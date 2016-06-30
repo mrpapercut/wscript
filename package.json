@@ -1,0 +1,19 @@
+{
+  "name": "wscript-malware-analyser",
+  "version": "1.0.0",
+  "description": "Analyses common email-malware relying on WScript",
+  "keywords": [
+    "wscript",
+    "malware"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrpapercut/wscript-malware-analyser.git"
+  },
+  "main": "./lib/profanity.js",
+  "author": {
+	"name": "Mischa Rodermond",
+	"url": "http://www.mrpapercut.com"
+  },
+  "license": "MIT"
+}
