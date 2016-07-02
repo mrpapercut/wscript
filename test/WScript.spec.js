@@ -41,15 +41,16 @@ describe('WScript', function() {
 		});
 	});
 
-	describe('Private methods', function() {
+	describe('toString()', function() {
+		WScript = require(getFilePath('WScript'));
+		it('should equal Windows Script Host', function() {
+			expect(WScript + '').to.equal('Windows Script Host');
+		});
+	});
+
+	describe('Property setters', function() {
 		beforeEach(function() {
 			WScript = require(getFilePath('WScript'));
-		});
-
-		describe('toString()', function() {
-			it('should equal Windows Script Host', function() {
-				expect(WScript + '').to.equal('Windows Script Host');
-			});
 		});
 
 		describe('_setArguments()', function() {
@@ -101,7 +102,33 @@ describe('WScript', function() {
 		});
 
 		describe('CreateObject()', function() {
+			/*
+			switch (strProgId) {
+				case 'WScript.Shell':
+					Obj = new WshShell();
+				case 'WScript.Network':
+					Obj = new WshNetwork();
+				case 'MSXML2.XMLHTTP':
+					Obj = new XMLHttpRequest();
+				case 'ADODB.Stream':
+					Obj = new ADODBStream();
+			*/
+			it('should initially not contain any objects', function() {
+				expect(WScript._objects.length).to.equal(0);
+			});
 
+			it('should return WshShell object', function() {
+				expect(WScript.CreateObject('WScript.Shell')+'').to.equal('WshShell');
+			});
+
+			it('should return WshNetwork object', function() {
+				// expect(WScript.CreateObject('WScript.Network')+'').to.equal('WshNetwork');
+			});
+
+			it('should return undefined if no or invalid strProgId is provided', function() {
+				expect(WScript.CreateObject()).to.be.undefined;
+				expect(WScript.CreateObject('Invalid.strProgId')).to.be.undefined;
+			});
 		});
 
 		describe('DisconnectObject()', function() {
@@ -121,7 +148,13 @@ describe('WScript', function() {
 		});
 
 		describe('Sleep()', function() {
+			it('should sleep for (at least) 50ms', function() {
+				var sleepTime = 0.05,
+					now = +new Date;
 
+				WScript.Sleep(sleepTime);
+				expect(+new Date >= now + (sleepTime * 1000)).to.be.true;
+			});
 		});
 	});
 });
