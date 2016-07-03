@@ -5,7 +5,7 @@ var chai = require('chai'),
     expect = chai.expect;
 
 var getFilePath = function(filename) {
-    return path.join(__dirname, '..', 'lib', filename);
+    return path.join(__dirname, '..', 'lib/WScript', filename);
 }
 
 var WshShell;
@@ -72,6 +72,12 @@ describe('WshShell', function() {
             it('should return the correct number of folders', function() {
                 expect(WshShell.SpecialFolders.count()).to.equal(16);
             });
+        });
+
+        describe('AppActivate', function() {
+           it('should return boolean true', function() {
+               expect(WshShell.AppActivate('Command Prompt')).to.be.true;
+           });
         });
     });
 });
