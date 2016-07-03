@@ -56,7 +56,7 @@ describe('WshShell', function() {
             WshShell = require(getFilePath('WshShell'));
         });
 
-        describe('SpecialFolders', function() {
+        describe('SpecialFolders()', function() {
             it('should return empty string without argument', function() {
                 expect(WshShell.SpecialFolders()).to.equal('');
             });
@@ -74,10 +74,52 @@ describe('WshShell', function() {
             });
         });
 
-        describe('AppActivate', function() {
-           it('should return boolean true', function() {
-               expect(WshShell.AppActivate('Command Prompt')).to.be.true;
-           });
+        describe('AppActivate()', function() {
+            it('should return boolean true', function() {
+                expect(WshShell.AppActivate('Command Prompt')).to.be.true;
+            });
+        });
+
+        describe('CreateShortcut()', function() {
+            var WScript = require(getFilePath('index'));
+            var WshShortcut = require(getFilePath('WshShortcut'));
+
+            it('should return a WshShortcut object', function() {
+                expect(WshShell.CreateShortcut() instanceof WshShortcut).to.be.true;
+            });
+
+            it('should be able to create example from MS docs', function() {
+                // Example from https://msdn.microsoft.com/en-us/library/xsy6k3ys(v=vs.84).aspx
+                var strDesktop = WshShell.SpecialFolders('Desktop'),
+                oShellLink = WshShell.CreateShortcut(strDesktop + '\\Shortcut Script.lnk');
+                oShellLink.TargetPath       = WScript.ScriptFullName;
+                oShellLink.WindowStyle      = 1;
+                oShellLink.Hotkey           = 'CTRL+SHIFT+F';
+                oShellLink.IconLocation     = 'notepad.exe, 0';
+                oShellLink.Description      = 'Shortcut Script';
+                oShellLink.WorkingDirectory = strDesktop;
+                oShellLink.RelativePath     = '';
+                oShellLink.WindowStyle      = '';
+                oShellLink.Save();
+            });
+        });
+
+        describe('Exec()', function() {
+            var WshScriptExec = require(getFilePath('WshScriptExec'));
+
+            it('should return a WshScriptExec object', function() {
+                expect(WshShell.Exec() instanceof WshScriptExec).to.be.true;
+            });
+        });
+
+        describe('ExpandEnvironmentStrings()', function() {
+            it('should return C:\\Windir', function() {
+                expect(WshShell.ExpandEnvironmentStrings('%WINDIR%')).to.equal('C:\\Windows');
+            });
+
+            it('should return empty string when no or invalid strString is provided', function() {
+                expect(WshShell.ExpandEnvironmentStrings()).to.equal('');
+            });
         });
     });
 });
