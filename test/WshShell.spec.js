@@ -8,11 +8,16 @@ var getFilePath = function(filename) {
     return path.join(__dirname, '..', 'lib/WScript', filename);
 }
 
+var getNewInstance = function() {
+	var instance = require(getFilePath('WshShell'));
+	return new instance();
+}
+
 var WshShell;
 
 describe('WshShell', function() {
     describe('constructor()', function() {
-        WshShell = require(getFilePath('WshShell'));
+        WshShell = getNewInstance();
 
         var properties = {
             CurrentDirectory: 'C:\\Temp',
@@ -32,7 +37,7 @@ describe('WshShell', function() {
     });
 
     describe('toString()', function() {
-        WshShell = require(getFilePath('WshShell'));
+        WshShell = getNewInstance();
         it('should equal WshShell', function() {
             expect(WshShell + '').to.equal('WshShell');
         });
@@ -40,7 +45,7 @@ describe('WshShell', function() {
 
     describe('Property setters', function() {
         beforeEach(function() {
-            WshShell = require(getFilePath('WshShell'));
+            WshShell = getNewInstance();
         });
 
         describe('_setCurrentDirectory()', function() {
@@ -53,7 +58,7 @@ describe('WshShell', function() {
 
     describe('Default methods', function() {
         beforeEach(function() {
-            WshShell = require(getFilePath('WshShell'));
+            WshShell = getNewInstance();
         });
 
         describe('SpecialFolders()', function() {
