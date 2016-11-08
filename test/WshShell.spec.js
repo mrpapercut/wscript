@@ -9,8 +9,8 @@ var getFilePath = function(filename) {
 }
 
 var getNewInstance = function() {
-	var instance = require(getFilePath('WshShell'));
-	return new instance();
+    var instance = require(getFilePath('WshShell'));
+    return new instance();
 }
 
 var WshShell;
@@ -115,10 +115,10 @@ describe('WshShell', function() {
             it('should return a WshScriptExec object', function() {
                 expect(WshShell.Exec() instanceof WshScriptExec).to.be.true;
             });
-			it('should be able to call .Terminate() on WshScriptExec object', function() {
-				expect(WshShell.Exec().Terminate).to.be.a('function');
-				expect(WshShell.Exec().Terminate()).to.be.an('undefined');
-			});
+            it('should be able to call .Terminate() on WshScriptExec object', function() {
+                expect(WshShell.Exec().Terminate).to.be.a('function');
+                expect(WshShell.Exec().Terminate()).to.be.an('undefined');
+            });
         });
 
         describe('ExpandEnvironmentStrings()', function() {
@@ -131,58 +131,58 @@ describe('WshShell', function() {
             });
         });
 
-		describe('LogEvent()', function() {
-			it('should return -1', function() {
-				// Function deprecated
-				// https://msdn.microsoft.com/en-us/library/b4ce6by3(v=vs.84).aspx#Remarks
-				expect(WshShell.LogEvent(1, 'Log failed')).to.equal(-1);
-			});
-		});
+        describe('LogEvent()', function() {
+            it('should return -1', function() {
+                // Function deprecated
+                // https://msdn.microsoft.com/en-us/library/b4ce6by3(v=vs.84).aspx#Remarks
+                expect(WshShell.LogEvent(1, 'Log failed')).to.equal(-1);
+            });
+        });
 
-		describe('Popup()', function() {
-			it('should return -1 as if timed out', function() {
-				expect(WshShell.Popup("Hello World!", 10, "Hi", 0x4 + 0x20)).to.equal(-1);
-			});
-		});
+        describe('Popup()', function() {
+            it('should return -1 as if timed out', function() {
+                expect(WshShell.Popup("Hello World!", 10, "Hi", 0x4 + 0x20)).to.equal(-1);
+            });
+        });
 
-		describe('RegDelete()', function() {
-			it('should throw Error when trying to delete a registry key', function() {
-				expect(function() {
-					WshShell.RegDelete('HKCU\\Software\\ACME\\FortuneTeller\\MindReader');
-				}).to.throw(Error);
-			});
-		});
+        describe('RegDelete()', function() {
+            it('should throw Error when trying to delete a registry key', function() {
+                expect(function() {
+                    WshShell.RegDelete('HKCU\\Software\\ACME\\FortuneTeller\\MindReader');
+                }).to.throw(Error);
+            });
+        });
 
-		describe('RegRead()', function() {
-			it('should throw Error when trying to read a registry key', function() {
-				expect(function() {
-					WshShell.RegRead('HKCU\\Software\\ACME\\FortuneTeller\\MindReader');
-				}).to.throw(Error);
-			});
-		});
+        describe('RegRead()', function() {
+            it('should throw Error when trying to read a registry key', function() {
+                expect(function() {
+                    WshShell.RegRead('HKCU\\Software\\ACME\\FortuneTeller\\MindReader');
+                }).to.throw(Error);
+            });
+        });
 
-		describe('RegWrite()', function() {
-			it('should return undefined, regardless of registry key being written or not', function() {
-				expect(WshShell.RegWrite('HKCU\\Software\\ACME\\FortuneTeller\\', 1, 'REG_BINARY')).to.equal(undefined);
-			});
-		});
+        describe('RegWrite()', function() {
+            it('should return undefined, regardless of registry key being written or not', function() {
+                expect(WshShell.RegWrite('HKCU\\Software\\ACME\\FortuneTeller\\', 1, 'REG_BINARY')).to.equal(undefined);
+            });
+        });
 
-		describe('Run()', function() {
+        describe('Run()', function() {
             var WScript = require(getFilePath('index'));
 
-			it('should return 0', function() {
-				expect(WshShell.Run('notepad ' & WScript.ScriptFullName, 1, true)).to.equal(0);
-			});
+            it('should return 0', function() {
+                expect(WshShell.Run('notepad ' & WScript.ScriptFullName, 1, true)).to.equal(0);
+            });
 
-			it('should return 0 regardless of arguments provided', function() {
-				expect(WshShell.Run('notepad')).to.equal(0);
-			});
-		});
+            it('should return 0 regardless of arguments provided', function() {
+                expect(WshShell.Run('notepad')).to.equal(0);
+            });
+        });
 
-		describe('SendKeys()', function() {
-			it('should return undefined', function() {
-				expect(WshShell.SendKeys()).to.equal(undefined);
-			});
-		});
+        describe('SendKeys()', function() {
+            it('should return undefined', function() {
+                expect(WshShell.SendKeys()).to.equal(undefined);
+            });
+        });
     });
 });

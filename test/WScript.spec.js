@@ -136,10 +136,10 @@ describe('WScript', function() {
         });
 
         describe('Echo()', function() {
-			it('should return undefined regardless of input', function() {
-				expect(WScript.Echo()).to.equal(undefined);
-				expect(WScript.Echo('Hello World!')).to.equal(undefined);
-			});
+            it('should return undefined regardless of input', function() {
+                expect(WScript.Echo()).to.equal(undefined);
+                expect(WScript.Echo('Hello World!')).to.equal(undefined);
+            });
         });
 
         describe('GetObject()', function() {
@@ -147,10 +147,10 @@ describe('WScript', function() {
         });
 
         describe('Quit()', function() {
-			it('should return errorCode or undefined if no code provided', function() {
-				expect(WScript.Quit()).to.equal(undefined);
-				expect(WScript.Quit(1)).to.equal(1);
-			});
+            it('should return errorCode or undefined if no code provided', function() {
+                expect(WScript.Quit()).to.equal(undefined);
+                expect(WScript.Quit(1)).to.equal(1);
+            });
         });
 
         describe('Sleep()', function() {

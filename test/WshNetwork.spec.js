@@ -9,8 +9,8 @@ var getFilePath = function(filename) {
 }
 
 var getNewInstance = function() {
-	var instance = require(getFilePath('WshNetwork'));
-	return new instance();
+    var instance = require(getFilePath('WshNetwork'));
+    return new instance();
 }
 
 var WshNetwork;
@@ -21,9 +21,9 @@ describe('WshNetwork', function() {
 
         var properties = {
             ComputerName: 'USERPC',
-			UserDomain: 'USERDOMAIN',
-			UserName: 'USER',
-			_name: 'WshNetwork'
+            UserDomain: 'USERDOMAIN',
+            UserName: 'USER',
+            _name: 'WshNetwork'
         };
 
         it('should have all properties', function() {
@@ -56,6 +56,6 @@ describe('WshNetwork', function() {
         beforeEach(function() {
             WshNetwork = getNewInstance();
         });
-	});
+    });
 });
 
