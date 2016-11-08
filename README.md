@@ -1,1 +1,1 @@
-# WScript Malware analyser
+# WScript
