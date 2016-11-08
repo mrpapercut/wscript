@@ -1,7 +1,7 @@
 {
   "name": "wscript-malware-analyser",
   "version": "1.0.0",
-  "description": "Analyses common email-malware relying on WScript",
+  "description": "Analyses common email malware-downloaders relying on WScript",
   "keywords": [
     "wscript",
     "malware"

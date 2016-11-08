@@ -122,7 +122,7 @@ describe('WScript', function() {
             });
 
             it('should return WshNetwork object', function() {
-                // expect(WScript.CreateObject('WScript.Network')+'').to.equal('WshNetwork');
+                expect(WScript.CreateObject('WScript.Network')+'').to.equal('WshNetwork');
             });
 
             it('should return undefined if no or invalid strProgId is provided', function() {
@@ -136,7 +136,10 @@ describe('WScript', function() {
         });
 
         describe('Echo()', function() {
-
+			it('should return undefined regardless of input', function() {
+				expect(WScript.Echo()).to.equal(undefined);
+				expect(WScript.Echo('Hello World!')).to.equal(undefined);
+			});
         });
 
         describe('GetObject()', function() {
@@ -144,7 +147,10 @@ describe('WScript', function() {
         });
 
         describe('Quit()', function() {
-
+			it('should return errorCode or undefined if no code provided', function() {
+				expect(WScript.Quit()).to.equal(undefined);
+				expect(WScript.Quit(1)).to.equal(1);
+			});
         });
 
         describe('Sleep()', function() {
