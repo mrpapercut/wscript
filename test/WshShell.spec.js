@@ -5,7 +5,7 @@ var chai = require('chai'),
     expect = chai.expect;
 
 var getFilePath = function(filename) {
-    return path.join(__dirname, '..', 'lib/WScript', filename);
+    return path.join(__dirname, '..', 'lib', filename);
 }
 
 var getNewInstance = function() {
@@ -66,7 +66,7 @@ describe('WshShell', function() {
                 expect(WshShell.SpecialFolders()).to.equal('');
             });
 
-            var Folders = require('../config/SpecialFolders');
+            var Folders = require(getFilePath('config/SpecialFolders'));
 
             it('should return the correct SpecialFolders paths', function() {
                 for (var i in Folders) {

@@ -5,7 +5,7 @@ var chai = require('chai'),
     expect = chai.expect;
 
 var getFilePath = function(filename) {
-    return path.join(__dirname, '..', 'lib/WScript', filename);
+    return path.join(__dirname, '..', 'lib', filename);
 }
 
 var getNewInstance = function() {

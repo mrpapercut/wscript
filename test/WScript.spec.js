@@ -8,11 +8,16 @@ var getFilePath = function(filename) {
     return path.join(__dirname, '..', 'lib', filename);
 }
 
+var getNewInstance = function() {
+    var instance = require(getFilePath('WScript'));
+    return new instance();
+}
+
 var WScript;
 
 describe('WScript', function() {
     describe('constructor()', function() {
-        WScript = require(getFilePath('WScript'));
+        WScript = getNewInstance();
 
         var properties = {
             Arguments: [],
@@ -42,7 +47,7 @@ describe('WScript', function() {
     });
 
     describe('toString()', function() {
-        WScript = require(getFilePath('WScript'));
+        WScript = getNewInstance();
         it('should equal Windows Script Host', function() {
             expect(WScript + '').to.equal('Windows Script Host');
         });
@@ -50,7 +55,7 @@ describe('WScript', function() {
 
     describe('Property setters', function() {
         beforeEach(function() {
-            WScript = require(getFilePath('WScript'));
+            WScript = getNewInstance();
         });
 
         describe('_setArguments()', function() {
@@ -94,7 +99,7 @@ describe('WScript', function() {
 
     describe('Default methods', function() {
         beforeEach(function() {
-            WScript = require(getFilePath('WScript'));
+            WScript = getNewInstance();
         });
 
         describe('ConnectObject()', function() {
