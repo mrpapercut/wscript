@@ -44,18 +44,24 @@ describe('WshNetwork', function() {
         });
     });
 
-    describe('Property setters', function() {
-        beforeEach(function() {
-            WshNetwork = getNewInstance();
-        });
-
-
-    });
-
     describe('Default methods', function() {
         beforeEach(function() {
             WshNetwork = getNewInstance();
         });
+
+		describe('AddWindowsPrinterConnection()', function() {
+			it('should return undefined', function() {
+				var PrinterPath = '\\\\printserv\\DefaultPrinter';
+				var PrinterDriver = 'Lexmark Optra S 1650';
+				expect(WshNetwork.AddWindowsPrinterConnection(PrinterPath, PrinterDriver)).to.equal(undefined);
+			});
+		});
+
+		describe('AddPrinterConnection()', function() {
+			it('should return undefined', function() {
+				expect(WshNetwork.AddPrinterConnection ("LPT1", "\\\\Server\\Print1")).to.equal(undefined);
+			});
+		});
     });
 });
 
