@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<script src="Tracing.js"></script>
+<script src="WScript.js"></script>
+</head>
+<body>
+<script>
+// Tracing.trace('WScript.CreateObject');
+
+for (var fn in WScript) {
+	if (typeof WScript[fn] === 'function') {
+		console.log('WScript.' + fn);
+		Tracing.trace('WScript.' + fn);
+	}
+}
+
+var WshShell = WScript.CreateObject("WScript.Shell");
+
+WScript.Echo(WshShell.LogEvent(0, "Logon Script Completed Successfully"));
+</script>
+</body>
+</html>

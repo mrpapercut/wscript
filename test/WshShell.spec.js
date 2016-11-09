@@ -86,7 +86,7 @@ describe('WshShell', function() {
         });
 
         describe('CreateShortcut()', function() {
-            var WScript = require(getFilePath('index'));
+            var WScript = require(getFilePath('WScript'));
             var WshShortcut = require(getFilePath('WshShortcut'));
 
             it('should return a WshShortcut object', function() {
@@ -168,7 +168,7 @@ describe('WshShell', function() {
         });
 
         describe('Run()', function() {
-            var WScript = require(getFilePath('index'));
+            var WScript = require(getFilePath('WScript'));
 
             it('should return 0', function() {
                 expect(WshShell.Run('notepad ' & WScript.ScriptFullName, 1, true)).to.equal(0);
