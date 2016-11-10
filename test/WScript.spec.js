@@ -18,9 +18,10 @@ var WScript;
 describe('WScript', function() {
     describe('constructor()', function() {
         WScript = getNewInstance();
+        var WshArguments = require(getFilePath('WshArguments'));
 
         var properties = {
-            Arguments: [],
+            Arguments: new WshArguments(),
             BuildVersion: 0,
             FullName: 'C:\\WINDOWS\\system32\\wscript.exe',
             Interactive: true,
@@ -41,7 +42,11 @@ describe('WScript', function() {
 
         it('should have all default values', function() {
             for (var i in properties) {
-                expect(WScript[i]).to.eql(properties[i]);
+                if (i === 'Arguments') {
+                    expect(WScript[i] instanceof WshArguments).to.be.true;
+                } else {
+                    expect(WScript[i]).to.eql(properties[i]);
+                }
             }
         });
     });
