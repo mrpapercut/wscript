@@ -153,7 +153,9 @@ describe('WScript', function() {
         });
 
         describe('GetObject()', function() {
-
+            it('should return undefined', function() {
+                expect(WScript.GetObject()).to.eql(undefined);
+            });
         });
 
         describe('Quit()', function() {
