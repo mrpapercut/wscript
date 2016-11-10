@@ -76,11 +76,12 @@ TextStream.prototype.WriteLine = function(string) {
 
 module.exports = TextStream;
 
-},{"./config/ResponseText":9}],2:[function(require,module,exports){
+},{"./config/ResponseText":12}],2:[function(require,module,exports){
 'use strict';
 
-var WshShell   = require('./WshShell');
-var WshNetwork = require('./WshNetwork');
+var WshArguments = require('./WshArguments');
+var WshNetwork   = require('./WshNetwork');
+var WshShell     = require('./WshShell');
 
 /**
  * WScript.js
@@ -91,7 +92,7 @@ var WshNetwork = require('./WshNetwork');
 
 var WScript = function() {
     // Default properties
-    this.Arguments      = [];
+    this.Arguments      = new WshArguments(arguments);
     this.BuildVersion   = 0;
     this.FullName       = 'C:\\WINDOWS\\system32\\wscript.exe';
     this.Interactive    = true;
@@ -187,7 +188,81 @@ WScript.prototype.Sleep = function(seconds) {
 
 module.exports = WScript;
 
-},{"./WshNetwork":3,"./WshShell":5}],3:[function(require,module,exports){
+},{"./WshArguments":3,"./WshNetwork":5,"./WshShell":7}],3:[function(require,module,exports){
+'use strict';
+
+var WshNamed = require('./WshNamed');
+var WshUnnamed = require('./WshUnnamed');
+
+/**
+ * WshArguments.js
+ * This Object spoofs the WshArguments Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/ss1ysb2a(v=vs.84).aspx
+ */
+
+var WshArguments = function() {
+	// Default properties
+	this.Length = arguments.length;
+	this.Named = new WshNamed(arguments);
+	this.Unnamed = new WshUnnamed(arguments);
+
+	// Custom properties
+	this._args = arguments;
+};
+
+// Documentation calls Item a property, but it behaves like a method
+WshArguments.prototype.Item = function(natIndex) {
+	return typeof natIndex === 'string' ? this.Named.Item(natIndex) : this.Unnamed.Item(natIndex);
+};
+
+WshArguments.prototype.Count = function() {
+	return this.Length;
+};
+
+WshArguments.prototype.ShowUsage = function() {
+	return '';
+};
+
+module.exports = WshArguments;
+
+},{"./WshNamed":4,"./WshUnnamed":10}],4:[function(require,module,exports){
+'use strict';
+
+/**
+ * WshNamed.js
+ * This Object spoofs the WshNamed Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/d6y04sbb(v=vs.84).aspx
+ */
+
+var WshNamed = function(args) {
+	// Custom properties
+    this._args = {};
+
+    for (var i = 0; i < args.length; i++) {
+        if (typeof args[i] === 'string' && args[i].match(/:/)) {
+            var pair = args[i].split(/:/);
+            this._args[pair[0]] = pair[1];
+        }
+    }
+
+	// Default properties
+	this.Length = Object.getOwnPropertyNames(this._args).length;
+};
+
+// Documentation calls Item a property, but it behaves like a method
+WshNamed.prototype.Item = function(natIndex) {
+	return this._args[natIndex];
+};
+
+WshNamed.prototype.Count = function() {
+	return this.Length;
+};
+
+module.exports = WshNamed;
+
+},{}],5:[function(require,module,exports){
 'use strict';
 
 /**
@@ -204,19 +279,19 @@ var WshNetwork = function() {
     this.UserName     = 'USER';
 
     // Custom properties
-    this._name            = 'WshNetwork';
+    this._name        = 'WshNetwork';
 };
 
 WshNetwork.prototype.toString = function() {
     return this._name;
 };
 
-WshNetwork.prototype.AddWindowsPrinterConnection = function() {
-
+WshNetwork.prototype.AddWindowsPrinterConnection = function(strPrinterPath, strDriverName, strPort) {
+    // Return nothing
 }
 
-WshNetwork.prototype.AddPrinterConnection = function() {
-
+WshNetwork.prototype.AddPrinterConnection = function(strLocalName, strRemoteName, bUpdateProfile, strUser, strPassword) {
+    // Return nothing
 }
 
 WshNetwork.prototype.EnumNetworkDrives = function() {
@@ -245,7 +320,7 @@ WshNetwork.prototype.SetDefaultPrinter = function() {
 
 module.exports = WshNetwork;
 
-},{}],4:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 var TextStream = require('./TextStream');
@@ -275,7 +350,7 @@ WshScriptExec.prototype.Terminate = function() {
 
 module.exports = WshScriptExec;
 
-},{"./TextStream":1}],5:[function(require,module,exports){
+},{"./TextStream":1}],7:[function(require,module,exports){
 'use strict';
 
 var WshScriptExec        = require('./WshScriptExec');
@@ -380,7 +455,7 @@ WshShell.prototype.SendKeys = function(string) {
 
 module.exports = WshShell;
 
-},{"./WshScriptExec":4,"./WshShortcut":6,"./WshSpecialFolders":7,"./config/EnvironmentVariables":8}],6:[function(require,module,exports){
+},{"./WshScriptExec":6,"./WshShortcut":8,"./WshSpecialFolders":9,"./config/EnvironmentVariables":11}],8:[function(require,module,exports){
 'use strict';
 
 /**
@@ -409,7 +484,7 @@ WshShortcut.prototype.Save = function() {
 
 module.exports = WshShortcut;
 
-},{}],7:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
 
 var SpecialFolders = require('./config/SpecialFolders');
@@ -430,7 +505,43 @@ WshSpecialFolders.count = function() {
 
 module.exports = WshSpecialFolders;
 
-},{"./config/SpecialFolders":10}],8:[function(require,module,exports){
+},{"./config/SpecialFolders":13}],10:[function(require,module,exports){
+'use strict';
+
+/**
+ * WshUnnamed.js
+ * This Object spoofs the WshUnnamed Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/ah2hawwc(v=vs.84).aspx
+ */
+
+var WshUnnamed = function(args) {
+	// Custom properties
+    this._args = {};
+
+    for (var i = 0, j = 0; i < args.length; i++) {
+        var item = args[i];
+        if (typeof item === 'number' || typeof item === 'string' && !item.match(/:/)) {
+            this._args[++j] = item;
+        }
+    }
+
+	// Default properties
+	this.Length = Object.getOwnPropertyNames(this._args).length;
+};
+
+// Documentation calls Item a property, but it behaves like a method
+WshUnnamed.prototype.Item = function(natIndex) {
+	return this._args[natIndex];
+};
+
+WshUnnamed.prototype.Count = function() {
+	return this.Length;
+};
+
+module.exports = WshUnnamed;
+
+},{}],11:[function(require,module,exports){
 module.exports={
   "%ALLUSERSPROFILE%":          "C:\\ProgramData",
   "%APPDATA%":                  "C:\\Users\\User\\AppData\\Roaming",
@@ -476,7 +587,7 @@ module.exports={
   "%USERPROFILE%":              "C:\\Users\\User",
   "%WINDIR%":                   "C:\\Windows"
 }
-},{}],9:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict';
 
 /**
@@ -485,7 +596,7 @@ module.exports={
 
 module.exports = ['The MIT License (MIT)', '', 'Copyright (c) 2016 Author', '', 'Permission is hereby granted, free of charge, to any person obtaining a copy', 'of this software and associated documentation files (the "Software"), to deal', 'in the Software without restriction, including without limitation the rights', 'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell', 'copies of the Software, and to permit persons to whom the Software is', 'furnished to do so, subject to the following conditions:', '', 'The above copyright notice and this permission notice shall be included in', 'all copies or substantial portions of the Software.', '', 'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR', 'IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,', 'FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE', 'AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER', 'LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,', 'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN', 'THE SOFTWARE.'].join('\n');
 
-},{}],10:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports={
   "AllUsersDesktop":   "C:\\Users\\Public\\Desktop",
   "AllUsersStartMenu": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu",
@@ -504,11 +615,11 @@ module.exports={
   "StartUp":           "C:\\Users\\User\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup",
   "Templates":         "C:\\Users\\User\\AppData\\Roaming\\Microsoft\\Windows\\Templates"
 }
-},{}],11:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 'use strict';
 
 var WScript = require('./WScript');
 
 window.WScript = new WScript();
 
-},{"./WScript":2}]},{},[11]);
+},{"./WScript":2}]},{},[14]);
