@@ -1,1 +1,0 @@
-WScript.GetObject('C:\\Windows\\system32\\calc.exe');
