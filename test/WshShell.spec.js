@@ -75,7 +75,7 @@ describe('WshShell', function() {
             });
 
             it('should return the correct number of folders', function() {
-                expect(WshShell.SpecialFolders.count()).to.equal(16);
+                expect(WshShell.SpecialFolders.Count()).to.equal(16);
             });
         });
 
