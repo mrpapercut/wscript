@@ -49,19 +49,43 @@ describe('WshNetwork', function() {
             WshNetwork = getNewInstance();
         });
 
-		describe('AddWindowsPrinterConnection()', function() {
-			it('should return undefined', function() {
-				var PrinterPath = '\\\\printserv\\DefaultPrinter';
-				var PrinterDriver = 'Lexmark Optra S 1650';
-				expect(WshNetwork.AddWindowsPrinterConnection(PrinterPath, PrinterDriver)).to.equal(undefined);
-			});
-		});
+        describe('AddWindowsPrinterConnection()', function() {
+            it('should return undefined', function() {
+                var PrinterPath = '\\\\printserv\\DefaultPrinter';
+                var PrinterDriver = 'Lexmark Optra S 1650';
+                expect(WshNetwork.AddWindowsPrinterConnection(PrinterPath, PrinterDriver)).to.equal(undefined);
+            });
+        });
 
-		describe('AddPrinterConnection()', function() {
-			it('should return undefined', function() {
-				expect(WshNetwork.AddPrinterConnection ("LPT1", "\\\\Server\\Print1")).to.equal(undefined);
-			});
-		});
+        describe('AddPrinterConnection()', function() {
+            it('should return undefined', function() {
+                expect(WshNetwork.AddPrinterConnection ("LPT1", "\\\\Server\\Print1")).to.equal(undefined);
+            });
+        });
+
+        describe('EnumNetworkDrives()', function() {
+            var WshUnnamed = require(getFilePath('WshUnnamed'));
+
+            it('should return instance of Unnamed collection', function() {
+                expect(WshNetwork.EnumNetworkDrives() instanceof WshUnnamed).to.be.true;
+            });
+
+            it('should return empty Unnamed collection', function() {
+                expect(WshNetwork.EnumNetworkDrives().Length).to.eql(0);
+            });
+        });
+
+        describe('EnumPrinterConnections()', function() {
+            var WshUnnamed = require(getFilePath('WshUnnamed'));
+
+            it('should return instance of Unnamed collection', function() {
+                expect(WshNetwork.EnumPrinterConnections() instanceof WshUnnamed).to.be.true;
+            });
+
+            it('should return empty Unnamed collection', function() {
+                expect(WshNetwork.EnumPrinterConnections().Length).to.eql(0);
+            });
+        });
     });
 });
 
