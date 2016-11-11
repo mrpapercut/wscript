@@ -28,30 +28,36 @@ TextStream.prototype._parseInt = function(num) {
     return parseInt(num, 10);
 }
 
+// https://msdn.microsoft.com/en-us/library/yb3tbdkw(v=vs.84).aspx
 TextStream.prototype.Close = function() {
     return null;
 };
 
+// https://msdn.microsoft.com/en-us/library/dhyx75w2(v=vs.84).aspx
 TextStream.prototype.Read = function(characters) {
     characters = this._parseInt(characters);
 
     return ResponseText.length > characters ? ResponseText.substr(0, characters) : ResponseText;
 };
 
+// https://msdn.microsoft.com/en-us/library/t58aa4dd(v=vs.84).aspx
 TextStream.prototype.ReadAll = function() {
     return ResponseText;
 };
 
+// https://msdn.microsoft.com/en-us/library/h7se9d4f(v=vs.84).aspx
 TextStream.prototype.ReadLine = function() {
     return ResponseText.split('\n')[0];
 };
 
+// https://msdn.microsoft.com/en-us/library/08xz3c5a(v=vs.84).aspx
 TextStream.prototype.Skip = function(characters) {
     characters = this._parseInt(characters);
 
     return ResponseText.substr(characters);
 };
 
+// https://msdn.microsoft.com/en-us/library/zbhhkawe(v=vs.84).aspx
 TextStream.prototype.SkipLine = function(characters) {
     characters = this._parseInt(characters);
 
@@ -60,16 +66,19 @@ TextStream.prototype.SkipLine = function(characters) {
     return lines.slice(characters, lines.length).join('\n');
 };
 
+// https://msdn.microsoft.com/en-us/library/6ee7s9w2(v=vs.84).aspx
 TextStream.prototype.Write = function(string) {
     this._contents += string;
 };
 
+// https://msdn.microsoft.com/en-us/library/eysctzwa(v=vs.84).aspx
 TextStream.prototype.WriteBlankLines = function(lines) {
     lines = this._parseInt(lines);
 
     for (var i = 0; i < lines; i++) this._contents += '\n';
 };
 
+// https://msdn.microsoft.com/en-us/library/t5399c99(v=vs.84).aspx
 TextStream.prototype.WriteLine = function(string) {
     this._contents += string ? string + '\n' : '\n';
 };
@@ -129,10 +138,12 @@ WScript.prototype._setScriptFullName = function(scriptName) {
 };
 
 // Default methods
+// https://msdn.microsoft.com/en-us/library/ccxe1xe6(v=vs.84).aspx
 WScript.prototype.ConnectObject = function() {
 
 };
 
+// https://msdn.microsoft.com/en-us/library/xzysf6hc(v=vs.84).aspx
 WScript.prototype.CreateObject = function(strProgId, strPrefix) {
     var Obj = null;
 
@@ -164,22 +175,28 @@ WScript.prototype.CreateObject = function(strProgId, strPrefix) {
     return Obj;
 };
 
+// https://msdn.microsoft.com/en-us/library/2d26y0c1(v=vs.84).aspx
 WScript.prototype.DisconnectObject = function() {
 
 };
 
+// https://msdn.microsoft.com/en-us/library/h8f603s7(v=vs.84).aspx
 WScript.prototype.Echo = function(/*arguments = str1, str2, strN etc*/) {
     return undefined;
 };
 
-WScript.prototype.GetObject = function() {
-
+// https://msdn.microsoft.com/en-us/library/8ywk619w(v=vs.84).aspx
+WScript.prototype.GetObject = function(strPathname, strProgID, strPrefix) {
+    // Deprecated?
+    return undefined;
 };
 
+// https://msdn.microsoft.com/en-us/library/fw0fx1aw(v=vs.84).aspx
 WScript.prototype.Quit = function(intErrorCode) {
     return intErrorCode || undefined;
 };
 
+// https://msdn.microsoft.com/en-us/library/6t81adfd(v=vs.84).aspx
 WScript.prototype.Sleep = function(seconds) {
     var now = new Date().getTime();
     while (new Date().getTime() < now + (seconds * 1000)){};
@@ -211,15 +228,18 @@ var WshArguments = function() {
 	this._args = arguments;
 };
 
+// https://msdn.microsoft.com/en-us/library/yzefkb42(v=vs.84).aspx
 // Documentation calls Item a property, but it behaves like a method
 WshArguments.prototype.Item = function(natIndex) {
 	return typeof natIndex === 'string' ? this.Named.Item(natIndex) : this.Unnamed.Item(natIndex);
 };
 
+// https://msdn.microsoft.com/en-us/library/6x47fysb(v=vs.84).aspx
 WshArguments.prototype.Count = function() {
 	return this.Length;
 };
 
+// https://msdn.microsoft.com/en-us/library/dc1y0x0h(v=vs.84).aspx
 WshArguments.prototype.ShowUsage = function() {
 	return '';
 };
@@ -251,19 +271,28 @@ var WshNamed = function(args) {
 	this.Length = Object.getOwnPropertyNames(this._args).length;
 };
 
+// https://msdn.microsoft.com/en-us/library/c2x76sxz(v=vs.84).aspx
 // Documentation calls Item a property, but it behaves like a method
 WshNamed.prototype.Item = function(natIndex) {
 	return this._args[natIndex];
 };
 
+// https://msdn.microsoft.com/en-us/library/6x47fysb(v=vs.84).aspx
 WshNamed.prototype.Count = function() {
 	return this.Length;
+};
+
+// https://msdn.microsoft.com/en-us/library/0axxztye(v=vs.84).aspx
+WshNamed.prototype.Exists = function(key) {
+	return !!this._args[key];
 };
 
 module.exports = WshNamed;
 
 },{}],5:[function(require,module,exports){
 'use strict';
+
+var WshUnnamed = require('./WshUnnamed');
 
 /**
  * WshNetwork.js
@@ -286,41 +315,49 @@ WshNetwork.prototype.toString = function() {
     return this._name;
 };
 
-WshNetwork.prototype.AddWindowsPrinterConnection = function(strPrinterPath, strDriverName, strPort) {
-    // Return nothing
-}
-
+// https://msdn.microsoft.com/en-us/library/kxsdca3c(v=vs.84).aspx
 WshNetwork.prototype.AddPrinterConnection = function(strLocalName, strRemoteName, bUpdateProfile, strUser, strPassword) {
-    // Return nothing
+    throw new Error('The network resource type is not correct.');
 }
 
+// https://msdn.microsoft.com/en-us/library/zsdh7hkb(v=vs.84).aspx
+WshNetwork.prototype.AddWindowsPrinterConnection = function(strPrinterPath, strDriverName, strPort) {
+    throw new Error('The remote server machine does not exist or is unavailable.');
+}
+
+// https://msdn.microsoft.com/en-us/library/t9zt39at(v=vs.84).aspx
 WshNetwork.prototype.EnumNetworkDrives = function() {
-
+    return new WshUnnamed([]);
 }
 
+// https://msdn.microsoft.com/en-us/library/zhds6k80(v=vs.84).aspx
 WshNetwork.prototype.EnumPrinterConnections = function() {
-
+    return new WshUnnamed([]);
 }
 
-WshNetwork.prototype.MapNetworkDrive = function() {
-
+// https://msdn.microsoft.com/en-us/library/8kst88h6(v=vs.84).aspx
+WshNetwork.prototype.MapNetworkDrive = function(strLocalName, strRemoteName, bUpdateProfile, strUser, strPassword) {
+	throw new Error('The network path was not found.');
 }
 
-WshNetwork.prototype.RemoveNetworkDrive = function() {
-
+// https://msdn.microsoft.com/en-us/library/d16d7wbf(v=vs.84).aspx
+WshNetwork.prototype.RemoveNetworkDrive = function(strName, bForce, bUpdateProfile) {
+	throw new Error('This network connection does not exist.');
 }
 
-WshNetwork.prototype.RemovePrinterConnection = function() {
-
+// https://msdn.microsoft.com/en-us/library/tsbh2yy7(v=vs.84).aspx
+WshNetwork.prototype.RemovePrinterConnection = function(strName, bForce, bUpdateProfile) {
+	throw new Error('This network connection does not exist.');
 }
 
-WshNetwork.prototype.SetDefaultPrinter = function() {
-
+// https://msdn.microsoft.com/en-us/library/2ccwwdct(v=vs.84).aspx
+WshNetwork.prototype.SetDefaultPrinter = function(strPrinterName) {
+	throw new Error('There is no printer called "' + strPrinterName + '"');
 }
 
 module.exports = WshNetwork;
 
-},{}],6:[function(require,module,exports){
+},{"./WshUnnamed":10}],6:[function(require,module,exports){
 'use strict';
 
 var TextStream = require('./TextStream');
@@ -344,8 +381,9 @@ var WshScriptExec = function(strCommand) {
     this._strCommand = strCommand;
 };
 
+// https://msdn.microsoft.com/en-us/library/yk84ffsf(v=vs.84).aspx
 WshScriptExec.prototype.Terminate = function() {
-
+    // return nothing
 }
 
 module.exports = WshScriptExec;
@@ -385,49 +423,60 @@ WshShell.prototype._setCurrentDirectory = function(currentDirectory) {
 };
 
 // Default methods
+// https://msdn.microsoft.com/en-us/library/0ea7b5xe(v=vs.84).aspx
 WshShell.prototype.SpecialFolders = WshSpecialFolders;
 
+// https://msdn.microsoft.com/en-us/library/wzcddbek(v=vs.84).aspx
 WshShell.prototype.AppActivate = function(appName) {
     return true;
 };
 
+// https://msdn.microsoft.com/en-us/library/xsy6k3ys(v=vs.84).aspx
 WshShell.prototype.CreateShortcut = function(strPathName) {
     return new WshShortcut(strPathName);
 };
 
+// https://msdn.microsoft.com/en-us/library/ateytk4a(v=vs.84).aspx
 WshShell.prototype.Exec = function(strCommand) {
     return new WshScriptExec(strCommand);
 };
 
+// https://msdn.microsoft.com/en-us/library/dy8116cf(v=vs.84).aspx
 WshShell.prototype.ExpandEnvironmentStrings = function(strString) {
-    return EnvironmentVariables[strString] || '';
+	return typeof strString === 'string' ? strString.replace(/(%[a-zA-Z]+%)/g, function(m) {
+		return EnvironmentVariables[m] || '';
+	}) : '';
 };
 
+// https://msdn.microsoft.com/en-us/library/b4ce6by3(v=vs.84).aspx
 WshShell.prototype.LogEvent = function(intType, strMessage) {
     // Deprecated
     return -1;
 };
 
+// https://msdn.microsoft.com/en-us/library/x83z1d9f(v=vs.84).aspx
 WshShell.prototype.Popup = function(strText, nSecondsToWait, strTitle, nType) {
-    // https://msdn.microsoft.com/en-us/library/x83z1d9f(v=vs.84).aspx
     // Return -1 as if timed out
     return -1;
 };
 
+// https://msdn.microsoft.com/en-us/library/293bt9hh(v=vs.84).aspx
 WshShell.prototype.RegDelete = function(key) {
     throw new Error('Invalid root in registry key');
 };
 
+// https://msdn.microsoft.com/en-us/library/x05fawxd(v=vs.84).aspx
 WshShell.prototype.RegRead = function(key) {
     throw new Error('Invalid root in registry key');
 };
 
+// https://msdn.microsoft.com/en-us/library/yfdfhz1b(v=vs.84).aspx
 WshShell.prototype.RegWrite = function(key) {
     return undefined;
 };
 
+// https://msdn.microsoft.com/en-us/library/d5fk67ky(v=vs.84).aspx
 WshShell.prototype.Run = function(strCommand, intWindowStyle, bWaitOnReturn) {
-    // https://msdn.microsoft.com/en-us/library/d5fk67ky(v=vs.84).aspx
 
     /** intWindowStyle values
     * 0: Hides the window and activates another window.
@@ -448,8 +497,8 @@ WshShell.prototype.Run = function(strCommand, intWindowStyle, bWaitOnReturn) {
     return 0;
 };
 
+// https://msdn.microsoft.com/en-us/library/8c6yea83(v=vs.84).aspx
 WshShell.prototype.SendKeys = function(string) {
-    // https://msdn.microsoft.com/en-us/library/8c6yea83(v=vs.84).aspx
     return undefined;
 };
 
@@ -478,6 +527,7 @@ var WshShortcut = function(FullName) {
     this.WorkingDirectory = null;
 };
 
+// https://msdn.microsoft.com/en-us/library/k5x59zft(v=vs.84).aspx
 WshShortcut.prototype.Save = function() {
     return null;
 };
@@ -499,7 +549,8 @@ var WshSpecialFolders = function(folder) {
     return folder && SpecialFolders[folder] !== undefined ? SpecialFolders[folder] : '';
 };
 
-WshSpecialFolders.count = function() {
+// https://msdn.microsoft.com/en-us/library/6x47fysb(v=vs.84).aspx
+WshSpecialFolders.Count = function() {
     return Object.keys(SpecialFolders).length;
 };
 
@@ -530,11 +581,13 @@ var WshUnnamed = function(args) {
 	this.Length = Object.getOwnPropertyNames(this._args).length;
 };
 
+// https://msdn.microsoft.com/en-us/library/c2x76sxz(v=vs.84).aspx
 // Documentation calls Item a property, but it behaves like a method
 WshUnnamed.prototype.Item = function(natIndex) {
 	return this._args[natIndex];
 };
 
+// https://msdn.microsoft.com/en-us/library/6x47fysb(v=vs.84).aspx
 WshUnnamed.prototype.Count = function() {
 	return this.Length;
 };

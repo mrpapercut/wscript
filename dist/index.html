@@ -6,18 +6,27 @@
 </head>
 <body>
 <script>
-// Tracing.trace('WScript.CreateObject');
-
 for (var fn in WScript) {
 	if (typeof WScript[fn] === 'function') {
-		console.log('WScript.' + fn);
 		Tracing.trace('WScript.' + fn);
 	}
 }
 
-var WshShell = WScript.CreateObject("WScript.Shell");
+function getTmpFolderLocation() {
+	var shell = WScript.CreateObject("WScript.Shell");
+	return shell.ExpandEnvironmentStrings("%TEMP%\\");
+}
 
-WScript.Echo(WshShell.LogEvent(0, "Logon Script Completed Successfully"));
+var obj = {
+	tmpFolder: getTmpFolderLocation(),
+	fileName: 912892,
+	folderName: "elbCzuv\\"
+};
+
+obj.destFolder = obj.tmpFolder + obj.folderName;
+obj.destination = obj.destFolder + obj.fileName + '.exe';
+
+console.log(obj);
 </script>
 </body>
 </html>
