@@ -128,12 +128,16 @@ describe('WScript', function() {
             });
 
             it('should return WshShell object', function() {
-                expect(WScript.CreateObject('WScript.Shell')+'').to.equal('WshShell');
+                expect(WScript.CreateObject('WScript.Shell') + '').to.equal('WshShell');
             });
 
             it('should return WshNetwork object', function() {
-                expect(WScript.CreateObject('WScript.Network')+'').to.equal('WshNetwork');
+                expect(WScript.CreateObject('WScript.Network') + '').to.equal('WshNetwork');
             });
+
+			it('should return WshController object', function() {
+				expect(WScript.CreateObject('WSHController') + '').to.equal('WshController');
+			});
 
             it('should return undefined if no or invalid strProgId is provided', function() {
                 expect(WScript.CreateObject()).to.be.undefined;
