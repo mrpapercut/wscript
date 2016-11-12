@@ -146,7 +146,9 @@ describe('WScript', function() {
         });
 
         describe('DisconnectObject()', function() {
-
+            it('should return undefined', function() {
+                expect(WScript.DisconnectObject()).to.be.undefined;
+            });
         });
 
         describe('Echo()', function() {

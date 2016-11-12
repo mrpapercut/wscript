@@ -2,11 +2,7 @@
 
 var chai = require('chai'),
     path = require('path'),
-	spies = require('chai-spies');
-
-chai.use(spies);
-
-var expect = chai.expect;
+    expect = chai.expect;
 
 var getFilePath = function(filename) {
     return path.join(__dirname, '..', 'lib', filename);
@@ -20,40 +16,92 @@ var getNewInstance = function() {
 var WshRemote;
 
 describe('WshRemote', function() {
-    describe('constructor()', function() {
+    beforeEach(function() {
         WshRemote = getNewInstance();
+    });
 
-		it('_name should equal WshRemote', function() {
-			expect(WshRemote._name).to.equal('WshRemote');
-		});
+    describe('constructor()', function() {
+        var properties = {
+            Error: null,
+            _CommandLine: undefined,
+            _MachineName: undefined,
+            _status: 0,
+            _started: false,
+            _ended: false,
+            _name: 'WshRemote'
+        };
+
+        it('should have all properties', function() {
+            expect(WshRemote).to.have.all.keys(Object.keys(properties));
+        });
+
+        it('should have all default values', function() {
+            for (var i in properties) {
+                expect(WshRemote[i]).to.eql(properties[i]);
+            }
+        });
 	});
 
 	describe('toString()', function() {
-		WshRemote = getNewInstance();
-
 		it('should return WshRemote', function() {
 			expect(WshRemote.toString()).to.equal('WshRemote');
 		});
 	});
 
 	describe('Execute()', function() {
+        it('should have Status set to 1', function() {
+            WshRemote.Execute();
+            expect(WshRemote.Status).to.equal(1);
+        });
+    });
 
+    describe('.Status', function() {
+        it('should not increment Status without triggering Execute()', function() {
+            expect(WshRemote.Status).to.equal(0);
+            expect(WshRemote.Status).to.equal(0);
+        });
+
+        it('should have Status set to 2 when we check twice', function() {
+            WshRemote.Execute();
+            expect(WshRemote.Status).to.equal(1);
+            expect(WshRemote.Status).to.equal(2);
+        });
+
+        it('should never have Status go over 2', function() {
+            WshRemote.Execute();
+            expect(WshRemote.Status).to.equal(1);
+            expect(WshRemote.Status).to.equal(2);
+            expect(WshRemote.Status).to.equal(2);
+        });
 	});
 
 	describe('Terminate()', function() {
-
+        it('should set Status to 2', function() {
+            WshRemote.Terminate();
+            expect(WshRemote.Status).to.equal(2);
+        });
 	});
 
 	// Events
 	describe('_eventEnd()', function() {
-
+        it('should set Status to 2', function() {
+            WshRemote._eventEnd();
+            expect(WshRemote.Status).to.equal(2);
+        });
 	});
 
 	describe('_eventError()', function() {
-
+        var WshRemoteError = require(getFilePath('WshRemoteError'));
+        it('should set Error to instanceof WshRemoteError', function() {
+            WshRemote._eventError();
+            expect(WshRemote.Error instanceof WshRemoteError).to.be.true;
+        });
 	});
 
 	describe('_eventStart()', function() {
-
+        it('should have Status set to 1', function() {
+            WshRemote._eventStart();
+            expect(WshRemote.Status).to.equal(1);
+        });
 	});
 });
