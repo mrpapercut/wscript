@@ -130,16 +130,16 @@ describe('WScript', function() {
             it('should attach eventFunctions when connecting to object', function() {
                 global.remote_Start = function() {};
                 global.remote_End = function() {};
-                global.remote_Error = function() {};
 
                 var WshController = WScript.CreateObject('WSHController');
                 var RemoteScript = WshController.CreateScript('test.vbs');
-                WScript.ConnectObject(RemoteScript, 'remote');
+                var _eventError = RemoteScript._eventError;
 
+                WScript.ConnectObject(RemoteScript, 'remote');
 
                 expect(RemoteScript._eventStart).to.equal(global.remote_Start);
                 expect(RemoteScript._eventEnd).to.equal(global.remote_End);
-                expect(RemoteScript._eventError).to.equal(global.remote_Error);
+                expect(RemoteScript._eventError).to.equal(_eventError);
             });
         });
 
@@ -205,11 +205,11 @@ describe('WScript', function() {
 
         describe('Sleep()', function() {
             it('should sleep for (at least) 50ms', function() {
-                var sleepTime = 0.05,
+                var sleepTime = 50,
                     now = +new Date;
 
                 WScript.Sleep(sleepTime);
-                expect(+new Date >= now + (sleepTime * 1000)).to.be.true;
+                expect(+new Date >= now + (sleepTime)).to.be.true;
             });
         });
     });
