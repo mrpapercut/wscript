@@ -85,12 +85,15 @@ TextStream.prototype.WriteLine = function(string) {
 
 module.exports = TextStream;
 
-},{"./config/ResponseText":12}],2:[function(require,module,exports){
+},{"./config/ResponseText":16}],2:[function(require,module,exports){
+(function (global){
 'use strict';
 
-var WshArguments = require('./WshArguments');
-var WshNetwork   = require('./WshNetwork');
-var WshShell     = require('./WshShell');
+var WshArguments  = require('./WshArguments');
+var WshController = require('./WshController');
+var WshNetwork    = require('./WshNetwork');
+var WshRemote     = require('./WshRemote');
+var WshShell      = require('./WshShell');
 
 /**
  * WScript.js
@@ -139,8 +142,13 @@ WScript.prototype._setScriptFullName = function(scriptName) {
 
 // Default methods
 // https://msdn.microsoft.com/en-us/library/ccxe1xe6(v=vs.84).aspx
-WScript.prototype.ConnectObject = function() {
+WScript.prototype.ConnectObject = function(objEventSource, strPrefix) {
+    if (objEventSource instanceof WshRemote !== true) throw new TypeError();
+    if (!strPrefix || (strPrefix && typeof strPrefix !== 'string')) throw new TypeError();
 
+    objEventSource._eventStart = global[strPrefix + '_Start'];
+    objEventSource._eventEnd = global[strPrefix + '_End'];
+    objEventSource._eventError = global[strPrefix + '_Error'];
 };
 
 // https://msdn.microsoft.com/en-us/library/xzysf6hc(v=vs.84).aspx
@@ -154,6 +162,9 @@ WScript.prototype.CreateObject = function(strProgId, strPrefix) {
         case 'WScript.Network':
             Obj = new WshNetwork();
             break;
+		case 'WSHController':
+			Obj = new WshController();
+			break;
         /*
         case 'MSXML2.XMLHTTP':
             Obj = new XMLHttpRequest();
@@ -177,7 +188,7 @@ WScript.prototype.CreateObject = function(strProgId, strPrefix) {
 
 // https://msdn.microsoft.com/en-us/library/2d26y0c1(v=vs.84).aspx
 WScript.prototype.DisconnectObject = function() {
-
+    return undefined;
 };
 
 // https://msdn.microsoft.com/en-us/library/h8f603s7(v=vs.84).aspx
@@ -205,7 +216,8 @@ WScript.prototype.Sleep = function(seconds) {
 
 module.exports = WScript;
 
-},{"./WshArguments":3,"./WshNetwork":5,"./WshShell":7}],3:[function(require,module,exports){
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./WshArguments":3,"./WshController":4,"./WshNetwork":7,"./WshRemote":8,"./WshShell":11}],3:[function(require,module,exports){
 'use strict';
 
 var WshNamed = require('./WshNamed');
@@ -219,34 +231,109 @@ var WshUnnamed = require('./WshUnnamed');
  */
 
 var WshArguments = function() {
-	// Default properties
-	this.Length = arguments.length;
-	this.Named = new WshNamed(arguments);
-	this.Unnamed = new WshUnnamed(arguments);
+    // Default properties
+    this.Length = arguments.length;
+    this.Named = new WshNamed(arguments);
+    this.Unnamed = new WshUnnamed(arguments);
 
-	// Custom properties
-	this._args = arguments;
+    // Custom properties
+    this._args = arguments;
 };
 
 // https://msdn.microsoft.com/en-us/library/yzefkb42(v=vs.84).aspx
 // Documentation calls Item a property, but it behaves like a method
 WshArguments.prototype.Item = function(natIndex) {
-	return typeof natIndex === 'string' ? this.Named.Item(natIndex) : this.Unnamed.Item(natIndex);
+    return typeof natIndex === 'string' ? this.Named.Item(natIndex) : this.Unnamed.Item(natIndex);
 };
 
 // https://msdn.microsoft.com/en-us/library/6x47fysb(v=vs.84).aspx
 WshArguments.prototype.Count = function() {
-	return this.Length;
+    return this.Length;
 };
 
 // https://msdn.microsoft.com/en-us/library/dc1y0x0h(v=vs.84).aspx
 WshArguments.prototype.ShowUsage = function() {
-	return '';
+    return '';
 };
 
 module.exports = WshArguments;
 
-},{"./WshNamed":4,"./WshUnnamed":10}],4:[function(require,module,exports){
+},{"./WshNamed":6,"./WshUnnamed":14}],4:[function(require,module,exports){
+'use strict';
+
+var WshRemote = require('./WshRemote');
+
+/**
+ * WshController.js
+ * This Object spoofs the WshController Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/xk7bxb0d(v=vs.84).aspx
+ */
+var WshController = function() {
+	// Custom properties
+	this._name = 'WshController';
+};
+
+WshController.prototype.toString = function() {
+    return this._name;
+};
+
+// Default methods
+// https://msdn.microsoft.com/en-us/library/5zdwefhx(v=vs.84).aspx
+WshController.prototype.CreateScript = function(CommandLine, MachineName) {
+    // Return instance of WshRemote
+    return new WshRemote(CommandLine, MachineName);
+}
+
+module.exports = WshController;
+
+},{"./WshRemote":8}],5:[function(require,module,exports){
+'use strict';
+
+var WshEnvironmentVariables = require('./config/WshEnvironment');
+
+/**
+ * WshEnvironment.js
+ * This Object spoofs the WshEnvironment Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/6s7w15a0(v=vs.84).aspx
+ */
+
+var _envVars = null;
+
+var WshEnvironment = function(strType) {
+    _envVars = WshEnvironmentVariables[strType] || WshEnvironmentVariables['VOLATILE'];
+
+    // Return a function
+    var returnFunction = function(natIndex) {
+        return _envVars[natIndex];
+    }
+
+    // https://msdn.microsoft.com/en-us/library/6kz722cz(v=vs.84).aspx
+    returnFunction.Length = Object.getOwnPropertyNames(_envVars).length;
+
+    // https://msdn.microsoft.com/en-us/library/c2x76sxz(v=vs.84).aspx
+    // Documentation calls Item a property, but it behaves like a method
+    returnFunction.Item = function(natIndex) {
+        return _envVars[natIndex];
+    };
+
+    // https://msdn.microsoft.com/en-us/library/6x47fysb(v=vs.84).aspx
+    returnFunction.Count = function() {
+        return Object.getOwnPropertyNames(_envVars).length;
+    };
+
+    // https://msdn.microsoft.com/en-us/library/218yba97(v=vs.84).aspx
+    returnFunction.Remove = function(strName) {
+        delete _envVars[strName];
+    };
+
+    return returnFunction;
+};
+
+module.exports = WshEnvironment;
+
+},{"./config/WshEnvironment":18}],6:[function(require,module,exports){
 'use strict';
 
 /**
@@ -257,7 +344,7 @@ module.exports = WshArguments;
  */
 
 var WshNamed = function(args) {
-	// Custom properties
+    // Custom properties
     this._args = {};
 
     for (var i = 0; i < args.length; i++) {
@@ -267,29 +354,29 @@ var WshNamed = function(args) {
         }
     }
 
-	// Default properties
-	this.Length = Object.getOwnPropertyNames(this._args).length;
+    // Default properties
+    this.Length = Object.getOwnPropertyNames(this._args).length;
 };
 
 // https://msdn.microsoft.com/en-us/library/c2x76sxz(v=vs.84).aspx
 // Documentation calls Item a property, but it behaves like a method
 WshNamed.prototype.Item = function(natIndex) {
-	return this._args[natIndex];
+    return this._args[natIndex];
 };
 
 // https://msdn.microsoft.com/en-us/library/6x47fysb(v=vs.84).aspx
 WshNamed.prototype.Count = function() {
-	return this.Length;
+    return this.Length;
 };
 
 // https://msdn.microsoft.com/en-us/library/0axxztye(v=vs.84).aspx
 WshNamed.prototype.Exists = function(key) {
-	return !!this._args[key];
+    return !!this._args[key];
 };
 
 module.exports = WshNamed;
 
-},{}],5:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 var WshUnnamed = require('./WshUnnamed');
@@ -337,27 +424,131 @@ WshNetwork.prototype.EnumPrinterConnections = function() {
 
 // https://msdn.microsoft.com/en-us/library/8kst88h6(v=vs.84).aspx
 WshNetwork.prototype.MapNetworkDrive = function(strLocalName, strRemoteName, bUpdateProfile, strUser, strPassword) {
-	throw new Error('The network path was not found.');
+    throw new Error('The network path was not found.');
 }
 
 // https://msdn.microsoft.com/en-us/library/d16d7wbf(v=vs.84).aspx
 WshNetwork.prototype.RemoveNetworkDrive = function(strName, bForce, bUpdateProfile) {
-	throw new Error('This network connection does not exist.');
+    throw new Error('This network connection does not exist.');
 }
 
 // https://msdn.microsoft.com/en-us/library/tsbh2yy7(v=vs.84).aspx
 WshNetwork.prototype.RemovePrinterConnection = function(strName, bForce, bUpdateProfile) {
-	throw new Error('This network connection does not exist.');
+    throw new Error('This network connection does not exist.');
 }
 
 // https://msdn.microsoft.com/en-us/library/2ccwwdct(v=vs.84).aspx
 WshNetwork.prototype.SetDefaultPrinter = function(strPrinterName) {
-	throw new Error('There is no printer called "' + strPrinterName + '"');
+    throw new Error('There is no printer called "' + strPrinterName + '"');
 }
 
 module.exports = WshNetwork;
 
-},{"./WshUnnamed":10}],6:[function(require,module,exports){
+},{"./WshUnnamed":14}],8:[function(require,module,exports){
+'use strict';
+
+var WshRemoteError = require('./WshRemoteError');
+
+/**
+ * WshRemote.js
+ * This Object spoofs the WshRemote Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/x9t3ze5y(v=vs.84).aspx
+ */
+var WshRemote = function(CommandLine, MachineName) {
+    // Default properties
+    this.Error = null;
+
+    // When checking Status, increment to simulate finish running script
+    this._status = 0;
+    Object.defineProperty(this, 'Status', {
+        get: function() {
+            if (this._started || this._ended) {
+                if (this._status < 2) {
+                    return this._status++;
+                }
+            }
+            return this._status;
+        }
+    });
+
+    // Custom properties
+    this._CommandLine = CommandLine;
+    this._MachineName = MachineName;
+
+    this._started = false;
+    this._ended = false;
+
+	this._name = 'WshRemote';
+};
+
+WshRemote.prototype.toString = function() {
+    return this._name;
+};
+
+// Events
+// https://msdn.microsoft.com/en-us/library/8twtdcke(v=vs.84).aspx
+WshRemote.prototype._eventEnd = function() {
+    // This method is meant to be overwritten
+    // Return nothing
+};
+
+// https://msdn.microsoft.com/en-us/library/d070t67d(v=vs.84).aspx
+WshRemote.prototype._eventError = function() {
+    this.Error = new WshRemoteError();
+};
+
+// https://msdn.microsoft.com/en-us/library/zwzwaa4c(v=vs.84).aspx
+WshRemote.prototype._eventStart = function() {
+    // This method is meant to be overwritten
+    // Return nothing
+};
+
+// Default methods
+// https://msdn.microsoft.com/en-us/library/d33x48a9(v=vs.84).aspx
+WshRemote.prototype.Execute = function() {
+    this._status = 1;
+    this._started = true;
+    this._eventStart();
+};
+
+// https://msdn.microsoft.com/en-us/library/yk84ffsf(v=vs.84).aspx
+WshRemote.prototype.Terminate = function() {
+    this._status = 2;
+    this._ended = true;
+    this._eventEnd();
+};
+
+module.exports = WshRemote;
+
+},{"./WshRemoteError":9}],9:[function(require,module,exports){
+'use strict';
+
+/**
+ * WshRemoteError.js
+ * This Object spoofs the WshRemoteError Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/d02b3e15(v=vs.84).aspx
+ */
+var WshRemoteError = function() {
+    // Default properties
+    this.Description    = '';
+    this.Line           = 0;
+    this.Character      = 0;
+    this.Number         = 0;
+    this.SourceText     = '';
+    this.Source         = '';
+
+	this._name = 'WshRemoteError';
+};
+
+WshRemoteError.prototype.toString = function() {
+    return this._name;
+};
+
+module.exports = WshRemoteError;
+
+},{}],10:[function(require,module,exports){
 'use strict';
 
 var TextStream = require('./TextStream');
@@ -388,9 +579,10 @@ WshScriptExec.prototype.Terminate = function() {
 
 module.exports = WshScriptExec;
 
-},{"./TextStream":1}],7:[function(require,module,exports){
+},{"./TextStream":1}],11:[function(require,module,exports){
 'use strict';
 
+var WshEnvironment       = require('./WshEnvironment');
 var WshScriptExec        = require('./WshScriptExec');
 var WshSpecialFolders    = require('./WshSpecialFolders');
 var WshShortcut          = require('./WshShortcut');
@@ -407,10 +599,14 @@ var EnvironmentVariables = require('./config/EnvironmentVariables');
 var WshShell = function() {
     // Default properties
     this.CurrentDirectory = 'C:\\Temp';
-    this.Environment      = null;
 
     // Custom properties
     this._name            = 'WshShell';
+};
+
+// Using method instead of property
+WshShell.prototype.Environment = function(strName) {
+    return new WshEnvironment(strName);
 };
 
 WshShell.prototype.toString = function() {
@@ -443,9 +639,9 @@ WshShell.prototype.Exec = function(strCommand) {
 
 // https://msdn.microsoft.com/en-us/library/dy8116cf(v=vs.84).aspx
 WshShell.prototype.ExpandEnvironmentStrings = function(strString) {
-	return typeof strString === 'string' ? strString.replace(/(%[a-zA-Z]+%)/g, function(m) {
-		return EnvironmentVariables[m] || '';
-	}) : '';
+    return typeof strString === 'string' ? strString.replace(/(%[a-zA-Z]+%)/g, function(m) {
+        return EnvironmentVariables[m] || m;
+    }) : '';
 };
 
 // https://msdn.microsoft.com/en-us/library/b4ce6by3(v=vs.84).aspx
@@ -504,7 +700,7 @@ WshShell.prototype.SendKeys = function(string) {
 
 module.exports = WshShell;
 
-},{"./WshScriptExec":6,"./WshShortcut":8,"./WshSpecialFolders":9,"./config/EnvironmentVariables":11}],8:[function(require,module,exports){
+},{"./WshEnvironment":5,"./WshScriptExec":10,"./WshShortcut":12,"./WshSpecialFolders":13,"./config/EnvironmentVariables":15}],12:[function(require,module,exports){
 'use strict';
 
 /**
@@ -534,7 +730,7 @@ WshShortcut.prototype.Save = function() {
 
 module.exports = WshShortcut;
 
-},{}],9:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 var SpecialFolders = require('./config/SpecialFolders');
@@ -556,7 +752,7 @@ WshSpecialFolders.Count = function() {
 
 module.exports = WshSpecialFolders;
 
-},{"./config/SpecialFolders":13}],10:[function(require,module,exports){
+},{"./config/SpecialFolders":17}],14:[function(require,module,exports){
 'use strict';
 
 /**
@@ -567,7 +763,7 @@ module.exports = WshSpecialFolders;
  */
 
 var WshUnnamed = function(args) {
-	// Custom properties
+    // Custom properties
     this._args = {};
 
     for (var i = 0, j = 0; i < args.length; i++) {
@@ -577,24 +773,24 @@ var WshUnnamed = function(args) {
         }
     }
 
-	// Default properties
-	this.Length = Object.getOwnPropertyNames(this._args).length;
+    // Default properties
+    this.Length = Object.getOwnPropertyNames(this._args).length;
 };
 
 // https://msdn.microsoft.com/en-us/library/c2x76sxz(v=vs.84).aspx
 // Documentation calls Item a property, but it behaves like a method
 WshUnnamed.prototype.Item = function(natIndex) {
-	return this._args[natIndex];
+    return this._args[natIndex];
 };
 
 // https://msdn.microsoft.com/en-us/library/6x47fysb(v=vs.84).aspx
 WshUnnamed.prototype.Count = function() {
-	return this.Length;
+    return this.Length;
 };
 
 module.exports = WshUnnamed;
 
-},{}],11:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 module.exports={
   "%ALLUSERSPROFILE%":          "C:\\ProgramData",
   "%APPDATA%":                  "C:\\Users\\User\\AppData\\Roaming",
@@ -640,7 +836,7 @@ module.exports={
   "%USERPROFILE%":              "C:\\Users\\User",
   "%WINDIR%":                   "C:\\Windows"
 }
-},{}],12:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 'use strict';
 
 /**
@@ -649,7 +845,7 @@ module.exports={
 
 module.exports = ['The MIT License (MIT)', '', 'Copyright (c) 2016 Author', '', 'Permission is hereby granted, free of charge, to any person obtaining a copy', 'of this software and associated documentation files (the "Software"), to deal', 'in the Software without restriction, including without limitation the rights', 'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell', 'copies of the Software, and to permit persons to whom the Software is', 'furnished to do so, subject to the following conditions:', '', 'The above copyright notice and this permission notice shall be included in', 'all copies or substantial portions of the Software.', '', 'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR', 'IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,', 'FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE', 'AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER', 'LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,', 'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN', 'THE SOFTWARE.'].join('\n');
 
-},{}],13:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 module.exports={
   "AllUsersDesktop":   "C:\\Users\\Public\\Desktop",
   "AllUsersStartMenu": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu",
@@ -668,11 +864,51 @@ module.exports={
   "StartUp":           "C:\\Users\\User\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup",
   "Templates":         "C:\\Users\\User\\AppData\\Roaming\\Microsoft\\Windows\\Templates"
 }
-},{}],14:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
+module.exports={
+    "SYSTEM": {
+        "NUMBER_OF_PROCESSORS": 4,
+        "PROCESSOR_ARCHITECTURE": "AMD64",
+        "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+        "PROCESSOR_LEVEL": 6,
+        "PROCESSOR_REVISION": "4e03",
+        "OS": "Windows_NT",
+        "COMSPEC": "%SystemRoot%\\system32\\cmd.exe",
+        "PATH": "%SystemRoot%\\system32",
+        "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+        "WINDIR": "C:\\Windows"
+    },
+    "PROCESS": {
+        "NUMBER_OF_PROCESSORS": 4,
+        "PROCESSOR_ARCHITECTURE": "AMD64",
+        "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+        "PROCESSOR_LEVEL": 6,
+        "PROCESSOR_REVISION": "4e03",
+        "OS": "Windows_NT",
+        "COMSPEC": "%SystemRoot%\\system32\\cmd.exe",
+        "HOMEDRIVE": "C:",
+        "HOMEPATH": "\\Users\\User",
+        "PATH": "%SystemRoot%\\system32",
+        "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+        "PROMPT": "",
+        "SYSTEMDRIVE": "C:",
+        "SYSTEMROOT": "C:\\Windows",
+        "WINDIR": "C:\\Windows",
+        "TEMP": "C:\\Users\\User\\AppData\\Local\\Temp",
+        "TMP": "C:\\Users\\User\\AppData\\Local\\Temp"
+    },
+    "USER": {
+        "PATH": "%SystemRoot%\\system32",
+        "TEMP": "C:\\Users\\User\\AppData\\Local\\Temp",
+        "TMP": "C:\\Users\\User\\AppData\\Local\\Temp"
+    },
+    "VOLATILE": {}
+}
+},{}],19:[function(require,module,exports){
 'use strict';
 
 var WScript = require('./WScript');
 
 window.WScript = new WScript();
 
-},{"./WScript":2}]},{},[14]);
+},{"./WScript":2}]},{},[19]);
