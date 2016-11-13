@@ -84,9 +84,8 @@ describe('WshRemote', function() {
 
 	// Events
 	describe('_eventEnd()', function() {
-        it('should set Status to 2', function() {
-            WshRemote._eventEnd();
-            expect(WshRemote.Status).to.equal(2);
+        it('should return undefined', function() {
+            expect(WshRemote._eventEnd()).to.be.undefined;
         });
 	});
 
@@ -99,9 +98,8 @@ describe('WshRemote', function() {
 	});
 
 	describe('_eventStart()', function() {
-        it('should have Status set to 1', function() {
-            WshRemote._eventStart();
-            expect(WshRemote.Status).to.equal(1);
+        it('should return undefined', function() {
+            expect(WshRemote._eventStart()).to.be.undefined;
         });
 	});
 });

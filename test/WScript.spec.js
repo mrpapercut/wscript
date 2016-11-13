@@ -108,7 +108,39 @@ describe('WScript', function() {
         });
 
         describe('ConnectObject()', function() {
+            it('should throw TypeError if called with wrong arguments', function() {
+                var RemoteScript = 'Hello world';
+                expect(function() {
+                    WScript.ConnectObject(RemoteScript);
+                }).to.throw(TypeError);
+            });
 
+            it('should throw TypeError if strPrefix is not a string', function() {
+                var WshController = WScript.CreateObject('WSHController');
+                var RemoteScript = WshController.CreateScript('test.vbs');
+                expect(function() {
+                    WScript.ConnectObject(RemoteScript);
+                }).to.throw(TypeError);
+
+                expect(function() {
+                    WScript.ConnectObject(RemoteScript, {});
+                }).to.throw(TypeError);
+            });
+
+            it('should attach eventFunctions when connecting to object', function() {
+                global.remote_Start = function() {};
+                global.remote_End = function() {};
+                global.remote_Error = function() {};
+
+                var WshController = WScript.CreateObject('WSHController');
+                var RemoteScript = WshController.CreateScript('test.vbs');
+                WScript.ConnectObject(RemoteScript, 'remote');
+
+
+                expect(RemoteScript._eventStart).to.equal(global.remote_Start);
+                expect(RemoteScript._eventEnd).to.equal(global.remote_End);
+                expect(RemoteScript._eventError).to.equal(global.remote_Error);
+            });
         });
 
         describe('CreateObject()', function() {

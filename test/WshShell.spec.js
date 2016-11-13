@@ -14,6 +14,7 @@ var getNewInstance = function() {
 }
 
 var WshShell;
+var WshEnvironment = require(getFilePath('WshEnvironment'));
 
 describe('WshShell', function() {
     describe('constructor()', function() {
@@ -21,7 +22,6 @@ describe('WshShell', function() {
 
         var properties = {
             CurrentDirectory: 'C:\\Temp',
-            Environment: null,
             _name: 'WshShell'
         };
 
@@ -33,6 +33,49 @@ describe('WshShell', function() {
             for (var i in properties) {
                 expect(WshShell[i]).to.eql(properties[i]);
             }
+        });
+    });
+
+    describe('Environment()', function() {
+        WshShell = getNewInstance();
+        it('should use VOLATILE as default. VOLATILE should contain no keys', function() {
+            var WshEnv = WshShell.Environment();
+            expect(WshEnv.Length).to.equal(0);
+        });
+
+        it('should return length 0 for Length of VOLATILE', function() {
+            var WshEnv = WshShell.Environment('VOLATILE');
+            expect(WshEnv.Length).to.equal(0);
+        });
+
+        it('should be able to fetch environment string directly', function() {
+            var WshSysEnv = WshShell.Environment('SYSTEM');
+            expect(WshSysEnv('WINDIR')).to.equal('C:\\Windows');
+        });
+
+        describe('Item()', function() {
+            WshShell = getNewInstance();
+            it('should fetch an item by key', function() {
+                var WshSysEnv = WshShell.Environment('SYSTEM');
+                expect(WshSysEnv.Item('WINDIR')).to.equal('C:\\Windows');
+            });
+        });
+
+        describe('Count()', function() {
+            WshShell = getNewInstance();
+            it('should count same as length', function() {
+                var WshSysEnv = WshShell.Environment('SYSTEM');
+                expect(WshSysEnv.Count()).to.equal(WshSysEnv.Length);
+            });
+        });
+
+        describe('Remove()', function() {
+            WshShell = getNewInstance();
+            it('should remove a key from variables', function() {
+                var WshSysEnv = WshShell.Environment('SYSTEM');
+                WshSysEnv.Remove('WINDIR');
+                expect(WshSysEnv('WINDIR')).to.be.undefined;
+            });
         });
     });
 

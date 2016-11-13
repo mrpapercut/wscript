@@ -1,0 +1,39 @@
+{
+    "SYSTEM": {
+        "NUMBER_OF_PROCESSORS": 4,
+        "PROCESSOR_ARCHITECTURE": "AMD64",
+        "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+        "PROCESSOR_LEVEL": 6,
+        "PROCESSOR_REVISION": "4e03",
+        "OS": "Windows_NT",
+        "COMSPEC": "%SystemRoot%\\system32\\cmd.exe",
+        "PATH": "%SystemRoot%\\system32",
+        "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+        "WINDIR": "C:\\Windows"
+    },
+    "PROCESS": {
+        "NUMBER_OF_PROCESSORS": 4,
+        "PROCESSOR_ARCHITECTURE": "AMD64",
+        "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+        "PROCESSOR_LEVEL": 6,
+        "PROCESSOR_REVISION": "4e03",
+        "OS": "Windows_NT",
+        "COMSPEC": "%SystemRoot%\\system32\\cmd.exe",
+        "HOMEDRIVE": "C:",
+        "HOMEPATH": "\\Users\\User",
+        "PATH": "%SystemRoot%\\system32",
+        "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+        "PROMPT": "",
+        "SYSTEMDRIVE": "C:",
+        "SYSTEMROOT": "C:\\Windows",
+        "WINDIR": "C:\\Windows",
+        "TEMP": "C:\\Users\\User\\AppData\\Local\\Temp",
+        "TMP": "C:\\Users\\User\\AppData\\Local\\Temp"
+    },
+    "USER": {
+        "PATH": "%SystemRoot%\\system32",
+        "TEMP": "C:\\Users\\User\\AppData\\Local\\Temp",
+        "TMP": "C:\\Users\\User\\AppData\\Local\\Temp"
+    },
+    "VOLATILE": {}
+}

@@ -1,5 +1,5 @@
 var Controller = WScript.CreateObject("WSHController");
-var RemoteScript = Controller.CreateScript("test.js");
+var RemoteScript = Controller.CreateScript("Z:\\obscure\\wscript\\examples\\WshController\\test.vbs");
 WScript.ConnectObject(RemoteScript, "remote_");
 RemoteScript.Execute();
 
