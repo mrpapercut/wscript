@@ -89,11 +89,19 @@ module.exports = TextStream;
 (function (global){
 'use strict';
 
-var WshArguments  = require('./WshArguments');
-var WshController = require('./WshController');
-var WshNetwork    = require('./WshNetwork');
-var WshRemote     = require('./WshRemote');
-var WshShell      = require('./WshShell');
+var WshArguments        = require('./WshArguments');
+var WshController       = require('./WshController');
+var WshNetwork          = require('./WshNetwork');
+var WshRemote           = require('./WshRemote');
+var WshShell            = require('./WshShell');
+
+// Objects
+var ActiveXObject       = require('./objects/ActiveXObject');
+var ADODBStream         = require('./objects/ADODB.Stream');
+var ApplicationObject   = require('./objects/ApplicationObject');
+var MicrosoftXMLDOM     = require('./objects/Microsoft.XMLDOM');
+var MSXML2XMLHTTP       = require('./objects/MSXML2.XMLHTTP');
+var ScriptingFSO        = require('./objects/Scripting.FileSystemObject');
 
 /**
  * WScript.js
@@ -159,25 +167,39 @@ WScript.prototype.ConnectObject = function(objEventSource, strPrefix) {
 WScript.prototype.CreateObject = function(strProgId, strPrefix) {
     var Obj = null;
 
+	if (!strProgId) return undefined;
+
+    strProgId = strProgId.toLowerCase();
+
     switch (strProgId) {
-        case 'WScript.Shell':
+        case 'wscript.shell':               // WScript.Shell
             Obj = new WshShell();
             break;
-        case 'WScript.Network':
+        case 'wscript.network':             // WScript.Network
             Obj = new WshNetwork();
             break;
-		case 'WSHController':
-			Obj = new WshController();
-			break;
-        /*
-        case 'MSXML2.XMLHTTP':
-            Obj = new XMLHttpRequest();
+        case 'wshcontroller':               // WSHController
+            Obj = new WshController();
             break;
-        case 'ADODB.Stream':
+        /*
+        case 'msxml2.xmlhttp.6.0':          // MSXML2.XMLHTTP.6.0
+        case 'msxml2.xmlhttp.3.0':          // MSXML2.XMLHTTP.3.0
+        case 'msxml2.xmlhttp':              // MSXML2.XMLHTTP
+            Obj = new MSXML2XMLHTTP();
+            break;
+        case 'adodb.stream ADODB.Stream':   // ADODB.Stream
             Obj = new ADODBStream();
+            break;
+        case 'microsoft.xmldom':            // Microsoft.XMLDOM
+            Obj = new MicrosoftXMLDOM();
+            break;
+        case 'scripting.filesystemobject':  // Scripting.FileSystemObject
+            Obj = new ScriptingFSO();
             break;
         */
     }
+
+    // if (strProgId.match(/.application$/)) Obj = new ApplicationObject();
 
     if (Obj === null) return undefined;
 
@@ -221,7 +243,7 @@ WScript.prototype.Sleep = function(intTime) {
 module.exports = WScript;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./WshArguments":3,"./WshController":4,"./WshNetwork":7,"./WshRemote":8,"./WshShell":11}],3:[function(require,module,exports){
+},{"./WshArguments":3,"./WshController":4,"./WshNetwork":7,"./WshRemote":8,"./WshShell":11,"./objects/ADODB.Stream":20,"./objects/ActiveXObject":21,"./objects/ApplicationObject":22,"./objects/MSXML2.XMLHTTP":23,"./objects/Microsoft.XMLDOM":24,"./objects/Scripting.FileSystemObject":25}],3:[function(require,module,exports){
 'use strict';
 
 var WshNamed = require('./WshNamed');
@@ -915,4 +937,33 @@ var WScript = require('./WScript');
 
 window.WScript = new WScript();
 
-},{"./WScript":2}]},{},[19]);
+},{"./WScript":2}],20:[function(require,module,exports){
+
+},{}],21:[function(require,module,exports){
+'use strict';
+
+var WScript = require('../WScript');
+
+/**
+ * ActiveXObject.js
+ * This Object spoofs the ActiveXObject Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/6958xykx(v=vs.100).aspx
+ */
+
+var ActiveXObject = function(object) {
+    var wscript = new WScript();
+    return wscript.CreateObject(object);
+}
+
+module.exports = ActiveXObject;
+
+},{"../WScript":2}],22:[function(require,module,exports){
+arguments[4][20][0].apply(exports,arguments)
+},{"dup":20}],23:[function(require,module,exports){
+arguments[4][20][0].apply(exports,arguments)
+},{"dup":20}],24:[function(require,module,exports){
+arguments[4][20][0].apply(exports,arguments)
+},{"dup":20}],25:[function(require,module,exports){
+arguments[4][20][0].apply(exports,arguments)
+},{"dup":20}]},{},[19]);
