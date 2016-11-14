@@ -8,8 +8,8 @@ var getFilePath = function(filename) {
     return path.join(__dirname, '..', 'lib', filename);
 }
 
-var ActiveXObject	= require(getFilePath('objects/ActiveXObject'));
-var WshShell		= require(getFilePath('WshShell'));
+var ActiveXObject   = require(getFilePath('objects/ActiveXObject'));
+var WshShell        = require(getFilePath('WshShell'));
 
 describe('ActiveXObject', function() {
     describe('constructor()', function() {

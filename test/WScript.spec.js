@@ -167,9 +167,9 @@ describe('WScript', function() {
                 expect(WScript.CreateObject('WScript.Network') + '').to.equal('WshNetwork');
             });
 
-			it('should return WshController object', function() {
-				expect(WScript.CreateObject('WSHController') + '').to.equal('WshController');
-			});
+            it('should return WshController object', function() {
+                expect(WScript.CreateObject('WSHController') + '').to.equal('WshController');
+            });
 
             it('should return undefined if no or invalid strProgId is provided', function() {
                 expect(WScript.CreateObject()).to.be.undefined;
