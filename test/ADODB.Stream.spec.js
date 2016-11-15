@@ -20,14 +20,14 @@ describe('ADODBStream', function() {
         ADODBStream = getNewInstance();
 
         var properties = {
-            Charset: 'unicode',
+            charset: 'unicode',
             EOS: false,
-            LineSeparator: -1,
-            Mode: 1,
-            Position: 0,
-            Size: Infinity,
-            State: 0,
-            Type: 2
+            lineSeparator: -1,
+            mode: 1,
+            position: 0,
+            size: Infinity,
+            state: 0,
+            type: 2
         };
 
         it('should have all properties', function() {
@@ -46,14 +46,14 @@ describe('ADODBStream', function() {
             ADODBStream = getNewInstance();
         });
 
-        describe('Cancel()', function() {
+        describe('cancel()', function() {
             it('should return nothing', function() {
-                expect(ADODBStream.Cancel()).to.equal.undefined;
+                expect(ADODBStream.cancel()).to.equal.undefined;
             });
 
             it('should set State to 0', function() {
-                ADODBStream.Cancel();
-                expect(ADODBStream.State).to.be.equal(0);
+                ADODBStream.cancel();
+                expect(ADODBStream.state).to.eql(0);
             });
         });
     });
