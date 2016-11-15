@@ -160,15 +160,23 @@ describe('WScript', function() {
             });
 
             it('should return WshShell object', function() {
-                expect(WScript.CreateObject('WScript.Shell') + '').to.equal('WshShell');
+                var WshShell = require(getFilePath('WshShell'));
+                expect(WScript.CreateObject('WScript.Shell') instanceof WshShell).to.be.true;
             });
 
             it('should return WshNetwork object', function() {
-                expect(WScript.CreateObject('WScript.Network') + '').to.equal('WshNetwork');
+                var WshNetwork = require(getFilePath('WshNetwork'));
+                expect(WScript.CreateObject('WScript.Network') instanceof WshNetwork).to.be.true;
             });
 
             it('should return WshController object', function() {
-                expect(WScript.CreateObject('WSHController') + '').to.equal('WshController');
+                var WshController = require(getFilePath('WshController'));
+                expect(WScript.CreateObject('WSHController') instanceof WshController).to.be.true;
+            });
+
+            it('should return ADODB.Stream object', function() {
+                var ADODBStream = require(getFilePath('objects/ADODB.Stream'));
+                expect(WScript.CreateObject('ADODB.Stream') instanceof ADODBStream).to.be.true;
             });
 
             it('should return undefined if no or invalid strProgId is provided', function() {
