@@ -25,6 +25,13 @@ describe('WshController', function() {
 		});
 	});
 
+    describe('toString()', function() {
+        WshController = getNewInstance();
+        it('should return WshController', function() {
+            expect(WshController + '').to.equal('WshController');
+        });
+    });
+
 	describe('CreateScript()', function() {
 		WshController = getNewInstance();
 
