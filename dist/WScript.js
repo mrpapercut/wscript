@@ -167,7 +167,7 @@ WScript.prototype.ConnectObject = function(objEventSource, strPrefix) {
 WScript.prototype.CreateObject = function(strProgId, strPrefix) {
     var Obj = null;
 
-	if (!strProgId) return undefined;
+    if (!strProgId) return undefined;
 
     strProgId = strProgId.toLowerCase();
 
@@ -938,6 +938,132 @@ var WScript = require('./WScript');
 window.WScript = new WScript();
 
 },{"./WScript":2}],20:[function(require,module,exports){
+'use strict';
+
+/**
+ * ADODB.Stream.js
+ * This Object spoofs the ADODB.Stream Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/ms677486(v=vs.85).aspx
+ */
+
+var ADODBStream = function() {
+    // Default properties
+    // https://msdn.microsoft.com/en-us/library/ms681424(v=vs.85).aspx
+    this.Charset        = 'unicode';
+
+    // https://msdn.microsoft.com/en-us/library/ms676145(v=vs.85).aspx
+    this.EOS            = false;
+
+    // https://msdn.microsoft.com/en-us/library/ms675062(v=vs.85).aspx
+    // -1 = adCRLF
+    // 10 = adLF
+    // 13 = adCR
+    this.LineSeparator  = -1;
+
+    // https://msdn.microsoft.com/en-us/library/ms676693(v=vs.85).aspx
+    // 0 = mode unknown
+    // 1 = read-only
+    // 2 = write-only
+    // 3 = read/write
+    this.Mode           = 1;
+
+    // https://msdn.microsoft.com/en-us/library/ms680965(v=vs.85).aspx
+    this.Position       = 0;
+
+    // https://msdn.microsoft.com/en-us/library/ms677520(v=vs.85).aspx
+    // Because we don't actually use a stream, setting Size to Infinity
+    // means that checks against fixed bytesize always return true
+    // e.g. if (ADODBStream.Size > 65535) { will return true
+    this.Size           = Infinity;
+
+    // https://msdn.microsoft.com/en-us/library/ms675068(v=vs.85).aspx
+    // 0 = closed
+    // 1 = open
+    // 2 = connecting
+    // 4 = object is executing
+    // 8 = object is retrieving
+    this.State          = 0;
+
+    // https://msdn.microsoft.com/en-us/library/ms681553(v=vs.85).aspx
+    // 1 = Indicates binary data
+    // 2 = Indicates text data
+    this.Type           = 2;
+};
+
+// Default methods
+// https://msdn.microsoft.com/en-us/library/ms681014(v=vs.85).aspx
+ADODBStream.prototype.Cancel = function() {
+    this.State = 0;
+    // return nothing
+};
+
+// https://msdn.microsoft.com/en-us/library/ms675814(v=vs.85).aspx
+ADODBStream.prototype.Close = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms677586(v=vs.85).aspx
+ADODBStream.prototype.CopyTo = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms676997(v=vs.85).aspx
+ADODBStream.prototype.Flush = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms677570(v=vs.85).aspx
+ADODBStream.prototype.LoadFromFile = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms680846(v=vs.85).aspx
+ADODBStream.prototype.Open = function() {
+    this.State = 1;
+};
+
+// https://msdn.microsoft.com/en-us/library/ms676702(v=vs.85).aspx
+ADODBStream.prototype.Read = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms678077(v=vs.85).aspx
+ADODBStream.prototype.ReadText = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms676745(v=vs.85).aspx
+ADODBStream.prototype.SaveToFile = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms676560(v=vs.85).aspx
+ADODBStream.prototype.SetEOS = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms675056(v=vs.85).aspx
+ADODBStream.prototype.SkipLine = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms677226(v=vs.85).aspx
+ADODBStream.prototype.Stat = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms675017(v=vs.85).aspx
+ADODBStream.prototype.Write = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms676597(v=vs.85).aspx
+ADODBStream.prototype.WriteText = function() {
+
+};
+
+module.exports = ADODBStream;
 
 },{}],21:[function(require,module,exports){
 'use strict';
@@ -959,11 +1085,119 @@ var ActiveXObject = function(object) {
 module.exports = ActiveXObject;
 
 },{"../WScript":2}],22:[function(require,module,exports){
-arguments[4][20][0].apply(exports,arguments)
-},{"dup":20}],23:[function(require,module,exports){
-arguments[4][20][0].apply(exports,arguments)
-},{"dup":20}],24:[function(require,module,exports){
-arguments[4][20][0].apply(exports,arguments)
-},{"dup":20}],25:[function(require,module,exports){
-arguments[4][20][0].apply(exports,arguments)
-},{"dup":20}]},{},[19]);
+
+},{}],23:[function(require,module,exports){
+'use strict';
+
+/**
+ * MSXML2.XMLHTTP.js
+ * This Object spoofs the MSXML2.XMLHTTP Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/ms760305(v=vs.85).aspx
+ *
+ * Note: Different versions of Windows use different forms of
+ * this object, like MSXML2.XMLHTTP.3.0 or MSXML2.XMLHTTP.6.0.
+ * This object ignores versioning.
+ */
+
+var MSXML2XMLHTTP = function(object) {
+    // Default properties
+
+    // https://msdn.microsoft.com/en-us/library/ms762767(v=vs.85).aspx
+    this.onreadystatechange = null;
+
+    // https://msdn.microsoft.com/en-us/library/ms753800(v=vs.85).aspx
+    this.readyState = null;
+
+    // https://msdn.microsoft.com/en-us/library/ms756095(v=vs.85).aspx
+    this.responseBody = null;
+
+    // https://msdn.microsoft.com/en-us/library/ms763792(v=vs.85).aspx
+    this.responseStream = null;
+
+    // https://msdn.microsoft.com/en-us/library/ms762275(v=vs.85).aspx
+    this.responseText = null;
+
+    // https://msdn.microsoft.com/en-us/library/ms757066(v=vs.85).aspx
+    this.responseXML = null;
+
+    // https://msdn.microsoft.com/en-us/library/ms767625(v=vs.85).aspx
+    this.status = null;
+
+    // https://msdn.microsoft.com/en-us/library/ms759127(v=vs.85).aspx
+    this.statusText = null;
+}
+
+// Default methods
+// https://msdn.microsoft.com/en-us/library/ms760349(v=vs.85).aspx
+MSXML2XMLHTTP.prototype.abort = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms766595(v=vs.85).aspx
+MSXML2XMLHTTP.prototype.getAllResponseHeaders = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms757006(v=vs.85).aspx
+MSXML2XMLHTTP.prototype.getResponseHeader = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms757849(v=vs.85).aspx
+MSXML2XMLHTTP.prototype.open = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms763706(v=vs.85).aspx
+MSXML2XMLHTTP.prototype.send = function() {
+
+};
+
+// https://msdn.microsoft.com/en-us/library/ms766589(v=vs.85).aspx
+MSXML2XMLHTTP.prototype.setRequestHeader = function() {
+
+};
+
+module.exports = MSXML2XMLHTTP;
+
+},{}],24:[function(require,module,exports){
+'use strict';
+
+/**
+ * Microsoft.XMLDOM.js
+ * This Object spoofs the Microsoft.XMLDOM Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/ms677486(v=vs.85).aspx
+ *
+ * Note: this object is out of scope for WScript
+ */
+
+var MicrosoftXMLDOM = function() {
+    // Default properties
+};
+
+// Default methods
+
+module.exports = MicrosoftXMLDOM;
+
+},{}],25:[function(require,module,exports){
+'use strict';
+
+/**
+ * Scripting.FileSystemObject.js
+ * This Object spoofs the Scripting.FileSystemObject Object
+ * Properties and methods taken from Microsoft documentation
+ * https://msdn.microsoft.com/en-us/library/hww8txat(v=vs.84).aspx
+ */
+
+var ScriptingFSO = function() {
+    // Default properties
+
+};
+
+// Default methods
+
+module.exports = ScriptingFSO;
+
+},{}]},{},[19]);
