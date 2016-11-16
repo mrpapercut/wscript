@@ -139,7 +139,19 @@ describe('ADODBStream', function() {
 		});
 
 		describe('loadFromFile()', function() {
+			it('should throw Error if Stream is not open', function() {
+				expect(function() {
+					ADODBStream.loadFromFile('test.js');
+				}).to.throw(Error);
+			});
 
+			it('should throw Error if file cannot be opened', function() {
+				ADODBStream = getNewInstance();
+				ADODBStream.open();
+				expect(function() {
+					ADODBStream.loadFromFile('test.js');
+				}).to.throw(Error);
+			});
 		});
 
 		describe('open()', function() {
