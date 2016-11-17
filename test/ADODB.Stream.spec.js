@@ -187,7 +187,22 @@ describe('ADODBStream', function() {
 		});
 
 		describe('read()', function() {
+			it('should throw Error when called on TextStream', function() {
+				ADODBStream.open();
+				ADODBStream.type = 2;
+				expect(function() {
+					ADODBStream.read();
+				}).to.throw(TypeError);
+			});
 
+			/*
+			it('should return full string when called on ByteStream', function() {
+				ADODBStream = getNewInstance();
+				ADODBStream.open();
+				ADODBStream.type = 1;
+				expect(ADODBStream.read()).to.equal('');
+			});
+			*/
 		});
 
 		describe('readText()', function() {
