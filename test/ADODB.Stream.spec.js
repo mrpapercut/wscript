@@ -28,7 +28,7 @@ describe('ADODBStream', function() {
             size: Infinity,
             state: 0,
             type: 2,
-			_data: null
+			_data: ''
         };
 
         it('should have all properties', function() {
@@ -41,6 +41,25 @@ describe('ADODBStream', function() {
             }
         });
     });
+
+	describe('getters', function() {
+		describe('_getLineSeparator()', function() {
+			ADODBStream = getNewInstance();
+			it('should return \r\n', function() {
+				expect(ADODBStream._getLineSeparator()).to.equal('\r\n');
+			});
+
+			it('should return \n', function() {
+				ADODBStream.lineSeparator = 10;
+				expect(ADODBStream._getLineSeparator()).to.equal('\n');
+			});
+
+			it('should return \r', function() {
+				ADODBStream.lineSeparator = 13;
+				expect(ADODBStream._getLineSeparator()).to.equal('\r');
+			});
+		});
+	});
 
     describe('default methods', function() {
         beforeEach(function() {
@@ -202,11 +221,51 @@ describe('ADODBStream', function() {
 				ADODBStream.type = 1;
 				expect(ADODBStream.read()).to.equal('');
 			});
+
+			it('should return n bytes from _data', function() {
+				ADODBStream = getNewInstance();
+
+				expect(ADODBStream.read(4)).to.equal('Hell');
+				expect(ADODBStream.read(-1)).to.equal('Hello world');
+
+				expect(function() {
+					ADODBStream.read(true);
+				}).to.throw(TypeError);
+			});
 			*/
 		});
 
 		describe('readText()', function() {
+			it('should throw Error when called on ByteStream', function() {
+				ADODBStream.open();
+				ADODBStream.type = 1;
+				expect(function() {
+					ADODBStream.readText();
+				}).to.throw(TypeError);
+			});
 
+			it('should read written text', function() {
+				ADODBStream = getNewInstance();
+				ADODBStream.open();
+				ADODBStream.type = 2;
+				ADODBStream.writeText('Hello world');
+
+				expect(ADODBStream.readText()).to.equal('Hello world');
+			});
+
+			it('should return n characters from _data', function() {
+				ADODBStream = getNewInstance();
+				ADODBStream.open();
+				ADODBStream.type = 2;
+				ADODBStream.writeText('Hello world');
+
+				expect(ADODBStream.readText(4)).to.equal('Hell');
+				expect(ADODBStream.readText(-1)).to.equal('Hello world');
+
+				expect(function() {
+					ADODBStream.readText(true);
+				}).to.throw(TypeError);
+			});
 		});
 
 		describe('saveToFile()', function() {
@@ -226,11 +285,41 @@ describe('ADODBStream', function() {
 		});
 
 		describe('write()', function() {
+			it('should throw Error when called on TextStream', function() {
+				ADODBStream.open();
+				ADODBStream.type = 2;
+				expect(function() {
+					ADODBStream.write();
+				}).to.throw(TypeError);
+			});
 
 		});
 
 		describe('writeText()', function() {
+			it('should throw Error when called on ByteStream', function() {
+				ADODBStream.open();
+				ADODBStream.type = 1;
+				expect(function() {
+					ADODBStream.writeText();
+				}).to.throw(TypeError);
+			});
 
+			it('should write text to _data', function() {
+				ADODBStream = getNewInstance();
+				ADODBStream.open();
+				ADODBStream.type = 2;
+				ADODBStream.writeText('Hello world');
+				expect(ADODBStream._data).to.equal('Hello world');
+			});
+
+			it('should add newline to end of string', function() {
+				ADODBStream = getNewInstance();
+				ADODBStream.open();
+				ADODBStream.type = 2;
+				ADODBStream.lineSeparator = 10;
+				ADODBStream.writeText('Hello world', 1);
+				expect(ADODBStream._data).to.equal('Hello world\n');
+			});
 		});
     });
 });
