@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<title>ADODB.Stream example: Write/Read/Skipline</title>
+<style>
+fieldset {
+  border: 1px solid #ccc;
+  clear: both;
+  float: left;
+  margin-bottom: .5em;
+}
+#outdata {
+  width: 400px;
+  height: 200px;
+  clear: both;
+  float: left;
+  background: #e5e5e5;
+  border: 1px solid #ccc;
+}
+label {
+  clear: both;
+  float: left;
+  min-width: 140px;
+}
+
+input[type=text] {
+  float: right;
+  width: 250px;
+}
+</style>
+</head>
+<body>
+<form id="examples">
+	<fieldset>
+		<label for="outdata">Current data:</label><div id="outdata"></div>
+		<label for="pos">Position:</label><input type="text" id="pos" name="pos">
+		<label for="res">Response:</label><input type="text" id="res" name="res">
+	</fieldset>
+	<fieldset>
+		<label for="linesep">Line separator:</label>
+		<label for="crlf"><input type="radio" name="linesep" id="crlf" value="\r\n" checked>\r\n</label>
+		<label for="cr"><input type="radio" name="linesep" id="cr" value="\r">\r</label>
+		<label for="lf"><input type="radio" name="linesep" id="lf" value="\n">\n</label>
+	</fieldset>
+	<fieldset>
+		<label for="write">Write:</label><input type="text" id="write" name="write">
+		<label for="newline">Include newline:</label><input type="checkbox" id="newline" name="newline">
+	</fieldset>
+	<fieldset>
+		<label for="readall"><input type="radio" name="readval" id="readall" value="-1" checked>Read all</label>
+		<label for="readline"><input type="radio" name="readval" id="readline" value="-2">Read line</label>
+		<label for="readnum"><input type="radio" name="readval" id="readnum"><input type="text" name="readnum" id="readnum">Read #</label>
+	</fieldset>
+	<fieldset>
+		<button id="writetext">WriteText()</button>
+		<button id="readtext">ReadText()</button>
+		<button id="skipline">SkipLine()</button>
+	</fieldset>
+</form>
+
+<script>
+var form = document.forms.examples;
+
+var [intext, innewline,	outpos, outres, outdata, btnwrite, btnread, btnskip] =
+	['write', 'newline', 'pos', 'res', 'outdata', 'writetext', 'readtext', 'skipline'].map(function(el) {
+		return document.getElementById(el)
+	});
+
+var pos = 0;
+var _data = '';
+
+var getFD = function() {
+	return new FormData(form);
+}
+
+var getLineSep = function() {
+	return [...document.querySelectorAll('[name=linesep]')].filter(e => e.checked)[0].value || '\u000d\u000a';
+}
+
+var update = function() {
+	outpos.value = pos.toString();
+	outdata.innerText = _data;
+}
+
+form.addEventListener('submit', function(e) {
+	e.preventDefault();
+});
+
+btnwrite.addEventListener('click', function() {
+	_data += intext.value + (innewline.checked ? getLineSep() : '');
+	pos += intext.value.length;
+	intext.value = '';
+
+	update();
+});
+
+update();
+</script>
+</body>
+</html>

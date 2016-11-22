@@ -258,6 +258,7 @@ describe('ADODBStream', function() {
                 ADODBStream.open();
                 ADODBStream.type = 2;
                 ADODBStream.writeText('Hello world');
+				ADODBStream.position = 0;
 
                 expect(ADODBStream.readText(4)).to.equal('Hell');
                 expect(ADODBStream.readText(-1)).to.equal('Hello world');
@@ -283,11 +284,25 @@ describe('ADODBStream', function() {
         });
 
         describe('skipLine()', function() {
-
+			it('should read text, skip to next line, read text', function() {
+				ADODBStream.open();
+				ADODBStream.writeText('Foo', 1);
+				ADODBStream.writeText('Bar', 1);
+				ADODBStream.writeText('Qud', 1);
+				ADODBStream.position = 0;
+				console.log(ADODBStream.position);
+				expect(ADODBStream.readText(3)).to.equal('Foo');
+				console.log(ADODBStream.position);
+				ADODBStream.skipLine();
+				console.log(ADODBStream.position);
+				expect(ADODBStream.readText(3)).to.equal('Qud');
+			});
         });
 
         describe('stat()', function() {
-
+			it('should not do anything', function() {
+				expect(ADODBStream.stat()).to.be.undefined;
+			});
         });
 
         describe('write()', function() {

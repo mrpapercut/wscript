@@ -1,3 +1,6 @@
 # Folders
 node_modules
 coverage
+
+# Files
+npm-debug.log
