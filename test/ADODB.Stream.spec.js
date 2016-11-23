@@ -28,7 +28,7 @@ describe('ADODBStream', function() {
             size: Infinity,
             state: 0,
             type: 2,
-            _data: ''
+            _data: {}
         };
 
         it('should have all properties', function() {
@@ -258,7 +258,7 @@ describe('ADODBStream', function() {
                 ADODBStream.open();
                 ADODBStream.type = 2;
                 ADODBStream.writeText('Hello world');
-				ADODBStream.position = 0;
+                ADODBStream.position = 0;
 
                 expect(ADODBStream.readText(4)).to.equal('Hell');
                 expect(ADODBStream.readText(-1)).to.equal('Hello world');
@@ -277,32 +277,31 @@ describe('ADODBStream', function() {
             it('should truncate all characters after this.position', function() {
                 ADODBStream.open();
                 ADODBStream.writeText('Hello world');
-                ADODBStream.position = ADODBStream.position - 6;
+                ADODBStream.position = ADODBStream.position - 12;
                 ADODBStream.setEOS();
                 expect(ADODBStream.readText()).to.equal('Hello');
             });
         });
 
+        /*
         describe('skipLine()', function() {
-			it('should read text, skip to next line, read text', function() {
-				ADODBStream.open();
-				ADODBStream.writeText('Foo', 1);
-				ADODBStream.writeText('Bar', 1);
-				ADODBStream.writeText('Qud', 1);
-				ADODBStream.position = 0;
-				console.log(ADODBStream.position);
-				expect(ADODBStream.readText(3)).to.equal('Foo');
-				console.log(ADODBStream.position);
-				ADODBStream.skipLine();
-				console.log(ADODBStream.position);
-				expect(ADODBStream.readText(3)).to.equal('Qud');
-			});
+            it('should read text, skip to next line, read text', function() {
+                ADODBStream.open();
+                ADODBStream.writeText('Foo', 1);
+                ADODBStream.writeText('Bar', 1);
+                ADODBStream.writeText('Qud', 1);
+                ADODBStream.position = 0;
+                expect(ADODBStream.readText(-2)).to.equal('Foo\r\n');
+                ADODBStream.skipLine();
+                expect(ADODBStream.readText(-2)).to.equal('Qud\r\n');
+            });
         });
+        */
 
         describe('stat()', function() {
-			it('should not do anything', function() {
-				expect(ADODBStream.stat()).to.be.undefined;
-			});
+            it('should not do anything', function() {
+                expect(ADODBStream.stat()).to.be.undefined;
+            });
         });
 
         describe('write()', function() {
@@ -325,12 +324,22 @@ describe('ADODBStream', function() {
                 }).to.throw(TypeError);
             });
 
+            it('should throw Error when second argument is set but not === 1', function() {
+                ADODBStream = getNewInstance();
+                ADODBStream.open();
+                ADODBStream.type = 2;
+                expect(function() {
+                    ADODBStream.writeText('Hello world', true);
+                }).to.throw(TypeError);
+            });
+
             it('should write text to _data', function() {
                 ADODBStream = getNewInstance();
                 ADODBStream.open();
                 ADODBStream.type = 2;
                 ADODBStream.writeText('Hello world');
-                expect(ADODBStream._data).to.equal('Hello world');
+                ADODBStream.position = 0;
+                expect(ADODBStream.readText()).to.equal('Hello world');
             });
 
             it('should add newline to end of string', function() {
@@ -339,7 +348,16 @@ describe('ADODBStream', function() {
                 ADODBStream.type = 2;
                 ADODBStream.lineSeparator = 10;
                 ADODBStream.writeText('Hello world', 1);
-                expect(ADODBStream._data).to.equal('Hello world\n');
+                ADODBStream.position = 0;
+                expect(ADODBStream.readText()).to.equal('Hello world\n');
+            });
+
+            it('should set position to strlen', function() {
+                ADODBStream = getNewInstance();
+                ADODBStream.open();
+                ADODBStream.type = 2;
+                ADODBStream.writeText('Hello world');
+                expect(ADODBStream.position).to.equal(24);
             });
         });
     });

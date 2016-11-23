@@ -38,7 +38,7 @@ input[type=text] {
 	</fieldset>
 	<fieldset>
 		<label for="linesep">Line separator:</label>
-		<label for="crlf"><input type="radio" name="linesep" id="crlf" value="\r\n" checked>\r\n</label>
+		<label for="crlf"><input type="radio" name="linesep" id="crlf" value="\r\n">\r\n</label>
 		<label for="cr"><input type="radio" name="linesep" id="cr" value="\r">\r</label>
 		<label for="lf"><input type="radio" name="linesep" id="lf" value="\n">\n</label>
 	</fieldset>
@@ -59,6 +59,34 @@ input[type=text] {
 </form>
 
 <script>
+// Helpers
+var stringToBuffer = function(string) {
+	var buffer = new ArrayBuffer(string.length * 2),
+		bufferView = new Uint16Array(buffer);
+
+	for (var i = 0; i < string.length; i++) {
+		bufferView[i] = string.charCodeAt(i);
+	}
+
+	return buffer;
+};
+
+var bufferToString = function(buffer) {
+	var bufferView = new Uint16Array(buffer);
+	var chars = [];
+
+	bufferView.forEach(function(c) {
+		chars.push(String.fromCharCode(c));
+	});
+
+	return chars.join('');
+};
+
+var getBufferSize = function(buffer) {
+	return buffer.byteLength || 0;
+};
+/* */
+
 var form = document.forms.examples;
 
 var [intext, innewline,	outpos, outres, outdata, btnwrite, btnread, btnskip] =
@@ -67,19 +95,24 @@ var [intext, innewline,	outpos, outres, outdata, btnwrite, btnread, btnskip] =
 	});
 
 var pos = 0;
-var _data = '';
+var _data = stringToBuffer('\ufeff');
 
 var getFD = function() {
 	return new FormData(form);
 }
 
 var getLineSep = function() {
-	return [...document.querySelectorAll('[name=linesep]')].filter(e => e.checked)[0].value || '\u000d\u000a';
+	var linesep = [...document.querySelectorAll('[name=linesep]')].filter(function(e) {
+		return !!e.checked
+	})[0];
+
+	return linesep ? linesep.value : '\r\n';
 }
 
 var update = function() {
 	outpos.value = pos.toString();
-	outdata.innerText = _data;
+	outdata.innerText = bufferToString(_data);
+	console.log(_data, bufferToString(_data).length);
 }
 
 form.addEventListener('submit', function(e) {
@@ -87,8 +120,9 @@ form.addEventListener('submit', function(e) {
 });
 
 btnwrite.addEventListener('click', function() {
-	_data += intext.value + (innewline.checked ? getLineSep() : '');
-	pos += intext.value.length;
+	console.log(bufferToString(_data).split('').map(c => c.charCodeAt(0)));
+	_data = stringToBuffer(bufferToString(_data) + intext.value + (innewline.checked ? getLineSep() : ''));
+	pos = getBufferSize(_data); // 2 bytes per character
 	intext.value = '';
 
 	update();
