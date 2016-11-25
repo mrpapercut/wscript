@@ -10,63 +10,163 @@ var getFilePath = function(filename) {
 
 var getNewInstance = function(strProgId) {
     var instance = require(getFilePath('objects/MSXML2.XMLHTTP'));
-    return new instance();
+    return new instance(strProgId);
 }
 
 var MSXML2XMLHTTP;
 
 describe('MSXML2XMLHTTP', function() {
     describe('constructor()', function() {
-        MSXML2XMLHTTP = getNewInstance();
-
-        var properties = {
-            // https://msdn.microsoft.com/en-us/library/ms762767(v=vs.85).aspx
-            //onreadystatechange: null,
-            // https://msdn.microsoft.com/en-us/library/ms753800(v=vs.85).aspx
-            readyState: 0,
-            // https://msdn.microsoft.com/en-us/library/ms756095(v=vs.85).aspx
-            responseBody: null,
-            // https://msdn.microsoft.com/en-us/library/ms763792(v=vs.85).aspx
-            responseStream: null,
-            // https://msdn.microsoft.com/en-us/library/ms762275(v=vs.85).aspx
-            responseText: null,
-            // https://msdn.microsoft.com/en-us/library/ms757066(v=vs.85).aspx
-            responseXML: null,
-            // https://msdn.microsoft.com/en-us/library/ms767625(v=vs.85).aspx
-            status: null,
-            // https://msdn.microsoft.com/en-us/library/ms759127(v=vs.85).aspx
-            statusText: null
-        };
-
-        it('should have default properties', function() {
-            expect(MSXML2XMLHTTP).to.have.any.keys(Object.keys(properties));
+        beforeEach(function() {
+            MSXML2XMLHTTP = getNewInstance();
         });
 
-        it('should have all default values', function() {
-            for (var i in properties) {
-                expect(MSXML2XMLHTTP[i]).to.eql(properties[i]);
-            }
+        describe('onreadystatechange', function() {
+            it('should throw error when calling onreadystatechange() directly', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.onreadystatechange();
+                }).to.throw(Error);
+            });
+
+            it('should throw error if setting onreadystatechange with invalid type', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.onreadystatechange = true;
+                }).to.throw(Error);
+            });
+
+            it('should succesfully set and run function on onreadystatechange', function() {
+                expect(MSXML2XMLHTTP._fireOnReadyStateChange(0)).to.be.undefined;
+                MSXML2XMLHTTP.onreadystatechange = function() {
+                    return 'Hello';
+                };
+                expect(MSXML2XMLHTTP._fireOnReadyStateChange(0)).to.equal('Hello');
+            });
         });
 
-        it('should throw error when calling onreadystatechange() directly', function() {
-            expect(function() {
-                MSXML2XMLHTTP.onreadystatechange();
-            }).to.throw(Error);
+        describe('readyState', function() {
+            it('should throw error when setting readyState and not change the value', function() {
+                expect(MSXML2XMLHTTP.readyState).to.eql(0);
+                expect(function() {
+                    MSXML2XMLHTTP.readyState = 4;
+                }).to.throw(Error);
+                expect(MSXML2XMLHTTP.readyState).to.eql(0);
+            });
         });
 
-        it('should set onreadystatechange() without error', function() {
-            MSXML2XMLHTTP.onreadystatechange = function() {
-                return 'Hello';
-            };
-            expect(MSXML2XMLHTTP._fireOnReadyStateChange(0)).to.equal('Hello');
+        describe('responseBody', function() {
+            it('should throw error when setting responseBody', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.responseBody = 'responseBody';
+                }).to.throw(Error);
+            });
+
+            it('should throw error when readyState is not 4', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.responseBody
+                }).to.throw(Error);
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.responseBody).to.be.null;
+            });
         });
 
-        it('should throw error when setting readyState and not change the value', function() {
-            expect(MSXML2XMLHTTP.readyState).to.eql(0);
-            expect(function() {
-                MSXML2XMLHTTP.readyState = 4;
-            }).to.throw(Error);
-            expect(MSXML2XMLHTTP.readyState).to.eql(0);
+        describe('responseStream', function() {
+            it('should throw error when setting responseStream', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.responseStream = 'responseStream';
+                }).to.throw(Error);
+            });
+
+            it('should throw error when readyState is not 4', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.responseStream
+                }).to.throw(Error);
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.responseStream).to.be.null;
+            });
+        });
+
+        describe('responseText', function() {
+            it('should throw error when setting responseText', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.responseText = 'responseText';
+                }).to.throw(Error);
+            });
+
+            it('should throw error when readyState is not 4', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.responseText
+                }).to.throw(Error);
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.responseText).to.be.null;
+            });
+        });
+
+        describe('responseXML', function() {
+            it('should throw error when setting responseXML', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.responseXML = 'responseXML';
+                }).to.throw(Error);
+            });
+
+            it('should throw error when readyState is not 4', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.responseXML
+                }).to.throw(Error);
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.responseXML).to.be.null;
+            });
+        });
+
+        describe('status', function() {
+            it('should throw error when setting status', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.status = 200;
+                }).to.throw(Error);
+            });
+
+            it('should return nothing if version is less than 3.0', function() {
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.status).to.be.undefined;
+            });
+
+            it('should throw error if readyState is less than 4 and version is greater than 0', function() {
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                expect(function() {
+                    MSXML2XMLHTTP.status
+                }).to.throw(Error);
+            });
+
+            it('should return status', function() {
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.status).to.equal(200);
+            });
+        });
+
+        describe('statusText', function() {
+            it('should throw error when setting statusText', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.statusText = 'OK';
+                }).to.throw(Error);
+            });
+
+            it('should return nothing if version is less than 3.0', function() {
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.statusText).to.be.undefined;
+            });
+
+            it('should throw error if readyState is less than 4 and version is greater than 0', function() {
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                expect(function() {
+                    MSXML2XMLHTTP.statusText
+                }).to.throw(Error);
+            });
+
+            it('should return statusText', function() {
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.statusText).to.equal('OK');
+            });
         });
     });
 
