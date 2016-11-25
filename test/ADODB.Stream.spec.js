@@ -221,13 +221,13 @@ describe('ADODBStream', function() {
                 }).to.throw(TypeError);
             });
 
-			it('should not throw Error when called on ByteStream', function() {
-				ADODBStream = getNewInstance();
-				ADODBStream.type = 1;
-				expect(function() {
-					ADODBStream.read();
-				}).to.not.throw(TypeError);
-			});
+            it('should not throw Error when called on ByteStream', function() {
+                ADODBStream = getNewInstance();
+                ADODBStream.type = 1;
+                expect(function() {
+                    ADODBStream.read();
+                }).to.not.throw(TypeError);
+            });
         });
 
         describe('readText()', function() {
@@ -276,25 +276,25 @@ describe('ADODBStream', function() {
         });
 
         describe('saveToFile()', function() {
-			it('should throw error when arguments are invalid', function() {
-				ADODBStream.open();
-				expect(function() {
-					ADODBStream.saveToFile('filename', true);
-				}).to.throw(TypeError);
-			});
+            it('should throw error when arguments are invalid', function() {
+                ADODBStream.open();
+                expect(function() {
+                    ADODBStream.saveToFile('filename', true);
+                }).to.throw(TypeError);
+            });
 
-			it('should set position to 0 after saveToFile()', function() {
-				ADODBStream = getNewInstance();
-				ADODBStream.open();
-				ADODBStream.writeText('Hello world');
-				expect(ADODBStream.position).to.equal(24);
-				ADODBStream.saveToFile('filename', 1);
-				expect(ADODBStream.position).to.equal(0);
-				ADODBStream.writeText('Hello');
-				expect(ADODBStream.position).to.equal(12);
-				ADODBStream.saveToFile('filename', 2);
-				expect(ADODBStream.position).to.equal(0);
-			});
+            it('should set position to 0 after saveToFile()', function() {
+                ADODBStream = getNewInstance();
+                ADODBStream.open();
+                ADODBStream.writeText('Hello world');
+                expect(ADODBStream.position).to.equal(24);
+                ADODBStream.saveToFile('filename', 1);
+                expect(ADODBStream.position).to.equal(0);
+                ADODBStream.writeText('Hello');
+                expect(ADODBStream.position).to.equal(12);
+                ADODBStream.saveToFile('filename', 2);
+                expect(ADODBStream.position).to.equal(0);
+            });
         });
 
         describe('setEOS()', function() {
@@ -303,7 +303,7 @@ describe('ADODBStream', function() {
                 ADODBStream.writeText('Hello world');
                 ADODBStream.position -= 14;
                 ADODBStream.setEOS();
-				ADODBStream.position = 0;
+                ADODBStream.position = 0;
                 expect(ADODBStream.readText()).to.equal('Hello');
             });
         });
@@ -336,13 +336,13 @@ describe('ADODBStream', function() {
                 }).to.throw(TypeError);
             });
 
-			it('should not throw Error when called on ByteStream', function() {
-				ADODBStream = getNewInstance();
-				ADODBStream.type = 1;
-				expect(function() {
-					ADODBStream.write();
-				}).to.not.throw(TypeError);
-			});
+            it('should not throw Error when called on ByteStream', function() {
+                ADODBStream = getNewInstance();
+                ADODBStream.type = 1;
+                expect(function() {
+                    ADODBStream.write();
+                }).to.not.throw(TypeError);
+            });
         });
 
         describe('writeText()', function() {
