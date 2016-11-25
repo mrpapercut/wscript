@@ -156,14 +156,14 @@ describe('MSXML2XMLHTTP', function() {
             });
 
             it('should throw error if readyState is less than 4 and version is greater than 0', function() {
-                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.6.0');
                 expect(function() {
                     MSXML2XMLHTTP.statusText
                 }).to.throw(Error);
             });
 
             it('should return statusText', function() {
-                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.6.0');
                 MSXML2XMLHTTP._fireOnReadyStateChange(4);
                 expect(MSXML2XMLHTTP.statusText).to.equal('OK');
             });
@@ -176,19 +176,65 @@ describe('MSXML2XMLHTTP', function() {
         });
 
         describe('abort()', function() {
-
+            it('should reset readyState to 0 after abort()', function() {
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP._readyState).to.equal(4);
+                MSXML2XMLHTTP.abort();
+                expect(MSXML2XMLHTTP._readyState).to.equal(0);
+            });
         });
 
         describe('getAllReponseHeaders()', function() {
+            it('should return undefined with version less than 3', function() {
+                expect(MSXML2XMLHTTP.getAllResponseHeaders()).to.be.undefined;
+            });
 
+            it('should throw error when readyState is not 4', function() {
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                expect(function() {
+                    MSXML2XMLHTTP.getAllResponseHeaders();
+                }).to.throw(Error);
+            });
+
+            it('should return headers when readyState is 4', function() {
+                var responseHeaders = 'HTTP/1.1 200 OK\r\nDate: Mon, 27 Jul 2009 12:28:53 GMT\r\nServer: Apache/2.2.14 (Win32)\r\nLast-Modified: Wed, 22 Jul 2009 19:15:56 GMT\r\nContent-Length: 88\r\nContent-Type: text/html\r\nConnection: Closed';
+
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.getAllResponseHeaders()).to.equal(responseHeaders);
+            });
         });
 
         describe('getResponseHeader()', function() {
+            it('should return undefined with version less than 3', function() {
+                expect(MSXML2XMLHTTP.getResponseHeader()).to.be.undefined;
+            });
 
+            it('should throw error when readyState is not 4', function() {
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                expect(function() {
+                    MSXML2XMLHTTP.getResponseHeader();
+                }).to.throw(Error);
+            });
+
+            it('should return a header when readyState is 4', function() {
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.getResponseHeader('Content-Type')).to.equal('text/html');
+            });
+
+            it('should return empty string if header is not available', function() {
+                MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
+                MSXML2XMLHTTP._fireOnReadyStateChange(4);
+                expect(MSXML2XMLHTTP.getResponseHeader('X-FAKE-HEADER')).to.equal('');
+            });
         });
 
         describe('open()', function() {
-
+            it('should set readyState to 1', function() {
+                MSXML2XMLHTTP.open();
+                expect(MSXML2XMLHTTP._readyState).to.equal(1);
+            });
         });
 
         describe('send()', function() {
