@@ -179,6 +179,13 @@ describe('WScript', function() {
                 expect(WScript.CreateObject('ADODB.Stream') instanceof ADODBStream).to.be.true;
             });
 
+            it('should return MSXML2.XMLHTTP object', function() {
+                var MSXML2XMLHTTP = require(getFilePath('objects/MSXML2.XMLHTTP'));
+                expect(WScript.CreateObject('MSXML2.XMLHTTP') instanceof MSXML2XMLHTTP).to.be.true;
+                expect(WScript.CreateObject('MSXML2.XMLHTTP.3.0') instanceof MSXML2XMLHTTP).to.be.true;
+                expect(WScript.CreateObject('MSXML2.XMLHTTP.6.0') instanceof MSXML2XMLHTTP).to.be.true;
+            });
+
             it('should return undefined if no or invalid strProgId is provided', function() {
                 expect(WScript.CreateObject()).to.be.undefined;
                 expect(WScript.CreateObject('Invalid.strProgId')).to.be.undefined;
