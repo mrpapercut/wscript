@@ -1,19 +1,13 @@
 var ADODBStream = WScript.CreateObject('ADODB.Stream');
+
 ADODBStream.open();
-WScript.Echo('size: ' + ADODBStream.size, '\nposition: ' + ADODBStream.position);
 ADODBStream.writeText('Foo', 1);
-WScript.Echo('size: ' + ADODBStream.size, '\nposition: ' + ADODBStream.position);
 ADODBStream.writeText('Bar', 1);
-WScript.Echo('size: ' + ADODBStream.size, '\nposition: ' + ADODBStream.position);
 ADODBStream.writeText('Qud', 1);
-WScript.Echo('size: ' + ADODBStream.size, '\nposition: ' + ADODBStream.position);
 ADODBStream.position = 0;
-WScript.Echo('size: ' + ADODBStream.size, '\nposition: ' + ADODBStream.position);
 WScript.Echo(ADODBStream.readText(-2));
-WScript.Echo('size: ' + ADODBStream.size, '\nposition: ' + ADODBStream.position);
+WScript.Echo(ADODBStream.position);
 ADODBStream.skipLine();
-WScript.Echo('size: ' + ADODBStream.size, '\nposition: ' + ADODBStream.position);
+WScript.Echo(ADODBStream.position);
 WScript.Echo(ADODBStream.readText(-2));
-WScript.Echo('size: ' + ADODBStream.size, '\nposition: ' + ADODBStream.position);
-ADODBStream.position = 0;
-ADODBStream.saveToFile('examples/ADODB.Stream/log.txt');
+WScript.Echo(ADODBStream.position);
