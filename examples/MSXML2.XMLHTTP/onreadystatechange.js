@@ -1,5 +1,5 @@
 var stream = WScript.CreateObject('MSXML2.XMLHTTP');
-stream.open('GET', 'http://x0f.re/loggetrequests', false);
+stream.open('GET', 'http://x0f.re', false);
 
 // 0 UNINTIALIZED
 // 1 LOADING
@@ -44,10 +44,11 @@ stream.onreadystatechange = function() {
     }
 
     if (stream.readyState === 4) {
+        var res = [];
         for (var i in states) {
-            WScript.Echo([states[i].readyState, states[i].time + 'ms'].join('\r\n'));
+            res.push([states[i].readyState, states[i].time + 'ms'].join('\r\n'));
         }
-        WScript.Echo('Total time: ' + (ts - ots) + 'ms');
+        WScript.Echo(res.join('\r\n') + '\r\nTotal time: ' + (ts - ots) + 'ms');
     }
 }
 
