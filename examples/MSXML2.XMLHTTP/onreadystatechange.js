@@ -1,5 +1,5 @@
 var stream = WScript.CreateObject('MSXML2.XMLHTTP');
-stream.open('GET', 'http://x0f.re', false);
+stream.open('GET', 'http://example.com', false);
 
 // 0 UNINTIALIZED
 // 1 LOADING

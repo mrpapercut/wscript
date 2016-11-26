@@ -305,7 +305,34 @@ describe('MSXML2XMLHTTP', function() {
         });
 
         describe('setRequestHeader()', function() {
+            it('should throw error if called on unopened request (readyState Uninitialized)', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.setRequestHeader('Accept', 'text/plain');
+                }).to.throw(Error);
+            });
 
+            it('should throw error if arguments bstrHeader or bstrValue are undefined', function() {
+                MSXML2XMLHTTP.open('GET', 'http://example.com');
+                expect(function() {
+                    MSXML2XMLHTTP.setRequestHeader();
+                }).to.throw(Error);
+
+                expect(function() {
+                    MSXML2XMLHTTP.setRequestHeader('Accept');
+                }).to.throw(Error);
+
+                expect(function() {
+                    MSXML2XMLHTTP.setRequestHeader(null, 'plain/text');
+                }).to.throw(Error);
+            });
+
+            it('should push requestHeaders to MSXML2XMLHTTP._requestHeaders', function() {
+                MSXML2XMLHTTP = getNewInstance();
+                MSXML2XMLHTTP.open('GET', 'http://example.com');
+                MSXML2XMLHTTP.setRequestHeader('Accept', 'text/plain');
+                expect(MSXML2XMLHTTP._requestHeaders[0][0]).to.equal('Accept');
+                expect(MSXML2XMLHTTP._requestHeaders[0][1]).to.equal('text/plain');
+            });
         });
     });
 });
