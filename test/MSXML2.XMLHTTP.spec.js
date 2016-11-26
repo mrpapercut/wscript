@@ -231,14 +231,77 @@ describe('MSXML2XMLHTTP', function() {
         });
 
         describe('open()', function() {
+            it('should throw error if bstrMethod or bstrUrl arguments are undefined', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.open();
+                }).to.throw(Error);
+
+                expect(function() {
+                    MSXML2XMLHTTP.open('GET');
+                }).to.throw(Error);
+
+                expect(function() {
+                    MSXML2XMLHTTP.open(null, 'http://example.com');
+                }).to.throw(Error);
+            });
+
             it('should set readyState to 1', function() {
-                MSXML2XMLHTTP.open();
+                MSXML2XMLHTTP.open('GET', 'http://example.com');
                 expect(MSXML2XMLHTTP._readyState).to.equal(1);
+            });
+
+            it('should not fire onreadystatechange if called with async = true', function() {
+                MSXML2XMLHTTP = getNewInstance();
+                var changedstate = false;
+                MSXML2XMLHTTP.onreadystatechange = function() {
+                    changedstate = true;
+                };
+                MSXML2XMLHTTP.open('GET', 'http://example.com', true);
+                expect(changedstate).to.be.false;
+            });
+
+            it('should fire onreadystatechange if called with async = false', function() {
+                MSXML2XMLHTTP = getNewInstance();
+                var changedstate = false;
+                MSXML2XMLHTTP.onreadystatechange = function() {
+                    changedstate = true;
+                };
+                MSXML2XMLHTTP.open('GET', 'http://example.com', false);
+                expect(changedstate).to.be.true;
             });
         });
 
         describe('send()', function() {
+            it('should throw error if called on unopened request (readyState Uninitialized)', function() {
+                expect(function() {
+                    MSXML2XMLHTTP.send();
+                }).to.throw(Error);
+            });
 
+            it('should cycle through readyStates 1 - 4', function() {
+                MSXML2XMLHTTP = getNewInstance();
+                var states = {
+                    1: false,
+                    2: false,
+                    3: false,
+                    4: false
+                };
+                MSXML2XMLHTTP.onreadystatechange = function() {
+                    states[MSXML2XMLHTTP.readyState] = true;
+                }
+                MSXML2XMLHTTP.open('GET', 'http://example.com', false);
+                MSXML2XMLHTTP.send();
+                for (var i in states) {
+                    expect(states[i]).to.be.true;
+                }
+            });
+
+            it('should set readyState to 4 immediately if called asynchronously', function() {
+                MSXML2XMLHTTP = getNewInstance();
+                MSXML2XMLHTTP.open('GET', 'http://example.com', true);
+                MSXML2XMLHTTP.send();
+                expect(MSXML2XMLHTTP._readyState).to.equal(4);
+            });
         });
 
         describe('setRequestHeader()', function() {
