@@ -179,6 +179,16 @@ describe('WScript', function() {
                 expect(WScript.CreateObject('ADODB.Stream') instanceof ADODBStream).to.be.true;
             });
 
+            it('should return Microsoft.XMLDOM object', function() {
+                var MSXMLDOM = require(getFilePath('objects/Microsoft.XMLDOM'));
+                expect(WScript.CreateObject('Microsoft.XMLDOM') instanceof MSXMLDOM).to.be.true;
+            });
+
+            it('should return Scripting.FileSystemObject object', function() {
+                var ScriptingFSO = require(getFilePath('objects/Scripting.FileSystemObject'));
+                expect(WScript.CreateObject('Scripting.FileSystemObject') instanceof ScriptingFSO).to.be.true;
+            });
+
             it('should return MSXML2.XMLHTTP object', function() {
                 var MSXML2XMLHTTP = require(getFilePath('objects/MSXML2.XMLHTTP'));
                 expect(WScript.CreateObject('MSXML2.XMLHTTP') instanceof MSXML2XMLHTTP).to.be.true;
