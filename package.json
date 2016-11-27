@@ -1,9 +1,10 @@
 {
-  "name": "wscript",
+  "name": "wscript-emulator",
   "version": "1.0.0",
-  "description": "WScript spoofer",
+  "description": "WScript emulator. Emulates the Windows WScript object to make static analysis of WScript-dependent scripts easier",
   "keywords": [
-    "wscript"
+    "wscript",
+    "emulator"
   ],
   "repository": {
     "type": "git",
@@ -12,7 +13,7 @@
   "main": "./lib/index.js",
   "author": {
     "name": "Mischa Rodermond",
-    "url": "http://www.mrpapercut.com"
+    "url": "https://www.mrpapercut.com"
   },
   "license": "MIT",
   "devDependencies": {
