@@ -296,6 +296,14 @@ describe('MSXML2XMLHTTP', function() {
                 }
             });
 
+            it('should be able to run normal synchronously', function() {
+                MSXML2XMLHTTP = getNewInstance();
+                MSXML2XMLHTTP.open('GET', 'http://example.com', false);
+                expect(function() {
+                    MSXML2XMLHTTP.send();
+                }).to.not.throw(Error);
+            });
+
             it('should set readyState to 4 immediately if called asynchronously', function() {
                 MSXML2XMLHTTP = getNewInstance();
                 MSXML2XMLHTTP.open('GET', 'http://example.com', true);

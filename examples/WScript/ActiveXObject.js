@@ -1,0 +1,1 @@
+var axo = WScript.CreateObject('ActiveXObject');
