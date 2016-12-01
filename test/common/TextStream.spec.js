@@ -13,6 +13,10 @@ var getNewInstance = function() {
     return new instance();
 }
 
+var getResponseText = function() {
+    return require(getFilePath('config/ResponseText'));
+};
+
 var TextStream;
 
 describe('TextStream', function() {
@@ -34,41 +38,55 @@ describe('TextStream', function() {
         });
 
         it('should return a string of 10 characters', function() {
+            TextStream.Write('abcdefghijklmnopqrstuvwxyz');
             expect(TextStream.Read(10)).to.have.lengthOf(10);
         });
 
-        var ResponseText = require(getFilePath('config/ResponseText'));
+        var ResponseText = getResponseText();
         it('should return all text if argument is larger than ResponseText.length', function() {
+            TextStream = getNewInstance();
+            TextStream.Write(ResponseText);
+
             expect(TextStream.Read(ResponseText.length + 10)).to.have.lengthOf(ResponseText.length);
         });
     });
 
     describe('ReadAll()', function() {
-        var ResponseText = require(getFilePath('config/ResponseText'));
+        var ResponseText = getResponseText();
 
         it('should return all text', function() {
+            TextStream.Write(ResponseText);
+
             expect(TextStream.ReadAll()).to.have.lengthOf(ResponseText.length);
         });
     });
 
     describe('ReadLine()', function() {
+        var ResponseText = getResponseText();
+
         it('should return the first line of ResponseText', function() {
+            TextStream.Write(ResponseText);
+
             expect(TextStream.ReadLine()).to.eql('The MIT License (MIT)');
         });
     });
 
     describe('Skip()', function() {
-        var ResponseText = require(getFilePath('config/ResponseText'));
+        var ResponseText = getResponseText();
 
         it('should skip 6 characters and return the rest', function() {
+            TextStream.Write(ResponseText);
+
             expect(TextStream.Skip(6)).to.have.lengthOf(ResponseText.length - 6);
         });
     });
 
     describe('SkipLine()', function() {
-        var ResponseText = require(getFilePath('config/ResponseText'));
+        var ResponseText = getResponseText();
 
         it('should skip first line and return the rest', function() {
+            TextStream.Write(ResponseText);
+
             expect(TextStream.SkipLine(1)).to.eql(ResponseText.replace('The MIT License (MIT)\n', ''));
         });
     });
@@ -76,6 +94,7 @@ describe('TextStream', function() {
     describe('Write()', function() {
         it('should write string to TextStream._contents', function() {
             TextStream.Write('Hello world!');
+
             expect(TextStream._contents).to.eql('Hello world!');
         });
     });
