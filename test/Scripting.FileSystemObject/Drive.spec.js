@@ -15,7 +15,7 @@ var getNewInstance = function() {
 
 var Drive;
 
-describe('ActiveXObject', function() {
+describe('Drive', function() {
     describe('constructor()', function() {
         Drive = getNewInstance();
 
