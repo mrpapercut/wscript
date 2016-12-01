@@ -1,27 +1,3 @@
-/*
-function ShowDriveList()
-{
-   var fso, s, n, e, x;
-   fso = new ActiveXObject("Scripting.FileSystemObject");
-   e = new Enumerator(fso.Drives);
-   s = "";
-   for (; !e.atEnd(); e.moveNext())
-   {
-      x = e.item();
-      s = s + x.DriveLetter;
-      s += " - ";
-      if (x.DriveType == 3)
-         n = x.ShareName;
-      else if (x.IsReady)
-         n = x.VolumeName;
-      else
-         n = "[Drive not ready]";
-      s +=   n + "<br>";
-   }
-   return(s);
-}
-*/
-
 var FSO = function() {
     this.fso = WScript.createObject('Scripting.FileSystemObject');
 };
