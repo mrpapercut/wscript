@@ -27,8 +27,8 @@ describe('Enumerator', function() {
 
     describe('constructor()', function() {
         var properties = {
-            collection: testCollection,
-            index: 0,
+            _collection: testCollection,
+            _index: 0,
             _length: testCollection.length
         };
 
@@ -79,19 +79,19 @@ describe('Enumerator', function() {
     describe('moveFirst()', function() {
         it('should reset the index to 0', function() {
             Enumerator.moveNext();
-            expect(Enumerator.index).to.equal(1);
+            expect(Enumerator._index).to.equal(1);
             Enumerator.moveFirst();
-            expect(Enumerator.index).to.equal(0);
+            expect(Enumerator._index).to.equal(0);
         });
     });
 
     describe('moveNext()', function() {
         it('should increment the index', function() {
-            expect(Enumerator.index).to.equal(0);
+            expect(Enumerator._index).to.equal(0);
             Enumerator.moveNext();
-            expect(Enumerator.index).to.equal(1);
+            expect(Enumerator._index).to.equal(1);
             Enumerator.moveNext();
-            expect(Enumerator.index).to.equal(2);
+            expect(Enumerator._index).to.equal(2);
         });
     });
 });
