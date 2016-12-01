@@ -28,6 +28,6 @@
     "build": "browserify ./lib/index.js -o ./dist/WScript.js",
     "build-min": "browserify ./lib/index.js | uglifyjs -c > ./dist/WScript.min.js",
     "test": "mocha --recursive",
-    "test-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --recursive"
+    "test-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive"
   }
 }
