@@ -5,16 +5,16 @@ var chai = require('chai'),
     expect = chai.expect;
 
 var getFilePath = function(filename) {
-    return path.join(__dirname, '../..', 'lib/objects/scriptingFSO/', filename);
+    return path.join(__dirname, '../..', 'lib/', filename);
 }
 
-var Drive = require(getFilePath('objects/Drive'));
+var Drive = require(getFilePath('objects/scriptingFSO/objects/Drive'));
 
 // Collection of drives
 var testCollection = [new Drive(), new Drive()];
 
 var getNewInstance = function() {
-    var instance = require(getFilePath('collections/Enumerator'));
+    var instance = require(getFilePath('common/Enumerator'));
     return new instance(testCollection);
 }
 
@@ -43,7 +43,7 @@ describe('Enumerator', function() {
         });
 
         it('should throw TypeError if instantiated with wrong type', function() {
-            var instance = require(getFilePath('collections/Enumerator'));
+            var instance = require(getFilePath('common/Enumerator'));
             expect(function() {
                 new instance();
             }).to.throw(TypeError);

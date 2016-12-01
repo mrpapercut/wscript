@@ -5,11 +5,11 @@ var chai = require('chai'),
     expect = chai.expect;
 
 var getFilePath = function(filename) {
-    return path.join(__dirname, '..', 'lib', filename);
+    return path.join(__dirname, '../..', 'lib', filename);
 }
 
 var getNewInstance = function() {
-    var instance = require(getFilePath('TextStream'));
+    var instance = require(getFilePath('common/TextStream'));
     return new instance();
 }
 
