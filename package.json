@@ -25,9 +25,9 @@
     "uglifyjs": "^2.4.10"
   },
   "scripts": {
-    "build": "./node_modules/.bin/browserify ./lib/index.js -o ./dist/WScript.js",
-    "build-min": "./node_modules/.bin/browserify ./lib/index.js | uglifyjs -c > ./dist/WScript.min.js",
-    "test": "./node_modules/.bin/mocha",
-    "test-coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha"
+    "build": "browserify ./lib/index.js -o ./dist/WScript.js",
+    "build-min": "browserify ./lib/index.js | uglifyjs -c > ./dist/WScript.min.js",
+    "test": "mocha --recursive",
+    "test-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --recursive"
   }
 }
