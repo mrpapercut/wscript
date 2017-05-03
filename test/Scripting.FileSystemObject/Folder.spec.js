@@ -19,14 +19,17 @@ describe('Folder', function() {
     describe('constructor("C:\\")', function() {
         var RootFolder = getNewInstance('C:\\');
 
+        var Files = require(getFilePath('objects/scriptingFSO/collections/Files'));
+        var Folders = require(getFilePath('objects/scriptingFSO/collections/Folders'));
+
 		var rootFolderProperties = {
 			Attributes: 22,
 			Drive: 'C:',
-			Files: {},
+			Files: new Files(),
 			IsRootFolder: true,
 			Path: 'C:\\',
 			ShortPath: 'C:\\',
-			SubFolders: {},
+			SubFolders: new Folders(),
 			Type: 'Local Disk'
 		};
 
@@ -36,36 +39,51 @@ describe('Folder', function() {
 
         it('should have all default values', function() {
             for (var i in rootFolderProperties) {
-                expect(RootFolder[i]).to.eql(rootFolderProperties[i]);
+                if (i === 'Files') {
+                    expect(RootFolder[i] instanceof Files).to.be.true;
+                } else if (i === 'Folders') {
+                    expect(RootFolder[i] instanceof Folders).to.be.true;
+                } else {
+                    expect(RootFolder[i]).to.eql(rootFolderProperties[i]);
+                }
             }
         });
     });
 
 	describe('constructor("C:\\temp\\tmp")', function() {
-		var NormalFolder = getNewInstance('C:\\temp\\tmp');
+		var normalFolder = getNewInstance('C:\\temp\\tmp');
+
+        var Files = require(getFilePath('objects/scriptingFSO/collections/Files'));
+        var Folders = require(getFilePath('objects/scriptingFSO/collections/Folders'));
 
 		var normalFolderProperties = {
 			Attributes: 16,
 			Drive: 'C:',
-			Files: {},
+			Files: new Files(),
 			IsRootFolder: false,
 			Name: 'tmp',
 			ParentFolder: 'C:\\temp',
 			Path: 'C:\\temp\\tmp',
-			ShortName: '',
-			ShortPath: '',
+			ShortName: 'tmp',
+			ShortPath: 'C:\\temp\\tmp',
 			Size: 20000,
-			SubFolders: {},
+			SubFolders: new Folders(),
 			Type: 'File Folder'
 		};
 
         it('should have all properties', function() {
-            expect(NormalFolder).to.have.all.keys(Object.keys(normalFolderProperties));
+            expect(normalFolder).to.have.all.keys(Object.keys(normalFolderProperties));
         });
 
         it('should have all default values', function() {
             for (var i in normalFolderProperties) {
-                expect(NormalFolder[i]).to.eql(normalFolderProperties[i]);
+                if (i === 'Files') {
+                    expect(normalFolder[i] instanceof Files).to.be.true;
+                } else if (i === 'Folders') {
+                    expect(normalFolder[i] instanceof Folders).to.be.true;
+                } else {
+                    expect(normalFolder[i]).to.eql(normalFolderProperties[i]);
+                }
             }
         });
 	});
