@@ -29,5 +29,9 @@
     "build-min": "browserify ./lib/index.js | uglifyjs -c > ./dist/WScript.min.js",
     "test": "mocha --recursive",
     "test-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive"
-  }
+  },
+  "engines": {
+    "node": ">=6.4.0"
+  },
+  "engineStrict": true
 }
