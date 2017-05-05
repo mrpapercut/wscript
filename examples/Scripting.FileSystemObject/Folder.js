@@ -32,9 +32,9 @@ FSO.prototype.folderProperties = function(item) {
 
 var fso = new FSO();
 
-var absolutePathFolder = fso.fso.getFolder('C:\\temp');
+var absolutePathFolder = fso.fso.getFolder('C:\\reverse-engineering\\shared\\tools\\WinSDK-WinDbg-requires-internet');
 WScript.echo(fso.folderProperties(absolutePathFolder));
-WScript.echo(fso.folderProperties(absolutePathFolder.parentFolder));
+// WScript.echo(fso.folderProperties(absolutePathFolder.parentFolder));
 /*
 var relativePathFolder = fso.fso.getFolder('examples');
 WScript.echo(fso.folderProperties(relativePathFolder));
