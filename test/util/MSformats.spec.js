@@ -21,13 +21,16 @@ describe('MSformats', function() {
         describe('getDate()', function() {
             var getDate = getFunction('getDate');
 
-            it('should format date as Sun Jan 1 00:00:00 UTC+0100 2017', function() {
-                expect(getDate(1483225200000)).to.equal('Sun Jan 1 00:00:00 UTC+0100 2017');
+            var d = new Date(1483228800000);
+
+            it('should format date to MSformat and UTC', function() {
+                expect(getDate(1483228800000 + d.getTimezoneOffset() * 6e4))
+                    .to.equal(['Sun Jan 1 00:00:00', 'UTC' + d.toString().match(/GMT([\-|\+][0-9]{4})/)[1], '2017'].join(' '));
             });
 
             it('should format current date in correct form', function() {
                 expect(getDate()).to
-                    .match(/^[A-Z][a-z]{2}\s[A-Z][a-z]{2}\s[0-9]{1,2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}\sUTC[\-|\+][0-9]{4}\s[0-9]{4}/);
+                    .match(/^[A-Z][a-z]{2}\s[A-Z][a-z]{2}\s[0-9]{1,2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}\s[A-Z]{3}(?:[\-|\+][0-9]{4})\s[0-9]{4}/);
             });
         });
     });
