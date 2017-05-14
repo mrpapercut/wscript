@@ -29,7 +29,7 @@ describe('Folder', function() {
 			IsRootFolder: true,
 			Path: 'C:\\',
 			ShortPath: 'C:\\',
-			SubFolders: new Folders(),
+			SubFolders: new Folders('C:\\'),
 			Type: 'Local Disk'
 		};
 
@@ -67,7 +67,7 @@ describe('Folder', function() {
 			ShortName: 'tmp',
 			ShortPath: 'C:\\temp\\tmp',
 			Size: 20000,
-			SubFolders: new Folders(),
+			SubFolders: new Folders('C:\\temp\\tmp'),
 			Type: 'File Folder'
 		};
 
