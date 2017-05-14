@@ -79,7 +79,7 @@ describe('Folder', function() {
             for (var i in normalFolderProperties) {
                 if (i === 'Files') {
                     expect(normalFolder[i] instanceof Files).to.be.true;
-                } else if (i === 'Folders') {
+                } else if (i === 'SubFolders') {
                     expect(normalFolder[i] instanceof Folders).to.be.true;
                 } else {
                     expect(normalFolder[i]).to.eql(normalFolderProperties[i]);
