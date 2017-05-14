@@ -184,6 +184,11 @@ describe('WScript', function() {
                 expect(WScript.CreateObject('Microsoft.XMLDOM') instanceof MSXMLDOM).to.be.true;
             });
 
+            it('should return Scripting.Dictionary object', function() {
+                var ScriptingDictionary = require(getFilePath('objects/Scripting.Dictionary'));
+                expect(WScript.CreateObject('Scripting.Dictionary') instanceof ScriptingDictionary).to.be.true;
+            });
+
             it('should return Scripting.FileSystemObject object', function() {
                 var ScriptingFSO = require(getFilePath('objects/Scripting.FileSystemObject'));
                 expect(WScript.CreateObject('Scripting.FileSystemObject') instanceof ScriptingFSO).to.be.true;
