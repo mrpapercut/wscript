@@ -30,7 +30,7 @@ FSO.prototype.fileproperties = function(item) {
 
 var fso = new FSO();
 var WshShell = WScript.CreateObject("WScript.Shell");
-var folder = fso.getFolder('Z:\\obscure\\wscript\\examples\\Scripting.FileSystemObject\\Files');
+var folder = fso.getFolder('testfiles');
 var files = fso.getfiles(folder);
 for (; !files.atEnd(); files.moveNext()) {
     WScript.Echo(fso.fileproperties(files.item()));
