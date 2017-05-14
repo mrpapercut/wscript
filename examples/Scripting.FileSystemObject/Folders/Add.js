@@ -9,3 +9,4 @@ function Add(path, foldername) {
 }
 
 Add('.', 'NewFolder');
+Add('.', 'NewFolder');
