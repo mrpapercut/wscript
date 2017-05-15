@@ -129,7 +129,28 @@ describe('VFS', function() {
     });
 
 	describe('copyFolder()', function() {
+		it('should copy a folder and its contents to a new location', function() {
+			VFS.copyFolder('C:\\temp', 'C:\\temp2');
 
+			expect(VFS.folderExists('C:\\temp2')).to.equal(-1);
+			expect(VFS.folderExists('C:\\temp2\\subfolder')).to.equal(-1);
+			expect(VFS.fileExists('C:\\temp2\\testfile.txt')).to.equal(-1);
+			expect(VFS.fileExists('C:\\temp2\\subfolder\\test.ini')).to.equal(-1);
+		});
+
+		it('should not create new folder if destination exists', function() {
+			VFS.createFolder('C:\\temp2');
+			VFS.copyFile('C:\\temp\\testfile.txt', 'C:\\temp2\\file.txt');
+			VFS.copyFolder('C:\\temp', 'C:\\temp2');
+
+			expect(VFS.fileExists('C:\\temp2\\file.txt'));
+		});
+
+		it('should throw error if origin does not exist', function() {
+			expect(function() {
+				VFS.copyFolder('C:\\temp2', 'C:\\temp');
+			}).to.throw(TypeError);
+		});
     });
 
 	describe('createFolder()', function() {
