@@ -8,16 +8,16 @@ var getFilePath = function(filename) {
     return path.join(__dirname, '../..', 'lib', filename);
 }
 
-var getNewInstance = function() {
+var getNewInstance = function(drivespec) {
     var instance = require(getFilePath('objects/scriptingFSO/objects/Drive'));
-    return new instance();
+    return new instance(drivespec);
 }
 
 var Drive;
 
 describe('Drive', function() {
     describe('constructor()', function() {
-        Drive = getNewInstance();
+        Drive = getNewInstance('C');
 
         var properties = {
             AvailableSpace: 7156948992,
