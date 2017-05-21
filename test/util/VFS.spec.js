@@ -8,10 +8,36 @@ var getFilePath = function(filename) {
     return path.join(__dirname, '../..', 'lib', filename);
 }
 
-var getNewInstance = function(fnName) {
+var getNewInstance = function(useDefaultVFS) {
     var instance = require(getFilePath('util/VFS'));
 
-    return new instance();
+    return new instance(!useDefaultVFS ? [{
+        name: 'C',
+        type: 'drive'
+    }, {
+        name: 'C:',
+        path: 'C:\\',
+        static: true,
+        type: 'folder'
+    }, {
+        name: 'temp',
+        path: 'C:\\temp',
+        type: 'folder',
+    }, {
+        content: 'Hello world!',
+        name: 'testfile.txt',
+        path: 'C:\\temp\\testfile.txt',
+        type: 'file'
+    }, {
+        name: 'subfolder',
+        path: 'C:\\temp\\subfolder',
+        type: 'folder'
+    }, {
+        content: 'Malicious content',
+        name: 'test.ini',
+        path: 'C:\\temp\\subfolder\\test.ini',
+        type: 'file'
+    }] : null);
 }
 
 var VFS;
@@ -24,6 +50,11 @@ describe('VFS', function() {
     describe('constructor()', function() {
         it('should initialize a VFS-object', function() {
             expect(VFS._vfs).to.be.instanceof(Array);
+        });
+
+        it('should initialize with default VFS', function() {
+            VFS = getNewInstance(true);
+            expect(VFS.fileExists('C:\\temp\\testfile.txt')).to.equal(0);
         });
     });
 
