@@ -126,6 +126,19 @@ describe('VFS', function() {
 
             expect(VFS._vfs.length).to.equal(len);
         });
+
+        it('should copy multiple files if wildcard is used', function() {
+            VFS.copyFile('C:\\temp\\testfile.txt', 'C:\\temp\\testfile2.txt');
+            VFS.copyFile('C:\\temp\\*.txt', 'C:\\temp\\subfolder\\');
+            expect(VFS.fileExists('C:\\temp\\subfolder\\testfile2.txt')).to.equal(-1);
+        });
+
+        it('should throw error if multiple files are copied to non-existing folder', function() {
+            VFS.copyFile('C:\\temp\\testfile.txt', 'C:\\temp\\testfile2.txt');
+            expect(function() {
+                VFS.copyFile('C:\\temp\\*.txt', 'C:\\temp2\\');
+            }).to.throw(TypeError);
+        });
     });
 
     describe('copyFolder()', function() {
@@ -202,6 +215,13 @@ describe('VFS', function() {
         it('should return false if file not found and suppressError is true', function() {
             expect(VFS.deleteFile('C:\\boot.ini', true)).to.equal(false);
         });
+
+        it('should delete multiple files if wildcard is used', function() {
+            VFS.copyFile('C:\\temp\\testfile.txt', 'C:\\temp\\testfile2.txt');
+            VFS.deleteFile('C:\\temp\\*.txt');
+            expect(VFS.fileExists('C:\\temp\\testfile.txt')).to.equal(0);
+            expect(VFS.fileExists('C:\\temp\\testfile2.txt')).to.equal(0);
+        });
     });
 
     describe('deleteFolder()', function() {
@@ -271,11 +291,46 @@ describe('VFS', function() {
     });
 
     describe('getDrive()', function() {
+        it('should throw error when trying to access network drive', function() {
+            expect(function() {
+                VFS.getDrive('\\\\computer2\\share1');
+            }).to.throw(TypeError);
+        });
 
+        it('should throw error if Drive does not exist', function() {
+            expect(function() {
+                VFS.getDrive('X');
+            }).to.throw(TypeError);
+        });
+
+        it('should return a Drive-object', function() {
+            expect(VFS.getDrive('C:')).to.be.instanceof(Object);
+        });
+
+        it('should handle all allowed drive-notations', function() {
+            expect(VFS.getDrive('C')).to.be.instanceof(Object);
+            expect(VFS.getDrive('C:')).to.be.instanceof(Object);
+            expect(VFS.getDrive('C:\\')).to.be.instanceof(Object);
+        });
+
+        it('should throw error if invalid drive-notation is used', function() {
+            expect(function() {
+                VFS.getDrive('C:\\temp');
+            }).to.throw(TypeError);
+        });
     });
 
     describe('getDriveName()', function() {
-
+        it('should return correct name for different formats', function() {
+            expect(VFS.getDriveName('C:')).to.equal('C:');
+            expect(VFS.getDriveName('C:\\')).to.equal('C:');
+            expect(VFS.getDriveName('V:\\temp')).to.equal('V:');
+            expect(VFS.getDriveName('\\\\computer2\\share1')).to.equal('\\\\computer2\\share1');
+            expect(VFS.getDriveName('\\\\computer2')).to.equal('');
+            expect(VFS.getDriveName('C')).to.equal('');
+            expect(VFS.getDriveName('.')).to.equal('');
+            expect(VFS.getDriveName('HELLO WORLD')).to.equal('');
+        });
     });
 
     describe('getExtensionName()', function() {
@@ -303,7 +358,15 @@ describe('VFS', function() {
     });
 
     describe('getFileVersion()', function() {
+        it('should throw error if file not found', function() {
+            expect(function() {
+                VFS.getFileVersion('C:\\ntdll.dll')
+            }).to.throw(TypeError);
+        });
 
+        it('should return empty string if file is found', function() {
+            expect(VFS.getFileVersion('C:\\temp\\testfile.txt')).to.equal('');
+        });
     });
 
     describe('getFolder()', function() {
@@ -319,30 +382,134 @@ describe('VFS', function() {
     });
 
     describe('getParentFolderName()', function() {
+        it('should return parent folder path', function() {
+            expect(VFS.getParentFolderName('C:\\temp')).to.equal('C:\\');
+            expect(VFS.getParentFolderName('C:\\temp\\subfolder\\filename.txt')).to.equal('C:\\temp\\subfolder');
+        });
 
+        it('should return empty string if no parent folder can be determined', function() {
+            expect(VFS.getParentFolderName('C:\\')).to.equal('');
+            expect(VFS.getParentFolderName('HELLO WORLD')).to.equal('');
+            expect(VFS.getParentFolderName('\\\\computer2\\share1')).to.equal('');
+        });
     });
 
     describe('getSpecialFolder()', function() {
+        it('should throw error if value is not an integer', function() {
+            expect(function() {
+                VFS.getSpecialFolder('C:\\Windows');
+            }).to.throw(TypeError);
+        });
 
+        it('should throw error if providing incorrect value', function() {
+            expect(function() {
+                VFS.getSpecialFolder(-1);
+            }).to.throw(TypeError);
+
+            expect(function() {
+                VFS.getSpecialFolder(3);
+            }).to.throw(TypeError);
+        });
+
+        it('should return C:\\Windows', function() {
+            expect(VFS.getSpecialFolder(0)).to.equal('C:\\Windows');
+        });
+
+        it('should return C:\\Windows\\System32', function() {
+            expect(VFS.getSpecialFolder(1)).to.equal('C:\\Windows\\System32');
+        });
+
+        it('should return C:\\temp', function() {
+            expect(VFS.getSpecialFolder(2)).to.equal('C:\\temp');
+        });
     });
 
     describe('getStandardStream()', function() {
+        it('should throw error if value is not an integer', function() {
+            expect(function() {
+                VFS.getStandardStream('StdIn');
+            }).to.throw(TypeError);
+        });
 
+        it('should throw error if providing incorrect value', function() {
+            expect(function() {
+                VFS.getStandardStream(-1);
+            }).to.throw(TypeError);
+
+            expect(function() {
+                VFS.getStandardStream(3);
+            }).to.throw(TypeError);
+        });
+
+        it('should create a StdIn stream type', function() {
+            var StdIn = VFS.getStandardStream(0);
+            expect(StdIn._filename).to.equal('StdIn');
+        });
+
+        it('should create a StdOut stream type', function() {
+            var StdOut = VFS.getStandardStream(1);
+            expect(StdOut._filename).to.equal('StdOut');
+        });
+
+        it('should create a StdErr stream type', function() {
+            var StdErr = VFS.getStandardStream(2);
+            expect(StdErr._filename).to.equal('StdErr');
+        });
     });
 
     describe('getTempName()', function() {
-
+        it('should return a random preformatted filename', function() {
+            expect(VFS.getTempName()).to.match(/^rad[0-9A-F]{5}.tmp$/);
+        });
     });
 
     describe('moveFile()', function() {
+        it('should move a file from source to destination', function() {
+            VFS.moveFile('C:\\temp\\testfile.txt', 'C:\\testfile.txt');
+            expect(VFS.fileExists('C:\\temp\\testfile.txt')).to.equal(0);
+            expect(VFS.fileExists('C:\\testfile.txt')).to.equal(-1);
+        });
 
+        it('should move multiple files from source to folder', function() {
+            VFS.copyFile('testfile.txt', 'testfile2.txt');
+            VFS.moveFile('*.txt', '.\\subfolder\\');
+            expect(VFS.fileExists('C:\\temp\\testfile.txt')).to.equal(0);
+            expect(VFS.fileExists('C:\\temp\\testfile2.txt')).to.equal(0);
+            expect(VFS.fileExists('C:\\temp\\subfolder\\testfile.txt')).to.equal(-1);
+            expect(VFS.fileExists('C:\\temp\\subfolder\\testfile2.txt')).to.equal(-1);
+        });
     });
 
     describe('moveFolder()', function() {
-
+        it('should move a folder to a new destination', function() {
+            VFS.moveFolder('C:\\temp', 'C:\\temp2');
+            expect(VFS.folderExists('C:\\temp')).to.equal(0);
+            expect(VFS.folderExists('C:\\temp2')).to.equal(-1);
+        });
     });
 
     describe('openTextFile()', function() {
+        it('should throw error if no filename provided', function() {
+            expect(function() {
+                VFS.openTextFile();
+            }).to.throw(TypeError);
+        });
 
+        it('should throw error if `create` is false and file not found', function() {
+            expect(function() {
+                VFS.openTextFile('notfound.txt');
+            }).to.throw(TypeError);
+        });
+
+        it('should create a new file if `create` is true', function() {
+            VFS.openTextFile('newfile.txt', 2, true);
+            expect(VFS.fileExists('newfile.txt')).to.equal(-1);
+        });
+
+        it('should return TextStream based on existing file', function() {
+            var ts = VFS.openTextFile('testfile.txt', 1);
+            // Using ReadAll() function to see if TextStream behaves as expected
+            expect(ts.ReadAll()).to.equal('Hello world!');
+        });
     });
 });
