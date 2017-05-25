@@ -8,16 +8,24 @@ var getFilePath = function(filename) {
     return path.join(__dirname, '../..', 'lib', filename);
 }
 
-var getNewInstance = function(folderPath) {
+var getNewInstance = function(folderPath, vfs) {
     var instance = require(getFilePath('objects/scriptingFSO/collections/Folders'));
-    return new instance(folderPath);
+    return new instance(folderPath, vfs);
 }
+
+var VFS = require(getFilePath('util/VFS'));
 
 var Folders;
 
+var normalFolderObj = {
+    name: 'temp',
+    path: 'C:\\temp',
+    type: 'folder',
+};
+
 describe('Folders', function() {
     beforeEach(function() {
-        Folders = getNewInstance('C:\\temp');
+        Folders = getNewInstance('C:\\temp', new VFS());
     });
 
     describe('constructor("C:\\temp")', function() {
@@ -25,7 +33,7 @@ describe('Folders', function() {
         var properties = {
             Count: null,
             Item: null,
-            _subfolders: [],
+            _parent: new VFS(),
             _path: 'C:\\temp'
         };
 
@@ -42,11 +50,8 @@ describe('Folders', function() {
 
     describe('Add()', function() {
         it('should add a new Folder object to this._subfolders', function() {
-            var Folder = require(getFilePath('objects/scriptingFSO/objects/Folder'));
-
             Folders.Add('NewFolder');
-            expect(Folders._subfolders[0] instanceof Folder).to.be.true;
-            expect(Folders._subfolders[0].Path).to.equal('C:\\temp\\NewFolder');
+            expect(Folders._parent.folderExists('C:\\temp\\NewFolder'));
         });
 
         it('should throw Error if folder exists', function() {

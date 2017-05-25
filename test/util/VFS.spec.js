@@ -262,7 +262,9 @@ describe('VFS', function() {
             textFile.Write('Hello world!');
             textFile.WriteBlankLines(1);
             textFile.WriteLine('Foo bar');
-            expect(VFS.getFile('newfile.txt').content).to.equal('Hello world!\nFoo bar\n');
+
+            var ts = VFS.openTextFile('newfile.txt', 1);
+            expect(ts.ReadAll()).to.equal('Hello world!\nFoo bar\n');
         });
     });
 
