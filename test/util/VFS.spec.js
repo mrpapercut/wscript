@@ -131,6 +131,41 @@ describe('VFS', function() {
         });
     });
 
+    describe('_replaceCurrentFS()', function() {
+        it('should replace the current VFS with a new one', function() {
+            VFS._replaceCurrentFS([{
+                name: 'D',
+                type: 'drive'
+            }, {
+                name: 'D:',
+                path: 'D:\\',
+                static: true,
+                type: 'folder'
+            }, {
+                name: 'temp',
+                path: 'D:\\temp',
+                type: 'folder',
+            }, {
+                content: 'Hello world!',
+                name: 'testfile.txt',
+                path: 'D:\\temp\\testfile.txt',
+                type: 'file'
+            }, {
+                name: 'subfolder',
+                path: 'D:\\temp\\subfolder',
+                type: 'folder'
+            }, {
+                content: 'Malicious content',
+                name: 'test.ini',
+                path: 'D:\\temp\\subfolder\\test.ini',
+                type: 'file'
+            }]);
+
+            expect(VFS.driveExists('C')).to.equal(0);
+            expect(VFS.driveExists('D')).to.equal(-1);
+        });
+    });
+
     describe('copyFile()', function() {
         it('should copy a file from one location to another', function() {
             VFS.copyFile('testfile.txt', 'textfile.txt');
