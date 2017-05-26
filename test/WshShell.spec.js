@@ -15,6 +15,7 @@ var getNewInstance = function() {
 
 var WshShell;
 var WshEnvironment = require(getFilePath('WshEnvironment'));
+var WshSpecialFolders = require(getFilePath('WshSpecialFolders'));
 
 describe('WshShell', function() {
     describe('constructor()', function() {
@@ -22,6 +23,7 @@ describe('WshShell', function() {
 
         var properties = {
             CurrentDirectory: 'C:\\Temp',
+            SpecialFolders: WshSpecialFolders,
             _name: 'WshShell'
         };
 
