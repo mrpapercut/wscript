@@ -72,7 +72,7 @@ describe('VFS', function() {
                 name: 'temp',
                 type: 'folder',
                 path: 'C:\\temp',
-                static: false
+                userCreated: true
             };
 
             var folder = VFS._createFolderObject('C:\\temp');
@@ -91,7 +91,8 @@ describe('VFS', function() {
                 content: 'Hello world!',
                 name: 'testfile.txt',
                 path: 'C:\\temp\\testfile.txt',
-                type: 'file'
+                type: 'file',
+                userCreated: true
             };
 
             var file = VFS._createFileObject('C:\\temp\\testfile.txt', 'Hello world!');
