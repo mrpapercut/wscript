@@ -21,12 +21,10 @@
     "chai": "^3.5.0",
     "coveralls": "^2.11.14",
     "istanbul": "^0.4.4",
-    "mocha": "^2.5.3",
-    "uglifyjs": "^2.4.10"
+    "mocha": "^2.5.3"
   },
   "scripts": {
     "build": "browserify ./lib/index.js -o ./dist/WScript.js",
-    "build-min": "browserify ./lib/index.js | uglifyjs -c > ./dist/WScript.min.js",
     "test": "mocha --recursive",
     "test-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive"
   },
