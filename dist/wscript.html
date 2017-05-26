@@ -4,18 +4,26 @@
 <title>WScript</title>
 <style>
 div {
-    width: 800px;
+    width: 49%;
     height: 600px;
+    float: left;
     position: relative;
     font-family: monospace;
 }
 
 div:after {
-    content: 'Output';
     color: #ccc;
     position: absolute;
     right: 1em;
     top: 0;
+}
+
+div#console:after {
+    content: 'Console';
+}
+
+div#vfs:after {
+    content: 'VFS';
 }
 
 textarea {
@@ -25,14 +33,15 @@ textarea {
 </style>
 </head>
 <body>
-<div><textarea id="output"></textarea></div>
+<div id="console"><textarea id="console-output"></textarea></div>
+<div id="vfs"><textarea id="vfs-output"></textarea></div>
 <script>
 console._log = console.log;
 console.log = function() {
     if (arguments) {
         [...arguments].map(l => {
-            window.output.value += typeof l === 'string' ? l : JSON.stringify(l, false, 2);
-            window.output.value += '\n';
+            window['console-output'].value += typeof l === 'string' ? l : JSON.stringify(l, false, 2);
+            window['console-output'].value += '\n';
         });
     }
 }
@@ -40,9 +49,9 @@ console.log = function() {
 <script src="WScript.js"></script>
 <script src="../examples/malwareExample.js"></script>
 <script>
-// var FSO = new ActiveXObject('Scripting.FileSystemObject');
-// FSO.CreateFolder('83294293');
-console.log(fileSystem._vfs._printVFS());
+window.setInterval(() => {
+    window['vfs-output'].value = VFS._printVFS();
+}, 100);
 </script>
 </body>
 </html>
