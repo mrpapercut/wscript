@@ -295,6 +295,16 @@ describe('ADODBStream', function() {
                 ADODBStream.saveToFile('filename', 2);
                 expect(ADODBStream.position).to.equal(0);
             });
+
+            it('should use global VFS to save file to', function() {
+                var vfs = require(getFilePath('util/VFS'));
+                global.VFS = new vfs();
+                ADODBStream = getNewInstance();
+                ADODBStream.open();
+                ADODBStream.writeText('Hello world');
+                ADODBStream.saveToFile('streamfile.txt', 1);
+                expect(global.VFS.fileExists('streamfile.txt')).to.equal(-1);
+            });
         });
 
         describe('setEOS()', function() {

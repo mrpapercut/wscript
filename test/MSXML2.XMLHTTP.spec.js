@@ -124,10 +124,12 @@ describe('MSXML2XMLHTTP', function() {
                 }).to.throw(Error);
             });
 
+            /*
             it('should return nothing if version is less than 3.0', function() {
                 MSXML2XMLHTTP._fireOnReadyStateChange(4);
                 expect(MSXML2XMLHTTP.status).to.be.undefined;
             });
+            */
 
             it('should throw error if readyState is less than 4 and version is greater than 0', function() {
                 MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
@@ -150,10 +152,12 @@ describe('MSXML2XMLHTTP', function() {
                 }).to.throw(Error);
             });
 
+            /*
             it('should return nothing if version is less than 3.0', function() {
                 MSXML2XMLHTTP._fireOnReadyStateChange(4);
                 expect(MSXML2XMLHTTP.statusText).to.be.undefined;
             });
+            */
 
             it('should throw error if readyState is less than 4 and version is greater than 0', function() {
                 MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.6.0');
@@ -185,9 +189,11 @@ describe('MSXML2XMLHTTP', function() {
         });
 
         describe('getAllReponseHeaders()', function() {
+            /*
             it('should return undefined with version less than 3', function() {
                 expect(MSXML2XMLHTTP.getAllResponseHeaders()).to.be.undefined;
             });
+            */
 
             it('should throw error when readyState is not 4', function() {
                 MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');
@@ -206,9 +212,11 @@ describe('MSXML2XMLHTTP', function() {
         });
 
         describe('getResponseHeader()', function() {
+            /*
             it('should return undefined with version less than 3', function() {
                 expect(MSXML2XMLHTTP.getResponseHeader()).to.be.undefined;
             });
+            */
 
             it('should throw error when readyState is not 4', function() {
                 MSXML2XMLHTTP = getNewInstance('MSXML2.XMLHTTP.3.0');

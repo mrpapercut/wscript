@@ -68,6 +68,12 @@ describe('Scripting.FileSystemObject', function() {
         it('should have all default values', function() {
             expect(FSO.Drives instanceof Drives).to.be.true;
         });
+
+        it('should use fresh VFS if global.VFS is not available', function() {
+            global.VFS = {};
+            FSO = getNewInstance();
+            expect(FSO.FileExists('testfile.txt')).to.equal(0);
+        });
     });
 
     describe('BuildPath()', function() {
