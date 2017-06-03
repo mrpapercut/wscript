@@ -29,7 +29,7 @@ describe('ADODBStream', function() {
             size: Infinity,
             state: 0,
             type: 2,
-            _data: {}
+            _data: ADODBStream._stringToArrayBuffer('\ufeff')
         };
 
         it('should have all properties', function() {
