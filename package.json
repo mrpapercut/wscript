@@ -23,9 +23,6 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2"
   },
-  "dependencies": {
-    "node-proxygenerator": "^0.0.1"
-  },
   "scripts": {
     "build": "browserify ./lib/index.js -o ./dist/WScript.js",
     "test": "mocha --recursive",
