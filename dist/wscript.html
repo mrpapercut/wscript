@@ -2,13 +2,20 @@
 <html>
 <head>
 <title>WScript</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 <style>
+body,
+textarea {
+    background: #222;
+    color: #ccc;
+    font-family: 'Roboto Mono', monospace;
+}
+
 div {
     width: 49%;
     height: 600px;
     float: left;
     position: relative;
-    font-family: monospace;
 }
 
 div:after {
@@ -20,6 +27,10 @@ div:after {
 
 div#console:after {
     content: 'Console';
+}
+
+div#vfs {
+    float: right;
 }
 
 div#vfs:after {
@@ -45,13 +56,19 @@ console.log = function() {
         });
     }
 }
+
+// Overwrite JS objects
+const nop = () => {};
+window.fetch = window.XMLHttpRequest = nop;
 </script>
 <script src="WScript.js"></script>
 <script src="../examples/malwareExample.js"></script>
 <script>
-window.setInterval(() => {
-    window['vfs-output'].value = VFS._printVFS();
-}, 100);
+if (window.WScript && window.VFS) {
+    window.setInterval(() => {
+        window['vfs-output'].value = VFS._printVFS();
+    }, 100);
+}
 </script>
 </body>
 </html>
