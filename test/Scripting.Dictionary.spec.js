@@ -25,7 +25,8 @@ describe('Scripting.Dictionary', function() {
             Count: 0,
             Key: null,
             CompareMode: null,
-            _contents: {}
+            _contents: {},
+            _name: 'Scripting.Dictionary'
         };
 
         it('should have all properties', function() {

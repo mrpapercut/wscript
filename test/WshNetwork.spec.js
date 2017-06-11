@@ -71,7 +71,7 @@ describe('WshNetwork', function() {
             var WshUnnamed = require(getFilePath('WshUnnamed'));
 
             it('should return instance of Unnamed collection', function() {
-                expect(WshNetwork.EnumNetworkDrives() instanceof WshUnnamed).to.be.true;
+                expect(WshNetwork.EnumNetworkDrives().toString()).to.eql('WshUnnamed');
             });
 
             it('should return empty Unnamed collection', function() {
@@ -83,7 +83,7 @@ describe('WshNetwork', function() {
             var WshUnnamed = require(getFilePath('WshUnnamed'));
 
             it('should return instance of Unnamed collection', function() {
-                expect(WshNetwork.EnumPrinterConnections() instanceof WshUnnamed).to.be.true;
+                expect(WshNetwork.EnumPrinterConnections().toString()).to.eql('WshUnnamed');
             });
 
             it('should return empty Unnamed collection', function() {

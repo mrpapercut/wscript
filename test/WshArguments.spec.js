@@ -25,7 +25,8 @@ describe('WshArguments', function() {
             Length: null,
             Named: null,
             Unnamed: null,
-            _args: null
+            _args: null,
+            _name: 'WshArguments'
         };
 
         it('should have all properties', function() {
@@ -37,11 +38,11 @@ describe('WshArguments', function() {
         });
 
         it('should initialize WshNamed object for WshArguments.Named', function() {
-            expect(WshArguments.Named instanceof WshNamed).to.be.true;
+            expect(WshArguments.Named.toString()).to.eql('WshNamed');
         });
 
         it('should initialize WshUnnamed object for WshArguments.Unnamed', function() {
-            expect(WshArguments.Unnamed instanceof WshUnnamed).to.be.true;
+            expect(WshArguments.Unnamed.toString()).to.eql('WshUnnamed');
         });
     });
 

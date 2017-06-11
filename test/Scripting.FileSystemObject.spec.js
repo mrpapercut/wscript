@@ -58,7 +58,8 @@ describe('Scripting.FileSystemObject', function() {
         var properties = {
             Drives: new Drives(),
             _vfs: new VFS(),
-            PATH_SEP: '\\'
+            PATH_SEP: '\\',
+            _name: 'Scripting.FileSystemObject'
         };
 
         it('should have all properties', function() {
@@ -66,7 +67,7 @@ describe('Scripting.FileSystemObject', function() {
         });
 
         it('should have all default values', function() {
-            expect(FSO.Drives instanceof Drives).to.be.true;
+            expect(FSO.Drives.toString()).to.eql('Drives');
         });
 
         it('should use fresh VFS if global.VFS is not available', function() {

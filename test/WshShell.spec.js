@@ -135,10 +135,13 @@ describe('WshShell', function() {
             var WshShortcut = require(getFilePath('WshShortcut'));
 
             it('should return a WshShortcut object', function() {
-                expect(WshShell.CreateShortcut() instanceof WshShortcut).to.be.true;
+                expect(WshShell.CreateShortcut().toString()).to.eql('WshShortcut');
             });
 
             it('should be able to create example from MS docs', function() {
+                var vfs = require(getFilePath('util/VFS'));
+                global.VFS = new vfs();
+
                 // Example from https://msdn.microsoft.com/en-us/library/xsy6k3ys(v=vs.84).aspx
                 var strDesktop = WshShell.SpecialFolders('Desktop'),
                 oShellLink = WshShell.CreateShortcut(strDesktop + '\\Shortcut Script.lnk');
@@ -151,6 +154,9 @@ describe('WshShell', function() {
                 oShellLink.RelativePath     = '';
                 oShellLink.WindowStyle      = '';
                 oShellLink.Save();
+
+                expect(global.VFS.fileExists('C:\\Users\\User\\Desktop\\Shortcut Script.lnk')).to.eql(-1);
+                delete global.VFS;
             });
         });
 
@@ -158,11 +164,11 @@ describe('WshShell', function() {
             var WshScriptExec = require(getFilePath('WshScriptExec'));
 
             it('should return a WshScriptExec object', function() {
-                expect(WshShell.Exec() instanceof WshScriptExec).to.be.true;
+                expect(WshShell.Exec().toString()).to.eql('WshScriptExec');
             });
             it('should be able to call .Terminate() on WshScriptExec object', function() {
                 expect(WshShell.Exec().Terminate).to.be.a('function');
-                expect(WshShell.Exec().Terminate()).to.be.an('undefined');
+                expect(WshShell.Exec().Terminate()).to.eql(undefined);
             });
         });
 

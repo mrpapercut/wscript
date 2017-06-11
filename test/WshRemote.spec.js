@@ -1,5 +1,5 @@
 'use strict';
-
+require('./_config')();
 var chai = require('chai'),
     path = require('path'),
     expect = chai.expect;
@@ -23,6 +23,7 @@ describe('WshRemote', function() {
     describe('constructor()', function() {
         var properties = {
             Error: null,
+            Status: 0,
             _CommandLine: undefined,
             _MachineName: undefined,
             _status: 0,
@@ -93,7 +94,7 @@ describe('WshRemote', function() {
         var WshRemoteError = require(getFilePath('WshRemoteError'));
         it('should set Error to instanceof WshRemoteError', function() {
             WshRemote._eventError();
-            expect(WshRemote.Error instanceof WshRemoteError).to.be.true;
+            expect(WshRemote.Error.toString()).to.eql('WshRemoteError');
         });
 	});
 

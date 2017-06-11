@@ -36,7 +36,7 @@ describe('WshController', function() {
 		WshController = getNewInstance();
 
 		it('should return instance of WshRemote', function() {
-			expect(WshController.CreateScript() instanceof WshRemote).to.be.true;
+			expect(WshController.CreateScript().toString()).to.eql('WshRemote');
 		});
 	});
 });

@@ -29,7 +29,8 @@ describe('ADODBStream', function() {
             size: Infinity,
             state: 0,
             type: 2,
-            _data: ADODBStream._stringToArrayBuffer('\ufeff')
+            _data: ADODBStream._stringToArrayBuffer('\ufeff'),
+            _name: 'ADODB.Stream'
         };
 
         it('should have all properties', function() {
@@ -292,7 +293,7 @@ describe('ADODBStream', function() {
                 expect(ADODBStream.position).to.equal(0);
                 ADODBStream.writeText('Hello');
                 expect(ADODBStream.position).to.equal(12);
-                ADODBStream.saveToFile('filename', 2);
+                ADODBStream.saveToFile('filename2', 2);
                 expect(ADODBStream.position).to.equal(0);
             });
 

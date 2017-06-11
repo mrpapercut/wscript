@@ -66,7 +66,7 @@ describe('Enumerator', function() {
 
     describe('item()', function() {
         it('should return instanceof Drive', function() {
-            expect(Enumerator.item() instanceof Drive).to.be.true;
+            expect(Enumerator.item().toString()).to.eql('Drive');
         });
 
         it('should return undefined if atEnd is true', function() {

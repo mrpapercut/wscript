@@ -34,7 +34,8 @@ describe('Folders', function() {
             Count: null,
             Item: null,
             _parent: new VFS(),
-            _path: 'C:\\temp'
+            _path: 'C:\\temp',
+            _name: 'Folders'
         };
 
         it('should have all properties', function() {

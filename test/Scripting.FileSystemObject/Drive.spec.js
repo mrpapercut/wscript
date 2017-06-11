@@ -31,7 +31,8 @@ describe('Drive', function() {
             SerialNumber: -1225924828,
             ShareName: '',
             TotalSize: 7725907968,
-            VolumeName: ''
+            VolumeName: '',
+            _name: 'Drive'
         };
 
         it('should have all properties', function() {

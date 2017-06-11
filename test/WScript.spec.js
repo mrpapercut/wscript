@@ -1,5 +1,7 @@
 'use strict';
 
+require('./_config')();
+
 var chai = require('chai'),
     path = require('path'),
     expect = chai.expect;
@@ -43,7 +45,7 @@ describe('WScript', function() {
         it('should have all default values', function() {
             for (var i in properties) {
                 if (i === 'Arguments') {
-                    expect(WScript[i] instanceof WshArguments).to.be.true;
+                    expect(WScript[i].toString()).to.eql('WshArguments');
                 } else {
                     expect(WScript[i]).to.eql(properties[i]);
                 }
@@ -133,13 +135,12 @@ describe('WScript', function() {
 
                 var WshController = WScript.CreateObject('WSHController');
                 var RemoteScript = WshController.CreateScript('test.vbs');
-                var _eventError = RemoteScript._eventError;
 
                 WScript.ConnectObject(RemoteScript, 'remote');
 
-                expect(RemoteScript._eventStart).to.equal(global.remote_Start);
-                expect(RemoteScript._eventEnd).to.equal(global.remote_End);
-                expect(RemoteScript._eventError).to.equal(_eventError);
+                expect(RemoteScript._eventStart.toString()).to.equal(global.remote_Start.toString());
+                expect(RemoteScript._eventEnd.toString()).to.equal(global.remote_End.toString());
+                expect(RemoteScript._eventError.toString()).to.equal('function () {}');
             });
         });
 
@@ -161,44 +162,44 @@ describe('WScript', function() {
 
             it('should return WshShell object', function() {
                 var WshShell = require(getFilePath('WshShell'));
-                expect(WScript.CreateObject('WScript.Shell') instanceof WshShell).to.be.true;
+                expect(WScript.CreateObject('WScript.Shell').toString()).to.equal('WshShell');
             });
 
             it('should return WshNetwork object', function() {
                 var WshNetwork = require(getFilePath('WshNetwork'));
-                expect(WScript.CreateObject('WScript.Network') instanceof WshNetwork).to.be.true;
+                expect(WScript.CreateObject('WScript.Network').toString()).to.equal('WshNetwork')
             });
 
             it('should return WshController object', function() {
                 var WshController = require(getFilePath('WshController'));
-                expect(WScript.CreateObject('WSHController') instanceof WshController).to.be.true;
+                expect(WScript.CreateObject('WSHController').toString()).to.equal('WshController');
             });
 
             it('should return ADODB.Stream object', function() {
                 var ADODBStream = require(getFilePath('objects/ADODB.Stream'));
-                expect(WScript.CreateObject('ADODB.Stream') instanceof ADODBStream).to.be.true;
+                expect(WScript.CreateObject('ADODB.Stream').toString()).to.equal('ADODB.Stream');
             });
 
             it('should return Microsoft.XMLDOM object', function() {
                 var MSXMLDOM = require(getFilePath('objects/Microsoft.XMLDOM'));
-                expect(WScript.CreateObject('Microsoft.XMLDOM') instanceof MSXMLDOM).to.be.true;
+                expect(WScript.CreateObject('Microsoft.XMLDOM').toString()).to.equal('Microsoft.XMLDOM');
             });
 
             it('should return Scripting.Dictionary object', function() {
                 var ScriptingDictionary = require(getFilePath('objects/Scripting.Dictionary'));
-                expect(WScript.CreateObject('Scripting.Dictionary') instanceof ScriptingDictionary).to.be.true;
+                expect(WScript.CreateObject('Scripting.Dictionary').toString()).to.equal('Scripting.Dictionary');
             });
 
             it('should return Scripting.FileSystemObject object', function() {
                 var ScriptingFSO = require(getFilePath('objects/Scripting.FileSystemObject'));
-                expect(WScript.CreateObject('Scripting.FileSystemObject') instanceof ScriptingFSO).to.be.true;
+                expect(WScript.CreateObject('Scripting.FileSystemObject').toString()).to.equal('Scripting.FileSystemObject');
             });
 
             it('should return MSXML2.XMLHTTP object', function() {
                 var MSXML2XMLHTTP = require(getFilePath('objects/MSXML2.XMLHTTP'));
-                expect(WScript.CreateObject('MSXML2.XMLHTTP') instanceof MSXML2XMLHTTP).to.be.true;
-                expect(WScript.CreateObject('MSXML2.XMLHTTP.3.0') instanceof MSXML2XMLHTTP).to.be.true;
-                expect(WScript.CreateObject('MSXML2.XMLHTTP.6.0') instanceof MSXML2XMLHTTP).to.be.true;
+                expect(WScript.CreateObject('MSXML2.XMLHTTP').toString()).to.equal('MSXML2.XMLHTTP');
+                expect(WScript.CreateObject('MSXML2.XMLHTTP.3.0').toString()).to.equal('MSXML2.XMLHTTP');
+                expect(WScript.CreateObject('MSXML2.XMLHTTP.6.0').toString()).to.equal('MSXML2.XMLHTTP');
             });
 
             it('should return undefined if no or invalid strProgId is provided', function() {

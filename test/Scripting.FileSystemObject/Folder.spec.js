@@ -56,9 +56,9 @@ describe('Folder', function() {
         it('should have all default values', function() {
             for (var i in rootFolderProperties) {
                 if (i === 'Files') {
-                    expect(RootFolder[i] instanceof Files).to.be.true;
+                    expect(RootFolder[i].toString()).to.eql('Files');
                 } else if (i === 'Folders') {
-                    expect(RootFolder[i] instanceof Folders).to.be.true;
+                    expect(RootFolder[i].toString()).to.eql('Folders');
                 } else {
                     expect(RootFolder[i]).to.eql(rootFolderProperties[i]);
                 }
@@ -95,9 +95,9 @@ describe('Folder', function() {
         it('should have all default values', function() {
             for (var i in normalFolderProperties) {
                 if (i === 'Files') {
-                    expect(normalFolder[i] instanceof Files).to.be.true;
-                } else if (i === 'SubFolders') {
-                    expect(normalFolder[i] instanceof Folders).to.be.true;
+                    expect(normalFolder[i].toString()).to.eql('Files');
+                } else if (i === 'Folders') {
+                    expect(normalFolder[i].toString()).to.eql('Folders');
                 } else {
                     expect(normalFolder[i]).to.eql(normalFolderProperties[i]);
                 }

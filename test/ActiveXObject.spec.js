@@ -1,5 +1,7 @@
 'use strict';
 
+require('./_config')()
+
 var chai = require('chai'),
     path = require('path'),
     expect = chai.expect;
