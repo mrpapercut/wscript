@@ -1,0 +1,116 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+body,
+textarea {
+    background: #222;
+    color: #ccc;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.green {
+    color: rgba(96, 206, 60, 1);
+}
+
+.blue {
+    color: rgba(141, 166, 206, 1);
+}
+
+.red {
+    color: rgba(251, 60, 60, 1);
+}
+
+.orange {
+    color: rgba(251, 222, 45, 1);
+}
+
+#incompatible-browser {
+    display: none;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: -4px;
+    border: 4px solid #f00;
+    background: rgba(255, 0, 0, .4);
+    text-align: center;
+    color: #fff;
+    padding: 1em 0;
+}
+
+div#input {
+    height: 80px;
+    padding: 8px 0;
+    text-align: center;
+}
+
+#fileupload {
+    opacity: 0;
+    position: absolute;
+    top: -10em;
+}
+
+label[for=fileupload] {
+    cursor: pointer;
+    display: block;
+    margin: .5em 0;
+    font-size: 1.2em;
+}
+
+div#output {
+    height: calc(100% - 100px);
+}
+
+div#output iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#innerframe #tracer,
+#innerframe #vfs,
+#innerframe #console {
+    position: relative;
+}
+
+#innerframe #tracer {
+    float: left;
+    width: 60%;
+    height: 80%;
+}
+
+#innerframe #vfs {
+    float: right;
+    width: 40%;
+    height: 80%;
+}
+
+#innerframe #console {
+    width: 100%;
+    clear: both;
+    height: 19%;
+}
+
+#innerframe > div:after {
+    color: #ccc;
+    position: absolute;
+    right: 1em;
+    top: 0;
+    content: attr(id);
+    text-transform: capitalize;
+    opacity: .6;
+}
+
+#innerframe > div:hover:after {
+    opacity: 1;
+}
+
+#innerframe textarea {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    resize: none;
+}
