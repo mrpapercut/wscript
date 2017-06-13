@@ -6,7 +6,7 @@
 WScript Emulator is an emulator/tracer of the Windows Script Host functionality. It provides a full Javascript equivalent of WScript, so most valid scripts running against it will work as if they were running in the regular WScript environment.
 Most components have been ported, though some are lacking because of scope (f.e. Microsoft.XMLDOM, ApplicationObject). But nearly all common functionality is present in the object. For a full list of supported functionality, see the [supported objects](#user-content-supported-objects) section.
 
-Because WScript Emulator is pure Javascript, it will run in any [recent](#user-content-requirements) browser on any platform. And because we actually run the original script against the emulator, javascript-obfuscation of the original file is irrelevant.
+Because WScript Emulator is pure Javascript, it will run in any [recent](#user-content-requirements) browser on any platform. And because we actually run the original script against the emulator, javascript-obfuscation of the original file is irrelevant. The emulator does not modify the provided script in any way, it runs as-is.
 
 ## Warnings
 If you were to use the WScript Emulator to analyse WScript-based malware downloaders, take all necessary precautions as you would for any other analysis. The emulator does not execute any HTTP-requests, registry changes or filesystem modifications, but you are still running a malicious file. Use only if you are confident (or confidently suspect) that the file is a WScript file, and always __at your own risk__.
