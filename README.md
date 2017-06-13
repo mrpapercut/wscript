@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/mrpapercut/wscript/badge.svg?branch=master)](https://coveralls.io/github/mrpapercut/wscript?branch=master)
 
 WScript Emulator is an emulator/tracer of the Windows Script Host functionality. It provides a full Javascript equivalent of WScript, so most valid scripts running against it will work as if they were running in the regular WScript environment.
-Most components have been ported, though some are lacking because of scope (f.e. Microsoft.XMLDOM, ApplicationObject). But nearly all common functionality is present in the object. For a full list of supported functionality, check the `/lib` and `/lib/objects` folders.
+Most components have been ported, though some are lacking because of scope (f.e. Microsoft.XMLDOM, ApplicationObject). But nearly all common functionality is present in the object. For a full list of supported functionality, see the [supported objects](#user-content-supported-objects) section.
 
 Because WScript Emulator is pure Javascript, it will run in any [recent](#user-content-requirements) browser on any platform. And because we actually run the original script against the emulator, javascript-obfuscation of the original file is irrelevant.
 
@@ -16,6 +16,36 @@ The WScript Emulator contains a full code tracer, listing every class-construct,
 
 ## VFS
 In order to track creating/modifying/deleting files that would normally occur on the filesystem, the emulator contains a mock filesystem. This helps to easily see what the script would do to your filesystem if it was running in the normal WScript environment.
+
+## Supported objects
+- [WScript](https://msdn.microsoft.com/en-us/library/at5ydy31(v=vs.84).aspx)
+  - [WshArguments](https://msdn.microsoft.com/en-us/library/ss1ysb2a(v=vs.84).aspx)
+    - [WshNamed](https://msdn.microsoft.com/en-us/library/d6y04sbb(v=vs.84).aspx)
+    - [WshUnnamed](https://msdn.microsoft.com/en-us/library/ah2hawwc(v=vs.84).aspx)
+  - [WshController](https://msdn.microsoft.com/en-us/library/xk7bxb0d(v=vs.84).aspx)
+    - [WshRemote](https://msdn.microsoft.com/en-us/library/x9t3ze5y(v=vs.84).aspx)
+      - [WshRemoteError](https://msdn.microsoft.com/en-us/library/d02b3e15(v=vs.84).aspx)
+  - [WshNetwork](https://msdn.microsoft.com/en-us/library/s6wt333f(v=vs.84).aspx)
+  - [WshShell](https://msdn.microsoft.com/en-us/library/aew9yb99(v=vs.84).aspx)
+    - [WshEnvironment](https://msdn.microsoft.com/en-us/library/6s7w15a0(v=vs.84).aspx)
+    - [WshScriptExec](https://msdn.microsoft.com/en-us/library/2f38xsxe(v=vs.84).aspx)
+    - [WshShortcut](https://msdn.microsoft.com/en-us/library/xk6kst2k(v=vs.84).aspx)
+    - [WshSpecialFolders](https://msdn.microsoft.com/en-us/library/9x9e7edx(v=vs.84).aspx)
+
+Additional objects:
+- [ActiveXObject](https://msdn.microsoft.com/en-us/library/6958xykx(v=vs.100).aspx)
+- [ADODB.Stream](https://msdn.microsoft.com/en-us/library/ms677486(v=vs.85).aspx)
+- [MSXML.XMLHTTP](https://msdn.microsoft.com/en-us/library/ms760305(v=vs.85).aspx)
+- [Scripting.Dictionary](https://msdn.microsoft.com/en-us/library/x4k5wbx4(v=vs.84).aspx)
+- [Scripting.FileSystemObject](https://msdn.microsoft.com/en-us/library/hww8txat(v=vs.84).aspx)
+
+Helpers:
+- [Enumerator](https://msdn.microsoft.com/en-us/library/x32bxwys(v=vs.100).aspx)
+- [TextStream](https://msdn.microsoft.com/en-us/library/312a5kbt(v=vs.84).aspx)
+
+Not supported:
+- ApplicationObject (Couldn't find documentation)
+- [Microsoft.XMLDOM](https://msdn.microsoft.com/en-us/library/ms677486(v=vs.85).aspx)
 
 ## Limitations
 It currently only supports JScript variants of WScript, not the VBScript variant. WScript originally supports both the VB and JS syntax, but emulating VB syntax in pure Javascript is out of scope for this project.
