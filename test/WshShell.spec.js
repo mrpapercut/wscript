@@ -177,6 +177,10 @@ describe('WshShell', function() {
                 expect(WshShell.ExpandEnvironmentStrings('%WINDIR%')).to.equal('C:\\Windows');
             });
 
+            it('should expand with appending strings', function() {
+                expect(WshShell.ExpandEnvironmentStrings('%WINDIR%/explorer.exe')).to.equal('C:\\Windows\\explorer.exe');
+            });
+
             it('should expand case-insensitively', function() {
                 expect(WshShell.ExpandEnvironmentStrings('%userprofile%')).to.equal('C:\\Users\\User');
             });
