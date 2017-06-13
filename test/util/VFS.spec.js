@@ -119,6 +119,7 @@ describe('VFS', function() {
             expect(VFS._formatPath('.\\testfile.txt')).to.equal('C:\\temp\\testfile.txt');
             expect(VFS._formatPath('C:\\')).to.equal('C:\\');
             expect(VFS._formatPath('..\\')).to.equal('C:\\');
+            expect(VFS._formatPath('C:\\temp/testfile.txt')).to.equal('C:\\temp\\testfile.txt');
         });
     });
 
