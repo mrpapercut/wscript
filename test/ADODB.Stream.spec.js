@@ -303,8 +303,8 @@ describe('ADODBStream', function() {
                 ADODBStream = getNewInstance();
                 ADODBStream.open();
                 ADODBStream.writeText('Hello world');
-                ADODBStream.saveToFile('streamfile.txt', 1);
-                expect(global.VFS.fileExists('streamfile.txt')).to.equal(-1);
+                ADODBStream.saveToFile('folder/streamfile.txt', 1);
+                expect(global.VFS.fileExists('folder\\streamfile.txt')).to.equal(-1);
             });
         });
 
