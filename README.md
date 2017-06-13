@@ -38,6 +38,12 @@ Additional objects:
 - [MSXML.XMLHTTP](https://msdn.microsoft.com/en-us/library/ms760305(v=vs.85).aspx)
 - [Scripting.Dictionary](https://msdn.microsoft.com/en-us/library/x4k5wbx4(v=vs.84).aspx)
 - [Scripting.FileSystemObject](https://msdn.microsoft.com/en-us/library/hww8txat(v=vs.84).aspx)
+  - [Drives (collection)](https://msdn.microsoft.com/en-us/library/x0s9y250(v=vs.84).aspx)
+  - [Files (collection)](https://msdn.microsoft.com/en-us/library/wz72a8c0(v=vs.84).aspx)
+  - [Folders (collection)](https://msdn.microsoft.com/en-us/library/9kcx47hd(v=vs.84).aspx)
+  - [Drive (object)](https://msdn.microsoft.com/en-us/library/ts2t8ybh(v=vs.84).aspx)
+  - [File (object)](https://msdn.microsoft.com/en-us/library/1ft05taf(v=vs.84).aspx)
+  - [Folder (object)](https://msdn.microsoft.com/en-us/library/1c87day3(v=vs.84).aspx)
 
 Helpers:
 - [Enumerator](https://msdn.microsoft.com/en-us/library/x32bxwys(v=vs.100).aspx)
