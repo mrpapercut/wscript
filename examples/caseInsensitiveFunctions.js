@@ -14,5 +14,6 @@ WScript.EcHo('EcHo');
 WScript.eChO('eChO');
 */
 
-var aXo = WScript.cReAtEoBjEcT('aCtIvExObJeCt');
+var aXo = WScript.cReAtEoBjEcT('ActiveXObject');
+console.log(aXo);
 aXo.oPeN('GET', 'http://example.com', false);
