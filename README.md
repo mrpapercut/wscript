@@ -19,7 +19,9 @@ In order to track creating/modifying/deleting files that would normally occur on
 
 ## Limitations
 It currently only supports JScript variants of WScript, not the VBScript variant. WScript originally supports both the VB and JS syntax, but emulating VB syntax in pure Javascript is out of scope for this project.
+
 __The emulator does not download any files__ when the original script calls for it. This is done for security reasons. It does show which URL is being requested and where the file would've been saved to in the VFS (but without the file's contents).
+
 In addition to this, the emulator page removes `XMLHTTPRequest` and `fetch` from the global `window`-object. It is easily replacable with other JS functionality though
 
 ## WScript/JScript quirks
@@ -31,5 +33,5 @@ Regular JScript, like all ECMAscript variants, is case-sensitive (there is a dif
 In WScript, false === 0, but true === ~false (-1). Because we cannot redefine `true` in javascript, this cannot be circumvented. If you find scripts relying on `true === -1`, please let me know.
 
 ## Requirements
-For use: any recent browser that supports the ES6 syntax and [Proxy](https://kangax.github.io/compat-table/es6/#test-Proxy) & [Reflect](https://kangax.github.io/compat-table/es6/#test-Reflect) objects. (Chrome >= 49.0, Firefox >= 42, Edge >= 14, Safari >= 10)
-For development: NodeJS >= 6.4
+- For use: any recent browser that supports the ES6 syntax and [Proxy](https://kangax.github.io/compat-table/es6/#test-Proxy) & [Reflect](https://kangax.github.io/compat-table/es6/#test-Reflect) objects. (Chrome >= 49.0, Firefox >= 42, Edge >= 14, Safari >= 10)
+- For development: NodeJS >= 6.4
