@@ -8,9 +8,9 @@ var getFilePath = function(filename) {
     return path.join(__dirname, '../..', 'lib', filename);
 }
 
-var getNewInstance = function(filename, contents, unicode, iomode) {
+var getNewInstance = function(filename, contents, unicode, iomode, fullpath) {
     var instance = require(getFilePath('common/TextStream'));
-    return new instance(filename, contents, unicode, iomode);
+    return new instance(filename, contents, unicode, iomode, fullpath || 'C:\\temp\\' + filename);
 }
 
 var getResponseText = function() {
@@ -31,6 +31,7 @@ describe('TextStream', function() {
             Column:        1,
             Line:          1,
             _filename:     'testfile.txt',
+			_fullpath:     'C:\\temp\\testfile.txt',
             _unicode:      false,
             _iomode:       1,
             _contents:     ''
