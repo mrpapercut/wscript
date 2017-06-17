@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 0 0 0 5px;
     height: 100%;
 }
 
@@ -43,6 +43,7 @@ textarea {
     padding: 1em 0;
 }
 
+/* INPUT */
 div#input {
     height: 80px;
     padding: 8px 0;
@@ -62,6 +63,11 @@ label[for=fileupload] {
     font-size: 1.2em;
 }
 
+label[for=b64decode] {
+    cursor: pointer;
+}
+
+/* OUTPUT */
 div#output {
     height: calc(100% - 100px);
 }
@@ -81,18 +87,32 @@ div#output iframe {
     float: left;
     width: 60%;
     height: 80%;
+    border: 1px solid #ccc;
+}
+
+#innerframe #tracer textarea {
+    border: 0;
 }
 
 #innerframe #vfs {
-    float: right;
-    width: 40%;
+    width: calc(40% - 10px);
     height: 80%;
+    float: left;
+    border: 1px solid #ccc;
+    border-left: 0;
+    overflow-x: auto;
 }
 
 #innerframe #console {
-    width: 100%;
+    width: calc(100% - 9px);
     clear: both;
     height: 19%;
+    border: 1px solid #ccc;
+    border-top: 0;
+}
+
+#innerframe #console textarea {
+    border: 0;
 }
 
 #innerframe > div:after {
@@ -113,4 +133,38 @@ div#output iframe {
     width: calc(100% - 6px);
     height: calc(100% - 6px);
     resize: none;
+}
+
+/* VFS */
+#vfs ul {
+  display: none;
+  padding-left: 1.25em;
+}
+
+#vfs li:not(.fileprop) {
+  font-weight: normal;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  line-height: 1.4em;
+}
+
+#vfs li:not(.fileprop):hover {
+  font-weight: bold;
+}
+
+#vfs li:not(.fileprop):before {
+  content: '▶';
+  position: absolute;
+  font-size: .7em;
+  left: -1.5em;
+  top: .15em;
+}
+
+#vfs li.open > ul {
+  display: block;
+}
+
+#vfs li.open:before {
+  content: '▼';
 }

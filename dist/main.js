@@ -44,13 +44,14 @@ var setIframeCode = function(usercode) {
 
     srcdoc = '<!doctype html><html><head><link href="styles.css" rel="styleshe'
            + 'et"></head><body id="innerframe"><div id="tracer"><textarea></te'
-           + 'xtarea></div><div id="vfs"><textarea></textarea></div><div id="c'
+           + 'xtarea></div><div id="vfs"></div><div id="c'
            + 'onsole"><textarea></textarea></div>';
 
-    srcdoc += '<script src="overrides.js"></script><script src="WScript.js"></'
+    srcdoc += '<script src="overrides.js"></script><script src="rendervfs.js"></script>'
+            + '<script src="WScript.js"></'
             + 'script><script>(function() {' + usercode + '})();</script><scri'
-            + 'pt>if(window.WScript&&window.VFS)window.setInterval(_=>{documen'
-            + 't.getElementById("vfs").children[0].value=VFS._printVFS()},100)'
+            + 'pt>if(window.WScript&&window.VFS)window.setTimeout(_=>{new renderVFS(VFS._vfs, documen'
+            + 't.getElementById("vfs"))/*.value=VFS._printVFS()*/},500)'
             + '</script></body></html>';
 
     ifr.srcdoc = srcdoc;
