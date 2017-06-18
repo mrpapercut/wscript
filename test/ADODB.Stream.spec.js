@@ -13,8 +13,10 @@ var getNewInstance = function() {
     return new instance();
 }
 
+var ArrayBufferString = require(getFilePath('util/ArrayBufferString'));
+
 var ADODBStream;
-var emptyBuffer = getNewInstance()._stringToArrayBuffer('\ufeff');
+var emptyBuffer = new ArrayBufferString();
 
 describe('ADODBStream', function() {
     describe('constructor()', function() {
@@ -29,7 +31,8 @@ describe('ADODBStream', function() {
             size: Infinity,
             state: 0,
             type: 2,
-            _data: ADODBStream._stringToArrayBuffer('\ufeff'),
+            _type: 2,
+            _data: new ArrayBufferString(),
             _name: 'ADODB.Stream'
         };
 
@@ -110,10 +113,10 @@ describe('ADODBStream', function() {
                 ADODBStream2.open();
 
                 ADODBStream1.mode = 3;
-                ADODBStream1._data = 'Hello world';
+                ADODBStream1._data.fromString('Hello world');
                 ADODBStream1.copyTo(ADODBStream2);
 
-                expect(ADODBStream2._data).to.equal(ADODBStream1._data);
+                expect(ADODBStream2._data.toString()).to.equal(ADODBStream1._data.toString());
                 expect(ADODBStream2.mode).to.equal(ADODBStream1.mode);
                 expect(ADODBStream2.type).to.equal(ADODBStream1.type);
             });
@@ -159,7 +162,7 @@ describe('ADODBStream', function() {
 
         describe('flush()', function() {
             it('should set data to null', function() {
-                ADODBStream._data = 'Hello world';
+                ADODBStream._data.fromString('Hello world');
                 ADODBStream.flush();
                 expect(ADODBStream._data).to.eql(emptyBuffer);
             });
