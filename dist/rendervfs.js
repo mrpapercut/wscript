@@ -53,6 +53,7 @@ class renderVFS {
             e.target.classList.toggle('open');
         })
 
+        li.classList.add('open');
         li.innerText = name;
         li.id = 'el' + this.elid;
         li.setAttribute('data-name', 'el-' + a2h(name));
@@ -83,7 +84,7 @@ class renderVFS {
             };
 
         for (var i in file) {
-            ul.appendChild(li(`${i}: ${file[i]}`));
+            ul.appendChild(li(`${i}: "${file[i]}"`));
         }
 
         ul.classList.add('fileobject');

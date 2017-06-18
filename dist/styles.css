@@ -63,10 +63,6 @@ label[for=fileupload] {
     font-size: 1.2em;
 }
 
-label[for=b64decode] {
-    cursor: pointer;
-}
-
 /* OUTPUT */
 div#output {
     height: calc(100% - 100px);
