@@ -20,7 +20,8 @@ try {
 
 // File upload handling
 var fileupload = document.getElementById('fileupload'),
-    loadedDiv = document.getElementById('loaded');
+    loadedDiv = document.getElementById('loaded'),
+    inputDiv = document.getElementById('loaded-input');
 
 var uploadhandler = function(e) {
     var file = e.target.files[0];
@@ -28,7 +29,6 @@ var uploadhandler = function(e) {
 
     reader.onload = function(f) {
         setIframeCode(f.target.result);
-        setInputCode(f.target.result);
         loaded.innerHTML = `Loaded: <span class="green">${file.name}</span> (${file.size} bytes)`;
     }
 
@@ -44,25 +44,21 @@ var setIframeCode = function(usercode) {
         srcdoc;
 
     srcdoc = '<!doctype html><html><head><link href="styles.css" rel="styleshe'
-           + 'et"></head><body id="innerframe"><div id="tracer" contenteditable>'
-           + '</div><div id="vfs"></div><div id="c'
-           + 'onsole"><textarea></textarea></div>';
+           + 'et"></head><body id="innerframe"><div id="left-panel"><div id="t'
+           + 'racer" contenteditable></div></div><div id="right-panel"><div id'
+           + '="loaded-input"><textarea>' + usercode + '</textarea></div><div '
+           + 'id="vfs" class="show"></div><div id="console"><textarea></textar'
+           + 'ea></div></div>';
 
-    srcdoc += '<script src="overrides.js"></script><script src="rendervfs.js"></script>'
-            + '<script src="WScript.js"></'
-            + 'script><script>(function() {' + usercode + '})();</script><scri'
-            + 'pt>if(window.WScript&&window.VFS)window.setTimeout(_=>{new renderVFS(VFS._vfs, documen'
-            + 't.getElementById("vfs"))/*.value=VFS._printVFS()*/},500)'
-            + '</script></body></html>';
+    srcdoc += '<script src="overrides.js"></script><script src="rendervfs.js">'
+            + '</script><script src="WScript.js"></script><script>(function() '
+            + '{' + usercode + '})();</script><script>if(window.WScript&&windo'
+            + 'w.VFS)window.setTimeout(_=>{new renderVFS(VFS._vfs, document.ge'
+            + 'tElementById("vfs"))/*.value=VFS._printVFS()*/},500)</script></'
+            + 'body></html>';
 
     ifr.srcdoc = srcdoc;
 }
 
-var setInputCode = function(usercode) {
-    var inputDiv = document.getElementById('loaded-input').children[0];
-    inputDiv.innerText = usercode;
-}
-
-
-
+// Toggle input div
 

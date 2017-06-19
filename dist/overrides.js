@@ -8,8 +8,8 @@ window.fetch = window.XMLHttpRequest = nop;
 window.proxy_config = {
     logFunction: function() {
         if (arguments) {
+            var out = document.getElementById('tracer');
             [...arguments].map(l => {
-                var out = document.getElementById('tracer');
                 out.innerHTML += typeof l === 'string' ? markString(l) : JSON.stringify(l, false, 2);
                 out.innerHTML += '<br>\n';
             });
@@ -22,16 +22,16 @@ var markString = function(string) {
     return string.replace(/^\>\s(CALL|CONSTRUCT|SET|GET)/, function(match, p) {
         switch(p) {
             case 'CALL':
-                p = '<span class="blue">' + p + '</span>      ';
+                p = '<span class="blue">' + p + '</span>';
                 break;
             case 'CONSTRUCT':
-                p = '<span class="green">' + p + '</span>   ';
+                p = '<span class="green">' + p + '</span>';
                 break;
             case 'SET':
-                p = '<span class="red">' + p + '</span>      ';
+                p = '<span class="red">' + p + '</span>';
                 break;
             case 'GET':
-                p = '<span class="orange">' + p + '</span>      ';
+                p = '<span class="orange">' + p + '</span>';
                 break;
 
             default:
