@@ -56,11 +56,24 @@ div#input {
     top: -10em;
 }
 
-label[for=fileupload] {
+label[for=fileupload],
+#input button {
     cursor: pointer;
-    display: block;
-    margin: .5em 0;
+    display: inline-block;
+    margin: .5em 1em;
     font-size: 1.2em;
+}
+
+#input button {
+    background: #222;
+    border: 0;
+    color: #ccc;
+    padding: 0;
+}
+
+label[for=fileupload]:hover,
+#input button:hover {
+    color: #eee;
 }
 
 /* OUTPUT */
@@ -77,22 +90,22 @@ div#output iframe {
 #innerframe #vfs,
 #innerframe #console {
     position: relative;
+    padding: 0.2em;
 }
 
 #innerframe #tracer {
     float: left;
-    width: 60%;
-    height: 80%;
+    width: calc(60% - 0.4em);
+    height: calc(80% - 0.7em);
     border: 1px solid #ccc;
-}
-
-#innerframe #tracer textarea {
-    border: 0;
+    overflow: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5em;
 }
 
 #innerframe #vfs {
-    width: calc(40% - 10px);
-    height: 80%;
+    width: calc(40% - 10px - 0.4em);
+    height: calc(80% - 0.4em);
     float: left;
     border: 1px solid #ccc;
     border-left: 0;
@@ -100,9 +113,9 @@ div#output iframe {
 }
 
 #innerframe #console {
-    width: calc(100% - 9px);
+    width: calc(100% - 9px - 0.4em);
     clear: both;
-    height: 19%;
+    height: calc(19% - 0.4em);
     border: 1px solid #ccc;
     border-top: 0;
 }
@@ -134,7 +147,7 @@ div#output iframe {
 /* VFS */
 #vfs ul {
   display: none;
-  padding-left: 1.25em;
+  padding: 0 0 0 1.5em;
 }
 
 #vfs li:not(.fileprop) {

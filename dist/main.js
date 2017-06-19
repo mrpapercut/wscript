@@ -28,6 +28,7 @@ var uploadhandler = function(e) {
 
     reader.onload = function(f) {
         setIframeCode(f.target.result);
+        setInputCode(f.target.result);
         loaded.innerHTML = `Loaded: <span class="green">${file.name}</span> (${file.size} bytes)`;
     }
 
@@ -43,8 +44,8 @@ var setIframeCode = function(usercode) {
         srcdoc;
 
     srcdoc = '<!doctype html><html><head><link href="styles.css" rel="styleshe'
-           + 'et"></head><body id="innerframe"><div id="tracer"><textarea></te'
-           + 'xtarea></div><div id="vfs"></div><div id="c'
+           + 'et"></head><body id="innerframe"><div id="tracer" contenteditable>'
+           + '</div><div id="vfs"></div><div id="c'
            + 'onsole"><textarea></textarea></div>';
 
     srcdoc += '<script src="overrides.js"></script><script src="rendervfs.js"></script>'
@@ -56,3 +57,12 @@ var setIframeCode = function(usercode) {
 
     ifr.srcdoc = srcdoc;
 }
+
+var setInputCode = function(usercode) {
+    var inputDiv = document.getElementById('loaded-input').children[0];
+    inputDiv.innerText = usercode;
+}
+
+
+
+
