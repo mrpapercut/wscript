@@ -29,15 +29,12 @@ describe('Enumerator', function() {
         var properties = {
             _collection: testCollection,
             _index: 0,
-            _length: testCollection.length
+            _length: testCollection.length,
         };
-
-        it('should have all properties', function() {
-            expect(Enumerator).to.have.all.keys(Object.keys(properties));
-        });
 
         it('should have all default values', function() {
             for (var i in properties) {
+                expect(Enumerator[i]).to.not.be.undefined;
                 expect(Enumerator[i]).to.eql(properties[i]);
             }
         });

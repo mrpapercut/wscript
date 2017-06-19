@@ -31,20 +31,16 @@ describe('TextStream', function() {
             Column:        1,
             Line:          1,
             _filename:     'testfile.txt',
-			_fullpath:     'C:\\temp\\testfile.txt',
+            _fullpath:     'C:\\temp\\testfile.txt',
             _unicode:      false,
             _iomode:       1,
             _contents:     ''
         };
 
-        it('should have all properties', function() {
-            TextStream = getNewInstance('testfile.txt', '', false);
-            expect(TextStream).to.have.all.keys(Object.keys(properties));
-        });
-
         it('should have all default values', function() {
             TextStream = getNewInstance('testfile.txt', '', false);
             for (var i in properties) {
+                expect(TextStream[i]).to.not.be.undefined;
                 expect(TextStream[i]).to.eql(properties[i]);
             }
         });
