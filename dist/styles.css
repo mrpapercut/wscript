@@ -12,10 +12,11 @@ body {
 }
 
 body,
-textarea {
+textarea,
+button {
     background: #222;
     color: #ccc;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Consolas', monospace;
 }
 
 textarea {
@@ -55,7 +56,7 @@ textarea {
 }
 
 /* INPUT */
-div#input {
+div#top {
     height: 80px;
     padding: 8px 0;
     text-align: center;
@@ -68,14 +69,14 @@ div#input {
 }
 
 label[for=fileupload],
-#input button {
+#top button {
     cursor: pointer;
     display: inline-block;
     margin: .5em 1em;
     font-size: 1.2em;
 }
 
-#input button {
+#top button {
     background: #222;
     border: 0;
     color: #ccc;
@@ -83,29 +84,25 @@ label[for=fileupload],
 }
 
 label[for=fileupload]:hover,
-#input button:hover {
+#top button:hover {
     color: #eee;
 }
 
 /* OUTPUT */
-div#output {
+div#bottom {
     height: calc(100% - 100px);
+	width: 95%;
+	margin: 0 auto;
 }
 
-div#output iframe {
+div#bottom iframe {
     width: 100%;
     height: 100%;
 }
-/*
-#innerframe #tracer,
-#innerframe #vfs,
-#innerframe #loaded-input,
-#innerframe #console {
-*/
+
 #left-panel,
 #right-panel {
     position: relative;
-    padding: 0.2em;
     border: 5px solid #888;
     border-right: 0;
     border-bottom: 0;
@@ -115,11 +112,12 @@ div#output iframe {
 }
 
 #left-panel {
-    width: 55%;
-    min-height: 90%;
-    height: 90%;
+    padding: 0.2em;
+    width: calc(55% - 1em);
+    min-height: calc(90% - 0.4em);
+    height: calc(90% - 0.4em);
     float: left;
-    overflow: none;
+    overflow: hidden;
 }
 
 #tracer {
@@ -145,23 +143,42 @@ div#output iframe {
 }
 
 #right-panel {
-    width: 40%;
+    width: calc(43% - 1em);
     height: 90%;
-    float: left;
+    float: right;
     overflow: hidden;
 }
 
-#right-panel > div {
+#tabs button {
+    border: 0;
+	cursor: pointer;
+	background: #ccc;
+	line-height: 2em;
+	color: #222;
+	padding: 0 1em;
+}
+
+#tabs button.active {
+	font-weight: bold;
+	background: #eee;
+}
+
+#right-panel #input,
+#right-panel #vfs,
+#right-panel #console {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 30px;
     right: 0;
     bottom: 0;
     z-index: -1;
     display: none;
+    padding: 0.2em;
 }
 
-#right-panel > div.show {
+#right-panel #input.show,
+#right-panel #vfs.show,
+#right-panel #console.show {
     display: block;
     z-index: 1;
 }
@@ -170,10 +187,20 @@ div#output iframe {
     overflow-x: auto;
 }
 
+#right-panel #vfs > ul {
+	margin-top: 0;
+}
+
+#right-panel #tabs {
+    width: 100%;
+	border-bottom: 5px solid #888;
+	background: #ccc;
+}
+
 /* VFS */
 #vfs ul {
   display: none;
-  padding: 0 0 0 1.5em;
+  padding: 0 0 0 1.1em;
 }
 
 #vfs li:not(.fileprop) {
@@ -189,7 +216,7 @@ div#output iframe {
 }
 
 #vfs li:not(.fileprop):before {
-  content: '▶';
+  content: '\25b6';
   position: absolute;
   font-size: .7em;
   left: -1.5em;
@@ -201,5 +228,5 @@ div#output iframe {
 }
 
 #vfs li.open:before {
-  content: '▼';
+  content: '\25bc';
 }
