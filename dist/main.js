@@ -46,9 +46,9 @@ var setIframeCode = function(usercode) {
     srcdoc = '<!doctype html><html><head><link href="styles.css" rel="styleshe'
            + 'et"></head><body id="innerframe"><div id="left-panel"><div id="t'
            + 'racer" contenteditable></div></div><div id="right-panel"><div id'
-		   + '="tabs"><button type="button" id="inputbtn">Input</button><butto'
-		   + 'n type="button" id="vfsbtn" class="active">VFS</button><button type="button" id'
-		   + '="consolebtn">Console</button></div><div id'
+           + '="tabs"><button type="button" id="inputbtn">Input</button><butto'
+           + 'n type="button" id="vfsbtn" class="active">VFS</button><button type="button" id'
+           + '="consolebtn">Console</button></div><div id'
            + '="input"><textarea>' + usercode + '</textarea></div><div '
            + 'id="vfs" class="show"></div><div id="console"><textarea></textar'
            + 'ea></div></div>';

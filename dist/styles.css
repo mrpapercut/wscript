@@ -91,8 +91,8 @@ label[for=fileupload]:hover,
 /* OUTPUT */
 div#bottom {
     height: calc(100% - 100px);
-	width: 95%;
-	margin: 0 auto;
+    width: 95%;
+    margin: 0 auto;
 }
 
 div#bottom iframe {
@@ -151,16 +151,16 @@ div#bottom iframe {
 
 #tabs button {
     border: 0;
-	cursor: pointer;
-	background: #ccc;
-	line-height: 2em;
-	color: #222;
-	padding: 0 1em;
+    cursor: pointer;
+    background: #ccc;
+    line-height: 2em;
+    color: #222;
+    padding: 0 1em;
 }
 
 #tabs button.active {
-	font-weight: bold;
-	background: #eee;
+    font-weight: bold;
+    background: #eee;
 }
 
 #right-panel #input,
@@ -188,13 +188,13 @@ div#bottom iframe {
 }
 
 #right-panel #vfs > ul {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 #right-panel #tabs {
     width: 100%;
-	border-bottom: 5px solid #888;
-	background: #ccc;
+    border-bottom: 5px solid #888;
+    background: #ccc;
 }
 
 /* VFS */

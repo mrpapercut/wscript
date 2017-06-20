@@ -7,13 +7,13 @@ window.fetch = window.XMLHttpRequest = nop;
 // Using proxy_config to redirect output
 window.proxy_config = {
     logFunction: function() {
-		if (arguments) {
-			var out = document.getElementById('tracer');
-			[...arguments].map(l => {
-				out.innerHTML += typeof l === 'string' ? markString(l) : JSON.stringify(l, false, 2);
-				out.innerHTML += '<br>\n';
-			});
-		}
+        if (arguments) {
+            var out = document.getElementById('tracer');
+            [...arguments].map(l => {
+                out.innerHTML += typeof l === 'string' ? markString(l) : JSON.stringify(l, false, 2);
+                out.innerHTML += '<br>\n';
+            });
+        }
     }
 }
 
@@ -58,38 +58,38 @@ console.log = console.warn = console.error = function() {
 
 // Attach right-panel tabs
 var attachTabs = function() {
-	var tabbtns = [
-		document.getElementById('inputbtn'),
-		document.getElementById('vfsbtn'),
-		document.getElementById('consolebtn')
-	];
+    var tabbtns = [
+        document.getElementById('inputbtn'),
+        document.getElementById('vfsbtn'),
+        document.getElementById('consolebtn')
+    ];
 
-	var tabs = [
-		document.getElementById('input'),
-		document.getElementById('vfs'),
-		document.getElementById('console')
-	];
+    var tabs = [
+        document.getElementById('input'),
+        document.getElementById('vfs'),
+        document.getElementById('console')
+    ];
 
-	var hideTabs = function() {
-		for (var i = 0; i < tabs.length; i++) {
-			tabs[i].classList.remove('show');
-		}
+    var hideTabs = function() {
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove('show');
+        }
 
-		for (var i = 0; i < tabbtns.length; i++) {
-			tabbtns[i].classList.remove('active');
-		}
-	}
+        for (var i = 0; i < tabbtns.length; i++) {
+            tabbtns[i].classList.remove('active');
+        }
+    }
 
-	for (var i = 0; i < tabbtns.length; i++) {
-		tabbtns[i].addEventListener('click', function(e) {
-			hideTabs();
+    for (var i = 0; i < tabbtns.length; i++) {
+        tabbtns[i].addEventListener('click', function(e) {
+            hideTabs();
 
-			e.target.classList.add('active');
-			for (var i = 0; i < tabs.length; i++) {
-				if (tabs[i].id === e.target.id.replace('btn', '')) {
-					tabs[i].classList.add('show');
-				}
-			}
-		});
-	}
+            e.target.classList.add('active');
+            for (var i = 0; i < tabs.length; i++) {
+                if (tabs[i].id === e.target.id.replace('btn', '')) {
+                    tabs[i].classList.add('show');
+                }
+            }
+        });
+    }
 }
