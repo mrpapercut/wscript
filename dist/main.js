@@ -42,6 +42,7 @@ fileupload.addEventListener('change', uploadhandler);
 var setIframeCode = function(usercode) {
     var ifr = document.getElementById('output-iframe'),
         srcdoc;
+    usercode = '\n' + usercode + '\n';
 
     srcdoc = '<!doctype html><html><head><link href="styles.css" rel="styleshe'
            + 'et"></head><body id="innerframe"><div id="left-panel"><div id="t'
