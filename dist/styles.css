@@ -68,23 +68,16 @@ div#top {
     top: -10em;
 }
 
-label[for=fileupload],
-#top button {
+label[for=fileupload] {
     cursor: pointer;
     display: inline-block;
-    margin: .5em 1em;
+    margin: 0 1em .5em;
+    padding: .5em 1em;
     font-size: 1.2em;
+    border: 2px dotted transparent;
 }
 
-#top button {
-    background: #222;
-    border: 0;
-    color: #ccc;
-    padding: 0;
-}
-
-label[for=fileupload]:hover,
-#top button:hover {
+label[for=fileupload]:hover {
     color: #eee;
 }
 

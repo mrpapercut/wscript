@@ -20,11 +20,12 @@ try {
 
 // File upload handling
 var fileupload = document.getElementById('fileupload'),
+    fileuploadlabel = document.querySelector('label[for=fileupload]'),
     loadedDiv = document.getElementById('loaded'),
     inputDiv = document.getElementById('input');
 
 var uploadhandler = function(e) {
-    var file = e.target.files[0];
+    var file = (e.target.files || e.dataTransfer.files)[0];
     var reader = new FileReader();
 
     reader.onload = function(f) {
@@ -39,6 +40,34 @@ var uploadhandler = function(e) {
 
 fileupload.addEventListener('change', uploadhandler);
 
+// Drag/drop functionality
+var topdiv = document.getElementById('top'),
+    isDragging = false,
+    resetDrag = function() {
+        isDragging = false;
+        fileuploadlabel.innerText = 'Load file';
+        fileuploadlabel.style.borderColor = 'transparent';
+    };
+
+topdiv.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (!isDragging) {
+        fileuploadlabel.innerText = 'Drop file';
+        fileuploadlabel.style.borderColor = 'white';
+        isDragging = true;
+    }
+});
+topdiv.addEventListener('dragleave', function(e) {
+    resetDrag();
+});
+topdiv.addEventListener('drop', function(e) {
+    resetDrag();
+    uploadhandler(e);
+});
+
+// Setting HTML for iframe
 var setIframeCode = function(usercode, activeTab) {
     var ifr = document.getElementById('output-iframe'),
         tabsHTML,
@@ -78,4 +107,5 @@ var setIframeCode = function(usercode, activeTab) {
     ifr.srcdoc = srcdoc;
 }
 
+// Iniitialize
 window.onload = () => setIframeCode('', 'input');
