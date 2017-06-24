@@ -39,26 +39,43 @@ var uploadhandler = function(e) {
 
 fileupload.addEventListener('change', uploadhandler);
 
-var setIframeCode = function(usercode) {
+var setIframeCode = function(usercode, activeTab) {
     var ifr = document.getElementById('output-iframe'),
+        tabsHTML,
         srcdoc;
+
     usercode = '\n' + usercode + '\n';
+    activeTab = activeTab || 'vfs';
 
-    srcdoc = '<!doctype html><html><head><link href="styles.css" rel="styleshe'
-           + 'et"></head><body id="innerframe"><div id="left-panel"><div id="t'
-           + 'racer" contenteditable></div></div><div id="right-panel"><div id'
-           + '="tabs"><button type="button" id="inputbtn">Input</button><butto'
-           + 'n type="button" id="vfsbtn" class="active">VFS</button><button type="button" id'
-           + '="consolebtn">Console</button></div><div id'
-           + '="input"><textarea>' + usercode + '</textarea></div><div '
-           + 'id="vfs" class="show"></div><div id="console"><textarea></textar'
-           + 'ea></div></div>';
+    var classA = 'class="active"',
+        classS = 'class="show"';
 
-    srcdoc += '<script src="overrides.js"></script><script src="rendervfs.js">'
-            + '</script><script src="WScript.js"></script><script>(function() '
-            + '{' + usercode + '})();</script><script>if(window.WScript&&windo'
-            + 'w.VFS)window.setTimeout(_=>{new renderVFS(VFS._vfs, document.ge'
-            + 'tElementById("vfs")),attachTabs()},500);</script></body></html>';
+    srcdoc = `<!doctype html><html>`
+           + `<head><link href="styles.css" rel="stylesheet"></head>`
+           + `<body id="innerframe">`
+             + `<div id="left-panel"><div id="tracer" contenteditable></div></div>`
+               + `<div id="right-panel">`
+               + `<div id="tabs">`
+                 + `<button type="button" id="inputbtn" ${activeTab === 'input' ? classA : ''}>Input</button>`
+                 + `<button type="button" id="vfsbtn" ${activeTab === 'vfs' ? classA : ''}>VFS</button>`
+                 + `<button type="button" id="consolebtn" ${activeTab === 'console' ? classA : ''}>Console</button>`
+               + `</div>`
+               + `<div id="input" ${activeTab === 'input' ? classS : ''}>`
+                 + `<button id="runInput">Run</button>`
+                 + `<textarea>${usercode}</textarea>`
+               + `</div>`
+               + `<div id="vfs" ${activeTab === 'vfs' ? classS : ''}></div>`
+               + `<div id="console" ${activeTab === 'console' ? classS : ''}><textarea></textarea></div>`
+             + `</div>`
+
+             + `<script src="overrides.js"></script>`
+             + `<script src="rendervfs.js"></script>`
+             + `<script src="WScript.js"></script>`
+             + `<script>(function() {${usercode}})();</script>`
+             + `<script src="afterload.js"></script>`
+           + `</body></html>`;
 
     ifr.srcdoc = srcdoc;
 }
+
+window.onload = () => setIframeCode('', 'input');

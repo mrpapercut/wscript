@@ -149,13 +149,24 @@ div#bottom iframe {
     overflow: hidden;
 }
 
-#tabs button {
+#right-panel #tabs {
+    width: 100%;
+    border-bottom: 5px solid #888;
+    background: #ccc;
+}
+
+#tabs button,
+#input button {
     border: 0;
     cursor: pointer;
     background: #ccc;
     line-height: 2em;
     color: #222;
     padding: 0 1em;
+}
+
+#tabs button:hover {
+    background: #eee;
 }
 
 #tabs button.active {
@@ -183,18 +194,23 @@ div#bottom iframe {
     z-index: 1;
 }
 
+#input button {
+    position: absolute;
+    top: -30px;
+    right: 25px;
+    height: 26px;
+    line-height: 26px;
+    background: #222;
+    color: #eee;
+    font-size: 1em;
+}
+
 #right-panel #vfs {
     overflow-x: auto;
 }
 
 #right-panel #vfs > ul {
     margin-top: 0;
-}
-
-#right-panel #tabs {
-    width: 100%;
-    border-bottom: 5px solid #888;
-    background: #ccc;
 }
 
 /* VFS */
