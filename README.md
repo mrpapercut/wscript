@@ -71,3 +71,18 @@ In WScript, false === 0, but true === ~false (-1). Because we cannot redefine `t
 ## Requirements
 - For use: any recent browser that supports the ES6 syntax and [Proxy](https://kangax.github.io/compat-table/es6/#test-Proxy) & [Reflect](https://kangax.github.io/compat-table/es6/#test-Reflect) objects. (Chrome >= 49.0, Firefox >= 42, Edge >= 14, Safari >= 10)
 - For development: NodeJS >= 6.4
+
+## Developement
+This package contains a full emulated version of WScript with 100% test coverage. Every file has been named as expected, every documented method has a link to the official WScript documentation describing what the feature should do. If you want to contribute to this project, please keep the following in mind:
+- Every method should behave as identical as possible to original WScript code. See Microsoft's documentation for this
+- Everything must be covered by tests
+
+## Development setup
+```bash
+git clone https://github.com/mrpapercut/wscript.git
+cd wscript
+npm install
+npm run test-coverage
+npm run build
+```
+The HTML emulator can then be found in /dist/
