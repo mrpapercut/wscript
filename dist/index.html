@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>WScript emulator</title>
+<title>WScript Emulator</title>
 <link href="https://fonts.googleapis.com/css?family=Consolas" rel="stylesheet">
 <link href="styles.css" rel="stylesheet">
 </head>
@@ -11,6 +11,28 @@
     <input type="file" id="fileupload" name="fileupload">
     <label for="fileupload">Load file</label>
     <div id="loaded"></div>
+    <div id="help">
+        <button type="button" id="togglehelp" title="Help">?</button>
+        <button type="button" id="loadExampleCode">Load example</button>
+        <div id="help-inner">
+            <h2>WScript Emulator</h2>
+            <p>This software emulates the WScript functionality found on Windows systems. Load a file and see which classes &amp; methods are called and with which arguments. Because the WScript emulator aims to behave as close as the normal WScript functionality, using this emulator makes analysing WScript files much easier, no matter how many layers of obfuscation are added.</p>
+            <h3>Usage</h3>
+            <p>Click on 'Load file' or drag a file to the button to run a WScript js file. The file is not uploaded to the server but runs in your browser against the WScript emulator.<br>
+            The 'Tracer' screen shows you what actions are performed in the script. The first 7 lines are always present because of the initialisation of the WScript object and virtual filesystem (VFS).</p>
+            <p>The right panel has 3 screens:
+                <ul>
+                    <li><strong>Input</strong> shows your input. This also allows for inline-editing and running scripts</li>
+                    <li><strong>VFS</strong> is a tree-representation of the Virtual Filesystem, showing created and/or modified files. The VFS contains a default basic folder structure</li>
+                    <li><strong>Console</strong> is the output of console.log commands in the input. This helps with inline-debugging</li>
+                </ul>
+            </p>
+            <h3>Restrictions / warnings</h3>
+            <p>If the input file asks to download an external file, this file is <u>not</u> downloaded. In addition, default methods 'XMLHTTPRequest' and 'fetch' are overwritten with nops. Of course it is possible for scripts to re-implement these features, so don't rely on this software to keep yourself safe. Take precautions if you're using this to analyse malware-downloaders.</p>
+            <p>The WScript Emulator is written in Javascript, and handles only the JScript variant of WScript files. WScript can also be written in VBScript, but due to the differences between Javascript and VBScript, it is not possible to emulate it easily.</p>
+            <p>Note: while the emulator tries to be as close to the original as possible, it cannot be expected to handle 100% of the files, for various reasons. If you find a problem and know of a solution to fix this, please visit the <a href="https://github.com/mrpapercut/wscript">Github page</a>.</p>
+        </div>
+    </div>
 </div>
 <div id="bottom">
     <iframe id="output-iframe" sandbox="allow-forms allow-scripts allow-same-origin allow-modals allow-popups" allowfullscreen frameBorder="0"></iframe>
