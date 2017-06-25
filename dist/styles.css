@@ -71,7 +71,7 @@ div#top {
 label[for=fileupload] {
     cursor: pointer;
     display: inline-block;
-    margin: 0 1em .5em;
+    margin: 0 1em;
     padding: .5em 1em;
     font-size: 1.2em;
     border: 2px dotted transparent;
