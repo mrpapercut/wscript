@@ -185,9 +185,9 @@ describe('WshShell', function() {
                 expect(WshShell.ExpandEnvironmentStrings('%userprofile%')).to.equal('C:\\Users\\User');
             });
 
-			it('should not expand strings that are not EnvironmentStrings', function() {
-				expect(WshShell.ExpandEnvironmentStrings('%FAKESTR%')).to.equal('%FAKESTR%');
-			});
+            it('should not expand strings that are not EnvironmentStrings', function() {
+                expect(WshShell.ExpandEnvironmentStrings('%FAKESTR%')).to.equal('%FAKESTR%');
+            });
 
             it('should return empty string when no or invalid strString is provided', function() {
                 expect(WshShell.ExpandEnvironmentStrings()).to.equal('');

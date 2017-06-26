@@ -69,10 +69,10 @@ describe('WshArguments', function() {
             expect(WshArguments.Named.Length).to.eql(1);
         });
 
-		it('should find item with Exists()', function() {
-			expect(WshArguments.Named.Exists('ab')).to.be.true;
-			expect(WshArguments.Named.Exists('cd')).to.be.false;
-		});
+        it('should find item with Exists()', function() {
+            expect(WshArguments.Named.Exists('ab')).to.be.true;
+            expect(WshArguments.Named.Exists('cd')).to.be.false;
+        });
 
         it('should have Count() same as Length', function() {
             expect(WshArguments.Named.Count()).to.eql(WshArguments.Named.Length);

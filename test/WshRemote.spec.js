@@ -41,15 +41,15 @@ describe('WshRemote', function() {
                 expect(WshRemote[i]).to.eql(properties[i]);
             }
         });
-	});
+    });
 
-	describe('toString()', function() {
-		it('should return WshRemote', function() {
-			expect(WshRemote.toString()).to.equal('WshRemote');
-		});
-	});
+    describe('toString()', function() {
+        it('should return WshRemote', function() {
+            expect(WshRemote.toString()).to.equal('WshRemote');
+        });
+    });
 
-	describe('Execute()', function() {
+    describe('Execute()', function() {
         it('should have Status set to 1', function() {
             WshRemote.Execute();
             expect(WshRemote.Status).to.equal(1);
@@ -74,33 +74,33 @@ describe('WshRemote', function() {
             expect(WshRemote.Status).to.equal(2);
             expect(WshRemote.Status).to.equal(2);
         });
-	});
+    });
 
-	describe('Terminate()', function() {
+    describe('Terminate()', function() {
         it('should set Status to 2', function() {
             WshRemote.Terminate();
             expect(WshRemote.Status).to.equal(2);
         });
-	});
+    });
 
-	// Events
-	describe('_eventEnd()', function() {
+    // Events
+    describe('_eventEnd()', function() {
         it('should return undefined', function() {
             expect(WshRemote._eventEnd()).to.be.undefined;
         });
-	});
+    });
 
-	describe('_eventError()', function() {
+    describe('_eventError()', function() {
         var WshRemoteError = require(getFilePath('WshRemoteError'));
         it('should set Error to instanceof WshRemoteError', function() {
             WshRemote._eventError();
             expect(WshRemote.Error.toString()).to.eql('WshRemoteError');
         });
-	});
+    });
 
-	describe('_eventStart()', function() {
+    describe('_eventStart()', function() {
         it('should return undefined', function() {
             expect(WshRemote._eventStart()).to.be.undefined;
         });
-	});
+    });
 });

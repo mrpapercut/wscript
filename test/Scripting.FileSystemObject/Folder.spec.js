@@ -37,17 +37,17 @@ describe('Folder', function() {
         var Files = require(getFilePath('objects/scriptingFSO/collections/Files'));
         var Folders = require(getFilePath('objects/scriptingFSO/collections/Folders'));
 
-		var rootFolderProperties = {
-			Attributes: 22,
-			Drive: 'C:',
-			Files: new Files(),
-			IsRootFolder: true,
-			Path: 'C:\\',
-			ShortPath: 'C:\\',
-			SubFolders: new Folders('C:\\'),
-			Type: 'Local Disk',
+        var rootFolderProperties = {
+            Attributes: 22,
+            Drive: 'C:',
+            Files: new Files(),
+            IsRootFolder: true,
+            Path: 'C:\\',
+            ShortPath: 'C:\\',
+            SubFolders: new Folders('C:\\'),
+            Type: 'Local Disk',
             _parent: new VFS()
-		};
+        };
 
         it('should have all properties', function() {
             expect(RootFolder).to.have.all.keys(Object.keys(rootFolderProperties));
@@ -66,27 +66,27 @@ describe('Folder', function() {
         });
     });
 
-	describe('constructor("C:\\windows\\system32")', function() {
-		var normalFolder = getNewInstance(normalFolderObj);
+    describe('constructor("C:\\windows\\system32")', function() {
+        var normalFolder = getNewInstance(normalFolderObj);
 
         var Files = require(getFilePath('objects/scriptingFSO/collections/Files'));
         var Folders = require(getFilePath('objects/scriptingFSO/collections/Folders'));
 
-		var normalFolderProperties = {
-			Attributes: 16,
-			Drive: 'C:',
-			Files: new Files(),
-			IsRootFolder: false,
-			Name: 'system32',
-			ParentFolder: 'C:\\windows',
-			Path: 'C:\\windows\\system32',
-			ShortName: 'system32',
-			ShortPath: 'C:\\windows\\system32',
-			Size: 20000,
-			SubFolders: new Folders('C:\\windows\\system32'),
-			Type: 'File Folder',
+        var normalFolderProperties = {
+            Attributes: 16,
+            Drive: 'C:',
+            Files: new Files(),
+            IsRootFolder: false,
+            Name: 'system32',
+            ParentFolder: 'C:\\windows',
+            Path: 'C:\\windows\\system32',
+            ShortName: 'system32',
+            ShortPath: 'C:\\windows\\system32',
+            Size: 20000,
+            SubFolders: new Folders('C:\\windows\\system32'),
+            Type: 'File Folder',
             _parent: new VFS()
-		};
+        };
 
         it('should have all properties', function() {
             expect(normalFolder).to.have.all.keys(Object.keys(normalFolderProperties));
@@ -103,7 +103,7 @@ describe('Folder', function() {
                 }
             }
         });
-	});
+    });
 
     describe('Copy()', function() {
         it('should copy the current folder to a new location', function() {

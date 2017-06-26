@@ -4,5 +4,4 @@ coverage
 
 # Files
 npm-debug.log
-dist/WScript.js
 dist/WScript.min.js

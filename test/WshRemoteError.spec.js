@@ -40,11 +40,11 @@ describe('WshRemoteError', function() {
                 expect(WshRemoteError[i]).to.eql(properties[i]);
             }
         });
-	});
+    });
 
-	describe('toString()', function() {
-		it('should return WshRemoteError', function() {
-			expect(WshRemoteError.toString()).to.equal('WshRemoteError');
-		});
-	});
+    describe('toString()', function() {
+        it('should return WshRemoteError', function() {
+            expect(WshRemoteError.toString()).to.equal('WshRemoteError');
+        });
+    });
 });

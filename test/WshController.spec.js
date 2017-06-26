@@ -20,10 +20,10 @@ describe('WshController', function() {
     describe('constructor()', function() {
         WshController = getNewInstance();
 
-		it('_name should equal WshController', function() {
-			expect(WshController._name).to.equal('WshController');
-		});
-	});
+        it('_name should equal WshController', function() {
+            expect(WshController._name).to.equal('WshController');
+        });
+    });
 
     describe('toString()', function() {
         WshController = getNewInstance();
@@ -32,11 +32,11 @@ describe('WshController', function() {
         });
     });
 
-	describe('CreateScript()', function() {
-		WshController = getNewInstance();
+    describe('CreateScript()', function() {
+        WshController = getNewInstance();
 
-		it('should return instance of WshRemote', function() {
-			expect(WshController.CreateScript().toString()).to.eql('WshRemote');
-		});
-	});
+        it('should return instance of WshRemote', function() {
+            expect(WshController.CreateScript().toString()).to.eql('WshRemote');
+        });
+    });
 });

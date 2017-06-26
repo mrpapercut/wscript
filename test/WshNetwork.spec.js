@@ -54,16 +54,16 @@ describe('WshNetwork', function() {
                 var PrinterPath = '\\\\printserv\\DefaultPrinter';
                 var PrinterDriver = 'Lexmark Optra S 1650';
                 expect(function() {
-					WshNetwork.AddWindowsPrinterConnection(PrinterPath, PrinterDriver)
-				}).to.throw(Error);
+                    WshNetwork.AddWindowsPrinterConnection(PrinterPath, PrinterDriver)
+                }).to.throw(Error);
             });
         });
 
         describe('AddPrinterConnection()', function() {
             it('should throw Error', function() {
                 expect(function() {
-					WshNetwork.AddPrinterConnection ("LPT1", "\\\\Server\\Print1")
-				}).to.throw(Error);
+                    WshNetwork.AddPrinterConnection ("LPT1", "\\\\Server\\Print1")
+                }).to.throw(Error);
             });
         });
 
@@ -91,39 +91,39 @@ describe('WshNetwork', function() {
             });
         });
 
-		describe('MapNetworkDrive()', function() {
-			it('should throw Error', function() {
-				expect(function() {
-					WshNetwork.MapNetworkDrive ("E:", "\\\\Server\\Public");
-				}).to.throw(Error);
-			});
-		});
+        describe('MapNetworkDrive()', function() {
+            it('should throw Error', function() {
+                expect(function() {
+                    WshNetwork.MapNetworkDrive ("E:", "\\\\Server\\Public");
+                }).to.throw(Error);
+            });
+        });
 
-		describe('RemoveNetworkDrive()', function() {
-			it('should throw Error', function() {
-				expect(function() {
-					WshNetwork.RemoveNetworkDrive ("E:");
-				}).to.throw(Error);
-			});
-		});
+        describe('RemoveNetworkDrive()', function() {
+            it('should throw Error', function() {
+                expect(function() {
+                    WshNetwork.RemoveNetworkDrive ("E:");
+                }).to.throw(Error);
+            });
+        });
 
-		describe('RemovePrinterConnection()', function() {
-			it('should throw Error', function() {
-				expect(function() {
-					var PrinterPath = "\\\\PRN-CORP1\\B41-4523-A";
-					WshNetwork.RemovePrinterConnection(PrinterPath, true, true);
-				}).to.throw(Error);
-			});
-		});
+        describe('RemovePrinterConnection()', function() {
+            it('should throw Error', function() {
+                expect(function() {
+                    var PrinterPath = "\\\\PRN-CORP1\\B41-4523-A";
+                    WshNetwork.RemovePrinterConnection(PrinterPath, true, true);
+                }).to.throw(Error);
+            });
+        });
 
-		describe('SetDefaultPrinter()', function() {
-			it('should throw Error', function() {
-				expect(function() {
-					var PrinterPath = "\\\\research\\library1";
-					WshNetwork.SetDefaultPrinter(PrinterPath);
-				}).to.throw(Error);
-			});
-		});
+        describe('SetDefaultPrinter()', function() {
+            it('should throw Error', function() {
+                expect(function() {
+                    var PrinterPath = "\\\\research\\library1";
+                    WshNetwork.SetDefaultPrinter(PrinterPath);
+                }).to.throw(Error);
+            });
+        });
     });
 });
 

@@ -582,12 +582,12 @@ describe('VFS', function() {
             expect(ts.ReadAll()).to.equal('Hello world!');
         });
 
-		it('should return a TextStream that can be written to', function() {
-			var ts = VFS.openTextFile('testfile.txt', 8);
-			ts.WriteLine('Hello world!');
-			ts.Close();
-			var file = VFS.getFile('testfile.txt');
-			expect(file._content.length).to.equal(25);
-		});
+        it('should return a TextStream that can be written to', function() {
+            var ts = VFS.openTextFile('testfile.txt', 8);
+            ts.WriteLine('Hello world!');
+            ts.Close();
+            var file = VFS.getFile('testfile.txt');
+            expect(file._content.length).to.equal(25);
+        });
     });
 });
