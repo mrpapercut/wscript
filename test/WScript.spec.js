@@ -202,9 +202,14 @@ describe('WScript', function() {
                 expect(WScript.CreateObject('MSXML2.XMLHTTP.6.0').toString()).to.equal('MSXML2.XMLHTTP');
             });
 
-            it('should return undefined if no or invalid strProgId is provided', function() {
-                expect(WScript.CreateObject()).to.be.undefined;
-                expect(WScript.CreateObject('Invalid.strProgId')).to.be.undefined;
+            it('should throw error if no or invalid strProgId is provided', function() {
+                expect(function() {
+					WScript.CreateObject();
+				}).to.throw(TypeError);
+
+                expect(function() {
+					WScript.CreateObject('Invalid.strProgId');
+				}).to.throw(TypeError);
             });
         });
 
