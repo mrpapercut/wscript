@@ -96,6 +96,7 @@ var setIframeCode = function(usercode, activeTab) {
                + `<div id="vfs" ${activeTab === 'vfs' ? classS : ''}></div>`
                + `<div id="console" ${activeTab === 'console' ? classS : ''}><textarea></textarea></div>`
              + `</div>`
+			 + ``
 
              + `<script src="overrides.js"></script>`
              + `<script src="rendervfs.js"></script>`

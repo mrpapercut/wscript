@@ -81,6 +81,14 @@ label[for=fileupload]:hover {
     color: #eee;
 }
 
+#githublink {
+	float: right;
+    clear: both;
+    margin: 0.5em calc(2.5% + 1em) 0 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
 /* HELP */
 #help {
     position: absolute;
