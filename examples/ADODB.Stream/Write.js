@@ -1,7 +1,7 @@
 var ADODBStream = WScript.CreateObject('ADODB.Stream');
 ADODBStream.open();
 ADODBStream.type = 1;
-ADODBStream.loadFromFile('examples//ADODB.Stream//empty.js');
+ADODBStream.loadFromFile('Write.js');
 // ADODBStream.write(01011001);
 ADODBStream.position = 0;
 var bA = ADODBStream.read();

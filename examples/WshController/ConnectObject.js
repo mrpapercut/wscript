@@ -1,5 +1,5 @@
 var Controller = WScript.CreateObject("WSHController");
-var RemoteScript = Controller.CreateScript("Z:\\obscure\\wscript\\examples\\WshController\\test.vbs");
+var RemoteScript = Controller.CreateScript(".\\test.vbs");
 
 var _eventError = RemoteScript._eventError;
 
