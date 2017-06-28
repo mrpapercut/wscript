@@ -60,6 +60,17 @@ __The emulator does not download any files__ when the original script calls for 
 
 In addition to this, the emulator page removes `XMLHTTPRequest` and `fetch` from the global `window`-object. It is easily replacable with other JS functionality though
 
+## Issues
+Not every script returns useful results. Commonly there can be 4 reasons for this:
+- The emulator doesn't support or incorrectly supports one of the objects called in the script
+- The script gets stuck in an infinite loop when emulating downloads. See issue #1 for a more detailed explanation
+- The file is not JScript (but VBscript or something else)
+- The malware is badly written and wouldn't run in a normal WScript environment either
+
+In any of these cases, the malware will have to be reversed manually to figure out why it didn't run correctly. I don't claim every script will run because of the limitations of emulation, but if even 50% of the scripts runs, it can save a lot of time.
+
+If you find a bug in the emulator, please open an Issue and provide sample code explaining where it went wrong. If you cannot provide the sample because it is actual malware, please send an email to `mischa [a] mrpapercut.com`.
+
 ## WScript/JScript quirks
 JScript is Microsoft's flavour of the ECMAscript standard. This means that most ECMAscript rules still apply, but JScript's implementation in WScript is a bit different:
 ### JScript in WScript is case-insensitive.
