@@ -12,7 +12,7 @@ foreach ($comobj in $lines) {
 		echo "Class not found: $comobj"
 	}
 
-	echo $info | Out-File ".\Objects\$comobj.txt"
+	echo $info | Out-File -Encoding "UTF8" ".\Objects\$comobj.txt"
 }
 
 # Class not found: AudioVBScript.1
