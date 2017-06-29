@@ -9,7 +9,7 @@ var getFilePath = function(filename) {
 }
 
 var getNewInstance = function(strProgId) {
-    var instance = require(getFilePath('objects/MSXML2.XMLHTTP'));
+    var instance = require(getFilePath('COMobjects/MSXML2.XMLHTTP'));
     return new instance(strProgId);
 }
 

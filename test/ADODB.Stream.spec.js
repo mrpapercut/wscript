@@ -9,7 +9,7 @@ var getFilePath = function(filename) {
 }
 
 var getNewInstance = function() {
-    var instance = require(getFilePath('objects/ADODB.Stream'));
+    var instance = require(getFilePath('COMobjects/ADODB.Stream'));
     return new instance();
 }
 

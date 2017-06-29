@@ -9,7 +9,7 @@ var getFilePath = function(filename) {
 }
 
 var getNewInstance = function() {
-    var instance = require(getFilePath('objects/Scripting.Dictionary'));
+    var instance = require(getFilePath('COMobjects/Scripting.Dictionary'));
     return new instance();
 }
 

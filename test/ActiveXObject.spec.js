@@ -10,7 +10,7 @@ var getFilePath = function(filename) {
     return path.join(__dirname, '..', 'lib', filename);
 }
 
-var ActiveXObject   = require(getFilePath('objects/ActiveXObject'));
+var ActiveXObject   = require(getFilePath('COMobjects/ActiveXObject'));
 var WshShell        = require(getFilePath('WshShell'));
 
 describe('ActiveXObject', function() {

@@ -9,7 +9,7 @@ var getFilePath = function(filename) {
 }
 
 var getNewInstance = function(folderPath, vfs) {
-    var instance = require(getFilePath('objects/scriptingFSO/collections/Folders'));
+    var instance = require(getFilePath('COMobjects/scriptingFSO/collections/Folders'));
     return new instance(folderPath, vfs);
 }
 

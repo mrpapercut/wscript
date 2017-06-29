@@ -8,7 +8,7 @@ var getFilePath = function(filename) {
     return path.join(__dirname, '../..', 'lib/', filename);
 }
 
-var Drive = require(getFilePath('objects/scriptingFSO/objects/Drive'));
+var Drive = require(getFilePath('COMobjects/scriptingFSO/objects/Drive'));
 
 // Collection of drives
 var testCollection = [new Drive(), new Drive()];

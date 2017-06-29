@@ -176,27 +176,27 @@ describe('WScript', function() {
             });
 
             it('should return ADODB.Stream object', function() {
-                var ADODBStream = require(getFilePath('objects/ADODB.Stream'));
+                var ADODBStream = require(getFilePath('COMobjects/ADODB.Stream'));
                 expect(WScript.CreateObject('ADODB.Stream').toString()).to.equal('ADODB.Stream');
             });
 
             it('should return Microsoft.XMLDOM object', function() {
-                var MSXMLDOM = require(getFilePath('objects/Microsoft.XMLDOM'));
+                var MSXMLDOM = require(getFilePath('COMobjects/Microsoft.XMLDOM'));
                 expect(WScript.CreateObject('Microsoft.XMLDOM').toString()).to.equal('Microsoft.XMLDOM');
             });
 
             it('should return Scripting.Dictionary object', function() {
-                var ScriptingDictionary = require(getFilePath('objects/Scripting.Dictionary'));
+                var ScriptingDictionary = require(getFilePath('COMobjects/Scripting.Dictionary'));
                 expect(WScript.CreateObject('Scripting.Dictionary').toString()).to.equal('Scripting.Dictionary');
             });
 
             it('should return Scripting.FileSystemObject object', function() {
-                var ScriptingFSO = require(getFilePath('objects/Scripting.FileSystemObject'));
+                var ScriptingFSO = require(getFilePath('COMobjects/Scripting.FileSystemObject'));
                 expect(WScript.CreateObject('Scripting.FileSystemObject').toString()).to.equal('Scripting.FileSystemObject');
             });
 
             it('should return MSXML2.XMLHTTP object', function() {
-                var MSXML2XMLHTTP = require(getFilePath('objects/MSXML2.XMLHTTP'));
+                var MSXML2XMLHTTP = require(getFilePath('COMobjects/MSXML2.XMLHTTP'));
                 expect(WScript.CreateObject('MSXML2.XMLHTTP').toString()).to.equal('MSXML2.XMLHTTP');
                 expect(WScript.CreateObject('MSXML2.XMLHTTP.3.0').toString()).to.equal('MSXML2.XMLHTTP');
                 expect(WScript.CreateObject('MSXML2.XMLHTTP.6.0').toString()).to.equal('MSXML2.XMLHTTP');

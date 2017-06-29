@@ -12,7 +12,7 @@ var VFS       = require(getFilePath('util/VFS'));
 var MSformats = require(getFilePath('util/MSformats'));
 
 var getNewInstance = function(filespec, vfs) {
-    var instance = require(getFilePath('objects/scriptingFSO/objects/File'));
+    var instance = require(getFilePath('COMobjects/scriptingFSO/objects/File'));
     return new instance(filespec, vfs || new VFS());
 }
 

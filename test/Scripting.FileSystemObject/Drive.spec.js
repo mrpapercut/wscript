@@ -9,7 +9,7 @@ var getFilePath = function(filename) {
 }
 
 var getNewInstance = function(drivespec) {
-    var instance = require(getFilePath('objects/scriptingFSO/objects/Drive'));
+    var instance = require(getFilePath('COMobjects/scriptingFSO/objects/Drive'));
     return new instance(drivespec);
 }
 

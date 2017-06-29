@@ -9,7 +9,7 @@ var getFilePath = function(filename) {
 }
 
 var getNewInstance = function() {
-    var instance = require(getFilePath('objects/Scripting.FileSystemObject'));
+    var instance = require(getFilePath('COMobjects/Scripting.FileSystemObject'));
     return new instance();
 }
 
@@ -52,7 +52,7 @@ describe('Scripting.FileSystemObject', function() {
     });
 
     describe('constructor()', function() {
-        var Drives = require(getFilePath('objects/scriptingFSO/collections/Drives'));
+        var Drives = require(getFilePath('COMobjects/scriptingFSO/collections/Drives'));
         var VFS = require(getFilePath('util/VFS'));
 
         var properties = {
