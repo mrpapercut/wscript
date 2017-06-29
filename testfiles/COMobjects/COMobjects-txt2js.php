@@ -1,6 +1,6 @@
 <?php
 
-#header('Content-Type: text/plain');
+header('Content-Type: text/plain');
 
 $files = scandir('./Objects/');
 foreach ($files as $file) {
@@ -23,12 +23,29 @@ foreach ($files as $file) {
 			}
 		}
 
-		$out = array();
-		array_push($out, "class ".strtolower(str_replace('.', '_', $filename))." {");
-		array_push($out, "\tconstructor() {");
+        $T = '    ';
+        $classname = strtolower(str_replace('.', '_', $filename));
+
+		$out  = "class ".$classname." {\n"
+        $out .= $T."constructor() {\n";
 		foreach ($properties as $prop => $default) {
-			array_push($out, "\t\t// ".$default);
-			array_push($out, "\t\tthis.".$prop." = undefined;");
+			$out .= $T.$T."// ".$default."\n";
+			$out .= $T.$T."this.".$prop." = undefined;\n\n";
 		}
+        $out .= $T."}\n\n";
+
+        foreach ($methods as $method => $default) {
+            $out .= $T."//".$default."\n";
+            if (preg_match('/\w+\s(\w+)\s\(([\w\s,]+)\)/', $default, $matches)) {
+                $out .= $T.$matches[1]."(".$matches[2].")";
+            } else {
+                $out .= $T.$default."()";
+            }
+            $out .= " {\n\n\t}\n\n";
+        }
+
+        $out .= "}\n\nmodule.exports = ".$classname;
+
+
 	}
 }
