@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mrpapercut/wscript.svg?branch=master)](https://travis-ci.org/mrpapercut/wscript)
 [![Coverage Status](https://coveralls.io/repos/github/mrpapercut/wscript/badge.svg?branch=master)](https://coveralls.io/github/mrpapercut/wscript?branch=master)
+[![Vanilla JS](http://vanilla-js.com/assets/button.png)](http://vanilla-js.com)
 
 WScript Emulator is an emulator/tracer of the Windows Script Host functionality. It provides a full Javascript equivalent of WScript, so most valid scripts running against it will work as if they were running in the regular WScript environment.
 Most components have been ported, though some are lacking because of scope (f.e. Microsoft.XMLDOM, ApplicationObject). But nearly all common functionality is present in the object. For a full list of supported functionality, see the [supported objects](#user-content-supported-objects) section.
