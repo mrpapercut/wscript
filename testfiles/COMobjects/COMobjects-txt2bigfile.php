@@ -3,6 +3,9 @@
 header('Content-Type: text/plain');
 
 $files = scandir('./Objects/');
+
+$allobjects = new stdClass();
+
 foreach ($files as $file) {
 	if ($file !== '.' && $file !== '..') {
 		$methods = array();
@@ -21,8 +24,27 @@ foreach ($files as $file) {
 					}
 				}
 			}
+		} else {
+			continue;
 		}
 
+		$obj = new stdClass();
+		$obj->properties = $properties;
+		$obj->methods = array();
+
+		foreach($methods as $method => $default) {
+			if (preg_match('/^([\w\.\[\]]+)\s(.*)\((.*)\)/', $default, $matches)) {
+				//var_dump($matches);
+				$obj->methods[$method] = array(
+					'returns' => $matches[1],
+					'params' => $matches[3]
+				);
+			}
+		}
+
+		$allobjects->{$filename} = $obj;
+
+		/*
         $T = '    ';
         $classname = strtolower(str_replace('.', '_', $filename));
 
@@ -36,7 +58,7 @@ foreach ($files as $file) {
 
         foreach ($methods as $method => $default) {
             $out .= $T."// ".$default."\n";
-            if (preg_match('/\w+\s(\w+)\s\(([\w\s,]+)\)/', $default, $matches)) {
+            if (preg_match('/(\w+)\s(\w+)\s\(([\w\s,]+)\)/', $default, $matches)) {
                 $out .= $T.$matches[1]."(".$matches[2].")";
             } else {
                 $out .= $T.$method."()";
@@ -47,5 +69,8 @@ foreach ($files as $file) {
         $out .= "}\n\nmodule.exports = ".$classname.";\n\n";
 
 		file_put_contents("JSclasses/".$filename.".js", $out);
+		*/
 	}
 }
+
+echo json_encode($allobjects);
