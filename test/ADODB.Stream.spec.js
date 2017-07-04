@@ -357,6 +357,20 @@ describe('ADODBStream', function() {
                     ADODBStream.write();
                 }).to.not.throw(TypeError);
             });
+
+            it('should write bytes to stream', function() {
+                var bytes = new Uint8Array([0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64]);
+
+                ADODBStream.type = 1;
+                ADODBStream.write(bytes.buffer);
+                expect(ADODBStream._data.toString()).to.equal('hello world');
+            });
+
+            it('should write characters as bytes', function() {
+                ADODBStream.type = 1;
+                ADODBStream.write('hello world');
+                expect(ADODBStream._data.getLength()).to.equal(11);
+            });
         });
 
         describe('writeText()', function() {
