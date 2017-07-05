@@ -31,5 +31,8 @@
   "engines": {
     "node": ">=6.4.0"
   },
-  "engineStrict": true
+  "engineStrict": true,
+  "dependencies": {
+    "yargs": "^8.0.2"
+  }
 }
