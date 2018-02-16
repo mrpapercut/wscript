@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{494b20cf-282e-4bdd-9f5d-b70cb09d351e}
+
+Name               MemberType Definition                     
+----               ---------- ----------                     
+createAppBundleWeb Method     IDispatch createAppBundleWeb ()
+
+

@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{9ea69f99-f8ff-415e-8b90-35d6dfaf160e}
+
+Name                   MemberType Definition                                  
+----                   ---------- ----------                                  
+GetAsyncCallStatus     Method     void GetAsyncCallStatus (Variant, Variant)  
+GetDRMSecurityVersion  Method     string GetDRMSecurityVersion ()             
+GetDRMVersion          Method     string GetDRMVersion ()                     
+GetLicenseFromURL      Method     void GetLicenseFromURL (string, string)     
+GetLicenseFromURLAsync Method     void GetLicenseFromURLAsync (string, string)
+GetSystemInfo          Method     string GetSystemInfo ()                     
+StoreLicense           Method     void StoreLicense (string)                  
+
+

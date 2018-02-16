@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{734321ed-1e7b-4e1c-bbfa-89c819800e2f}
+
+Name       MemberType Definition                       
+----       ---------- ----------                       
+ColorSpace Property   string ColorSpace () {get} {set} 
+Intent     Property   short Intent () {get} {set}      
+
+

@@ -1,0 +1,11 @@
+﻿
+
+   TypeName: System.__ComObject#{5a39b6a4-4929-438f-8c80-6ceaacfcd14a}
+
+Name       MemberType Definition                   
+----       ---------- ----------                   
+AddFile    Method     void AddFile (string, string)
+RemoveFile Method     void RemoveFile (string)     
+set_Append Method     void set_Append (bool)       
+
+

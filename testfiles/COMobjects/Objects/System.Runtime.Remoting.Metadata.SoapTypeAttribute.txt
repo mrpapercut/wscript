@@ -1,0 +1,27 @@
+﻿
+
+   TypeName: System.Runtime.Remoting.Metadata.SoapTypeAttribute
+
+Name               MemberType Definition                                                                               
+----               ---------- ----------                                                                               
+Equals             Method     bool Equals(System.Object obj)                                                           
+GetHashCode        Method     int GetHashCode()                                                                        
+GetIDsOfNames      Method     void _Attribute.GetIDsOfNames([ref] guid riid, System.IntPtr rgszNames, uint32 cNames,...
+GetType            Method     type GetType()                                                                           
+GetTypeInfo        Method     void _Attribute.GetTypeInfo(uint32 iTInfo, uint32 lcid, System.IntPtr ppTInfo)           
+GetTypeInfoCount   Method     void _Attribute.GetTypeInfoCount([ref] uint32 pcTInfo)                                   
+Invoke             Method     void _Attribute.Invoke(uint32 dispIdMember, [ref] guid riid, uint32 lcid, int16 wFlags...
+IsDefaultAttribute Method     bool IsDefaultAttribute()                                                                
+Match              Method     bool Match(System.Object obj)                                                            
+ToString           Method     string ToString()                                                                        
+Embedded           Property   bool Embedded {get;set;}                                                                 
+SoapOptions        Property   System.Runtime.Remoting.Metadata.SoapOption SoapOptions {get;set;}                       
+TypeId             Property   System.Object TypeId {get;}                                                              
+UseAttribute       Property   bool UseAttribute {get;set;}                                                             
+XmlElementName     Property   string XmlElementName {get;set;}                                                         
+XmlFieldOrder      Property   System.Runtime.Remoting.Metadata.XmlFieldOrderOption XmlFieldOrder {get;set;}            
+XmlNamespace       Property   string XmlNamespace {get;set;}                                                           
+XmlTypeName        Property   string XmlTypeName {get;set;}                                                            
+XmlTypeNamespace   Property   string XmlTypeNamespace {get;set;}                                                       
+
+

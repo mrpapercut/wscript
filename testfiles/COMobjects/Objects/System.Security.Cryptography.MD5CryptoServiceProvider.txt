@@ -1,0 +1,24 @@
+﻿
+
+   TypeName: System.Security.Cryptography.MD5CryptoServiceProvider
+
+Name                       MemberType Definition                                                                       
+----                       ---------- ----------                                                                       
+Clear                      Method     void Clear()                                                                     
+ComputeHash                Method     byte[] ComputeHash(System.IO.Stream inputStream), byte[] ComputeHash(byte[] bu...
+Dispose                    Method     void Dispose(), void IDisposable.Dispose()                                       
+Equals                     Method     bool Equals(System.Object obj)                                                   
+GetHashCode                Method     int GetHashCode()                                                                
+GetType                    Method     type GetType()                                                                   
+Initialize                 Method     void Initialize()                                                                
+ToString                   Method     string ToString()                                                                
+TransformBlock             Method     int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[]...
+TransformFinalBlock        Method     byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount...
+CanReuseTransform          Property   bool CanReuseTransform {get;}                                                    
+CanTransformMultipleBlocks Property   bool CanTransformMultipleBlocks {get;}                                           
+Hash                       Property   byte[] Hash {get;}                                                               
+HashSize                   Property   int HashSize {get;}                                                              
+InputBlockSize             Property   int InputBlockSize {get;}                                                        
+OutputBlockSize            Property   int OutputBlockSize {get;}                                                       
+
+

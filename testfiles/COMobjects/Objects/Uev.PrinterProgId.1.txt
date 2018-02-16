@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{8cdeddfd-ea1c-48c4-9e2a-e106d753bac4}
+
+Name            MemberType Definition                
+----            ---------- ----------                
+Get             Method     Variant Get (Variant)     
+RequireAsyncGet Method     Variant RequireAsyncGet ()
+RequireAsyncSet Method     Variant RequireAsyncSet ()
+Set             Method     void Set (Variant)        
+
+

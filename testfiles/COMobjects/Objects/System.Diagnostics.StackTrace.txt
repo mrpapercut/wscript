@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.Diagnostics.StackTrace
+
+Name        MemberType Definition                                       
+----        ---------- ----------                                       
+Equals      Method     bool Equals(System.Object obj)                   
+GetFrame    Method     System.Diagnostics.StackFrame GetFrame(int index)
+GetFrames   Method     System.Diagnostics.StackFrame[] GetFrames()      
+GetHashCode Method     int GetHashCode()                                
+GetType     Method     type GetType()                                   
+ToString    Method     string ToString()                                
+FrameCount  Property   int FrameCount {get;}                            
+
+

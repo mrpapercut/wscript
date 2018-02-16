@@ -1,0 +1,58 @@
+﻿
+
+   TypeName: System.__ComObject#{305104a3-98b5-11cf-bb82-00aa00bdce0b}
+
+Name                         MemberType Definition                                       
+----                         ---------- ----------                                       
+deviceSupports               Method     Variant deviceSupports (string)                  
+ensurePrintDialogDefaults    Method     bool ensurePrintDialogDefaults ()                
+getPageMarginBottom          Method     Variant getPageMarginBottom (IDispatch, int, int)
+getPageMarginBottomImportant Method     bool getPageMarginBottomImportant (IDispatch)    
+getPageMarginLeft            Method     Variant getPageMarginLeft (IDispatch, int, int)  
+getPageMarginLeftImportant   Method     bool getPageMarginLeftImportant (IDispatch)      
+getPageMarginRight           Method     Variant getPageMarginRight (IDispatch, int, int) 
+getPageMarginRightImportant  Method     bool getPageMarginRightImportant (IDispatch)     
+getPageMarginTop             Method     Variant getPageMarginTop (IDispatch, int, int)   
+getPageMarginTopImportant    Method     bool getPageMarginTopImportant (IDispatch)       
+printBlankPage               Method     void printBlankPage ()                           
+printNonNative               Method     bool printNonNative (IUnknown)                   
+printNonNativeFrames         Method     void printNonNativeFrames (IUnknown, bool)       
+printPage                    Method     void printPage (IDispatch)                       
+showPageSetupDialog          Method     bool showPageSetupDialog ()                      
+showPrintDialog              Method     bool showPrintDialog ()                          
+startDoc                     Method     bool startDoc (string)                           
+stopDoc                      Method     void stopDoc ()                                  
+updatePageStatus             Method     void updatePageStatus (int)                      
+allLinkedDocuments           Property   bool allLinkedDocuments () {get} {set}           
+collate                      Property   bool collate () {get} {set}                      
+copies                       Property   ushort copies () {get} {set}                     
+currentPage                  Property   bool currentPage () {get} {set}                  
+currentPageAvail             Property   bool currentPageAvail () {get} {set}             
+duplex                       Property   bool duplex () {get}                             
+footer                       Property   string footer () {get} {set}                     
+frameActive                  Property   bool frameActive () {get} {set}                  
+frameActiveEnabled           Property   bool frameActiveEnabled () {get} {set}           
+frameAsShown                 Property   bool frameAsShown () {get} {set}                 
+framesetDocument             Property   bool framesetDocument () {get} {set}             
+header                       Property   string header () {get} {set}                     
+headerFooterFont             Property   string headerFooterFont () {get} {set}           
+marginBottom                 Property   int marginBottom () {get} {set}                  
+marginLeft                   Property   int marginLeft () {get} {set}                    
+marginRight                  Property   int marginRight () {get} {set}                   
+marginTop                    Property   int marginTop () {get} {set}                     
+orientation                  Property   string orientation () {get} {set}                
+pageFrom                     Property   ushort pageFrom () {get} {set}                   
+pageHeight                   Property   int pageHeight () {get}                          
+pageTo                       Property   ushort pageTo () {get} {set}                     
+pageWidth                    Property   int pageWidth () {get}                           
+selectedPages                Property   bool selectedPages () {get} {set}                
+selection                    Property   bool selection () {get} {set}                    
+selectionEnabled             Property   bool selectionEnabled () {get} {set}             
+tableOfLinks                 Property   bool tableOfLinks () {get} {set}                 
+unprintableBottom            Property   int unprintableBottom () {get}                   
+unprintableLeft              Property   int unprintableLeft () {get}                     
+unprintableRight             Property   int unprintableRight () {get}                    
+unprintableTop               Property   int unprintableTop () {get}                      
+usePrinterCopyCollate        Property   bool usePrinterCopyCollate () {get} {set}        
+
+

@@ -1,0 +1,20 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.Pvr.Service.PvrService
+
+Name                  MemberType Definition                                                                                                                              
+----                  ---------- ----------                                                                                                                              
+ClientCallsExceeded   Method     bool IPvrService.ClientCallsExceeded()                                                                                                  
+Dispose               Method     void Dispose(), void IDisposable.Dispose()                                                                                              
+EnsureRecordingsStart Method     void IPvrService.EnsureRecordingsStart(bool fRecover)                                                                                   
+Equals                Method     bool Equals(System.Object obj)                                                                                                          
+GetCurrentRecordings  Method     long[] IPvrService.GetCurrentRecordings()                                                                                               
+GetHashCode           Method     int GetHashCode()                                                                                                                       
+GetRecordingID        Method     long IPvrService.GetRecordingID(string bstrFile)                                                                                        
+GetRecordingInfo      Method     void IPvrService.GetRecordingInfo(long llRecordingID, [ref] string bstrFile, [ref] string bstrSeries, [ref] string bstrEpisode, [ref]...
+GetType               Method     type GetType()                                                                                                                          
+Shutdown              Method     void IPvrService.Shutdown()                                                                                                             
+StopRecording         Method     void IPvrService.StopRecording(long llRecordingID, ehiProxy.REASONRECSTOPPED reason)                                                    
+ToString              Method     string ToString()                                                                                                                       
+
+

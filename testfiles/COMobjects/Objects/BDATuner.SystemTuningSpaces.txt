@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{5b692e84-e2f1-11d2-9493-00c04f72d980}
+
+Name                 MemberType            Definition                                 
+----                 ----------            ----------                                 
+Add                  Method                Variant Add (ITuningSpace)                 
+FindID               Method                int FindID (ITuningSpace)                  
+Remove               Method                void Remove (Variant)                      
+TuningSpacesForCLSID Method                ITuningSpaces TuningSpacesForCLSID (string)
+TuningSpacesForName  Method                ITuningSpaces TuningSpacesForName (string) 
+Item                 ParameterizedProperty ITuningSpace Item (Variant) {get} {set}    
+Count                Property              int Count () {get}                         
+MaxCount             Property              int MaxCount () {get}                      
+
+

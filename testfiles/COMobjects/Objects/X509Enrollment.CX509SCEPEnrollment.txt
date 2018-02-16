@@ -1,0 +1,30 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab364-217d-11da-b2a4-000e7bbb2b09}
+
+Name                             MemberType            Definition                                                      
+----                             ----------            ----------                                                      
+CreateChallengeAnswerMessage     Method                string CreateChallengeAnswerMessage (EncodingType)              
+CreateRequestMessage             Method                string CreateRequestMessage (EncodingType)                      
+CreateRetrieveCertificateMessage Method                string CreateRetrieveCertificateMessage (X509CertificateEnrol...
+CreateRetrievePendingMessage     Method                string CreateRetrievePendingMessage (EncodingType)              
+DeleteRequest                    Method                void DeleteRequest ()                                           
+Initialize                       Method                void Initialize (IX509CertificateRequestPkcs10, string, Encod...
+InitializeForPending             Method                void InitializeForPending (X509CertificateEnrollmentContext)    
+ProcessResponseMessage           Method                X509SCEPDisposition ProcessResponseMessage (string, EncodingT...
+ProcessResponseMessage2          Method                X509SCEPDisposition ProcessResponseMessage2 (X509SCEPProcessM...
+Certificate                      ParameterizedProperty string Certificate (EncodingType) {get}                         
+TransactionId                    ParameterizedProperty string TransactionId (EncodingType) {get} {set}                 
+ActivityId                       Property              string ActivityId () {get} {set}                                
+CertificateFriendlyName          Property              string CertificateFriendlyName () {get} {set}                   
+DelayRetry                       Property              DelayRetryAction DelayRetry () {get}                            
+FailInfo                         Property              X509SCEPFailInfo FailInfo () {get}                              
+OldCertificate                   Property              ISignerCertificate OldCertificate () {get} {set}                
+Request                          Property              IX509CertificateRequestPkcs10 Request () {get}                  
+ResultMessageText                Property              string ResultMessageText () {get}                               
+ServerCapabilities               Property              string ServerCapabilities () {set}                              
+SignerCertificate                Property              ISignerCertificate SignerCertificate () {get} {set}             
+Silent                           Property              bool Silent () {get} {set}                                      
+Status                           Property              IX509EnrollmentStatus Status () {get}                           
+
+

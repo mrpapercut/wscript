@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.EnterpriseServices.Internal.GenerateMetadata
+
+Name             MemberType Definition                                                                                 
+----             ---------- ----------                                                                                 
+Equals           Method     bool Equals(System.Object obj)                                                             
+Generate         Method     string Generate(string strSrcTypeLib, string outPath), string IComSoapMetadata.Generate(...
+GenerateMetaData Method     string GenerateMetaData(string strSrcTypeLib, string outPath, byte[] PublicKey, System.R...
+GenerateSigned   Method     string GenerateSigned(string strSrcTypeLib, string outPath, bool InstallGac, [ref] strin...
+GetHashCode      Method     int GetHashCode()                                                                          
+GetType          Method     type GetType()                                                                             
+ToString         Method     string ToString()                                                                          
+
+

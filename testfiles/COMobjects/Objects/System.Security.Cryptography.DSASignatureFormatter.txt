@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.Security.Cryptography.DSASignatureFormatter
+
+Name             MemberType Definition                                                                                 
+----             ---------- ----------                                                                                 
+CreateSignature  Method     byte[] CreateSignature(byte[] rgbHash), byte[] CreateSignature(System.Security.Cryptogra...
+Equals           Method     bool Equals(System.Object obj)                                                             
+GetHashCode      Method     int GetHashCode()                                                                          
+GetType          Method     type GetType()                                                                             
+SetHashAlgorithm Method     void SetHashAlgorithm(string strName)                                                      
+SetKey           Method     void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key)                          
+ToString         Method     string ToString()                                                                          
+
+

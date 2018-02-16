@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: System.Runtime.Serialization.Formatters.SoapFault
+
+Name          MemberType Definition                                                                                    
+----          ---------- ----------                                                                                    
+Equals        Method     bool Equals(System.Object obj)                                                                
+GetHashCode   Method     int GetHashCode()                                                                             
+GetObjectData Method     void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Seri...
+GetType       Method     type GetType()                                                                                
+ToString      Method     string ToString()                                                                             
+Detail        Property   System.Object Detail {get;set;}                                                               
+FaultActor    Property   string FaultActor {get;set;}                                                                  
+FaultCode     Property   string FaultCode {get;set;}                                                                   
+FaultString   Property   string FaultString {get;set;}                                                                 
+
+

@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{bad7753b-6b37-4810-ae57-3ce0c4a9e6cb}
+
+Name         MemberType Definition                        
+----         ---------- ----------                        
+Clone        Method     ITuneRequest Clone ()             
+Channel      Property   int Channel () {get} {set}        
+Components   Property   IComponents Components () {get}   
+Locator      Property   ILocator Locator () {get} {set}   
+MajorChannel Property   int MajorChannel () {get} {set}   
+MinorChannel Property   int MinorChannel () {get} {set}   
+SourceID     Property   int SourceID () {get} {set}       
+TuningSpace  Property   ITuningSpace TuningSpace () {get} 
+
+

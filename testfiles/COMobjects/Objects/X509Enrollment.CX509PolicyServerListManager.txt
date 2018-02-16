@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{884e204b-217d-11da-b2a4-000e7bbb2b09}
+
+Name        MemberType            Definition                                                              
+----        ----------            ----------                                                              
+Add         Method                void Add (IX509PolicyServerUrl)                                         
+Clear       Method                void Clear ()                                                           
+Initialize  Method                void Initialize (X509CertificateEnrollmentContext, PolicyServerUrlFlags)
+Remove      Method                void Remove (int)                                                       
+ItemByIndex ParameterizedProperty IX509PolicyServerUrl ItemByIndex (int) {get}                            
+Count       Property              int Count () {get}                                                      
+
+

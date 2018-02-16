@@ -1,0 +1,11 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab319-217d-11da-b2a4-000e7bbb2b09}
+
+Name       MemberType Definition                      
+----       ---------- ----------                      
+Initialize Method     void Initialize (IObjectId, int)
+BitCount   Property   int BitCount () {get}           
+ObjectId   Property   IObjectId ObjectId () {get}     
+
+

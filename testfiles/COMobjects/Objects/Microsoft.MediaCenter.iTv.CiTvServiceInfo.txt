@@ -1,0 +1,20 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.iTv.CiTvServiceInfo
+
+Name               MemberType Definition                                      
+----               ---------- ----------                                      
+AddDataPidOverride Method     void IiTvServiceInfo.AddDataPidOverride(int PID)
+Equals             Method     bool Equals(System.Object obj)                  
+GetHashCode        Method     int GetHashCode()                               
+GetType            Method     type GetType()                                  
+ToString           Method     string ToString()                               
+AudioPID           Property   int AudioPID {get;set;}                         
+NID                Property   int NID {get;}                                  
+ONID               Property   int ONID {get;}                                 
+PcrPID             Property   int PcrPID {get;set;}                           
+SID                Property   int SID {get;}                                  
+TSID               Property   int TSID {get;}                                 
+VideoPID           Property   int VideoPID {get;set;}                         
+
+

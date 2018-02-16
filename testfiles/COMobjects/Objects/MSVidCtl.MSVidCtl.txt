@@ -1,0 +1,37 @@
+﻿
+
+   TypeName: System.__ComObject#{b0edf162-910a-11d2-b632-00c04f79498e}
+
+Name                    MemberType            Definition                                                  
+----                    ----------            ----------                                                  
+Build                   Method                void Build ()                                               
+Decompose               Method                void Decompose ()                                           
+DisableAudio            Method                void DisableAudio ()                                        
+DisableVideo            Method                void DisableVideo ()                                        
+Pause                   Method                void Pause ()                                               
+Refresh                 Method                void Refresh ()                                             
+Run                     Method                void Run ()                                                 
+Stop                    Method                void Stop ()                                                
+View                    Method                void View (Variant)                                         
+ViewNext                Method                void ViewNext (Variant)                                     
+InputsAvailable         ParameterizedProperty IMSVidInputDevices InputsAvailable (string) {get}           
+OutputsAvailable        ParameterizedProperty IMSVidOutputDevices OutputsAvailable (string) {get}         
+AudioRendererActive     Property              IMSVidAudioRenderer AudioRendererActive () {get} {set}      
+AudioRenderersAvailable Property              IMSVidAudioRendererDevices AudioRenderersAvailable () {get} 
+AutoSize                Property              bool AutoSize () {get} {set}                                
+BackColor               Property              OLE_COLOR BackColor () {get} {set}                          
+ColorKey                Property              OLE_COLOR ColorKey () {get} {set}                           
+DisplaySize             Property              DisplaySizeList DisplaySize () {get} {set}                  
+Enabled                 Property              bool Enabled () {get} {set}                                 
+FeaturesActive          Property              IMSVidFeatures FeaturesActive () {get} {set}                
+FeaturesAvailable       Property              IMSVidFeatures FeaturesAvailable () {get}                   
+InputActive             Property              IMSVidInputDevice InputActive () {get} {set}                
+MaintainAspectRatio     Property              bool MaintainAspectRatio () {get} {set}                     
+OutputsActive           Property              IMSVidOutputDevices OutputsActive () {get} {set}            
+State                   Property              MSVidCtlStateList State () {get}                            
+TabStop                 Property              bool TabStop () {get} {set}                                 
+VideoRendererActive     Property              IMSVidVideoRenderer VideoRendererActive () {get} {set}      
+VideoRenderersAvailable Property              IMSVidVideoRendererDevices VideoRenderersAvailable () {get} 
+Window                  Property              wireHWND Window () {get}                                    
+
+

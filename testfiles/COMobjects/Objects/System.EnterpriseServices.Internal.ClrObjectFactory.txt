@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.EnterpriseServices.Internal.ClrObjectFactory
+
+Name               MemberType Definition                                                                               
+----               ---------- ----------                                                                               
+CreateFromAssembly Method     System.Object CreateFromAssembly(string AssemblyName, string TypeName, string Mode), S...
+CreateFromMailbox  Method     System.Object CreateFromMailbox(string Mailbox, string Mode), System.Object IClrObject...
+CreateFromVroot    Method     System.Object CreateFromVroot(string VrootUrl, string Mode), System.Object IClrObjectF...
+CreateFromWsdl     Method     System.Object CreateFromWsdl(string WsdlUrl, string Mode), System.Object IClrObjectFac...
+Equals             Method     bool Equals(System.Object obj)                                                           
+GetHashCode        Method     int GetHashCode()                                                                        
+GetType            Method     type GetType()                                                                           
+ToString           Method     string ToString()                                                                        
+
+

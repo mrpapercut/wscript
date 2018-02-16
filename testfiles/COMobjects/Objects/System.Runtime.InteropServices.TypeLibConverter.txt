@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.Runtime.InteropServices.TypeLibConverter
+
+Name                      MemberType Definition                                                                        
+----                      ---------- ----------                                                                        
+ConvertAssemblyToTypeLib  Method     System.Object ConvertAssemblyToTypeLib(System.Reflection.Assembly assembly, str...
+ConvertTypeLibToAssembly  Method     System.Reflection.Emit.AssemblyBuilder ConvertTypeLibToAssembly(System.Object t...
+Equals                    Method     bool Equals(System.Object obj)                                                    
+GetHashCode               Method     int GetHashCode()                                                                 
+GetPrimaryInteropAssembly Method     bool GetPrimaryInteropAssembly(guid g, int major, int minor, int lcid, [ref] st...
+GetType                   Method     type GetType()                                                                    
+ToString                  Method     string ToString()                                                                 
+
+

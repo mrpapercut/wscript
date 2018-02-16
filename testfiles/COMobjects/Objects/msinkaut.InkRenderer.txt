@@ -1,0 +1,23 @@
+﻿
+
+   TypeName: System.__ComObject#{e6257a9c-b511-4f4c-a8b0-a7dbc9506b83}
+
+Name                      MemberType Definition                                                         
+----                      ---------- ----------                                                         
+Draw                      Method     void Draw (LONG_PTR, IInkStrokes)                                  
+DrawStroke                Method     void DrawStroke (LONG_PTR, IInkStrokeDisp, IInkDrawingAttributes)  
+GetObjectTransform        Method     void GetObjectTransform (IInkTransform)                            
+GetViewTransform          Method     void GetViewTransform (IInkTransform)                              
+InkSpaceToPixel           Method     void InkSpaceToPixel (LONG_PTR, int, int)                          
+InkSpaceToPixelFromPoints Method     void InkSpaceToPixelFromPoints (LONG_PTR, Variant)                 
+Measure                   Method     IInkRectangle Measure (IInkStrokes)                                
+MeasureStroke             Method     IInkRectangle MeasureStroke (IInkStrokeDisp, IInkDrawingAttributes)
+Move                      Method     void Move (float, float)                                           
+PixelToInkSpace           Method     void PixelToInkSpace (LONG_PTR, int, int)                          
+PixelToInkSpaceFromPoints Method     void PixelToInkSpaceFromPoints (LONG_PTR, Variant)                 
+Rotate                    Method     void Rotate (float, float, float)                                  
+ScaleTransform            Method     void ScaleTransform (float, float, bool)                           
+SetObjectTransform        Method     void SetObjectTransform (IInkTransform)                            
+SetViewTransform          Method     void SetViewTransform (IInkTransform)                              
+
+

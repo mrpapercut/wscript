@@ -1,0 +1,20 @@
+﻿
+
+   TypeName: System.Security.Cryptography.FromBase64Transform
+
+Name                       MemberType Definition                                                                       
+----                       ---------- ----------                                                                       
+Clear                      Method     void Clear()                                                                     
+Dispose                    Method     void Dispose(), void IDisposable.Dispose()                                       
+Equals                     Method     bool Equals(System.Object obj)                                                   
+GetHashCode                Method     int GetHashCode()                                                                
+GetType                    Method     type GetType()                                                                   
+ToString                   Method     string ToString()                                                                
+TransformBlock             Method     int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[]...
+TransformFinalBlock        Method     byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount...
+CanReuseTransform          Property   bool CanReuseTransform {get;}                                                    
+CanTransformMultipleBlocks Property   bool CanTransformMultipleBlocks {get;}                                           
+InputBlockSize             Property   int InputBlockSize {get;}                                                        
+OutputBlockSize            Property   int OutputBlockSize {get;}                                                       
+
+

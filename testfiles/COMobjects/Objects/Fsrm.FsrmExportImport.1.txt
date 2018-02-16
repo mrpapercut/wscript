@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{efcb0ab1-16c4-4a79-812c-725614c3306b}
+
+Name                      MemberType Definition                                                                    
+----                      ---------- ----------                                                                    
+ExportFileGroups          Method     void ExportFileGroups (string, Variant, string)                               
+ExportFileScreenTemplates Method     void ExportFileScreenTemplates (string, Variant, string)                      
+ExportQuotaTemplates      Method     void ExportQuotaTemplates (string, Variant, string)                           
+ImportFileGroups          Method     IFsrmCommittableCollection ImportFileGroups (string, Variant, string)         
+ImportFileScreenTemplates Method     IFsrmCommittableCollection ImportFileScreenTemplates (string, Variant, string)
+ImportQuotaTemplates      Method     IFsrmCommittableCollection ImportQuotaTemplates (string, Variant, string)     
+
+

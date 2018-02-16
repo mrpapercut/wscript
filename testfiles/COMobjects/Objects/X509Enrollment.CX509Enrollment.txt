@@ -1,0 +1,32 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab350-217d-11da-b2a4-000e7bbb2b09}
+
+Name                       MemberType            Definition                                                            
+----                       ----------            ----------                                                            
+CreatePFX                  Method                string CreatePFX (string, PFXExportOptions, EncodingType)             
+CreateRequest              Method                string CreateRequest (EncodingType)                                   
+Enroll                     Method                void Enroll ()                                                        
+Initialize                 Method                void Initialize (X509CertificateEnrollmentContext)                    
+InitializeFromRequest      Method                void InitializeFromRequest (IX509CertificateRequest)                  
+InitializeFromTemplate     Method                void InitializeFromTemplate (X509CertificateEnrollmentContext, IX50...
+InitializeFromTemplateName Method                void InitializeFromTemplateName (X509CertificateEnrollmentContext, ...
+InstallResponse            Method                void InstallResponse (InstallResponseRestrictionFlags, string, Enco...
+InstallResponse2           Method                void InstallResponse2 (InstallResponseRestrictionFlags, string, Enc...
+Certificate                ParameterizedProperty string Certificate (EncodingType) {get}                               
+Response                   ParameterizedProperty string Response (EncodingType) {get}                                  
+CAConfigString             Property              string CAConfigString () {get}                                        
+CertificateDescription     Property              string CertificateDescription () {get} {set}                          
+CertificateFriendlyName    Property              string CertificateFriendlyName () {get} {set}                         
+EnrollmentContext          Property              X509CertificateEnrollmentContext EnrollmentContext () {get}           
+NameValuePairs             Property              IX509NameValuePairs NameValuePairs () {get}                           
+ParentWindow               Property              int ParentWindow () {get} {set}                                       
+PolicyServer               Property              IX509EnrollmentPolicyServer PolicyServer () {get}                     
+Request                    Property              IX509CertificateRequest Request () {get}                              
+RequestId                  Property              int RequestId () {get}                                                
+RequestIdString            Property              string RequestIdString () {get}                                       
+Silent                     Property              bool Silent () {get} {set}                                            
+Status                     Property              IX509EnrollmentStatus Status () {get}                                 
+Template                   Property              IX509CertificateTemplate Template () {get}                            
+
+

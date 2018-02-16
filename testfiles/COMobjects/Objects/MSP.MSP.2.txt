@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.__ComObject#{f3eb39bc-1b1f-4e99-a0c0-56305c4dd591}
+
+Name                              MemberType            Definition                                                     
+----                              ----------            ----------                                                     
+CreateTerminal                    Method                ITTerminal CreateTerminal (string, int, TERMINAL_DIRECTION)    
+EnumerateDynamicTerminalClasses   Method                IEnumTerminalClass EnumerateDynamicTerminalClasses ()          
+EnumeratePluggableSuperclasses    Method                IEnumPluggableSuperclassInfo EnumeratePluggableSuperclasses () 
+EnumeratePluggableTerminalClasses Method                IEnumPluggableTerminalClassInfo EnumeratePluggableTerminalCl...
+EnumerateStaticTerminals          Method                IEnumTerminal EnumerateStaticTerminals ()                      
+GetDefaultStaticTerminal          Method                ITTerminal GetDefaultStaticTerminal (int, TERMINAL_DIRECTION)  
+PluggableTerminalClasses          ParameterizedProperty Variant PluggableTerminalClasses (string, int) {get}           
+DynamicTerminalClasses            Property              Variant DynamicTerminalClasses () {get}                        
+PluggableSuperclasses             Property              Variant PluggableSuperclasses () {get}                         
+StaticTerminals                   Property              Variant StaticTerminals () {get}                               
+
+

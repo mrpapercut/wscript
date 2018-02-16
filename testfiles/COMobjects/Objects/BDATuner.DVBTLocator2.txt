@@ -1,0 +1,24 @@
+﻿
+
+   TypeName: System.__ComObject#{448a2edf-ae95-4b43-a3cc-747843c453d4}
+
+Name                MemberType Definition                                              
+----                ---------- ----------                                              
+Clone               Method     ILocator Clone ()                                       
+Bandwidth           Property   int Bandwidth () {get} {set}                            
+CarrierFrequency    Property   int CarrierFrequency () {get} {set}                     
+Guard               Property   GuardInterval Guard () {get} {set}                      
+HAlpha              Property   HierarchyAlpha HAlpha () {get} {set}                    
+InnerFEC            Property   FECMethod InnerFEC () {get} {set}                       
+InnerFECRate        Property   BinaryConvolutionCodeRate InnerFECRate () {get} {set}   
+LPInnerFEC          Property   FECMethod LPInnerFEC () {get} {set}                     
+LPInnerFECRate      Property   BinaryConvolutionCodeRate LPInnerFECRate () {get} {set} 
+Mode                Property   TransmissionMode Mode () {get} {set}                    
+Modulation          Property   ModulationType Modulation () {get} {set}                
+OtherFrequencyInUse Property   bool OtherFrequencyInUse () {get} {set}                 
+OuterFEC            Property   FECMethod OuterFEC () {get} {set}                       
+OuterFECRate        Property   BinaryConvolutionCodeRate OuterFECRate () {get} {set}   
+PhysicalLayerPipeId Property   int PhysicalLayerPipeId () {get} {set}                  
+SymbolRate          Property   int SymbolRate () {get} {set}                           
+
+

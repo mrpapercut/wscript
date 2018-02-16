@@ -2,18 +2,18 @@
 
    TypeName: System.ContextStaticAttribute
 
-Name               MemberType Definition                                                                                                                                                                                    
-----               ---------- ----------                                                                                                                                                                                    
-Equals             Method     bool Equals(System.Object obj)                                                                                                                                                                
-GetHashCode        Method     int GetHashCode()                                                                                                                                                                             
-GetIDsOfNames      Method     void _Attribute.GetIDsOfNames([ref] guid riid, System.IntPtr rgszNames, uint32 cNames, uint32 lcid, System.IntPtr rgDispId)                                                                   
-GetType            Method     type GetType()                                                                                                                                                                                
-GetTypeInfo        Method     void _Attribute.GetTypeInfo(uint32 iTInfo, uint32 lcid, System.IntPtr ppTInfo)                                                                                                                
-GetTypeInfoCount   Method     void _Attribute.GetTypeInfoCount([ref] uint32 pcTInfo)                                                                                                                                        
-Invoke             Method     void _Attribute.Invoke(uint32 dispIdMember, [ref] guid riid, uint32 lcid, int16 wFlags, System.IntPtr pDispParams, System.IntPtr pVarResult, System.IntPtr pExcepInfo, System.IntPtr puArgErr)
-IsDefaultAttribute Method     bool IsDefaultAttribute()                                                                                                                                                                     
-Match              Method     bool Match(System.Object obj)                                                                                                                                                                 
-ToString           Method     string ToString()                                                                                                                                                                             
-TypeId             Property   System.Object TypeId {get;}                                                                                                                                                                   
+Name               MemberType Definition                                                                               
+----               ---------- ----------                                                                               
+Equals             Method     bool Equals(System.Object obj)                                                           
+GetHashCode        Method     int GetHashCode()                                                                        
+GetIDsOfNames      Method     void _Attribute.GetIDsOfNames([ref] guid riid, System.IntPtr rgszNames, uint32 cNames,...
+GetType            Method     type GetType()                                                                           
+GetTypeInfo        Method     void _Attribute.GetTypeInfo(uint32 iTInfo, uint32 lcid, System.IntPtr ppTInfo)           
+GetTypeInfoCount   Method     void _Attribute.GetTypeInfoCount([ref] uint32 pcTInfo)                                   
+Invoke             Method     void _Attribute.Invoke(uint32 dispIdMember, [ref] guid riid, uint32 lcid, int16 wFlags...
+IsDefaultAttribute Method     bool IsDefaultAttribute()                                                                
+Match              Method     bool Match(System.Object obj)                                                            
+ToString           Method     string ToString()                                                                        
+TypeId             Property   System.Object TypeId {get;}                                                              
 
 

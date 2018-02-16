@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: Microsoft.GroupPolicy.AdmTmplEditor.GPMAdmTmplEditorManager
+
+Name             MemberType Definition                                                                                 
+----             ---------- ----------                                                                                 
+CreateEditor     Method     Microsoft.GroupPolicy.AdmTmplEditor.IGPMAdmTmplEditor CreateEditor(System.IntPtr parentW...
+Dispose          Method     void Dispose(), void IDisposable.Dispose()                                                 
+Equals           Method     bool Equals(System.Object obj)                                                             
+GetCurrentEditor Method     Microsoft.GroupPolicy.AdmTmplEditor.IGPMAdmTmplEditor GetCurrentEditor(), Microsoft.Grou...
+GetHashCode      Method     int GetHashCode()                                                                          
+GetType          Method     type GetType()                                                                             
+Initialize       Method     void Initialize(System.Void*, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken...
+IsInitialized    Method     bool IsInitialized(), bool IGPMAdmTmplEditorManager.IsInitialized()                        
+ToString         Method     string ToString()                                                                          
+Handle           Property   System.IntPtr Handle {get;}                                                                
+
+

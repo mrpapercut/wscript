@@ -1,0 +1,20 @@
+﻿
+
+   TypeName: System.Security.Cryptography.CspParameters
+
+Name               MemberType Definition                                                                  
+----               ---------- ----------                                                                  
+Equals             Method     bool Equals(System.Object obj)                                              
+GetHashCode        Method     int GetHashCode()                                                           
+GetType            Method     type GetType()                                                              
+ToString           Method     string ToString()                                                           
+CryptoKeySecurity  Property   System.Security.AccessControl.CryptoKeySecurity CryptoKeySecurity {get;set;}
+Flags              Property   System.Security.Cryptography.CspProviderFlags Flags {get;set;}              
+KeyContainerName   Property   string KeyContainerName {get;set;}                                          
+KeyNumber          Property   int KeyNumber {get;set;}                                                    
+KeyPassword        Property   securestring KeyPassword {get;set;}                                         
+ParentWindowHandle Property   System.IntPtr ParentWindowHandle {get;set;}                                 
+ProviderName       Property   string ProviderName {get;set;}                                              
+ProviderType       Property   int ProviderType {get;set;}                                                 
+
+

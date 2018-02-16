@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.Security.Cryptography.PKCS1MaskGenerationMethod
+
+Name         MemberType Definition                                       
+----         ---------- ----------                                       
+Equals       Method     bool Equals(System.Object obj)                   
+GenerateMask Method     byte[] GenerateMask(byte[] rgbSeed, int cbReturn)
+GetHashCode  Method     int GetHashCode()                                
+GetType      Method     type GetType()                                   
+ToString     Method     string ToString()                                
+HashName     Property   string HashName {get;set;}                       
+
+

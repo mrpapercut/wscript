@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{a1067146-b063-47d7-a54a-2c2309e9889d}
+
+Name  MemberType Definition                   
+----  ---------- ----------                   
+Color Property   Variant Color () {get} {set} 
+
+

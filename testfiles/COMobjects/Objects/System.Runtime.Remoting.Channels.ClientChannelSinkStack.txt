@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: System.Runtime.Remoting.Channels.ClientChannelSinkStack
+
+Name                 MemberType Definition                                                                             
+----                 ---------- ----------                                                                             
+AsyncProcessResponse Method     void AsyncProcessResponse(System.Runtime.Remoting.Channels.ITransportHeaders headers...
+DispatchException    Method     void DispatchException(System.Exception e), void IClientResponseChannelSinkStack.Dis...
+DispatchReplyMessage Method     void DispatchReplyMessage(System.Runtime.Remoting.Messaging.IMessage msg), void ICli...
+Equals               Method     bool Equals(System.Object obj)                                                         
+GetHashCode          Method     int GetHashCode()                                                                      
+GetType              Method     type GetType()                                                                         
+Pop                  Method     System.Object Pop(System.Runtime.Remoting.Channels.IClientChannelSink sink), System....
+Push                 Method     void Push(System.Runtime.Remoting.Channels.IClientChannelSink sink, System.Object st...
+ToString             Method     string ToString()                                                                      
+
+

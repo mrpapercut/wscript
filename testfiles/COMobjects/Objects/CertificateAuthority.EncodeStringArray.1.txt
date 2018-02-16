@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: System.__ComObject#{9c680d93-9b7d-4e95-9018-4ffe10ba5ada}
+
+Name          MemberType Definition                            
+----          ---------- ----------                            
+Decode        Method     void Decode (string)                  
+DecodeBlob    Method     void DecodeBlob (string, EncodingType)
+Encode        Method     string Encode ()                      
+EncodeBlob    Method     string EncodeBlob (EncodingType)      
+GetCount      Method     int GetCount ()                       
+GetStringType Method     int GetStringType ()                  
+GetValue      Method     string GetValue (int)                 
+Reset         Method     void Reset (int, int)                 
+SetValue      Method     void SetValue (int, string)           
+
+

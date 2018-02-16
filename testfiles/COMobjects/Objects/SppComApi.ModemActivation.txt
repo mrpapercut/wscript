@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{0580952f-ea21-44d5-934e-c031a599dcb3}
+
+Name                 MemberType Definition                                   
+----                 ---------- ----------                                   
+CreateConnection     Method     void CreateConnection (string, uint)         
+DeleteConnection     Method     void DeleteConnection ()                     
+InitializePhoneIndex Method     void InitializePhoneIndex ()                 
+CurrentPhoneIndex    Property   int CurrentPhoneIndex () {get} {set}         
+CurrentPhoneValue    Property   string CurrentPhoneValue () {get}            
+PhoneList            Property   IModemActivationPhoneList PhoneList () {get} 
+
+

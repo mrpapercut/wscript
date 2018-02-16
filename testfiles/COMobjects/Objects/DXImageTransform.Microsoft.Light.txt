@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{f9efbec1-4302-11d2-952a-00c04fa34f05}
+
+Name           MemberType Definition                                                     
+----           ---------- ----------                                                     
+addAmbient     Method     void addAmbient (int, int, int, int)                           
+addCone        Method     void addCone (int, int, int, int, int, int, int, int, int, int)
+addPoint       Method     void addPoint (int, int, int, int, int, int, int)              
+ChangeColor    Method     void ChangeColor (int, int, int, int, int)                     
+ChangeStrength Method     void ChangeStrength (int, int, int)                            
+Clear          Method     void Clear ()                                                  
+moveLight      Method     void moveLight (int, int, int, int, int)                       
+
+

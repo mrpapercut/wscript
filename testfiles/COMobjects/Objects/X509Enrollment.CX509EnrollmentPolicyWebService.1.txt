@@ -1,0 +1,31 @@
+﻿
+
+   TypeName: System.__ComObject#{13b79026-2181-11da-b2a4-000e7bbb2b09}
+
+Name                MemberType Definition                                                                              
+----                ---------- ----------                                                                              
+Export              Method     Variant Export (X509EnrollmentPolicyExportFlags)                                        
+GetAllowUnTrustedCA Method     bool GetAllowUnTrustedCA ()                                                             
+GetAuthFlags        Method     X509EnrollmentAuthFlags GetAuthFlags ()                                                 
+GetCacheDir         Method     string GetCacheDir ()                                                                   
+GetCachePath        Method     string GetCachePath ()                                                                  
+GetCAs              Method     ICertificationAuthorities GetCAs ()                                                     
+GetCAsForTemplate   Method     ICertificationAuthorities GetCAsForTemplate (IX509CertificateTemplate)                  
+GetCustomOids       Method     IObjectIds GetCustomOids ()                                                             
+GetFriendlyName     Method     string GetFriendlyName ()                                                               
+GetIsDefaultCEP     Method     bool GetIsDefaultCEP ()                                                                 
+GetLastUpdateTime   Method     Date GetLastUpdateTime ()                                                               
+GetNextUpdateTime   Method     Date GetNextUpdateTime ()                                                               
+GetPolicyServerId   Method     string GetPolicyServerId ()                                                             
+GetPolicyServerUrl  Method     string GetPolicyServerUrl ()                                                            
+GetTemplates        Method     IX509CertificateTemplates GetTemplates ()                                               
+GetUseClientId      Method     bool GetUseClientId ()                                                                  
+Initialize          Method     void Initialize (string, string, X509EnrollmentAuthFlags, bool, X509CertificateEnroll...
+InitializeImport    Method     void InitializeImport (Variant)                                                         
+LoadPolicy          Method     void LoadPolicy (X509EnrollmentPolicyLoadOption)                                        
+QueryChanges        Method     bool QueryChanges ()                                                                    
+SetCredential       Method     void SetCredential (int, X509EnrollmentAuthFlags, string, string)                       
+Validate            Method     void Validate ()                                                                        
+Cost                Property   uint Cost () {get} {set}                                                                
+
+

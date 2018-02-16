@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{5852f5ec-8bf4-11d4-a245-0080c6f74284}
+
+Name       MemberType Definition                
+----       ---------- ----------                
+dnsResolve Method     string dnsResolve (string)
+
+

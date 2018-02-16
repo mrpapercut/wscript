@@ -1,0 +1,25 @@
+﻿
+
+   TypeName: System.__ComObject#{eba615aa-fac6-4738-ba5f-ff09e9fe473e}
+
+Name                  MemberType Definition                           
+----                  ---------- ----------                           
+AddFunctionName       Method     void AddFunctionName (string)        
+Clear                 Method     void Clear ()                        
+EnableAutoGrow        Method     void EnableAutoGrow (bool)           
+EnableExtendedButtons Method     void EnableExtendedButtons (bool)    
+GetHoverIcon          Method     void GetHoverIcon (IPictureDisp)     
+GetPosition           Method     void GetPosition (int, int, int, int)
+GetPreviewHeight      Method     void GetPreviewHeight (int)          
+Hide                  Method     void Hide ()                         
+IsVisible             Method     void IsVisible (bool)                
+LoadInk               Method     void LoadInk (IInkDisp)              
+RemoveFunctionName    Method     void RemoveFunctionName (string)     
+SetCaptionText        Method     void SetCaptionText (string)         
+SetCustomPaint        Method     void SetCustomPaint (int, bool)      
+SetOwnerWindow        Method     void SetOwnerWindow (LONG_PTR)       
+SetPosition           Method     void SetPosition (int, int, int, int)
+SetPreviewHeight      Method     void SetPreviewHeight (int)          
+Show                  Method     void Show ()                         
+
+

@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{4a2f5c31-cfd9-410e-b7fb-29a653973a0f}
+
+Name               MemberType Definition                                  
+----               ---------- ----------                                  
+DetectNow          Method     void DetectNow ()                           
+EnableService      Method     void EnableService ()                       
+Pause              Method     void Pause ()                               
+Resume             Method     void Resume ()                              
+ShowSettingsDialog Method     void ShowSettingsDialog ()                  
+Results            Property   IAutomaticUpdatesResults Results () {get}   
+ServiceEnabled     Property   bool ServiceEnabled () {get}                
+Settings           Property   IAutomaticUpdatesSettings Settings () {get} 
+
+

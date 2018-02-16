@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{1d4637e0-383c-11d2-952a-00c04fa34f05}
+
+Name          MemberType Definition                       
+----          ---------- ----------                       
+FinishOpacity Property   int FinishOpacity () {get} {set} 
+FinishX       Property   int FinishX () {get} {set}       
+FinishY       Property   int FinishY () {get} {set}       
+Opacity       Property   int Opacity () {get} {set}       
+StartX        Property   int StartX () {get} {set}        
+StartY        Property   int StartY () {get} {set}        
+Style         Property   int Style () {get} {set}         
+
+

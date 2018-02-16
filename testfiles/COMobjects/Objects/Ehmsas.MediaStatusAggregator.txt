@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{075fc453-f236-41da-b90d-9fbb8bbdc1c5}
+
+Name                     MemberType Definition                                                   
+----                     ---------- ----------                                                   
+CreateMediaStatusSession Method     IMediaStatusSession CreateMediaStatusSession (string, string)
+
+

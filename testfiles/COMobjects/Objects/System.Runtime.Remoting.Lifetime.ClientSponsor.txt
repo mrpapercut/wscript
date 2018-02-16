@@ -1,0 +1,20 @@
+﻿
+
+   TypeName: System.Runtime.Remoting.Lifetime.ClientSponsor
+
+Name                      MemberType Definition                                                                        
+----                      ---------- ----------                                                                        
+Close                     Method     void Close()                                                                      
+CreateObjRef              Method     System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)                   
+Equals                    Method     bool Equals(System.Object obj)                                                    
+GetHashCode               Method     int GetHashCode()                                                                 
+GetLifetimeService        Method     System.Object GetLifetimeService()                                                
+GetType                   Method     type GetType()                                                                    
+InitializeLifetimeService Method     System.Object InitializeLifetimeService()                                         
+Register                  Method     bool Register(System.MarshalByRefObject obj)                                      
+Renewal                   Method     timespan Renewal(System.Runtime.Remoting.Lifetime.ILease lease), timespan ISpon...
+ToString                  Method     string ToString()                                                                 
+Unregister                Method     void Unregister(System.MarshalByRefObject obj)                                    
+RenewalTime               Property   timespan RenewalTime {get;set;}                                                   
+
+

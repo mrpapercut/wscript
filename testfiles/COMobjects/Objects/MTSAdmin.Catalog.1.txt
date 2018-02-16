@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{6eb22870-8a19-11d0-81b6-00a0c9231c29}
+
+Name          MemberType Definition                      
+----          ---------- ----------                      
+Connect       Method     IDispatch Connect (string)      
+GetCollection Method     IDispatch GetCollection (string)
+MajorVersion  Property   int MajorVersion () {get}       
+MinorVersion  Property   int MinorVersion () {get}       
+
+

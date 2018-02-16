@@ -1,0 +1,33 @@
+﻿
+
+   TypeName: System.__ComObject#{d58b0015-ebef-44bb-bbdd-3f3699d76ea1}
+
+Name                    MemberType Definition                                           
+----                    ---------- ----------                                           
+Capture                 Method     IPictureDisp Capture ()                              
+IsEqualDevice           Method     bool IsEqualDevice (IMSVidDevice)                    
+SetAllocator            Method     void SetAllocator (IUnknown, int)                    
+SetupMixerBitmap        Method     void SetupMixerBitmap (IPictureDisp, int, IMSVidRect)
+Allocator               Property   IUnknown Allocator () {get}                          
+Allocator_ID            Property   int Allocator_ID () {get}                            
+AvailableSourceRect     Property   IMSVidRect AvailableSourceRect () {get}              
+Category                Property   string Category () {get}                             
+ClassID                 Property   string ClassID () {get}                              
+ClippedSourceRect       Property   IMSVidRect ClippedSourceRect () {get} {set}          
+CustomCompositorClass   Property   string CustomCompositorClass () {get} {set}          
+DecimateInput           Property   bool DecimateInput () {get} {set}                    
+FramesPerSecond         Property   int FramesPerSecond () {get}                         
+MaxVidRect              Property   IMSVidRect MaxVidRect () {get}                       
+MinVidRect              Property   IMSVidRect MinVidRect () {get}                       
+MixerBitmap             Property   IPictureDisp MixerBitmap () {get} {set}              
+MixerBitmapOpacity      Property   int MixerBitmapOpacity () {get} {set}                
+MixerBitmapPositionRect Property   IMSVidRect MixerBitmapPositionRect () {get} {set}    
+Name                    Property   string Name () {get}                                 
+OverScan                Property   int OverScan () {get} {set}                          
+Power                   Property   bool Power () {get} {set}                            
+SourceSize              Property   SourceSizeList SourceSize () {get} {set}             
+Status                  Property   int Status () {get}                                  
+SuppressEffects         Property   bool SuppressEffects () {get} {set}                  
+UsingOverlay            Property   bool UsingOverlay () {get} {set}                     
+
+

@@ -1,0 +1,54 @@
+﻿
+
+   TypeName: System.__ComObject#{310ab61b-ef71-4544-99bf-75dd6b8666ea}
+
+Name                       MemberType            Definition                                       
+----                       ----------            ----------                                       
+BeginTransaction           Method                void BeginTransaction ()                         
+ClientToDocument           Method                void ClientToDocument (int, int, int)            
+DocumentToClient           Method                void DocumentToClient (int, int, int)            
+DPtoLP                     Method                void DPtoLP (int, int, int)                      
+DVtoSV                     Method                void DVtoSV (int, int)                           
+EndTransation              Method                void EndTransation ()                            
+EnterMenuLoop              Method                void EnterMenuLoop (int, int)                    
+GetScale                   Method                void GetScale (double, double)                   
+GetVisibleRect             Method                void GetVisibleRect (int, int, int, int, int)    
+LPtoDP                     Method                void LPtoDP (int, int, int)                      
+MoveRectIntoView           Method                void MoveRectIntoView (int, Variant)             
+MoveRectIntoViewEx         Method                void MoveRectIntoViewEx (int, Variant, uint)     
+MoveSelectionToView        Method                void MoveSelectionToView (IDispatch)             
+OnExternalWndMsg           Method                uint OnExternalWndMsg (INT_PTR, uint, uint, uint)
+PageFromClient             Method                int PageFromClient (int, int)                    
+SelectAll                  Method                void SelectAll (int)                             
+SelectWordSpan             Method                void SelectWordSpan (int, int, int)              
+SetScale                   Method                void SetScale (double, double)                   
+SetViewVisible             Method                void SetViewVisible (uint, int)                  
+AttachedBehavior           ParameterizedProperty IUnknown AttachedBehavior (int) {get}            
+ActionState                Property              enumEPActionState ActionState () {get} {set}     
+AttachedBehaviorType       Property              string AttachedBehaviorType () {get} {set}       
+BackColor                  Property              OLE_COLOR BackColor () {get} {set}               
+BackStyle                  Property              int BackStyle () {get} {set}                     
+ControlFlags               Property              uint ControlFlags () {get} {set}                 
+Document                   Property              IUnknown Document () {get} {set}                 
+DocViewMode                Property              enumDocviewMode DocViewMode () {get} {set}       
+EnableHighContrast         Property              int EnableHighContrast () {get} {set}            
+EnablePressAndHold         Property              int EnablePressAndHold () {set}                  
+EraserMode                 Property              enumEPActionState EraserMode () {set}            
+FileName                   Property              string FileName () {get} {set}                   
+FitMode                    Property              enumFitmode FitMode () {get} {set}               
+NumPages                   Property              int NumPages () {get}                            
+PageNum                    Property              int PageNum () {get} {set}                       
+ReadingViewInSync          Property              int ReadingViewInSync () {get}                   
+ReadingViewNumSections     Property              int ReadingViewNumSections () {get}              
+ReadingViewSection         Property              int ReadingViewSection () {get} {set}            
+RepurposingRegionContainer Property              IUnknown RepurposingRegionContainer () {set}     
+ReverseVideo               Property              int ReverseVideo () {get} {set}                  
+RichInkSelection           Property              IUnknown RichInkSelection () {get} {set}         
+RiffleRect                 Property              Variant RiffleRect () {get}                      
+Selection                  Property              IDispatch Selection () {get} {set}               
+ShowMarkupViewScrollbar    Property              int ShowMarkupViewScrollbar () {get} {set}       
+ShowRiffle                 Property              int ShowRiffle () {get} {set}                    
+StrokeInProgressCount      Property              uint StrokeInProgressCount () {get}              
+TabletInput                Property              IUnknown TabletInput () {get}                    
+
+

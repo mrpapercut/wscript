@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.Runtime.Remoting.Metadata.W3cXsd2001.SoapQName
+
+Name        MemberType Definition                                       
+----        ---------- ----------                                       
+Equals      Method     bool Equals(System.Object obj)                   
+GetHashCode Method     int GetHashCode()                                
+GetType     Method     type GetType()                                   
+GetXsdType  Method     string GetXsdType(), string ISoapXsd.GetXsdType()
+ToString    Method     string ToString()                                
+Key         Property   string Key {get;set;}                            
+Name        Property   string Name {get;set;}                           
+Namespace   Property   string Namespace {get;set;}                      
+
+

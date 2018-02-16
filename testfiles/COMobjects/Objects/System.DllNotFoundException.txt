@@ -2,22 +2,22 @@
 
    TypeName: System.DllNotFoundException
 
-Name             MemberType Definition                                                                                                                                                                                                                                        
-----             ---------- ----------                                                                                                                                                                                                                                        
-Equals           Method     bool Equals(System.Object obj), bool _Exception.Equals(System.Object obj)                                                                                                                                                                         
-GetBaseException Method     System.Exception GetBaseException(), System.Exception _Exception.GetBaseException()                                                                                                                                                               
-GetHashCode      Method     int GetHashCode(), int _Exception.GetHashCode()                                                                                                                                                                                                   
-GetObjectData    Method     void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context), void ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serializat...
-GetType          Method     type GetType(), type _Exception.GetType()                                                                                                                                                                                                         
-ToString         Method     string ToString(), string _Exception.ToString()                                                                                                                                                                                                   
-Data             Property   System.Collections.IDictionary Data {get;}                                                                                                                                                                                                        
-HelpLink         Property   string HelpLink {get;set;}                                                                                                                                                                                                                        
-HResult          Property   int HResult {get;set;}                                                                                                                                                                                                                            
-InnerException   Property   System.Exception InnerException {get;}                                                                                                                                                                                                            
-Message          Property   string Message {get;}                                                                                                                                                                                                                             
-Source           Property   string Source {get;set;}                                                                                                                                                                                                                          
-StackTrace       Property   string StackTrace {get;}                                                                                                                                                                                                                          
-TargetSite       Property   System.Reflection.MethodBase TargetSite {get;}                                                                                                                                                                                                    
-TypeName         Property   string TypeName {get;}                                                                                                                                                                                                                            
+Name             MemberType Definition                                                                                 
+----             ---------- ----------                                                                                 
+Equals           Method     bool Equals(System.Object obj), bool _Exception.Equals(System.Object obj)                  
+GetBaseException Method     System.Exception GetBaseException(), System.Exception _Exception.GetBaseException()        
+GetHashCode      Method     int GetHashCode(), int _Exception.GetHashCode()                                            
+GetObjectData    Method     void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.S...
+GetType          Method     type GetType(), type _Exception.GetType()                                                  
+ToString         Method     string ToString(), string _Exception.ToString()                                            
+Data             Property   System.Collections.IDictionary Data {get;}                                                 
+HelpLink         Property   string HelpLink {get;set;}                                                                 
+HResult          Property   int HResult {get;set;}                                                                     
+InnerException   Property   System.Exception InnerException {get;}                                                     
+Message          Property   string Message {get;}                                                                      
+Source           Property   string Source {get;set;}                                                                   
+StackTrace       Property   string StackTrace {get;}                                                                   
+TargetSite       Property   System.Reflection.MethodBase TargetSite {get;}                                             
+TypeName         Property   string TypeName {get;}                                                                     
 
 

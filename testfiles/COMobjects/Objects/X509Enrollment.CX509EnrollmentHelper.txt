@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab351-217d-11da-b2a4-000e7bbb2b09}
+
+Name                MemberType Definition                                                                              
+----                ---------- ----------                                                                              
+AddEnrollmentServer Method     void AddEnrollmentServer (string, X509EnrollmentAuthFlags, string, string)              
+AddPolicyServer     Method     void AddPolicyServer (string, string, PolicyServerUrlFlags, X509EnrollmentAuthFlags, ...
+Enroll              Method     string Enroll (string, string, EncodingType, WebEnrollmentFlags)                        
+Initialize          Method     void Initialize (X509CertificateEnrollmentContext)                                      
+
+

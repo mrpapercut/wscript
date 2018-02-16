@@ -1,0 +1,28 @@
+﻿
+
+   TypeName: System.__ComObject#{333c7bc5-460f-11d0-bc04-0080c7055a83}
+
+Name            MemberType Definition                            
+----            ---------- ----------                            
+Reset           Method     void Reset ()                         
+AppendData      Property   bool AppendData () {get} {set}        
+CaseSensitive   Property   bool CaseSensitive () {get} {set}     
+CharSet         Property   string CharSet () {get} {set}         
+DataURL         Property   string DataURL () {get} {set}         
+EscapeChar      Property   string EscapeChar () {get} {set}      
+FieldDelim      Property   string FieldDelim () {get} {set}      
+Filter          Property   string Filter () {get} {set}          
+FilterColumn    Property   string FilterColumn () {get} {set}    
+FilterCriterion Property   string FilterCriterion () {get} {set} 
+FilterValue     Property   string FilterValue () {get} {set}     
+Language        Property   string Language () {get} {set}        
+OSP             Property   IDispatch OSP () {get}                
+ReadyState      Property   int ReadyState () {get} {set}         
+RowDelim        Property   string RowDelim () {get} {set}        
+Sort            Property   string Sort () {get} {set}            
+SortAscending   Property   bool SortAscending () {get} {set}     
+SortColumn      Property   string SortColumn () {get} {set}      
+TextQualifier   Property   string TextQualifier () {get} {set}   
+UseHeader       Property   bool UseHeader () {get} {set}         
+
+

@@ -1,0 +1,32 @@
+﻿
+
+   TypeName: System.__ComObject#{9d398fa0-c4e2-4fcd-9973-975caaf47ea6}
+
+Name                       MemberType Definition                                                                       
+----                       ---------- ----------                                                                       
+AddStrokesAtRectangle      Method     void AddStrokesAtRectangle (IInkStrokes, IInkRectangle)                          
+CanPaste                   Method     bool CanPaste (IDataObject)                                                      
+Clip                       Method     void Clip (IInkRectangle)                                                        
+ClipboardCopy              Method     IDataObject ClipboardCopy (IInkStrokes, InkClipboardFormats, InkClipboardModes)  
+ClipboardCopyWithRectangle Method     IDataObject ClipboardCopyWithRectangle (IInkRectangle, InkClipboardFormats, In...
+ClipboardPaste             Method     IInkStrokes ClipboardPaste (int, int, IDataObject)                               
+Clone                      Method     IInkDisp Clone ()                                                                
+CreateStroke               Method     IInkStrokeDisp CreateStroke (Variant, Variant)                                   
+CreateStrokes              Method     IInkStrokes CreateStrokes (Variant)                                              
+DeleteStroke               Method     void DeleteStroke (IInkStrokeDisp)                                               
+DeleteStrokes              Method     void DeleteStrokes (IInkStrokes)                                                 
+ExtractStrokes             Method     IInkDisp ExtractStrokes (IInkStrokes, InkExtractFlags)                           
+ExtractWithRectangle       Method     IInkDisp ExtractWithRectangle (IInkRectangle, InkExtractFlags)                   
+GetBoundingBox             Method     IInkRectangle GetBoundingBox (InkBoundingBoxMode)                                
+HitTestCircle              Method     IInkStrokes HitTestCircle (int, int, float)                                      
+HitTestWithLasso           Method     IInkStrokes HitTestWithLasso (Variant, float, Variant)                           
+HitTestWithRectangle       Method     IInkStrokes HitTestWithRectangle (IInkRectangle, float)                          
+Load                       Method     void Load (Variant)                                                              
+NearestPoint               Method     IInkStrokeDisp NearestPoint (int, int, float, float)                             
+Save                       Method     Variant Save (InkPersistenceFormat, InkPersistenceCompressionMode)               
+CustomStrokes              Property   IInkCustomStrokes CustomStrokes () {get}                                         
+Dirty                      Property   bool Dirty () {get} {set}                                                        
+ExtendedProperties         Property   IInkExtendedProperties ExtendedProperties () {get}                               
+Strokes                    Property   IInkStrokes Strokes () {get}                                                     
+
+

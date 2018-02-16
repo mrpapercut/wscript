@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab32c-217d-11da-b2a4-000e7bbb2b09}
+
+Name                   MemberType Definition                                 
+----                   ---------- ----------                                 
+InitializeFromObjectId Method     void InitializeFromObjectId (IObjectId)    
+InitializeFromValues   Method     void InitializeFromValues (IX509Attributes)
+ObjectId               Property   IObjectId ObjectId () {get}                
+Values                 Property   IX509Attributes Values () {get}            
+
+

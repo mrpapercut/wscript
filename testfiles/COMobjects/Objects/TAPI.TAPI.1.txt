@@ -1,0 +1,26 @@
+﻿
+
+   TypeName: System.__ComObject#{54fbdc8c-d90f-4dad-9695-b373097f094b}
+
+Name                         MemberType Definition                                                     
+----                         ---------- ----------                                                     
+CreateEmptyCollectionObject  Method     ITCollection2 CreateEmptyCollectionObject ()                   
+EnumerateAddresses           Method     IEnumAddress EnumerateAddresses ()                             
+EnumerateCallHubs            Method     IEnumCallHub EnumerateCallHubs ()                              
+EnumeratePhones              Method     IEnumPhone EnumeratePhones ()                                  
+EnumeratePrivateTAPIObjects  Method     void EnumeratePrivateTAPIObjects (IEnumUnknown)                
+Initialize                   Method     void Initialize ()                                             
+RegisterCallNotifications    Method     int RegisterCallNotifications (ITAddress, bool, bool, int, int)
+RegisterRequestRecipient     Method     void RegisterRequestRecipient (int, int, bool)                 
+SetApplicationPriority       Method     void SetApplicationPriority (string, int, bool)                
+SetAssistedTelephonyPriority Method     void SetAssistedTelephonyPriority (string, bool)               
+SetCallHubTracking           Method     void SetCallHubTracking (Variant, bool)                        
+Shutdown                     Method     void Shutdown ()                                               
+UnregisterNotifications      Method     void UnregisterNotifications (int)                             
+Addresses                    Property   Variant Addresses () {get}                                     
+CallHubs                     Property   Variant CallHubs () {get}                                      
+EventFilter                  Property   int EventFilter () {get} {set}                                 
+Phones                       Property   Variant Phones () {get}                                        
+PrivateTAPIObjects           Property   Variant PrivateTAPIObjects () {get}                            
+
+

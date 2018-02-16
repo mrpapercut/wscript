@@ -1,0 +1,19 @@
+﻿
+
+   TypeName: System.__ComObject#{612aa885-66cf-4090-ba0a-566f5312e4ca}
+
+Name             MemberType Definition                                            
+----             ---------- ----------                                            
+Clone            Method     ILocator Clone ()                                     
+CarrierFrequency Property   int CarrierFrequency () {get} {set}                   
+InnerFEC         Property   FECMethod InnerFEC () {get} {set}                     
+InnerFECRate     Property   BinaryConvolutionCodeRate InnerFECRate () {get} {set} 
+Modulation       Property   ModulationType Modulation () {get} {set}              
+OuterFEC         Property   FECMethod OuterFEC () {get} {set}                     
+OuterFECRate     Property   BinaryConvolutionCodeRate OuterFECRate () {get} {set} 
+PhysicalChannel  Property   int PhysicalChannel () {get} {set}                    
+ProgramNumber    Property   int ProgramNumber () {get} {set}                      
+SymbolRate       Property   int SymbolRate () {get} {set}                         
+TSID             Property   int TSID () {get} {set}                               
+
+

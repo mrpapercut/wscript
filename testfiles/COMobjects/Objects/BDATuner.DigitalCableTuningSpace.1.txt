@@ -1,0 +1,29 @@
+﻿
+
+   TypeName: System.__ComObject#{013f9f9c-b449-4ec7-a6d2-9d4f2fc70ae5}
+
+Name                           MemberType Definition                                                    
+----                           ---------- ----------                                                    
+Clone                          Method     ITuningSpace Clone ()                                         
+CreateTuneRequest              Method     ITuneRequest CreateTuneRequest ()                             
+CLSID                          Property   string CLSID () {get}                                         
+CountryCode                    Property   int CountryCode () {get} {set}                                
+DefaultLocator                 Property   ILocator DefaultLocator () {get} {set}                        
+DefaultPreferredComponentTypes Property   IComponentTypes DefaultPreferredComponentTypes () {get} {set} 
+FrequencyMapping               Property   string FrequencyMapping () {get} {set}                        
+FriendlyName                   Property   string FriendlyName () {get} {set}                            
+InputType                      Property   tagTunerInputType InputType () {get} {set}                    
+MaxChannel                     Property   int MaxChannel () {get} {set}                                 
+MaxMajorChannel                Property   int MaxMajorChannel () {get} {set}                            
+MaxMinorChannel                Property   int MaxMinorChannel () {get} {set}                            
+MaxPhysicalChannel             Property   int MaxPhysicalChannel () {get} {set}                         
+MaxSourceID                    Property   int MaxSourceID () {get} {set}                                
+MinChannel                     Property   int MinChannel () {get} {set}                                 
+MinMajorChannel                Property   int MinMajorChannel () {get} {set}                            
+MinMinorChannel                Property   int MinMinorChannel () {get} {set}                            
+MinPhysicalChannel             Property   int MinPhysicalChannel () {get} {set}                         
+MinSourceID                    Property   int MinSourceID () {get} {set}                                
+NetworkType                    Property   string NetworkType () {get} {set}                             
+UniqueName                     Property   string UniqueName () {get} {set}                              
+
+

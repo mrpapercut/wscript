@@ -1,0 +1,11 @@
+﻿
+
+   TypeName: System.__ComObject#{089057be-d3f5-4a2c-b10a-a5130184a0f7}
+
+Name      MemberType Definition                     
+----      ---------- ----------                     
+Add       Property   bool Add () {get} {set}        
+Direction Property   short Direction () {get} {set} 
+Strength  Property   int Strength () {get} {set}    
+
+

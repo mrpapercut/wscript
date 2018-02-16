@@ -1,0 +1,32 @@
+﻿
+
+   TypeName: System.__ComObject#{0004c1c9-127e-4765-ba07-6a3147bca112}
+
+Name                                         MemberType Definition                                                     
+----                                         ---------- ----------                                                     
+CancelClassification                         Method     void CancelClassification ()                                   
+ClassifyFiles                                Method     void ClassifyFiles (SAFEARRAY(Variant), SAFEARRAY(Variant), ...
+ClearFileProperty                            Method     void ClearFileProperty (string, string)                        
+CreateModuleDefinition                       Method     IFsrmPipelineModuleDefinition CreateModuleDefinition (_FsrmP...
+CreatePropertyDefinition                     Method     IFsrmPropertyDefinition CreatePropertyDefinition ()            
+CreateRule                                   Method     IFsrmRule CreateRule (_FsrmRuleType)                           
+EnumFileProperties                           Method     IFsrmCollection EnumFileProperties (string, _FsrmGetFileProp...
+EnumModuleDefinitions                        Method     IFsrmCollection EnumModuleDefinitions (_FsrmPipelineModuleTy...
+EnumPropertyDefinitions                      Method     IFsrmCollection EnumPropertyDefinitions (_FsrmEnumOptions)     
+EnumRules                                    Method     IFsrmCollection EnumRules (_FsrmRuleType, _FsrmEnumOptions)    
+GetFileProperty                              Method     IFsrmProperty GetFileProperty (string, string, _FsrmGetFileP...
+GetModuleDefinition                          Method     IFsrmPipelineModuleDefinition GetModuleDefinition (string, _...
+GetPropertyDefinition                        Method     IFsrmPropertyDefinition GetPropertyDefinition (string)         
+GetRule                                      Method     IFsrmRule GetRule (string, _FsrmRuleType)                      
+RunClassification                            Method     void RunClassification (_FsrmReportGenerationContext, string)  
+SetFileProperty                              Method     void SetFileProperty (string, string, string)                  
+WaitForClassificationCompletion              Method     bool WaitForClassificationCompletion (int)                     
+ClassificationLastError                      Property   string ClassificationLastError () {get}                        
+ClassificationLastReportPathWithoutExtension Property   string ClassificationLastReportPathWithoutExtension () {get}   
+ClassificationReportEnabled                  Property   bool ClassificationReportEnabled () {get} {set}                
+ClassificationReportFormats                  Property   SAFEARRAY(Variant) ClassificationReportFormats () {get} {set}  
+ClassificationReportMailTo                   Property   string ClassificationReportMailTo () {get} {set}               
+ClassificationRunningStatus                  Property   _FsrmReportRunningStatus ClassificationRunningStatus () {get}  
+Logging                                      Property   int Logging () {get} {set}                                     
+
+

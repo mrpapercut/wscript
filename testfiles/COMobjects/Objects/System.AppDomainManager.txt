@@ -2,22 +2,22 @@
 
    TypeName: System.AppDomainManager
 
-Name                        MemberType Definition                                                                                                                           
-----                        ---------- ----------                                                                                                                           
-CheckSecuritySettings       Method     bool CheckSecuritySettings(System.Security.SecurityState state)                                                                      
-CreateDomain                Method     System.AppDomain CreateDomain(string friendlyName, System.Security.Policy.Evidence securityInfo, System.AppDomainSetup appDomainInfo)
-CreateObjRef                Method     System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)                                                                      
-Equals                      Method     bool Equals(System.Object obj)                                                                                                       
-GetHashCode                 Method     int GetHashCode()                                                                                                                    
-GetLifetimeService          Method     System.Object GetLifetimeService()                                                                                                   
-GetType                     Method     type GetType()                                                                                                                       
-InitializeLifetimeService   Method     System.Object InitializeLifetimeService()                                                                                            
-InitializeNewDomain         Method     void InitializeNewDomain(System.AppDomainSetup appDomainInfo)                                                                        
-ToString                    Method     string ToString()                                                                                                                    
-ApplicationActivator        Property   System.Runtime.Hosting.ApplicationActivator ApplicationActivator {get;}                                                              
-EntryAssembly               Property   System.Reflection.Assembly EntryAssembly {get;}                                                                                      
-HostExecutionContextManager Property   System.Threading.HostExecutionContextManager HostExecutionContextManager {get;}                                                      
-HostSecurityManager         Property   System.Security.HostSecurityManager HostSecurityManager {get;}                                                                       
-InitializationFlags         Property   System.AppDomainManagerInitializationOptions InitializationFlags {get;set;}                                                          
+Name                        MemberType Definition                                                                      
+----                        ---------- ----------                                                                      
+CheckSecuritySettings       Method     bool CheckSecuritySettings(System.Security.SecurityState state)                 
+CreateDomain                Method     System.AppDomain CreateDomain(string friendlyName, System.Security.Policy.Evi...
+CreateObjRef                Method     System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)                 
+Equals                      Method     bool Equals(System.Object obj)                                                  
+GetHashCode                 Method     int GetHashCode()                                                               
+GetLifetimeService          Method     System.Object GetLifetimeService()                                              
+GetType                     Method     type GetType()                                                                  
+InitializeLifetimeService   Method     System.Object InitializeLifetimeService()                                       
+InitializeNewDomain         Method     void InitializeNewDomain(System.AppDomainSetup appDomainInfo)                   
+ToString                    Method     string ToString()                                                               
+ApplicationActivator        Property   System.Runtime.Hosting.ApplicationActivator ApplicationActivator {get;}         
+EntryAssembly               Property   System.Reflection.Assembly EntryAssembly {get;}                                 
+HostExecutionContextManager Property   System.Threading.HostExecutionContextManager HostExecutionContextManager {get;} 
+HostSecurityManager         Property   System.Security.HostSecurityManager HostSecurityManager {get;}                  
+InitializationFlags         Property   System.AppDomainManagerInitializationOptions InitializationFlags {get;set;}     
 
 

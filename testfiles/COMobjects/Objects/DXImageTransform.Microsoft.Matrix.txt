@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{ac66a493-0f0c-4c76-825c-9d68bede9188}
+
+Name         MemberType Definition                         
+----         ---------- ----------                         
+Dx           Property   float Dx () {get} {set}            
+Dy           Property   float Dy () {get} {set}            
+FilterType   Property   string FilterType () {get} {set}   
+M11          Property   float M11 () {get} {set}           
+M12          Property   float M12 () {get} {set}           
+M21          Property   float M21 () {get} {set}           
+M22          Property   float M22 () {get} {set}           
+SizingMethod Property   string SizingMethod () {get} {set} 
+
+

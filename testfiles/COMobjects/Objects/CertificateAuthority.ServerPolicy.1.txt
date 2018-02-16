@@ -1,0 +1,22 @@
+﻿
+
+   TypeName: System.__ComObject#{aa000922-ffbe-11cf-8800-00a0c903b83c}
+
+Name                         MemberType Definition                                              
+----                         ---------- ----------                                              
+EnumerateAttributes          Method     string EnumerateAttributes ()                           
+EnumerateAttributesClose     Method     void EnumerateAttributesClose ()                        
+EnumerateAttributesSetup     Method     void EnumerateAttributesSetup (int)                     
+EnumerateExtensions          Method     string EnumerateExtensions ()                           
+EnumerateExtensionsClose     Method     void EnumerateExtensionsClose ()                        
+EnumerateExtensionsSetup     Method     void EnumerateExtensionsSetup (int)                     
+GetCertificateExtension      Method     Variant GetCertificateExtension (string, int)           
+GetCertificateExtensionFlags Method     int GetCertificateExtensionFlags ()                     
+GetCertificateProperty       Method     Variant GetCertificateProperty (string, int)            
+GetRequestAttribute          Method     string GetRequestAttribute (string)                     
+GetRequestProperty           Method     Variant GetRequestProperty (string, int)                
+SetCertificateExtension      Method     void SetCertificateExtension (string, int, int, Variant)
+SetCertificateProperty       Method     void SetCertificateProperty (string, int, Variant)      
+SetContext                   Method     void SetContext (int)                                   
+
+

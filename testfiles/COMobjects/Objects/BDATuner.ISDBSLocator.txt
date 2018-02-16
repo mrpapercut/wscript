@@ -1,0 +1,21 @@
+﻿
+
+   TypeName: System.__ComObject#{c9897087-e29c-473f-9e4b-7072123dea14}
+
+Name               MemberType Definition                                            
+----               ---------- ----------                                            
+Clone              Method     ILocator Clone ()                                     
+Azimuth            Property   int Azimuth () {get} {set}                            
+CarrierFrequency   Property   int CarrierFrequency () {get} {set}                   
+Elevation          Property   int Elevation () {get} {set}                          
+InnerFEC           Property   FECMethod InnerFEC () {get} {set}                     
+InnerFECRate       Property   BinaryConvolutionCodeRate InnerFECRate () {get} {set} 
+Modulation         Property   ModulationType Modulation () {get} {set}              
+OrbitalPosition    Property   int OrbitalPosition () {get} {set}                    
+OuterFEC           Property   FECMethod OuterFEC () {get} {set}                     
+OuterFECRate       Property   BinaryConvolutionCodeRate OuterFECRate () {get} {set} 
+SignalPolarisation Property   Polarisation SignalPolarisation () {get} {set}        
+SymbolRate         Property   int SymbolRate () {get} {set}                         
+WestPosition       Property   bool WestPosition () {get} {set}                      
+
+

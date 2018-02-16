@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter
+
+Name              MemberType Definition                                                                                
+----              ---------- ----------                                                                                
+CreateKeyExchange Method     byte[] CreateKeyExchange(byte[] rgbData), byte[] CreateKeyExchange(byte[] rgbData, type...
+Equals            Method     bool Equals(System.Object obj)                                                            
+GetHashCode       Method     int GetHashCode()                                                                         
+GetType           Method     type GetType()                                                                            
+SetKey            Method     void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key)                         
+ToString          Method     string ToString()                                                                         
+Parameters        Property   string Parameters {get;}                                                                  
+Rng               Property   System.Security.Cryptography.RandomNumberGenerator Rng {get;set;}                         
+
+

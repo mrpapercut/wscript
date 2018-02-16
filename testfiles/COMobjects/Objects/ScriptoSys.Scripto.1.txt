@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.__ComObject#{9fc29d15-759d-11d2-999b-00c04f8ef4e0}
+
+Name             MemberType Definition                                 
+----             ---------- ----------                                 
+Abort            Method     void Abort ()                              
+Complete         Method     void Complete ()                           
+CreateInstance   Method     IDispatch CreateInstance (string, GUID)    
+DeActivateScript Method     void DeActivateScript (int)                
+DeInitScript     Method     void DeInitScript ()                       
+InitScript       Method     void InitScript (IUnknown)                 
+InitScript2      Method     void InitScript2 (IUnknown, GUID, int, int)
+ReInitScript     Method     void ReInitScript (IUnknown)               
+RunScrap         Method     void RunScrap (int, int)                   
+Response         Property   string Response () {get} {set}             
+
+

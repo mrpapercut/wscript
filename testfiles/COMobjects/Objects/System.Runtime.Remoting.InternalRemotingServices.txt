@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.Runtime.Remoting.InternalRemotingServices
+
+Name        MemberType Definition                    
+----        ---------- ----------                    
+Equals      Method     bool Equals(System.Object obj)
+GetHashCode Method     int GetHashCode()             
+GetType     Method     type GetType()                
+ToString    Method     string ToString()             
+
+

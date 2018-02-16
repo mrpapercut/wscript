@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{16ff1a34-9e30-42c3-b44d-e22513b5767a}
+
+Name          MemberType Definition                    
+----          ---------- ----------                    
+AddressLine1  Property   string AddressLine1 () {get}  
+AddressLine2  Property   string AddressLine2 () {get}  
+City          Property   string City () {get}          
+CountryRegion Property   string CountryRegion () {get} 
+DetailLevel   Property   uint DetailLevel () {get}     
+PostalCode    Property   string PostalCode () {get}    
+StateProvince Property   string StateProvince () {get} 
+Timestamp     Property   Date Timestamp () {get}       
+
+

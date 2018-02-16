@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{d6742451-cd24-4189-8b65-32eede0fe0a2}
+
+Name          MemberType Definition                              
+----          ---------- ----------                              
+AddConsumer   Method     void AddConsumer (IFsrmPipelineConsumer)
+Clone         Method     IFsrmConsumerModule Clone ()            
+GetConsumer   Method     IFsrmPipelineConsumer GetConsumer (uint)
+ConsumerCount Property   uint ConsumerCount () {get}             
+
+

@@ -1,0 +1,11 @@
+﻿
+
+   TypeName: System.__ComObject#{722a338c-6e8e-4e72-ac27-1417fb0c81c2}
+
+Name       MemberType            Definition                    
+----       ----------            ----------                    
+Initialize Method                void Initialize (uint)        
+Item       ParameterizedProperty IWscProduct Item (uint) {get} 
+Count      Property              int Count () {get}            
+
+

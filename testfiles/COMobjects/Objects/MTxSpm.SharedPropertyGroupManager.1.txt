@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{2a005c0d-a5de-11cf-9e66-00aa00a3f464}
+
+Name                MemberType            Definition                                                       
+----                ----------            ----------                                                       
+CreatePropertyGroup Method                ISharedPropertyGroup CreatePropertyGroup (string, int, int, bool)
+Group               ParameterizedProperty ISharedPropertyGroup Group (string) {get}                        
+
+

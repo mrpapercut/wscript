@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter
+
+Name               MemberType Definition                                                       
+----               ---------- ----------                                                       
+DecryptKeyExchange Method     byte[] DecryptKeyExchange(byte[] rgbData)                        
+Equals             Method     bool Equals(System.Object obj)                                   
+GetHashCode        Method     int GetHashCode()                                                
+GetType            Method     type GetType()                                                   
+SetKey             Method     void SetKey(System.Security.Cryptography.AsymmetricAlgorithm key)
+ToString           Method     string ToString()                                                
+Parameters         Property   string Parameters {get;set;}                                     
+
+

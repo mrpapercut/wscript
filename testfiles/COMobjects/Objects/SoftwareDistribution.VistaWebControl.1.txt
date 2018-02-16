@@ -1,0 +1,24 @@
+﻿
+
+   TypeName: System.__ComObject#{fb451ba6-8ef1-4816-baef-418315514939}
+
+Name                                 MemberType Definition                                                             
+----                                 ---------- ----------                                                             
+CheckOptInRestrictions               Method     OptInRestriction CheckOptInRestrictions (OptInRestriction)             
+ElevatedOptInToUpdateService         Method     void ElevatedOptInToUpdateService (string, Variant, _FILETIME, uint,...
+GetAutomaticUpdatesNotificationLevel Method     AutomaticUpdatesNotificationLevelSetting GetAutomaticUpdatesNotifica...
+GetAutomaticUpdatesReadOnly          Method     AutomaticUpdatesReadOnly GetAutomaticUpdatesReadOnly ()                
+GetErrorContext                      Method     OptInErrorContext GetErrorContext ()                                   
+GetFeaturedUpdatesEnabled            Method     bool GetFeaturedUpdatesEnabled ()                                      
+GetFeaturedUpdatesEnabledReadOnly    Method     AutomaticUpdatesReadOnly GetFeaturedUpdatesEnabledReadOnly ()          
+GetIncludeRecommendedUpdates         Method     bool GetIncludeRecommendedUpdates ()                                   
+GetIncludeRecommendedUpdatesReadOnly Method     AutomaticUpdatesReadOnly GetIncludeRecommendedUpdatesReadOnly ()       
+GetNonAdministratorsElevated         Method     bool GetNonAdministratorsElevated ()                                   
+GetNonAdministratorsElevatedReadOnly Method     AutomaticUpdatesReadOnly GetNonAdministratorsElevatedReadOnly ()       
+GetOSVersionInfo                     Method     Variant GetOSVersionInfo (OSVersionField, int)                         
+GetUpdateServiceOptInStatus          Method     bool GetUpdateServiceOptInStatus (string)                              
+LaunchWindowsUpdateApplication       Method     void LaunchWindowsUpdateApplication ()                                 
+OptInToUpdateService                 Method     void OptInToUpdateService (string, uint)                               
+UserLocale                           Property   uint UserLocale () {get}                                               
+
+

@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{eb7d987f-8a01-42ad-b8ae-574deee44d1a}
+
+Name        MemberType Definition                        
+----        ---------- ----------                        
+Clone       Method     ITuneRequest Clone ()             
+Components  Property   IComponents Components () {get}   
+Locator     Property   ILocator Locator () {get} {set}   
+ProgNo      Property   int ProgNo () {get} {set}         
+TSID        Property   int TSID () {get} {set}           
+TuningSpace Property   ITuningSpace TuningSpace () {get} 
+
+

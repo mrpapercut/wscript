@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.GlidHost.GLIDHost
+
+Name        MemberType Definition                            
+----        ---------- ----------                            
+Equals      Method     bool Equals(System.Object obj)        
+GetHashCode Method     int GetHashCode()                     
+GetType     Method     type GetType()                        
+Load        Method     void Load(), void IGLIDHost.Load()    
+ToString    Method     string ToString()                     
+Unload      Method     void Unload(), void IGLIDHost.Unload()
+
+

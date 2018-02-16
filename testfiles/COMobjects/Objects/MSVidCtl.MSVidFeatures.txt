@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{c5702cd5-9b79-11d3-b654-00c04f79498e}
+
+Name   MemberType            Definition                         
+----   ----------            ----------                         
+Add    Method                void Add (IMSVidFeature)           
+Remove Method                void Remove (Variant)              
+Item   ParameterizedProperty IMSVidFeature Item (Variant) {get} 
+Count  Property              int Count () {get}                 
+
+

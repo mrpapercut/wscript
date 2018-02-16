@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: System.__ComObject#{b8be681a-eb2c-47f0-b415-94d5452f0e05}
+
+Name                  MemberType Definition                                    
+----                  ---------- ----------                                    
+ChangePassword        Method     void ChangePassword (string, string, string)  
+GetParentalCountry    Method     int GetParentalCountry ()                     
+GetParentalLevel      Method     int GetParentalLevel ()                       
+SaveParentalCountry   Method     void SaveParentalCountry (int, string, string)
+SaveParentalLevel     Method     void SaveParentalLevel (int, string, string)  
+BookmarkOnStop        Property   bool BookmarkOnStop () {get} {set}            
+DefaultAudioLCID      Property   int DefaultAudioLCID () {get} {set}           
+DefaultMenuLCID       Property   int DefaultMenuLCID () {get} {set}            
+DefaultSubpictureLCID Property   int DefaultSubpictureLCID () {get} {set}      
+
+

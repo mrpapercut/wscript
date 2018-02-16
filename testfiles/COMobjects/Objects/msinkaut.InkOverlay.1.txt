@@ -1,0 +1,41 @@
+﻿
+
+   TypeName: System.__ComObject#{b82a463b-c1c5-45a3-997c-deab5651b67a}
+
+Name                           MemberType Definition                                                          
+----                           ---------- ----------                                                          
+Draw                           Method     void Draw (IInkRectangle)                                           
+GetEventInterest               Method     bool GetEventInterest (InkCollectorEventInterest)                   
+GetGestureStatus               Method     bool GetGestureStatus (InkApplicationGesture)                       
+GetWindowInputRectangle        Method     void GetWindowInputRectangle (IInkRectangle)                        
+HitTestSelection               Method     SelectionHitResult HitTestSelection (int, int)                      
+SetAllTabletsMode              Method     void SetAllTabletsMode (bool)                                       
+SetEventInterest               Method     void SetEventInterest (InkCollectorEventInterest, bool)             
+SetGestureStatus               Method     void SetGestureStatus (InkApplicationGesture, bool)                 
+SetSingleTabletIntegratedMode  Method     void SetSingleTabletIntegratedMode (IInkTablet)                     
+SetWindowInputRectangle        Method     void SetWindowInputRectangle (IInkRectangle)                        
+AttachMode                     Property   InkOverlayAttachMode AttachMode () {get} {set}                      
+AutoRedraw                     Property   bool AutoRedraw () {get} {set}                                      
+CollectingInk                  Property   bool CollectingInk () {get}                                         
+CollectionMode                 Property   InkCollectionMode CollectionMode () {get} {set}                     
+Cursors                        Property   IInkCursors Cursors () {get}                                        
+DefaultDrawingAttributes       Property   IInkDrawingAttributes DefaultDrawingAttributes () {get} {set by ref}
+DesiredPacketDescription       Property   Variant DesiredPacketDescription () {get} {set}                     
+DynamicRendering               Property   bool DynamicRendering () {get} {set}                                
+EditingMode                    Property   InkOverlayEditingMode EditingMode () {get} {set}                    
+Enabled                        Property   bool Enabled () {get} {set}                                         
+EraserMode                     Property   InkOverlayEraserMode EraserMode () {get} {set}                      
+EraserWidth                    Property   int EraserWidth () {get} {set}                                      
+hWnd                           Property   LONG_PTR hWnd () {get} {set}                                        
+Ink                            Property   IInkDisp Ink () {get} {set by ref}                                  
+MarginX                        Property   int MarginX () {get} {set}                                          
+MarginY                        Property   int MarginY () {get} {set}                                          
+MouseIcon                      Property   IPictureDisp MouseIcon () {get} {set} {set by ref}                  
+MousePointer                   Property   InkMousePointer MousePointer () {get} {set}                         
+Renderer                       Property   IInkRenderer Renderer () {get} {set by ref}                         
+Selection                      Property   IInkStrokes Selection () {get} {set}                                
+SupportHighContrastInk         Property   bool SupportHighContrastInk () {get} {set}                          
+SupportHighContrastSelectionUI Property   bool SupportHighContrastSelectionUI () {get} {set}                  
+Tablet                         Property   IInkTablet Tablet () {get}                                          
+
+

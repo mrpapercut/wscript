@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{c0020fd4-bee7-43d9-a495-9f213117103d}
+
+Name                  MemberType Definition                              
+----                  ---------- ----------                              
+IsEqualDevice         Method     bool IsEqualDevice (IMSVidDevice)       
+AudioEncoderInterface Property   IUnknown AudioEncoderInterface () {get} 
+Category              Property   string Category () {get}                
+ClassID               Property   string ClassID () {get}                 
+Name                  Property   string Name () {get}                    
+Power                 Property   bool Power () {get} {set}               
+Status                Property   int Status () {get}                     
+VideoEncoderInterface Property   IUnknown VideoEncoderInterface () {get} 
+
+

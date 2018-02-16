@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: IRService.CSetTopBox
+
+Name              MemberType Definition                                          
+----              ---------- ----------                                          
+Equals            Method     bool Equals(System.Object obj)                      
+GetHashCode       Method     int GetHashCode()                                   
+GetType           Method     type GetType()                                      
+Initialize        Method     void ISetTopBox.Initialize(string xmlPersist)       
+ToString          Method     string ToString()                                   
+TuneToChannel     Method     void ISetTopBox.TuneToChannel(int ch)               
+ValidateStbConfig Method     void ISetTopBox.ValidateStbConfig(string xmlPersist)
+
+

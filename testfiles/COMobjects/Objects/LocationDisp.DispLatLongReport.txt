@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{8ae32723-389b-4a11-9957-5bdd48fc9617}
+
+Name          MemberType Definition                    
+----          ---------- ----------                    
+Altitude      Property   double Altitude () {get}      
+AltitudeError Property   double AltitudeError () {get} 
+ErrorRadius   Property   double ErrorRadius () {get}   
+Latitude      Property   double Latitude () {get}      
+Longitude     Property   double Longitude () {get}     
+Timestamp     Property   Date Timestamp () {get}       
+
+

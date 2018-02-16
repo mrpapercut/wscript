@@ -1,0 +1,31 @@
+﻿
+
+   TypeName: System.Security.Policy.Evidence
+
+Name                  MemberType Definition                                                                            
+----                  ---------- ----------                                                                            
+AddAssembly           Method     void AddAssembly(System.Object id)                                                    
+AddAssemblyEvidence   Method     void AddAssemblyEvidence[T](T evidence)                                               
+AddHost               Method     void AddHost(System.Object id)                                                        
+AddHostEvidence       Method     void AddHostEvidence[T](T evidence)                                                   
+Clear                 Method     void Clear()                                                                          
+Clone                 Method     System.Security.Policy.Evidence Clone()                                               
+CopyTo                Method     void CopyTo(array array, int index), void ICollection.CopyTo(array array, int index)  
+Equals                Method     bool Equals(System.Object obj)                                                        
+GetAssemblyEnumerator Method     System.Collections.IEnumerator GetAssemblyEnumerator()                                
+GetAssemblyEvidence   Method     T GetAssemblyEvidence[T]()                                                            
+GetEnumerator         Method     System.Collections.IEnumerator GetEnumerator(), System.Collections.IEnumerator IEnu...
+GetHashCode           Method     int GetHashCode()                                                                     
+GetHostEnumerator     Method     System.Collections.IEnumerator GetHostEnumerator()                                    
+GetHostEvidence       Method     T GetHostEvidence[T]()                                                                
+GetType               Method     type GetType()                                                                        
+Merge                 Method     void Merge(System.Security.Policy.Evidence evidence)                                  
+RemoveType            Method     void RemoveType(type t)                                                               
+ToString              Method     string ToString()                                                                     
+Count                 Property   int Count {get;}                                                                      
+IsReadOnly            Property   bool IsReadOnly {get;}                                                                
+IsSynchronized        Property   bool IsSynchronized {get;}                                                            
+Locked                Property   bool Locked {get;set;}                                                                
+SyncRoot              Property   System.Object SyncRoot {get;}                                                         
+
+

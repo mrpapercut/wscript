@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.Diagnostics.StackFrame
+
+Name                MemberType Definition                              
+----                ---------- ----------                              
+Equals              Method     bool Equals(System.Object obj)          
+GetFileColumnNumber Method     int GetFileColumnNumber()               
+GetFileLineNumber   Method     int GetFileLineNumber()                 
+GetFileName         Method     string GetFileName()                    
+GetHashCode         Method     int GetHashCode()                       
+GetILOffset         Method     int GetILOffset()                       
+GetMethod           Method     System.Reflection.MethodBase GetMethod()
+GetNativeOffset     Method     int GetNativeOffset()                   
+GetType             Method     type GetType()                          
+ToString            Method     string ToString()                       
+
+

@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{40002314-590b-45a5-8e1b-8c05da527e52}
+
+Name MemberType Definition                                                            
+---- ---------- ----------                                                            
+Show Method     int Show (ULONG_PTR, string, _AdrClientErrorType, int, string, string)
+
+

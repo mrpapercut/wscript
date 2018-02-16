@@ -1,0 +1,31 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab360-217d-11da-b2a4-000e7bbb2b09}
+
+Name                        MemberType            Definition                                                    
+----                        ----------            ----------                                                    
+CheckPublicKeySignature     Method                void CheckPublicKeySignature (IX509PublicKey)                 
+CheckSignature              Method                void CheckSignature ()                                        
+Encode                      Method                void Encode ()                                                
+Initialize                  Method                void Initialize ()                                            
+InitializeDecode            Method                void InitializeDecode (string, EncodingType)                  
+ResetForEncode              Method                void ResetForEncode ()                                        
+CRLNumber                   ParameterizedProperty string CRLNumber (EncodingType) {get} {set}                   
+RawData                     ParameterizedProperty string RawData (EncodingType) {get}                           
+RawDataToBeSigned           ParameterizedProperty string RawDataToBeSigned (EncodingType) {get}                 
+Signature                   ParameterizedProperty string Signature (EncodingType) {get}                         
+AlternateSignatureAlgorithm Property              bool AlternateSignatureAlgorithm () {get} {set}               
+BaseCRL                     Property              bool BaseCRL () {get}                                         
+CAVersion                   Property              int CAVersion () {get} {set}                                  
+CriticalExtensions          Property              IObjectIds CriticalExtensions () {get}                        
+HashAlgorithm               Property              IObjectId HashAlgorithm () {get} {set}                        
+Issuer                      Property              IX500DistinguishedName Issuer () {get} {set}                  
+NextUpdate                  Property              Date NextUpdate () {get} {set}                                
+NullSigned                  Property              bool NullSigned () {get}                                      
+SignatureInformation        Property              IX509SignatureInformation SignatureInformation () {get}       
+SignerCertificate           Property              ISignerCertificate SignerCertificate () {get} {set}           
+ThisUpdate                  Property              Date ThisUpdate () {get} {set}                                
+X509CRLEntries              Property              IX509CertificateRevocationListEntries X509CRLEntries () {get} 
+X509Extensions              Property              IX509Extensions X509Extensions () {get}                       
+
+

@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.__ComObject#{0bb8531d-7e8d-424f-986c-a0b8f60a3e7b}
+
+Name                     MemberType Definition                                                  
+----                     ---------- ----------                                                  
+AddScanPackageService    Method     IUpdateService AddScanPackageService (string, string, int)  
+AddService               Method     IUpdateService AddService (string, string)                  
+AddService2              Method     IUpdateServiceRegistration AddService2 (string, int, string)
+QueryServiceRegistration Method     IUpdateServiceRegistration QueryServiceRegistration (string)
+RegisterServiceWithAU    Method     void RegisterServiceWithAU (string)                         
+RemoveService            Method     void RemoveService (string)                                 
+SetOption                Method     void SetOption (string, Variant)                            
+UnregisterServiceWithAU  Method     void UnregisterServiceWithAU (string)                       
+ClientApplicationID      Property   string ClientApplicationID () {get} {set}                   
+Services                 Property   IUpdateServiceCollection Services () {get}                  
+
+

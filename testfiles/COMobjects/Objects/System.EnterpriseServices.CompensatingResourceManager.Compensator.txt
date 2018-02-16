@@ -1,0 +1,29 @@
+﻿
+
+   TypeName: System.EnterpriseServices.CompensatingResourceManager.Compensator
+
+Name                      MemberType Definition                                                                        
+----                      ---------- ----------                                                                        
+AbortRecord               Method     bool AbortRecord(System.EnterpriseServices.CompensatingResourceManager.LogRecor...
+BeginAbort                Method     void BeginAbort(bool fRecovery)                                                   
+BeginCommit               Method     void BeginCommit(bool fRecovery)                                                  
+BeginPrepare              Method     void BeginPrepare()                                                               
+CommitRecord              Method     bool CommitRecord(System.EnterpriseServices.CompensatingResourceManager.LogReco...
+CreateObjRef              Method     System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)                   
+Dispose                   Method     void Dispose(), void IDisposable.Dispose()                                        
+EndAbort                  Method     void EndAbort()                                                                   
+EndCommit                 Method     void EndCommit()                                                                  
+EndPrepare                Method     bool EndPrepare()                                                                 
+Equals                    Method     bool Equals(System.Object obj)                                                    
+GetComponentInfo          Method     void IServicedComponentInfo.GetComponentInfo([ref] int infoMask, [ref] string[]...
+GetHashCode               Method     int GetHashCode()                                                                 
+GetLifetimeService        Method     System.Object GetLifetimeService()                                                
+GetType                   Method     type GetType()                                                                    
+InitializeLifetimeService Method     System.Object InitializeLifetimeService()                                         
+PrepareRecord             Method     bool PrepareRecord(System.EnterpriseServices.CompensatingResourceManager.LogRec...
+RemoteDispatchAutoDone    Method     string IRemoteDispatch.RemoteDispatchAutoDone(string s)                           
+RemoteDispatchNotAutoDone Method     string IRemoteDispatch.RemoteDispatchNotAutoDone(string s)                        
+ToString                  Method     string ToString()                                                                 
+Clerk                     Property   System.EnterpriseServices.CompensatingResourceManager.Clerk Clerk {get;}          
+
+

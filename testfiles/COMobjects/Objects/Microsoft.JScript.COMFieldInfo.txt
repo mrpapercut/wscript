@@ -1,0 +1,53 @@
+﻿
+
+   TypeName: Microsoft.JScript.COMFieldInfo
+
+Name                       MemberType Definition                                                                       
+----                       ---------- ----------                                                                       
+Equals                     Method     bool Equals(System.Object obj), bool _MemberInfo.Equals(System.Object other), ...
+GetCOMMemberInfo           Method     Microsoft.JScript.COMMemberInfo GetCOMMemberInfo(), Microsoft.JScript.COMMembe...
+GetCustomAttributes        Method     System.Object[] GetCustomAttributes(type t, bool inherit), System.Object[] Get...
+GetCustomAttributesData    Method     System.Collections.Generic.IList[System.Reflection.CustomAttributeData] GetCus...
+GetHashCode                Method     int GetHashCode(), int _MemberInfo.GetHashCode(), int _FieldInfo.GetHashCode()   
+GetIDsOfNames              Method     void _MemberInfo.GetIDsOfNames([ref] guid riid, System.IntPtr rgszNames, uint3...
+GetOptionalCustomModifiers Method     type[] GetOptionalCustomModifiers()                                              
+GetRawConstantValue        Method     System.Object GetRawConstantValue()                                              
+GetRequiredCustomModifiers Method     type[] GetRequiredCustomModifiers()                                              
+GetType                    Method     type GetType(), type _MemberInfo.GetType(), type _FieldInfo.GetType()            
+GetTypeInfo                Method     void _MemberInfo.GetTypeInfo(uint32 iTInfo, uint32 lcid, System.IntPtr ppTInfo...
+GetTypeInfoCount           Method     void _MemberInfo.GetTypeInfoCount([ref] uint32 pcTInfo), void _FieldInfo.GetTy...
+GetValue                   Method     System.Object GetValue(System.Object obj), System.Object _FieldInfo.GetValue(S...
+GetValueDirect             Method     System.Object GetValueDirect(System.TypedReference obj), System.Object _FieldI...
+Initialize                 Method     void Initialize(string name, Microsoft.JScript.COMMemberInfo dispatch), void M...
+Invoke                     Method     void _MemberInfo.Invoke(uint32 dispIdMember, [ref] guid riid, uint32 lcid, int...
+IsDefined                  Method     bool IsDefined(type t, bool inherit), bool ICustomAttributeProvider.IsDefined(...
+SetValue                   Method     void SetValue(System.Object obj, System.Object value, System.Reflection.Bindin...
+SetValueDirect             Method     void SetValueDirect(System.TypedReference obj, System.Object value), void _Fie...
+ToString                   Method     string ToString(), string _MemberInfo.ToString(), string _FieldInfo.ToString()   
+Attributes                 Property   System.Reflection.FieldAttributes Attributes {get;}                              
+CustomAttributes           Property   System.Collections.Generic.IEnumerable[System.Reflection.CustomAttributeData] ...
+DeclaringType              Property   type DeclaringType {get;}                                                        
+FieldHandle                Property   System.RuntimeFieldHandle FieldHandle {get;}                                     
+FieldType                  Property   type FieldType {get;}                                                            
+IsAssembly                 Property   bool IsAssembly {get;}                                                           
+IsFamily                   Property   bool IsFamily {get;}                                                             
+IsFamilyAndAssembly        Property   bool IsFamilyAndAssembly {get;}                                                  
+IsFamilyOrAssembly         Property   bool IsFamilyOrAssembly {get;}                                                   
+IsInitOnly                 Property   bool IsInitOnly {get;}                                                           
+IsLiteral                  Property   bool IsLiteral {get;}                                                            
+IsNotSerialized            Property   bool IsNotSerialized {get;}                                                      
+IsPinvokeImpl              Property   bool IsPinvokeImpl {get;}                                                        
+IsPrivate                  Property   bool IsPrivate {get;}                                                            
+IsPublic                   Property   bool IsPublic {get;}                                                             
+IsSecurityCritical         Property   bool IsSecurityCritical {get;}                                                   
+IsSecuritySafeCritical     Property   bool IsSecuritySafeCritical {get;}                                               
+IsSecurityTransparent      Property   bool IsSecurityTransparent {get;}                                                
+IsSpecialName              Property   bool IsSpecialName {get;}                                                        
+IsStatic                   Property   bool IsStatic {get;}                                                             
+MemberType                 Property   System.Reflection.MemberTypes MemberType {get;}                                  
+MetadataToken              Property   int MetadataToken {get;}                                                         
+Module                     Property   System.Reflection.Module Module {get;}                                           
+Name                       Property   string Name {get;}                                                               
+ReflectedType              Property   type ReflectedType {get;}                                                        
+
+

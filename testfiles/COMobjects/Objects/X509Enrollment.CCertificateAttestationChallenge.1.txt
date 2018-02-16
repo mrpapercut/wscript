@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{4631334d-e266-47d6-bd79-be53cb2e2753}
+
+Name             MemberType            Definition                            
+----             ----------            ----------                            
+DecryptChallenge Method                string DecryptChallenge (EncodingType)
+Initialize       Method                void Initialize (EncodingType, string)
+KeyBlob          ParameterizedProperty EncodingType KeyBlob (string) {set}   
+KeyContainerName Property              string KeyContainerName () {set}      
+RequestId        Property              string RequestId () {get}             
+
+

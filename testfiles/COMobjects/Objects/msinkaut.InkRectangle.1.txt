@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{9794ff82-6071-4717-8a8b-6ac7c64a686e}
+
+Name         MemberType Definition                            
+----         ---------- ----------                            
+GetRectangle Method     void GetRectangle (int, int, int, int)
+SetRectangle Method     void SetRectangle (int, int, int, int)
+Bottom       Property   int Bottom () {get} {set}             
+Data         Property   tagRECT Data () {get} {set}           
+Left         Property   int Left () {get} {set}               
+Right        Property   int Right () {get} {set}              
+Top          Property   int Top () {get} {set}                
+
+

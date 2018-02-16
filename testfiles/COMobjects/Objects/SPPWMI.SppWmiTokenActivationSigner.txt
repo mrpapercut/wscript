@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{a05946ec-4d2c-4e12-be58-b6bf0427fb59}
+
+Name                      MemberType Definition                                    
+----                      ---------- ----------                                    
+GetCertificateThumbprints Method     Variant GetCertificateThumbprints (Variant)   
+Sign                      Method     Variant Sign (string, string, string, Variant)
+
+

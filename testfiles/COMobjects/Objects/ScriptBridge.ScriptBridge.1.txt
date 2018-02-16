@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{ae24fdad-03c6-11d1-8b76-0080c744f389}
+
+Name       MemberType Definition                    
+----       ---------- ----------                    
+AboutBox   Method     void AboutBox ()              
+embed      Property   bool embed () {get} {set}     
+event      Property   IDispatch event () {get}      
+readyState Property   int readyState () {get}       
+Scrollbar  Property   bool Scrollbar () {get} {set} 
+url        Property   string url () {get} {set}     
+
+

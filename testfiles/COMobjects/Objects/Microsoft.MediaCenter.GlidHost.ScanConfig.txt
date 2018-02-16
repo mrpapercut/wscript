@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.GlidHost.ScanConfig
+
+Name            MemberType Definition                                                                                                                                    
+----            ---------- ----------                                                                                                                                    
+Close           Method     void Close(), void IScanControl.Close()                                                                                                       
+Dispose         Method     void Dispose(), void IDisposable.Dispose()                                                                                                    
+Equals          Method     bool Equals(System.Object obj)                                                                                                                
+GetConfig       Method     ehiProxy.sScanConfig GetConfig(), ehiProxy.sScanConfig IScanConfig.GetConfig()                                                                
+GetDevice       Method     ehiProxy.sScanDevice GetDevice(int index), ehiProxy.sScanDevice IScanConfig.GetDevice(int Index)                                              
+GetDeviceConfig Method     ehiProxy.sScanDeviceConfig GetDeviceConfig(string _deviceInstanceId, [ref] Microsoft.MediaCenter.TV.Tuning.Locator[] ppSortedLocators), ehi...
+GetHashCode     Method     int GetHashCode()                                                                                                                             
+GetType         Method     type GetType()                                                                                                                                
+IsMerging       Method     bool IsMerging(), bool IScanControl.IsMerging()                                                                                               
+ToString        Method     string ToString()                                                                                                                             
+
+

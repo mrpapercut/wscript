@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{c7ea09c0-ce17-11d0-8833-00a0c903b83c}
+
+Name      MemberType Definition            
+----      ---------- ----------            
+GetConfig Method     string GetConfig (int)
+
+

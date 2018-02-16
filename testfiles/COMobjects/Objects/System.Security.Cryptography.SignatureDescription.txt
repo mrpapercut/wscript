@@ -1,0 +1,19 @@
+﻿
+
+   TypeName: System.Security.Cryptography.SignatureDescription
+
+Name                 MemberType Definition                                                                             
+----                 ---------- ----------                                                                             
+CreateDeformatter    Method     System.Security.Cryptography.AsymmetricSignatureDeformatter CreateDeformatter(System...
+CreateDigest         Method     System.Security.Cryptography.HashAlgorithm CreateDigest()                              
+CreateFormatter      Method     System.Security.Cryptography.AsymmetricSignatureFormatter CreateFormatter(System.Sec...
+Equals               Method     bool Equals(System.Object obj)                                                         
+GetHashCode          Method     int GetHashCode()                                                                      
+GetType              Method     type GetType()                                                                         
+ToString             Method     string ToString()                                                                      
+DeformatterAlgorithm Property   string DeformatterAlgorithm {get;set;}                                                 
+DigestAlgorithm      Property   string DigestAlgorithm {get;set;}                                                      
+FormatterAlgorithm   Property   string FormatterAlgorithm {get;set;}                                                   
+KeyAlgorithm         Property   string KeyAlgorithm {get;set;}                                                         
+
+

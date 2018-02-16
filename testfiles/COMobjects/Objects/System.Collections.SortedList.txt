@@ -1,0 +1,39 @@
+﻿
+
+   TypeName: System.Collections.SortedList
+
+Name           MemberType            Definition                                                                        
+----           ----------            ----------                                                                        
+Add            Method                void Add(System.Object key, System.Object value), void IDictionary.Add(System.O...
+Clear          Method                void Clear(), void IDictionary.Clear()                                            
+Clone          Method                System.Object Clone(), System.Object ICloneable.Clone()                           
+Contains       Method                bool Contains(System.Object key), bool IDictionary.Contains(System.Object key)    
+ContainsKey    Method                bool ContainsKey(System.Object key)                                               
+ContainsValue  Method                bool ContainsValue(System.Object value)                                           
+CopyTo         Method                void CopyTo(array array, int arrayIndex), void ICollection.CopyTo(array array, ...
+Equals         Method                bool Equals(System.Object obj)                                                    
+GetByIndex     Method                System.Object GetByIndex(int index)                                               
+GetEnumerator  Method                System.Collections.IDictionaryEnumerator GetEnumerator(), System.Collections.ID...
+GetHashCode    Method                int GetHashCode()                                                                 
+GetKey         Method                System.Object GetKey(int index)                                                   
+GetKeyList     Method                System.Collections.IList GetKeyList()                                             
+GetType        Method                type GetType()                                                                    
+GetValueList   Method                System.Collections.IList GetValueList()                                           
+IndexOfKey     Method                int IndexOfKey(System.Object key)                                                 
+IndexOfValue   Method                int IndexOfValue(System.Object value)                                             
+Remove         Method                void Remove(System.Object key), void IDictionary.Remove(System.Object key)        
+RemoveAt       Method                void RemoveAt(int index)                                                          
+SetByIndex     Method                void SetByIndex(int index, System.Object value)                                   
+ToString       Method                string ToString()                                                                 
+TrimToSize     Method                void TrimToSize()                                                                 
+Item           ParameterizedProperty System.Object Item(System.Object key) {get;set;}                                  
+Capacity       Property              int Capacity {get;set;}                                                           
+Count          Property              int Count {get;}                                                                  
+IsFixedSize    Property              bool IsFixedSize {get;}                                                           
+IsReadOnly     Property              bool IsReadOnly {get;}                                                            
+IsSynchronized Property              bool IsSynchronized {get;}                                                        
+Keys           Property              System.Collections.ICollection Keys {get;}                                        
+SyncRoot       Property              System.Object SyncRoot {get;}                                                     
+Values         Property              System.Collections.ICollection Values {get;}                                      
+
+

@@ -2,19 +2,19 @@
 
    TypeName: System.Version
 
-Name          MemberType Definition                                                                                                                                                         
-----          ---------- ----------                                                                                                                                                         
-Clone         Method     System.Object Clone(), System.Object ICloneable.Clone()                                                                                                            
-CompareTo     Method     int CompareTo(System.Object version), int CompareTo(version value), int IComparable.CompareTo(System.Object obj), int IComparable[version].CompareTo(version other)
-Equals        Method     bool Equals(System.Object obj), bool Equals(version obj), bool IEquatable[version].Equals(version other)                                                           
-GetHashCode   Method     int GetHashCode()                                                                                                                                                  
-GetType       Method     type GetType()                                                                                                                                                     
-ToString      Method     string ToString(), string ToString(int fieldCount)                                                                                                                 
-Build         Property   int Build {get;}                                                                                                                                                   
-Major         Property   int Major {get;}                                                                                                                                                   
-MajorRevision Property   int16 MajorRevision {get;}                                                                                                                                         
-Minor         Property   int Minor {get;}                                                                                                                                                   
-MinorRevision Property   int16 MinorRevision {get;}                                                                                                                                         
-Revision      Property   int Revision {get;}                                                                                                                                                
+Name          MemberType Definition                                                                                    
+----          ---------- ----------                                                                                    
+Clone         Method     System.Object Clone(), System.Object ICloneable.Clone()                                       
+CompareTo     Method     int CompareTo(System.Object version), int CompareTo(version value), int IComparable.Compare...
+Equals        Method     bool Equals(System.Object obj), bool Equals(version obj), bool IEquatable[version].Equals(v...
+GetHashCode   Method     int GetHashCode()                                                                             
+GetType       Method     type GetType()                                                                                
+ToString      Method     string ToString(), string ToString(int fieldCount)                                            
+Build         Property   int Build {get;}                                                                              
+Major         Property   int Major {get;}                                                                              
+MajorRevision Property   int16 MajorRevision {get;}                                                                    
+Minor         Property   int Minor {get;}                                                                              
+MinorRevision Property   int16 MinorRevision {get;}                                                                    
+Revision      Property   int Revision {get;}                                                                           
 
 

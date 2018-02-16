@@ -1,0 +1,32 @@
+﻿
+
+   TypeName: System.__ComObject#{5823ef01-e0a4-4822-aebb-0a5d4fa381cf}
+
+Name                       MemberType Definition                                                                     
+----                       ---------- ----------                                                                     
+AddAccount                 Method     void AddAccount (string, string, int)                                          
+DeleteAccount              Method     void DeleteAccount (string)                                                    
+DeleteAllAccounts          Method     void DeleteAllAccounts ()                                                      
+DeleteSSOCreds             Method     void DeleteSSOCreds ()                                                         
+DeleteUserExtendedProperty Method     void DeleteUserExtendedProperty (string, string, string, bool)                 
+Disable                    Method     void Disable ()                                                                
+EnumerateEIDs              Method     string EnumerateEIDs (string, string)                                          
+GenerateCertToken          Method     string GenerateCertToken (string, string, int, string)                         
+GetAuthBufferEx            Method     string GetAuthBufferEx (string, string, string, string, string, string, string)
+GetAuthenticatedUserName   Method     string GetAuthenticatedUserName ()                                             
+GetAuthenticatedUserToken  Method     string GetAuthenticatedUserToken ()                                            
+GetAutoSSOUserName         Method     string GetAutoSSOUserName (uint)                                               
+GetUserExtendedProperty    Method     string GetUserExtendedProperty (string, string)                                
+GetUserList                Method     string GetUserList (string)                                                    
+GetUserListEx              Method     string GetUserListEx (string)                                                  
+GetUserProperty            Method     string GetUserProperty (string, string)                                        
+GetWgaTicket               Method     string GetWgaTicket ()                                                         
+InitNotForBrowser          Method     void InitNotForBrowser ()                                                      
+SaveDAToken                Method     void SaveDAToken (string, string, string, string)                              
+SaveSSOCreds               Method     void SaveSSOCreds ()                                                           
+SetUserExtendedProperty    Method     void SetUserExtendedProperty (string, string, string)                          
+SetUserTile                Method     void SetUserTile (string, string)                                              
+ComputerSetting            Property   int ComputerSetting () {get} {set}                                             
+Version                    Property   string Version () {get}                                                        
+
+

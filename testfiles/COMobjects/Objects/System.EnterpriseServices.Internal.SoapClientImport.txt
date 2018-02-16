@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.EnterpriseServices.Internal.SoapClientImport
+
+Name               MemberType Definition                                                                               
+----               ---------- ----------                                                                               
+Equals             Method     bool Equals(System.Object obj)                                                           
+GetHashCode        Method     int GetHashCode()                                                                        
+GetType            Method     type GetType()                                                                           
+ProcessClientTlbEx Method     void ProcessClientTlbEx(string progId, string virtualRoot, string baseUrl, string auth...
+ToString           Method     string ToString()                                                                        
+
+

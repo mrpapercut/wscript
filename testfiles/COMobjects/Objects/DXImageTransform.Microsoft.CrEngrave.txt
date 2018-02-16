@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{e4acfb7f-053e-11d2-81ea-0000f87557db}
+
+Name MemberType Definition                
+---- ---------- ----------                
+Bias Property   float Bias () {get} {set} 
+
+

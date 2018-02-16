@@ -1,19 +1,15 @@
 ﻿
 
-   TypeName: System.__ComObject#{a3afb9cc-b653-4741-86ab-f0470ec1384c}
+   TypeName: System.__ComObject
 
-Name         MemberType Definition                     
-----         ---------- ----------                     
-Help         Method     void Help ()                   
-Hide         Method     void Hide ()                   
-Load         Method     void Load (string)             
-Quit         Method     void Quit ()                   
-Show         Method     void Show ()                   
-Document     Property   Document Document () {get}     
-Frame        Property   Frame Frame () {get}           
-UserControl  Property   int UserControl () {get} {set} 
-VersionMajor Property   int VersionMajor () {get}      
-VersionMinor Property   int VersionMinor () {get}      
-Visible      Property   int Visible () {get}           
+Name                      MemberType Definition                                                     
+----                      ---------- ----------                                                     
+CreateObjRef              Method     System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+Equals                    Method     bool Equals(System.Object obj)                                 
+GetHashCode               Method     int GetHashCode()                                              
+GetLifetimeService        Method     System.Object GetLifetimeService()                             
+GetType                   Method     type GetType()                                                 
+InitializeLifetimeService Method     System.Object InitializeLifetimeService()                      
+ToString                  Method     string ToString()                                              
 
 

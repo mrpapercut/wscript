@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: IRService.IRServiceManager
+
+Name              MemberType Definition                                
+----              ---------- ----------                                
+Equals            Method     bool Equals(System.Object obj)            
+GetHashCode       Method     int GetHashCode()                         
+GetType           Method     type GetType()                            
+RefreshDeviceList Method     void IIRServiceManager.RefreshDeviceList()
+Start             Method     void IIRServiceManager.Start()            
+Stop              Method     void IIRServiceManager.Stop()             
+ToString          Method     string ToString()                         
+State             Property   ehiProxy.IRManagerState State {get;}      
+
+

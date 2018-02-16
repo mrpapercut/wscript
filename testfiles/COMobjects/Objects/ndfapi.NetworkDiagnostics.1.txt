@@ -1,0 +1,29 @@
+﻿
+
+   TypeName: System.__ComObject#{a92dfff7-67ca-439c-be88-27b4577fa57e}
+
+Name                 MemberType Definition                                   
+----                 ---------- ----------                                   
+CreateIncident       Method     void CreateIncident (string, string)         
+Diagnose             Method     IDiagnosticsWaitHandle Diagnose (uint, uint) 
+OpenExistingIncident Method     void OpenExistingIncident (string)           
+Repair               Method     IDiagnosticsWaitHandle Repair (uint, uint)   
+RepairShown          Method     void RepairShown (uint)                      
+SetFollowUpSession   Method     void SetFollowUpSession (INetworkDiagnostics)
+ShouldSkipRepair     Method     uint ShouldSkipRepair (IRepairInfo)          
+ShouldSkipRootCause  Method     uint ShouldSkipRootCause (IRootCauseInfo)    
+SkipRepair           Method     void SkipRepair (uint)                       
+Validate             Method     IDiagnosticsWaitHandle Validate (uint)       
+DiagnoseResult       Property   uint DiagnoseResult () {get}                 
+EntryPoint           Property   string EntryPoint () {get}                   
+FollowUpSession      Property   string FollowUpSession () {get}              
+HelperAttributes     Property   string HelperAttributes () {get}             
+IncidentID           Property   string IncidentID () {get}                   
+Progress             Property   string Progress () {get}                     
+RepairResult         Property   uint RepairResult () {get}                   
+RootCauses           Property   IRootCauseInfoEnum RootCauses () {get}       
+SessionStatus        Property   uint SessionStatus () {get}                  
+TraceFile            Property   string TraceFile () {get}                    
+ValidateResult       Property   uint ValidateResult () {get}                 
+
+

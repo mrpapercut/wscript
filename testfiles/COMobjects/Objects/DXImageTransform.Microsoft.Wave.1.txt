@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{1d4637e7-383c-11d2-952a-00c04fa34f05}
+
+Name          MemberType Definition                       
+----          ---------- ----------                       
+Add           Property   bool Add () {get} {set}          
+Freq          Property   int Freq () {get} {set}          
+LightStrength Property   int LightStrength () {get} {set} 
+Phase         Property   int Phase () {get} {set}         
+Strength      Property   int Strength () {get} {set}      
+
+

@@ -1,0 +1,24 @@
+﻿
+
+   TypeName: System.Collections.Stack
+
+Name           MemberType Definition                                                                                   
+----           ---------- ----------                                                                                   
+Clear          Method     void Clear()                                                                                 
+Clone          Method     System.Object Clone(), System.Object ICloneable.Clone()                                      
+Contains       Method     bool Contains(System.Object obj)                                                             
+CopyTo         Method     void CopyTo(array array, int index), void ICollection.CopyTo(array array, int index)         
+Equals         Method     bool Equals(System.Object obj)                                                               
+GetEnumerator  Method     System.Collections.IEnumerator GetEnumerator(), System.Collections.IEnumerator IEnumerable...
+GetHashCode    Method     int GetHashCode()                                                                            
+GetType        Method     type GetType()                                                                               
+Peek           Method     System.Object Peek()                                                                         
+Pop            Method     System.Object Pop()                                                                          
+Push           Method     void Push(System.Object obj)                                                                 
+ToArray        Method     System.Object[] ToArray()                                                                    
+ToString       Method     string ToString()                                                                            
+Count          Property   int Count {get;}                                                                             
+IsSynchronized Property   bool IsSynchronized {get;}                                                                   
+SyncRoot       Property   System.Object SyncRoot {get;}                                                                
+
+

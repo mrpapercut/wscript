@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{c16014f3-9aa1-46b3-b0a7-ab146eb205f2}
+
+Name                 MemberType Definition                                                                  
+----                 ---------- ----------                                                                  
+Bind                 Method     void Bind (IFsrmPipelineModuleDefinition, IFsrmPipelineModuleImplementation)
+HostingProcessPid    Property   int HostingProcessPid () {get}                                              
+HostingUserAccount   Property   string HostingUserAccount () {get}                                          
+ModuleImplementation Property   IFsrmPipelineModuleImplementation ModuleImplementation () {get}             
+moduleName           Property   string moduleName () {get}                                                  
+
+

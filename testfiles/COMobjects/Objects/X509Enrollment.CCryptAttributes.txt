@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab32d-217d-11da-b2a4-000e7bbb2b09}
+
+Name            MemberType            Definition                              
+----            ----------            ----------                              
+Add             Method                void Add (ICryptAttribute)              
+AddRange        Method                void AddRange (ICryptAttributes)        
+Clear           Method                void Clear ()                           
+Remove          Method                void Remove (int)                       
+IndexByObjectId ParameterizedProperty int IndexByObjectId (IObjectId) {get}   
+ItemByIndex     ParameterizedProperty ICryptAttribute ItemByIndex (int) {get} 
+Count           Property              int Count () {get}                      
+
+

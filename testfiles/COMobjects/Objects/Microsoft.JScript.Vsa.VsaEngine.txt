@@ -1,0 +1,64 @@
+﻿
+
+   TypeName: Microsoft.JScript.Vsa.VsaEngine
+
+Name                         MemberType Definition                                                                     
+----                         ---------- ----------                                                                     
+Clone                        Method     Microsoft.JScript.Vsa.IJSVsaEngine Clone(System.AppDomain domain), Microsoft...
+Close                        Method     void Close(), void IJSVsaEngine.Close()                                        
+Compile                      Method     bool Compile(), bool IJSVsaEngine.Compile()                                    
+CompileEmpty                 Method     bool CompileEmpty(), bool IEngine2.CompileEmpty()                              
+ConnectEvents                Method     void ConnectEvents(), void IEngine2.ConnectEvents()                            
+DisconnectEvents             Method     void DisconnectEvents(), void IEngine2.DisconnectEvents()                      
+Equals                       Method     bool Equals(System.Object obj)                                                 
+GetAssembly                  Method     System.Reflection.Assembly GetAssembly(), System.Reflection.Assembly IEngine...
+GetGlobalScope               Method     Microsoft.JScript.IVsaScriptScope GetGlobalScope(), Microsoft.JScript.IVsaSc...
+GetHashCode                  Method     int GetHashCode()                                                              
+GetItem                      Method     Microsoft.JScript.Vsa.IJSVsaItem GetItem(string itemName)                      
+GetItemAtIndex               Method     Microsoft.JScript.Vsa.IJSVsaItem GetItemAtIndex(int index)                     
+GetItemCount                 Method     int GetItemCount()                                                             
+GetMainScope                 Method     Microsoft.JScript.GlobalScope GetMainScope()                                   
+GetModule                    Method     System.Reflection.Module GetModule(), System.Reflection.Module IEngine2.GetM...
+GetOption                    Method     System.Object GetOption(string name), System.Object IJSVsaEngine.GetOption(s...
+GetOriginalArrayConstructor  Method     Microsoft.JScript.ArrayConstructor GetOriginalArrayConstructor()               
+GetOriginalObjectConstructor Method     Microsoft.JScript.ObjectConstructor GetOriginalObjectConstructor()             
+GetOriginalRegExpConstructor Method     Microsoft.JScript.RegExpConstructor GetOriginalRegExpConstructor()             
+GetType                      Method     type GetType()                                                                 
+InitNew                      Method     void InitNew(), void IJSVsaEngine.InitNew()                                    
+InitVsaEngine                Method     void InitVsaEngine(string rootMoniker, Microsoft.JScript.Vsa.IJSVsaSite site...
+Interrupt                    Method     void Interrupt(), void IEngine2.Interrupt()                                    
+IsValidIdentifier            Method     bool IsValidIdentifier(string ident), bool IJSVsaEngine.IsValidIdentifier(st...
+LoadSourceState              Method     void LoadSourceState(Microsoft.JScript.Vsa.IJSVsaPersistSite site), void IJS...
+PopScriptObject              Method     Microsoft.JScript.ScriptObject PopScriptObject()                               
+PushScriptObject             Method     void PushScriptObject(Microsoft.JScript.ScriptObject obj)                      
+RegisterEventSource          Method     void RegisterEventSource(string name), void IEngine2.RegisterEventSource(str...
+Reset                        Method     void Reset(), void IJSVsaEngine.Reset()                                        
+Restart                      Method     void Restart(), void IEngine2.Restart()                                        
+RevokeCache                  Method     void RevokeCache(), void IJSVsaEngine.RevokeCache()                            
+Run                          Method     void Run(System.AppDomain domain), void Run(), void IJSVsaEngine.Run(), void...
+RunEmpty                     Method     void RunEmpty(), void IEngine2.RunEmpty()                                      
+SaveCompiledState            Method     void SaveCompiledState([ref] byte[] pe, [ref] byte[] debugInfo), void IJSVsa...
+SaveSourceState              Method     void SaveSourceState(Microsoft.JScript.Vsa.IJSVsaPersistSite site), void IJS...
+ScriptObjectStackTop         Method     Microsoft.JScript.ScriptObject ScriptObjectStackTop()                          
+SetOption                    Method     void SetOption(string name, System.Object value), void IJSVsaEngine.SetOptio...
+SetOutputStream              Method     void SetOutputStream(Microsoft.JScript.IMessageReceiver output), void IRedir...
+ToString                     Method     string ToString()                                                              
+AppDomain                    Property   System._AppDomain AppDomain {get;set;}                                         
+ApplicationBase              Property   string ApplicationBase {get;set;}                                              
+Assembly                     Property   System.Reflection.Assembly Assembly {get;}                                     
+Evidence                     Property   System.Security.Policy.Evidence Evidence {get;set;}                            
+GenerateDebugInfo            Property   bool GenerateDebugInfo {get;set;}                                              
+IsCompiled                   Property   bool IsCompiled {get;}                                                         
+IsDirty                      Property   bool IsDirty {get;set;}                                                        
+IsRunning                    Property   bool IsRunning {get;}                                                          
+Items                        Property   Microsoft.JScript.Vsa.IJSVsaItems Items {get;}                                 
+Language                     Property   string Language {get;}                                                         
+LCID                         Property   int LCID {get;set;}                                                            
+LenientGlobalObject          Property   Microsoft.JScript.LenientGlobalObject LenientGlobalObject {get;}               
+Name                         Property   string Name {get;set;}                                                         
+RootMoniker                  Property   string RootMoniker {get;set;}                                                  
+RootNamespace                Property   string RootNamespace {get;set;}                                                
+Site                         Property   Microsoft.JScript.Vsa.IJSVsaSite Site {get;set;}                               
+Version                      Property   string Version {get;}                                                          
+
+

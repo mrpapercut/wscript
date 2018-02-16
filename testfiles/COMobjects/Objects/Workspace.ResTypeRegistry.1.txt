@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{1d428c79-6e2e-4351-a361-c0401a03a0ba}
+
+Name                        MemberType Definition                                          
+----                        ---------- ----------                                          
+AddResourceType             Method     void AddResourceType (bool, string, string)         
+DeleteResourceType          Method     void DeleteResourceType (bool, string)              
+GetRegisteredFileExtensions Method     SAFEARRAY(string) GetRegisteredFileExtensions (bool)
+GetResourceTypeInfo         Method     string GetResourceTypeInfo (bool, string)           
+ModifyResourceType          Method     void ModifyResourceType (bool, string, string)      
+
+

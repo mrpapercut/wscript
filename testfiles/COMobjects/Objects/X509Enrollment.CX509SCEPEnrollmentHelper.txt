@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab365-217d-11da-b2a4-000e7bbb2b09}
+
+Name                 MemberType Definition                                                                          
+----                 ---------- ----------                                                                          
+Enroll               Method     X509SCEPDisposition Enroll (X509SCEPProcessMessageFlags)                            
+FetchPending         Method     X509SCEPDisposition FetchPending (X509SCEPProcessMessageFlags)                      
+Initialize           Method     void Initialize (string, string, IX509CertificateRequestPkcs10, string)             
+InitializeForPending Method     void InitializeForPending (string, string, X509CertificateEnrollmentContext, string)
+ResultMessageText    Property   string ResultMessageText () {get}                                                   
+X509SCEPEnrollment   Property   IX509SCEPEnrollment X509SCEPEnrollment () {get}                                     
+
+

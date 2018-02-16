@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{e5c3507d-ad6a-4992-9c7f-74ab480b44cc}
+
+Name         MemberType Definition                            
+----         ---------- ----------                            
+NameResolver Property   IAzNameResolver NameResolver () {get} 
+ObjectPicker Property   IAzObjectPicker ObjectPicker () {get} 
+
+

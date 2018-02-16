@@ -1,0 +1,31 @@
+﻿
+
+   TypeName: System.__ComObject#{49372e7f-701f-4520-801a-06aca0e16384}
+
+Name                          MemberType            Definition                                                    
+----                          ----------            ----------                                                    
+ConsumeWindowsRight           Method                void ConsumeWindowsRight (uint)                               
+FireStateChanged              Method                void FireStateChanged ()                                      
+InstallProofOfPurchase        Method                void InstallProofOfPurchase (string)                          
+IsConnectedToInternet         ParameterizedProperty bool IsConnectedToInternet (INetworkListManager) {get}        
+IsGenuineComponent            ParameterizedProperty bool IsGenuineComponent (GUID) {get}                          
+LicensingInformation          ParameterizedProperty void LicensingInformation (string, int) {get}                 
+MapResultCategory             ParameterizedProperty tagE_ACTIVATION_RESULT_CATEGORY MapResultCategory (int) {get} 
+ProductKeyTypeFrom5x5         ParameterizedProperty string ProductKeyTypeFrom5x5 (string) {get}                   
+ProductSkuInformation         ParameterizedProperty int ProductSkuInformation (GUID, string) {get}                
+ReferralInformation           ParameterizedProperty string ReferralInformation (string) {get}                     
+ServiceInformation            ParameterizedProperty int ServiceInformation (string) {get}                         
+WGAUrl                        ParameterizedProperty string WGAUrl (int, tagLICENSINGSTATUS) {get}                 
+ActiveLicenseChannel          Property              tagE_LICENSING_CHANNEL ActiveLicenseChannel () {get}          
+DefaultKeyFromRegistry        Property              string DefaultKeyFromRegistry () {get}                        
+IsAtWinlogon                  Property              bool IsAtWinlogon () {get}                                    
+IsLocalGenuine                Property              bool IsLocalGenuine () {get}                                  
+IsTimebasedKeyInstalled       Property              int IsTimebasedKeyInstalled () {get}                          
+IsWinlogonNotificationProcess Property              bool IsWinlogonNotificationProcess () {get}                   
+LicensingState                Property              ILicensingStatusData LicensingState () {get}                  
+LicensingSystemDate           Property              Date LicensingSystemDate () {get}                             
+NotificationPolicy            Property              tagNOTIFICATIONPOLICYSTATUS NotificationPolicy () {get}       
+ProductKeyType                Property              string ProductKeyType () {get}                                
+SystemStateFlags              Property              tagSYSTEM_STATE_FLAGS SystemStateFlags () {get}               
+
+

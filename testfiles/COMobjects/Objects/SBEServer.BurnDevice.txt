@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{e2bc5e4b-f7f8-4c57-a1e0-197ebafea7a6}
+
+Name                  MemberType Definition                         
+----                  ---------- ----------                         
+AddTrack              Method     void AddTrack (string, double)     
+get_EstimatedTimeSize Method     void get_EstimatedTimeSize (double)
+InitDRM               Method     void InitDRM (string)              
+RemoveTrack           Method     void RemoveTrack (string)          
+
+

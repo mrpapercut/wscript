@@ -1,0 +1,42 @@
+﻿
+
+   TypeName: System.Globalization.NumberFormatInfo
+
+Name                     MemberType Definition                                                                         
+----                     ---------- ----------                                                                         
+Clone                    Method     System.Object Clone(), System.Object ICloneable.Clone()                            
+Equals                   Method     bool Equals(System.Object obj)                                                     
+GetFormat                Method     System.Object GetFormat(type formatType), System.Object IFormatProvider.GetForma...
+GetHashCode              Method     int GetHashCode()                                                                  
+GetType                  Method     type GetType()                                                                     
+ToString                 Method     string ToString()                                                                  
+CurrencyDecimalDigits    Property   int CurrencyDecimalDigits {get;set;}                                               
+CurrencyDecimalSeparator Property   string CurrencyDecimalSeparator {get;set;}                                         
+CurrencyGroupSeparator   Property   string CurrencyGroupSeparator {get;set;}                                           
+CurrencyGroupSizes       Property   int[] CurrencyGroupSizes {get;set;}                                                
+CurrencyNegativePattern  Property   int CurrencyNegativePattern {get;set;}                                             
+CurrencyPositivePattern  Property   int CurrencyPositivePattern {get;set;}                                             
+CurrencySymbol           Property   string CurrencySymbol {get;set;}                                                   
+DigitSubstitution        Property   System.Globalization.DigitShapes DigitSubstitution {get;set;}                      
+IsReadOnly               Property   bool IsReadOnly {get;}                                                             
+NaNSymbol                Property   string NaNSymbol {get;set;}                                                        
+NativeDigits             Property   string[] NativeDigits {get;set;}                                                   
+NegativeInfinitySymbol   Property   string NegativeInfinitySymbol {get;set;}                                           
+NegativeSign             Property   string NegativeSign {get;set;}                                                     
+NumberDecimalDigits      Property   int NumberDecimalDigits {get;set;}                                                 
+NumberDecimalSeparator   Property   string NumberDecimalSeparator {get;set;}                                           
+NumberGroupSeparator     Property   string NumberGroupSeparator {get;set;}                                             
+NumberGroupSizes         Property   int[] NumberGroupSizes {get;set;}                                                  
+NumberNegativePattern    Property   int NumberNegativePattern {get;set;}                                               
+PercentDecimalDigits     Property   int PercentDecimalDigits {get;set;}                                                
+PercentDecimalSeparator  Property   string PercentDecimalSeparator {get;set;}                                          
+PercentGroupSeparator    Property   string PercentGroupSeparator {get;set;}                                            
+PercentGroupSizes        Property   int[] PercentGroupSizes {get;set;}                                                 
+PercentNegativePattern   Property   int PercentNegativePattern {get;set;}                                              
+PercentPositivePattern   Property   int PercentPositivePattern {get;set;}                                              
+PercentSymbol            Property   string PercentSymbol {get;set;}                                                    
+PerMilleSymbol           Property   string PerMilleSymbol {get;set;}                                                   
+PositiveInfinitySymbol   Property   string PositiveInfinitySymbol {get;set;}                                           
+PositiveSign             Property   string PositiveSign {get;set;}                                                     
+
+

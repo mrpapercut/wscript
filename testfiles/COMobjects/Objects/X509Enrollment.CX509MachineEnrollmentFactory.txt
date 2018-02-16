@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab352-217d-11da-b2a4-000e7bbb2b09}
+
+Name         MemberType Definition                                 
+----         ---------- ----------                                 
+CreateObject Method     IX509EnrollmentHelper CreateObject (string)
+
+

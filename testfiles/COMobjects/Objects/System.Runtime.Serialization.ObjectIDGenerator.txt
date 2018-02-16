@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.Runtime.Serialization.ObjectIDGenerator
+
+Name        MemberType Definition                                         
+----        ---------- ----------                                         
+Equals      Method     bool Equals(System.Object obj)                     
+GetHashCode Method     int GetHashCode()                                  
+GetId       Method     long GetId(System.Object obj, [ref] bool firstTime)
+GetType     Method     type GetType()                                     
+HasId       Method     long HasId(System.Object obj, [ref] bool firstTime)
+ToString    Method     string ToString()                                  
+
+

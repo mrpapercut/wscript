@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.Runtime.Serialization.Formatters.SoapMessage
+
+Name         MemberType Definition                                                   
+----         ---------- ----------                                                   
+Equals       Method     bool Equals(System.Object obj)                               
+GetHashCode  Method     int GetHashCode()                                            
+GetType      Method     type GetType()                                               
+ToString     Method     string ToString()                                            
+Headers      Property   System.Runtime.Remoting.Messaging.Header[] Headers {get;set;}
+MethodName   Property   string MethodName {get;set;}                                 
+ParamNames   Property   string[] ParamNames {get;set;}                               
+ParamTypes   Property   type[] ParamTypes {get;set;}                                 
+ParamValues  Property   System.Object[] ParamValues {get;set;}                       
+XmlNameSpace Property   string XmlNameSpace {get;set;}                               
+
+

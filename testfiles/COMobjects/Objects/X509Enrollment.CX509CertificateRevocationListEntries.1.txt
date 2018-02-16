@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab35f-217d-11da-b2a4-000e7bbb2b09}
+
+Name                MemberType            Definition                                                  
+----                ----------            ----------                                                  
+Add                 Method                void Add (IX509CertificateRevocationListEntry)              
+AddRange            Method                void AddRange (IX509CertificateRevocationListEntries)       
+Clear               Method                void Clear ()                                               
+Remove              Method                void Remove (int)                                           
+IndexBySerialNumber ParameterizedProperty int IndexBySerialNumber (EncodingType, string) {get}        
+ItemByIndex         ParameterizedProperty IX509CertificateRevocationListEntry ItemByIndex (int) {get} 
+Count               Property              int Count () {get}                                          
+
+

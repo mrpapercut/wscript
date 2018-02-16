@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{eaab8da2-1e94-4037-bb4a-39a8b7b00bc8}
+
+Name       MemberType Definition                      
+----       ---------- ----------                      
+Initialize Method     void Initialize (string, string)
+ReadBSTR   Method     Variant ReadBSTR (int, int)     
+
+

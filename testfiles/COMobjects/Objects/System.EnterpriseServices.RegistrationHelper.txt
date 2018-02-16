@@ -1,0 +1,19 @@
+﻿
+
+   TypeName: System.EnterpriseServices.RegistrationHelper
+
+Name                        MemberType Definition                                                                      
+----                        ---------- ----------                                                                      
+CreateObjRef                Method     System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)                 
+Equals                      Method     bool Equals(System.Object obj)                                                  
+GetHashCode                 Method     int GetHashCode()                                                               
+GetLifetimeService          Method     System.Object GetLifetimeService()                                              
+GetType                     Method     type GetType()                                                                  
+InitializeLifetimeService   Method     System.Object InitializeLifetimeService()                                       
+InstallAssembly             Method     void InstallAssembly(string assembly, [ref] string application, [ref] string ...
+InstallAssemblyFromConfig   Method     void InstallAssemblyFromConfig([ref] System.EnterpriseServices.RegistrationCo...
+ToString                    Method     string ToString()                                                               
+UninstallAssembly           Method     void UninstallAssembly(string assembly, string application), void UninstallAs...
+UninstallAssemblyFromConfig Method     void UninstallAssemblyFromConfig([ref] System.EnterpriseServices.Registration...
+
+

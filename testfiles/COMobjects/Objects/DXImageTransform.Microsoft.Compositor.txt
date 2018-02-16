@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{9a43a843-0831-11d1-817f-0000f87557db}
+
+Name     MemberType Definition                         
+----     ---------- ----------                         
+Function Property   DXCOMPFUNC Function () {get} {set} 
+
+

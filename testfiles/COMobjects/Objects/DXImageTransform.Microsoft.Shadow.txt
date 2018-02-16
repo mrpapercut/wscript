@@ -1,0 +1,11 @@
+﻿
+
+   TypeName: System.__ComObject#{1d4637e6-383c-11d2-952a-00c04fa34f05}
+
+Name      MemberType Definition                   
+----      ---------- ----------                   
+Color     Property   string Color () {get} {set}  
+Direction Property   int Direction () {get} {set} 
+Strength  Property   int Strength () {get} {set}  
+
+

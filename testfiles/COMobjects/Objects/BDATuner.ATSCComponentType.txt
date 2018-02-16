@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{fc189e4d-7bd4-4125-b3b3-3a76a332cc96}
+
+Name            MemberType Definition                                
+----            ---------- ----------                                
+Clone           Method     IComponentType Clone ()                   
+Category        Property   ComponentCategory Category () {get} {set} 
+Flags           Property   int Flags () {get} {set}                  
+LangID          Property   int LangID () {get} {set}                 
+MediaFormatType Property   string MediaFormatType () {get} {set}     
+MediaMajorType  Property   string MediaMajorType () {get} {set}      
+MediaSubType    Property   string MediaSubType () {get} {set}        
+StreamType      Property   MPEG2StreamType StreamType () {get} {set} 
+
+

@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab325-217d-11da-b2a4-000e7bbb2b09}
+
+Name             MemberType            Definition                                                               
+----             ----------            ----------                                                               
+Initialize       Method                void Initialize (IObjectId, EncodingType, string)                        
+InitializeDecode Method                void InitializeDecode (EncodingType, string)                             
+InitializeEncode Method                void InitializeEncode (RequestClientInfoClientId, string, string, string)
+RawData          ParameterizedProperty string RawData (EncodingType) {get}                                      
+ClientId         Property              RequestClientInfoClientId ClientId () {get}                              
+MachineDnsName   Property              string MachineDnsName () {get}                                           
+ObjectId         Property              IObjectId ObjectId () {get}                                              
+ProcessName      Property              string ProcessName () {get}                                              
+UserSamName      Property              string UserSamName () {get}                                              
+
+

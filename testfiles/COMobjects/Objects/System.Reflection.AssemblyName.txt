@@ -1,0 +1,36 @@
+﻿
+
+   TypeName: System.Reflection.AssemblyName
+
+Name                  MemberType Definition                                                                            
+----                  ---------- ----------                                                                            
+Clone                 Method     System.Object Clone(), System.Object ICloneable.Clone()                               
+Equals                Method     bool Equals(System.Object obj)                                                        
+GetHashCode           Method     int GetHashCode()                                                                     
+GetIDsOfNames         Method     void _AssemblyName.GetIDsOfNames([ref] guid riid, System.IntPtr rgszNames, uint32 c...
+GetObjectData         Method     void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runt...
+GetPublicKey          Method     byte[] GetPublicKey()                                                                 
+GetPublicKeyToken     Method     byte[] GetPublicKeyToken()                                                            
+GetType               Method     type GetType()                                                                        
+GetTypeInfo           Method     void _AssemblyName.GetTypeInfo(uint32 iTInfo, uint32 lcid, System.IntPtr ppTInfo)     
+GetTypeInfoCount      Method     void _AssemblyName.GetTypeInfoCount([ref] uint32 pcTInfo)                             
+Invoke                Method     void _AssemblyName.Invoke(uint32 dispIdMember, [ref] guid riid, uint32 lcid, int16 ...
+OnDeserialization     Method     void OnDeserialization(System.Object sender), void IDeserializationCallback.OnDeser...
+SetPublicKey          Method     void SetPublicKey(byte[] publicKey)                                                   
+SetPublicKeyToken     Method     void SetPublicKeyToken(byte[] publicKeyToken)                                         
+ToString              Method     string ToString()                                                                     
+CodeBase              Property   string CodeBase {get;set;}                                                            
+ContentType           Property   System.Reflection.AssemblyContentType ContentType {get;set;}                          
+CultureInfo           Property   cultureinfo CultureInfo {get;set;}                                                    
+CultureName           Property   string CultureName {get;set;}                                                         
+EscapedCodeBase       Property   string EscapedCodeBase {get;}                                                         
+Flags                 Property   System.Reflection.AssemblyNameFlags Flags {get;set;}                                  
+FullName              Property   string FullName {get;}                                                                
+HashAlgorithm         Property   System.Configuration.Assemblies.AssemblyHashAlgorithm HashAlgorithm {get;set;}        
+KeyPair               Property   System.Reflection.StrongNameKeyPair KeyPair {get;set;}                                
+Name                  Property   string Name {get;set;}                                                                
+ProcessorArchitecture Property   System.Reflection.ProcessorArchitecture ProcessorArchitecture {get;set;}              
+Version               Property   version Version {get;set;}                                                            
+VersionCompatibility  Property   System.Configuration.Assemblies.AssemblyVersionCompatibility VersionCompatibility {...
+
+

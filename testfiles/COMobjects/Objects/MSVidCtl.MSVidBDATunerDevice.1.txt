@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.__ComObject#{1c15d47d-911d-11d2-b632-00c04f79498e}
+
+Name          MemberType Definition                        
+----          ---------- ----------                        
+IsEqualDevice Method     bool IsEqualDevice (IMSVidDevice) 
+IsViewable    Method     bool IsViewable (Variant)         
+View          Method     void View (Variant)               
+Category      Property   string Category () {get}          
+ClassID       Property   string ClassID () {get}           
+Name          Property   string Name () {get}              
+Power         Property   bool Power () {get} {set}         
+Status        Property   int Status () {get}               
+Tune          Property   ITuneRequest Tune () {get} {set}  
+TuningSpace   Property   ITuningSpace TuningSpace () {get} 
+
+

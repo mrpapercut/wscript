@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.Security.Policy.GacInstalled
+
+Name                     MemberType Definition                                                                         
+----                     ---------- ----------                                                                         
+Clone                    Method     System.Security.Policy.EvidenceBase Clone()                                        
+Copy                     Method     System.Object Copy()                                                               
+CreateIdentityPermission Method     System.Security.IPermission CreateIdentityPermission(System.Security.Policy.Evid...
+Equals                   Method     bool Equals(System.Object o)                                                       
+GetHashCode              Method     int GetHashCode()                                                                  
+GetType                  Method     type GetType()                                                                     
+ToString                 Method     string ToString()                                                                  
+
+

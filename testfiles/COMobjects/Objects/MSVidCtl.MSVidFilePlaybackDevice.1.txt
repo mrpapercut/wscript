@@ -1,0 +1,29 @@
+﻿
+
+   TypeName: System.__ComObject#{2f7e44af-6e52-4660-bc08-d8d542587d72}
+
+Name              MemberType            Definition                                   
+----              ----------            ----------                                   
+IsEqualDevice     Method                bool IsEqualDevice (IMSVidDevice)            
+IsViewable        Method                bool IsViewable (Variant)                    
+Pause             Method                void Pause ()                                
+Run               Method                void Run ()                                  
+Step              Method                void Step (int)                              
+Stop              Method                void Stop ()                                 
+View              Method                void View (Variant)                          
+CanStep           ParameterizedProperty bool CanStep (bool) {get}                    
+Category          Property              string Category () {get}                     
+ClassID           Property              string ClassID () {get}                      
+CurrentPosition   Property              int CurrentPosition () {get} {set}           
+EnableResetOnStop Property              bool EnableResetOnStop () {get} {set}        
+FileName          Property              string FileName () {get} {set}               
+Length            Property              int Length () {get}                          
+Name              Property              string Name () {get}                         
+PositionMode      Property              PositionModeList PositionMode () {get} {set} 
+Power             Property              bool Power () {get} {set}                    
+Rate              Property              double Rate () {get} {set}                   
+Status            Property              int Status () {get}                          
+_SourceFilter     Property              string _SourceFilter () {set}                
+__SourceFilter    Property              GUID __SourceFilter () {set}                 
+
+

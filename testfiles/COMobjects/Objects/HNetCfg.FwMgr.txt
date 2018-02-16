@@ -2,12 +2,12 @@
 
    TypeName: System.__ComObject#{f7898af5-cac4-4632-a2ec-da06e5111af2}
 
-Name               MemberType Definition                                                                                         
-----               ---------- ----------                                                                                         
-IsIcmpTypeAllowed  Method     void IsIcmpTypeAllowed (NET_FW_IP_VERSION_, string, byte, Variant, Variant)                        
-IsPortAllowed      Method     void IsPortAllowed (string, NET_FW_IP_VERSION_, int, string, NET_FW_IP_PROTOCOL_, Variant, Variant)
-RestoreDefaults    Method     void RestoreDefaults ()                                                                            
-CurrentProfileType Property   NET_FW_PROFILE_TYPE_ CurrentProfileType () {get}                                                   
-LocalPolicy        Property   INetFwPolicy LocalPolicy () {get}                                                                  
+Name               MemberType Definition                                                                               
+----               ---------- ----------                                                                               
+IsIcmpTypeAllowed  Method     void IsIcmpTypeAllowed (NET_FW_IP_VERSION_, string, byte, Variant, Variant)              
+IsPortAllowed      Method     void IsPortAllowed (string, NET_FW_IP_VERSION_, int, string, NET_FW_IP_PROTOCOL_, Vari...
+RestoreDefaults    Method     void RestoreDefaults ()                                                                  
+CurrentProfileType Property   NET_FW_PROFILE_TYPE_ CurrentProfileType () {get}                                         
+LocalPolicy        Property   INetFwPolicy LocalPolicy () {get}                                                        
 
 

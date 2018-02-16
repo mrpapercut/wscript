@@ -1,0 +1,75 @@
+﻿
+
+   TypeName: System.__ComObject#{2933bf96-7b36-11d2-b20e-00c04f983e60}
+
+Name                        MemberType Definition                                                               
+----                        ---------- ----------                                                               
+abort                       Method     void abort ()                                                            
+appendChild                 Method     IXMLDOMNode appendChild (IXMLDOMNode)                                    
+cloneNode                   Method     IXMLDOMNode cloneNode (bool)                                             
+createAttribute             Method     IXMLDOMAttribute createAttribute (string)                                
+createCDATASection          Method     IXMLDOMCDATASection createCDATASection (string)                          
+createComment               Method     IXMLDOMComment createComment (string)                                    
+createDocumentFragment      Method     IXMLDOMDocumentFragment createDocumentFragment ()                        
+createElement               Method     IXMLDOMElement createElement (string)                                    
+createEntityReference       Method     IXMLDOMEntityReference createEntityReference (string)                    
+createNode                  Method     IXMLDOMNode createNode (Variant, string, string)                         
+createProcessingInstruction Method     IXMLDOMProcessingInstruction createProcessingInstruction (string, string)
+createTextNode              Method     IXMLDOMText createTextNode (string)                                      
+getElementsByTagName        Method     IXMLDOMNodeList getElementsByTagName (string)                            
+getProperty                 Method     Variant getProperty (string)                                             
+hasChildNodes               Method     bool hasChildNodes ()                                                    
+importNode                  Method     IXMLDOMNode importNode (IXMLDOMNode, bool)                               
+insertBefore                Method     IXMLDOMNode insertBefore (IXMLDOMNode, Variant)                          
+load                        Method     bool load (Variant)                                                      
+loadXML                     Method     bool loadXML (string)                                                    
+nodeFromID                  Method     IXMLDOMNode nodeFromID (string)                                          
+removeChild                 Method     IXMLDOMNode removeChild (IXMLDOMNode)                                    
+replaceChild                Method     IXMLDOMNode replaceChild (IXMLDOMNode, IXMLDOMNode)                      
+save                        Method     void save (Variant)                                                      
+selectNodes                 Method     IXMLDOMNodeList selectNodes (string)                                     
+selectSingleNode            Method     IXMLDOMNode selectSingleNode (string)                                    
+setProperty                 Method     void setProperty (string, Variant)                                       
+transformNode               Method     string transformNode (IXMLDOMNode)                                       
+transformNodeToObject       Method     void transformNodeToObject (IXMLDOMNode, Variant)                        
+validate                    Method     IXMLDOMParseError validate ()                                            
+validateNode                Method     IXMLDOMParseError validateNode (IXMLDOMNode)                             
+async                       Property   bool async () {get} {set}                                                
+attributes                  Property   IXMLDOMNamedNodeMap attributes () {get}                                  
+baseName                    Property   string baseName () {get}                                                 
+childNodes                  Property   IXMLDOMNodeList childNodes () {get}                                      
+dataType                    Property   Variant dataType () {get} {set}                                          
+definition                  Property   IXMLDOMNode definition () {get}                                          
+doctype                     Property   IXMLDOMDocumentType doctype () {get}                                     
+documentElement             Property   IXMLDOMElement documentElement () {get} {set by ref}                     
+firstChild                  Property   IXMLDOMNode firstChild () {get}                                          
+implementation              Property   IXMLDOMImplementation implementation () {get}                            
+lastChild                   Property   IXMLDOMNode lastChild () {get}                                           
+namespaces                  Property   IXMLDOMSchemaCollection namespaces () {get}                              
+namespaceURI                Property   string namespaceURI () {get}                                             
+nextSibling                 Property   IXMLDOMNode nextSibling () {get}                                         
+nodeName                    Property   string nodeName () {get}                                                 
+nodeType                    Property   DOMNodeType nodeType () {get}                                            
+nodeTypedValue              Property   Variant nodeTypedValue () {get} {set}                                    
+nodeTypeString              Property   string nodeTypeString () {get}                                           
+nodeValue                   Property   Variant nodeValue () {get} {set}                                         
+ondataavailable             Property   Variant ondataavailable () {set}                                         
+onreadystatechange          Property   Variant onreadystatechange () {set}                                      
+ontransformnode             Property   Variant ontransformnode () {set}                                         
+ownerDocument               Property   IXMLDOMDocument ownerDocument () {get}                                   
+parentNode                  Property   IXMLDOMNode parentNode () {get}                                          
+parsed                      Property   bool parsed () {get}                                                     
+parseError                  Property   IXMLDOMParseError parseError () {get}                                    
+prefix                      Property   string prefix () {get}                                                   
+preserveWhiteSpace          Property   bool preserveWhiteSpace () {get} {set}                                   
+previousSibling             Property   IXMLDOMNode previousSibling () {get}                                     
+readyState                  Property   int readyState () {get}                                                  
+resolveExternals            Property   bool resolveExternals () {get} {set}                                     
+schemas                     Property   Variant schemas () {get} {set by ref}                                    
+specified                   Property   bool specified () {get}                                                  
+text                        Property   string text () {get} {set}                                               
+url                         Property   string url () {get}                                                      
+validateOnParse             Property   bool validateOnParse () {get} {set}                                      
+xml                         Property   string xml () {get}                                                      
+
+

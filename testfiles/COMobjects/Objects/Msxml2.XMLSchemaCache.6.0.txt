@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.__ComObject#{50ea08b0-dd1b-4664-9a50-c2f40f4bd79a}
+
+Name           MemberType            Definition                                  
+----           ----------            ----------                                  
+add            Method                void add (string, Variant)                  
+addCollection  Method                void addCollection (IXMLDOMSchemaCollection)
+get            Method                IXMLDOMNode get (string)                    
+getDeclaration Method                ISchemaItem getDeclaration (IXMLDOMNode)    
+getSchema      Method                ISchema getSchema (string)                  
+remove         Method                void remove (string)                        
+validate       Method                void validate ()                            
+namespaceURI   ParameterizedProperty string namespaceURI (int) {get}             
+length         Property              int length () {get}                         
+validateOnLoad Property              bool validateOnLoad () {get} {set}          
+
+

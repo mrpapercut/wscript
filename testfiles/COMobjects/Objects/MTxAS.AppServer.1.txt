@@ -1,0 +1,11 @@
+﻿
+
+   TypeName: System.__ComObject#{74c08641-cedb-11cf-8b49-00aa00b8a790}
+
+Name             MemberType Definition                       
+----             ---------- ----------                       
+GetObjectContext Method     ObjectContext GetObjectContext ()
+RecycleSurrogate Method     void RecycleSurrogate (int)      
+SafeRef          Method     Variant SafeRef (Variant)        
+
+

@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.__ComObject#{884e204a-217d-11da-b2a4-000e7bbb2b09}
+
+Name               MemberType Definition                                                
+----               ---------- ----------                                                
+GetStringProperty  Method     string GetStringProperty (PolicyServerUrlPropertyID)      
+Initialize         Method     void Initialize (X509CertificateEnrollmentContext)        
+RemoveFromRegistry Method     void RemoveFromRegistry (X509CertificateEnrollmentContext)
+SetStringProperty  Method     void SetStringProperty (PolicyServerUrlPropertyID, string)
+UpdateRegistry     Method     void UpdateRegistry (X509CertificateEnrollmentContext)    
+AuthFlags          Property   X509EnrollmentAuthFlags AuthFlags () {get} {set}          
+Cost               Property   uint Cost () {get} {set}                                  
+Default            Property   bool Default () {get} {set}                               
+Flags              Property   PolicyServerUrlFlags Flags () {get} {set}                 
+Url                Property   string Url () {get} {set}                                 
+
+

@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab334-217d-11da-b2a4-000e7bbb2b09}
+
+Name                      MemberType            Definition                                                 
+----                      ----------            ----------                                                 
+Initialize                Method                void Initialize (EncodingType, string)                     
+InitializeDecode          Method                void InitializeDecode (EncodingType, string)               
+InitializeFromCertificate Method                void InitializeFromCertificate (bool, EncodingType, string)
+RemoveFromCertificate     Method                void RemoveFromCertificate (bool, EncodingType, string)    
+SetValueOnCertificate     Method                void SetValueOnCertificate (bool, EncodingType, string)    
+RawData                   ParameterizedProperty string RawData (EncodingType) {get}                        
+SHA1Hash                  ParameterizedProperty string SHA1Hash (EncodingType) {get}                       
+PropertyId                Property              CERTENROLL_PROPERTYID PropertyId () {get} {set}            
+
+

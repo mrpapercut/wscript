@@ -1,0 +1,39 @@
+﻿
+
+   TypeName: System.__ComObject#{e4ba9059-b1ce-40d8-b9a0-d4ea4a9989d3}
+
+Name               MemberType            Definition                                                      
+----               ----------            ----------                                                      
+CurrentRatings     Method                void CurrentRatings (EnTvRat_System, EnTvRat_GenericLevel, int) 
+IsEqualDevice      Method                bool IsEqualDevice (IMSVidDevice)                               
+IsViewable         Method                bool IsViewable (Variant)                                       
+MaxRatingsLevel    Method                void MaxRatingsLevel (EnTvRat_System, EnTvRat_GenericLevel, int)
+Pause              Method                void Pause ()                                                   
+Run                Method                void Run ()                                                     
+Step               Method                void Step (int)                                                 
+Stop               Method                void Stop ()                                                    
+View               Method                void View (Variant)                                             
+CanStep            ParameterizedProperty bool CanStep (bool) {get}                                       
+RateEx             ParameterizedProperty double RateEx (uint) {set}                                      
+AudioCounter       Property              IUnknown AudioCounter () {get}                                  
+BlockUnrated       Property              bool BlockUnrated () {set}                                      
+Category           Property              string Category () {get}                                        
+CCCounter          Property              IUnknown CCCounter () {get}                                     
+ClassID            Property              string ClassID () {get}                                         
+CurrentPosition    Property              int CurrentPosition () {get} {set}                              
+EnableResetOnStop  Property              bool EnableResetOnStop () {get} {set}                           
+FileName           Property              string FileName () {get} {set}                                  
+Length             Property              int Length () {get}                                             
+Name               Property              string Name () {get}                                            
+PositionMode       Property              PositionModeList PositionMode () {get} {set}                    
+Power              Property              bool Power () {get} {set}                                       
+Rate               Property              double Rate () {get} {set}                                      
+RecordingAttribute Property              IUnknown RecordingAttribute () {get}                            
+SBESource          Property              IUnknown SBESource () {get}                                     
+Start              Property              int Start () {get}                                              
+Status             Property              int Status () {get}                                             
+UnratedDelay       Property              int UnratedDelay () {set}                                       
+VideoCounter       Property              IUnknown VideoCounter () {get}                                  
+WSTCounter         Property              IUnknown WSTCounter () {get}                                    
+
+

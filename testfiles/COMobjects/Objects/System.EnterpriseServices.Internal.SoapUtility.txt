@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.EnterpriseServices.Internal.SoapUtility
+
+Name                  MemberType Definition                                                                            
+----                  ---------- ----------                                                                            
+Equals                Method     bool Equals(System.Object obj)                                                        
+GetHashCode           Method     int GetHashCode()                                                                     
+GetServerBinPath      Method     void GetServerBinPath(string rootWebServer, string inBaseUrl, string inVirtualRoot,...
+GetServerPhysicalPath Method     void GetServerPhysicalPath(string rootWebServer, string inBaseUrl, string inVirtual...
+GetType               Method     type GetType()                                                                        
+Present               Method     void Present(), void ISoapUtility.Present()                                           
+ToString              Method     string ToString()                                                                     
+
+

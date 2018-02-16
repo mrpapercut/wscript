@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{d934be07-7b84-4208-9136-83c20994e905}
+
+Name       MemberType Definition                              
+----       ---------- ----------                              
+Columns    Property   int Columns () {get} {set}              
+DrawnBox   Property   IInkRectangle DrawnBox () {get} {set}   
+GuideData  Property   InkRecoGuide GuideData () {get} {set}   
+Midline    Property   int Midline () {get} {set}              
+Rows       Property   int Rows () {get} {set}                 
+WritingBox Property   IInkRectangle WritingBox () {get} {set} 
+
+

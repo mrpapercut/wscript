@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.EnterpriseServices.Internal.ServerWebConfig
+
+Name        MemberType Definition                                                                                      
+----        ---------- ----------                                                                                      
+AddElement  Method     void AddElement(string FilePath, string AssemblyName, string TypeName, string ProgId, string ...
+Create      Method     void Create(string FilePath, string FilePrefix, [ref] string Error), void IServerWebConfig.Cr...
+Equals      Method     bool Equals(System.Object obj)                                                                  
+GetHashCode Method     int GetHashCode()                                                                               
+GetType     Method     type GetType()                                                                                  
+ToString    Method     string ToString()                                                                               
+
+

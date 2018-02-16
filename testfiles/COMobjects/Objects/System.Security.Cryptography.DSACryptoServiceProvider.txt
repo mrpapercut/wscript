@@ -1,0 +1,33 @@
+﻿
+
+   TypeName: System.Security.Cryptography.DSACryptoServiceProvider
+
+Name                 MemberType Definition                                                                             
+----                 ---------- ----------                                                                             
+Clear                Method     void Clear()                                                                           
+CreateSignature      Method     byte[] CreateSignature(byte[] rgbHash)                                                 
+Dispose              Method     void Dispose(), void IDisposable.Dispose()                                             
+Equals               Method     bool Equals(System.Object obj)                                                         
+ExportCspBlob        Method     byte[] ExportCspBlob(bool includePrivateParameters), byte[] ICspAsymmetricAlgorithm....
+ExportParameters     Method     System.Security.Cryptography.DSAParameters ExportParameters(bool includePrivateParam...
+FromXmlString        Method     void FromXmlString(string xmlString)                                                   
+GetHashCode          Method     int GetHashCode()                                                                      
+GetType              Method     type GetType()                                                                         
+ImportCspBlob        Method     void ImportCspBlob(byte[] keyBlob), void ICspAsymmetricAlgorithm.ImportCspBlob(byte[...
+ImportParameters     Method     void ImportParameters(System.Security.Cryptography.DSAParameters parameters)           
+SignData             Method     byte[] SignData(System.IO.Stream inputStream), byte[] SignData(byte[] buffer), byte[...
+SignHash             Method     byte[] SignHash(byte[] rgbHash, string str)                                            
+ToString             Method     string ToString()                                                                      
+ToXmlString          Method     string ToXmlString(bool includePrivateParameters)                                      
+VerifyData           Method     bool VerifyData(byte[] rgbData, byte[] rgbSignature), bool VerifyData(byte[] data, b...
+VerifyHash           Method     bool VerifyHash(byte[] rgbHash, string str, byte[] rgbSignature)                       
+VerifySignature      Method     bool VerifySignature(byte[] rgbHash, byte[] rgbSignature)                              
+CspKeyContainerInfo  Property   System.Security.Cryptography.CspKeyContainerInfo CspKeyContainerInfo {get;}            
+KeyExchangeAlgorithm Property   string KeyExchangeAlgorithm {get;}                                                     
+KeySize              Property   int KeySize {get;}                                                                     
+LegalKeySizes        Property   System.Security.Cryptography.KeySizes[] LegalKeySizes {get;}                           
+PersistKeyInCsp      Property   bool PersistKeyInCsp {get;set;}                                                        
+PublicOnly           Property   bool PublicOnly {get;}                                                                 
+SignatureAlgorithm   Property   string SignatureAlgorithm {get;}                                                       
+
+

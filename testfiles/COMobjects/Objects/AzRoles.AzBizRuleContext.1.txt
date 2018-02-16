@@ -1,0 +1,11 @@
+﻿
+
+   TypeName: System.__ComObject#{e192f17d-d59f-455e-a152-940316cd77b2}
+
+Name               MemberType Definition                               
+----               ---------- ----------                               
+GetParameter       Method     Variant GetParameter (string)            
+BusinessRuleResult Property   int BusinessRuleResult () {set}          
+BusinessRuleString Property   string BusinessRuleString () {get} {set} 
+
+

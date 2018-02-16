@@ -1,0 +1,20 @@
+﻿
+
+   TypeName: System.Runtime.Remoting.ObjRef
+
+Name                MemberType Definition                                                                              
+----                ---------- ----------                                                                              
+Equals              Method     bool Equals(System.Object obj)                                                          
+GetHashCode         Method     int GetHashCode()                                                                       
+GetObjectData       Method     void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtim...
+GetRealObject       Method     System.Object GetRealObject(System.Runtime.Serialization.StreamingContext context), S...
+GetType             Method     type GetType()                                                                          
+IsFromThisAppDomain Method     bool IsFromThisAppDomain()                                                              
+IsFromThisProcess   Method     bool IsFromThisProcess()                                                                
+ToString            Method     string ToString()                                                                       
+ChannelInfo         Property   System.Runtime.Remoting.IChannelInfo ChannelInfo {get;set;}                             
+EnvoyInfo           Property   System.Runtime.Remoting.IEnvoyInfo EnvoyInfo {get;set;}                                 
+TypeInfo            Property   System.Runtime.Remoting.IRemotingTypeInfo TypeInfo {get;set;}                           
+URI                 Property   string URI {get;set;}                                                                   
+
+

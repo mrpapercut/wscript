@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.EnterpriseServices.Internal.SoapServerTlb
+
+Name            MemberType Definition                                                                                  
+----            ---------- ----------                                                                                  
+AddServerTlb    Method     void AddServerTlb(string progId, string classId, string interfaceId, string srcTlbPath, s...
+DeleteServerTlb Method     void DeleteServerTlb(string progId, string classId, string interfaceId, string srcTlbPath...
+Equals          Method     bool Equals(System.Object obj)                                                              
+GetHashCode     Method     int GetHashCode()                                                                           
+GetType         Method     type GetType()                                                                              
+ToString        Method     string ToString()                                                                           
+
+

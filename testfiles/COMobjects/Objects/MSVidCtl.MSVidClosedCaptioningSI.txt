@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: System.__ComObject#{c8638e8a-7625-4c51-9366-2f40a9831fc0}
+
+Name           MemberType Definition                            
+----           ---------- ----------                            
+IsEqualDevice  Method     bool IsEqualDevice (IMSVidDevice)     
+Category       Property   string Category () {get}              
+ClassID        Property   string ClassID () {get}               
+Enable         Property   bool Enable () {get} {set}            
+Name           Property   string Name () {get}                  
+Power          Property   bool Power () {get} {set}             
+Service        Property   MSVidCCService Service () {get} {set} 
+Status         Property   int Status () {get}                   
+TeleTextFilter Property   IUnknown TeleTextFilter () {get}      
+
+

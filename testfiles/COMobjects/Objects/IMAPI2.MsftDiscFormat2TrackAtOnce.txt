@@ -1,0 +1,34 @@
+﻿
+
+   TypeName: System.__ComObject#{27354154-8f64-5b0f-8f00-5d77afbe261e}
+
+Name                           MemberType Definition                                                  
+----                           ---------- ----------                                                  
+AddAudioTrack                  Method     void AddAudioTrack (IStream)                                
+CancelAddTrack                 Method     void CancelAddTrack ()                                      
+IsCurrentMediaSupported        Method     bool IsCurrentMediaSupported (IDiscRecorder2)               
+IsRecorderSupported            Method     bool IsRecorderSupported (IDiscRecorder2)                   
+PrepareMedia                   Method     void PrepareMedia ()                                        
+ReleaseMedia                   Method     void ReleaseMedia ()                                        
+SetWriteSpeed                  Method     void SetWriteSpeed (int, bool)                              
+BufferUnderrunFreeDisabled     Property   bool BufferUnderrunFreeDisabled () {get} {set}              
+ClientName                     Property   string ClientName () {get} {set}                            
+CurrentPhysicalMediaType       Property   IMAPI_MEDIA_PHYSICAL_TYPE CurrentPhysicalMediaType () {get} 
+CurrentRotationTypeIsPureCAV   Property   bool CurrentRotationTypeIsPureCAV () {get}                  
+CurrentWriteSpeed              Property   int CurrentWriteSpeed () {get}                              
+DoNotFinalizeMedia             Property   bool DoNotFinalizeMedia () {get} {set}                      
+ExpectedTableOfContents        Property   SAFEARRAY(Variant) ExpectedTableOfContents () {get}         
+FreeSectorsOnMedia             Property   int FreeSectorsOnMedia () {get}                             
+MediaHeuristicallyBlank        Property   bool MediaHeuristicallyBlank () {get}                       
+MediaPhysicallyBlank           Property   bool MediaPhysicallyBlank () {get}                          
+NumberOfExistingTracks         Property   int NumberOfExistingTracks () {get}                         
+Recorder                       Property   IDiscRecorder2 Recorder () {get} {set}                      
+RequestedRotationTypeIsPureCAV Property   bool RequestedRotationTypeIsPureCAV () {get}                
+RequestedWriteSpeed            Property   int RequestedWriteSpeed () {get}                            
+SupportedMediaTypes            Property   SAFEARRAY(Variant) SupportedMediaTypes () {get}             
+SupportedWriteSpeedDescriptors Property   SAFEARRAY(Variant) SupportedWriteSpeedDescriptors () {get}  
+SupportedWriteSpeeds           Property   SAFEARRAY(Variant) SupportedWriteSpeeds () {get}            
+TotalSectorsOnMedia            Property   int TotalSectorsOnMedia () {get}                            
+UsedSectorsOnMedia             Property   int UsedSectorsOnMedia () {get}                             
+
+

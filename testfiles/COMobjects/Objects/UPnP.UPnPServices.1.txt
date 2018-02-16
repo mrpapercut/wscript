@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{3f8c8e9e-9a7a-4dc8-bc41-ff31fa374956}
+
+Name  MemberType            Definition                       
+----  ----------            ----------                       
+Item  ParameterizedProperty IUPnPService Item (string) {get} 
+Count Property              int Count () {get}               
+
+

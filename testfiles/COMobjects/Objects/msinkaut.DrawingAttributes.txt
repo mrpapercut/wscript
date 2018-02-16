@@ -1,0 +1,19 @@
+﻿
+
+   TypeName: System.__ComObject#{bf519b75-0a15-4623-adc9-c00d436a8092}
+
+Name               MemberType Definition                                         
+----               ---------- ----------                                         
+Clone              Method     IInkDrawingAttributes Clone ()                     
+AntiAliased        Property   bool AntiAliased () {get} {set}                    
+Color              Property   int Color () {get} {set}                           
+ExtendedProperties Property   IInkExtendedProperties ExtendedProperties () {get} 
+FitToCurve         Property   bool FitToCurve () {get} {set}                     
+Height             Property   float Height () {get} {set}                        
+IgnorePressure     Property   bool IgnorePressure () {get} {set}                 
+PenTip             Property   InkPenTip PenTip () {get} {set}                    
+RasterOperation    Property   InkRasterOperation RasterOperation () {get} {set}  
+Transparency       Property   int Transparency () {get} {set}                    
+Width              Property   float Width () {get} {set}                         
+
+

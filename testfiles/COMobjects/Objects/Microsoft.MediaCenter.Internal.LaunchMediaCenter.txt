@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.Internal.LaunchMediaCenter
+
+Name                      MemberType Definition                                                     
+----                      ---------- ----------                                                     
+CreateObjRef              Method     System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+Equals                    Method     bool Equals(System.Object obj)                                 
+GetHashCode               Method     int GetHashCode()                                              
+GetLaunchDelegate         Method     System.IntPtr GetLaunchDelegate(string args)                   
+GetLifetimeService        Method     System.Object GetLifetimeService()                             
+GetType                   Method     type GetType()                                                 
+InitializeLifetimeService Method     System.Object InitializeLifetimeService()                      
+ReleaseLaunchMaterial     Method     void ReleaseLaunchMaterial()                                   
+ToString                  Method     string ToString()                                              
+
+

@@ -1,0 +1,53 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab35d-217d-11da-b2a4-000e7bbb2b09}
+
+Name                                   MemberType            Definition                                                
+----                                   ----------            ----------                                                
+CheckCertificateSignature              Method                void CheckCertificateSignature (ISignerCertificate, bool) 
+CheckSignature                         Method                void CheckSignature (Pkcs10AllowedSignatureTypes)         
+Encode                                 Method                void Encode ()                                            
+GetInnerRequest                        Method                IX509CertificateRequest GetInnerRequest (InnerRequestLe...
+Initialize                             Method                void Initialize (X509CertificateEnrollmentContext)        
+InitializeDecode                       Method                void InitializeDecode (string, EncodingType)              
+InitializeFromCertificate              Method                void InitializeFromCertificate (X509CertificateEnrollme...
+InitializeFromInnerRequest             Method                void InitializeFromInnerRequest (IX509CertificateRequest) 
+InitializeFromInnerRequestTemplate     Method                void InitializeFromInnerRequestTemplate (IX509Certifica...
+InitializeFromInnerRequestTemplateName Method                void InitializeFromInnerRequestTemplateName (IX509Certi...
+InitializeFromTemplate                 Method                void InitializeFromTemplate (X509CertificateEnrollmentC...
+InitializeFromTemplateName             Method                void InitializeFromTemplateName (X509CertificateEnrollm...
+ResetForEncode                         Method                void ResetForEncode ()                                    
+EncryptedKeyHash                       ParameterizedProperty string EncryptedKeyHash (EncodingType) {get}              
+KeyArchivalCertificate                 ParameterizedProperty string KeyArchivalCertificate (EncodingType) {get} {set}  
+RawData                                ParameterizedProperty string RawData (EncodingType) {get}                       
+RenewalCertificate                     ParameterizedProperty string RenewalCertificate (EncodingType) {get} {set}      
+SenderNonce                            ParameterizedProperty string SenderNonce (EncodingType) {get} {set}             
+AlternateSignatureAlgorithm            Property              bool AlternateSignatureAlgorithm () {get} {set}           
+ArchivePrivateKey                      Property              bool ArchivePrivateKey () {get} {set}                     
+ClientId                               Property              RequestClientInfoClientId ClientId () {get} {set}         
+CriticalExtensions                     Property              IObjectIds CriticalExtensions () {get}                    
+CryptAttributes                        Property              ICryptAttributes CryptAttributes () {get}                 
+CspInformations                        Property              ICspInformations CspInformations () {get} {set}           
+EncryptionAlgorithm                    Property              IObjectId EncryptionAlgorithm () {get} {set}              
+EncryptionStrength                     Property              int EncryptionStrength () {get} {set}                     
+EnrollmentContext                      Property              X509CertificateEnrollmentContext EnrollmentContext () {...
+HashAlgorithm                          Property              IObjectId HashAlgorithm () {get} {set}                    
+NameValuePairs                         Property              IX509NameValuePairs NameValuePairs () {get}               
+NullSigned                             Property              bool NullSigned () {get}                                  
+ParentWindow                           Property              int ParentWindow () {get} {set}                           
+PolicyServer                           Property              IX509EnrollmentPolicyServer PolicyServer () {get}         
+RequesterName                          Property              string RequesterName () {get} {set}                       
+SignatureInformation                   Property              IX509SignatureInformation SignatureInformation () {get}   
+SignerCertificate                      Property              ISignerCertificate SignerCertificate () {get} {set}       
+SignerCertificates                     Property              ISignerCertificates SignerCertificates () {get}           
+Silent                                 Property              bool Silent () {get} {set}                                
+SuppressDefaults                       Property              bool SuppressDefaults () {get} {set}                      
+SuppressOids                           Property              IObjectIds SuppressOids () {get}                          
+Template                               Property              IX509CertificateTemplate Template () {get}                
+TemplateObjectId                       Property              IObjectId TemplateObjectId () {get}                       
+TransactionId                          Property              int TransactionId () {get} {set}                          
+Type                                   Property              X509RequestType Type () {get}                             
+UIContextMessage                       Property              string UIContextMessage () {get} {set}                    
+X509Extensions                         Property              IX509Extensions X509Extensions () {get}                   
+
+

@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.Globalization.StringInfo
+
+Name                    MemberType Definition                                                                          
+----                    ---------- ----------                                                                          
+Equals                  Method     bool Equals(System.Object value)                                                    
+GetHashCode             Method     int GetHashCode()                                                                   
+GetType                 Method     type GetType()                                                                      
+SubstringByTextElements Method     string SubstringByTextElements(int startingTextElement), string SubstringByTextEl...
+ToString                Method     string ToString()                                                                   
+LengthInTextElements    Property   int LengthInTextElements {get;}                                                     
+String                  Property   string String {get;set;}                                                            
+
+

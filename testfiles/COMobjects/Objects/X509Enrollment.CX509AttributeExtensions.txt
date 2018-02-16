@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab324-217d-11da-b2a4-000e7bbb2b09}
+
+Name             MemberType            Definition                                       
+----             ----------            ----------                                       
+Initialize       Method                void Initialize (IObjectId, EncodingType, string)
+InitializeDecode Method                void InitializeDecode (EncodingType, string)     
+InitializeEncode Method                void InitializeEncode (IX509Extensions)          
+RawData          ParameterizedProperty string RawData (EncodingType) {get}              
+ObjectId         Property              IObjectId ObjectId () {get}                      
+X509Extensions   Property              IX509Extensions X509Extensions () {get}          
+
+

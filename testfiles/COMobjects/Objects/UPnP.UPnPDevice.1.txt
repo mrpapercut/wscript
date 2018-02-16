@@ -1,0 +1,27 @@
+﻿
+
+   TypeName: System.__ComObject#{3d44d0d1-98c9-4889-acd1-f9d674bf2221}
+
+Name             MemberType Definition                            
+----             ---------- ----------                            
+IconURL          Method     string IconURL (string, int, int, int)
+Children         Property   IUPnPDevices Children () {get}        
+Description      Property   string Description () {get}           
+FriendlyName     Property   string FriendlyName () {get}          
+HasChildren      Property   bool HasChildren () {get}             
+IsRootDevice     Property   bool IsRootDevice () {get}            
+ManufacturerName Property   string ManufacturerName () {get}      
+ManufacturerURL  Property   string ManufacturerURL () {get}       
+ModelName        Property   string ModelName () {get}             
+ModelNumber      Property   string ModelNumber () {get}           
+ModelURL         Property   string ModelURL () {get}              
+ParentDevice     Property   IUPnPDevice ParentDevice () {get}     
+PresentationURL  Property   string PresentationURL () {get}       
+RootDevice       Property   IUPnPDevice RootDevice () {get}       
+SerialNumber     Property   string SerialNumber () {get}          
+Services         Property   IUPnPServices Services () {get}       
+Type             Property   string Type () {get}                  
+UniqueDeviceName Property   string UniqueDeviceName () {get}      
+UPC              Property   string UPC () {get}                   
+
+

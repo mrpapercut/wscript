@@ -1,0 +1,23 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.iTv.CiTvOverlaySurface
+
+Name               MemberType Definition                                                                                                                                 
+----               ---------- ----------                                                                                                                                 
+AdviseEventSink    Method     void IiTvOverlaySurface.AdviseEventSink(System.Object pSink)                                                                               
+Allocate           Method     void IiTvOverlaySurface.Allocate(int Width, int Height, bool Widescreen, bool ScaleToViewport)                                             
+BeginRegionUpdates Method     void IiTvOverlaySurface.BeginRegionUpdates()                                                                                               
+EndRegionUpdates   Method     void IiTvOverlaySurface.EndRegionUpdates()                                                                                                 
+Equals             Method     bool Equals(System.Object obj)                                                                                                             
+Free               Method     void IiTvOverlaySurface.Free()                                                                                                             
+GetHashCode        Method     int GetHashCode()                                                                                                                          
+GetRenderingMode   Method     void IiTvOverlaySurface.GetRenderingMode([ref] int PixelAspectWidth, [ref] int PixelAspectHeight, [ref] int PlayerViewportWidth, [ref] i...
+GetType            Method     type GetType()                                                                                                                             
+SetLocation        Method     void IiTvOverlaySurface.SetLocation(int X, int Y)                                                                                          
+ToString           Method     string ToString()                                                                                                                          
+UnadviseEventSink  Method     void IiTvOverlaySurface.UnadviseEventSink()                                                                                                
+UpdateRegion       Method     void IiTvOverlaySurface.UpdateRegion(int X, int Y, int Width, int Height, int SourceStride, System.IntPtr Buffer)                          
+AnimationLevel     Property   uint32 AnimationLevel {get;}                                                                                                               
+Visible            Property   bool Visible {get;set;}                                                                                                                    
+
+

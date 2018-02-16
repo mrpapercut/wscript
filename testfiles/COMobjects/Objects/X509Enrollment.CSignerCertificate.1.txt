@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab33d-217d-11da-b2a4-000e7bbb2b09}
+
+Name                 MemberType            Definition                                                        
+----                 ----------            ----------                                                        
+Initialize           Method                void Initialize (bool, X509PrivateKeyVerify, EncodingType, string)
+Certificate          ParameterizedProperty string Certificate (EncodingType) {get}                           
+ParentWindow         Property              int ParentWindow () {get} {set}                                   
+Pin                  Property              string Pin () {set}                                               
+PrivateKey           Property              IX509PrivateKey PrivateKey () {get}                               
+SignatureInformation Property              IX509SignatureInformation SignatureInformation () {get}           
+Silent               Property              bool Silent () {get} {set}                                        
+UIContextMessage     Property              string UIContextMessage () {get} {set}                            
+
+

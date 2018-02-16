@@ -1,0 +1,19 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab308-217d-11da-b2a4-000e7bbb2b09}
+
+Name                         MemberType            Definition                                                          
+----                         ----------            ----------                                                          
+Add                          Method                void Add (ICspInformation)                                          
+AddAvailableCsps             Method                void AddAvailableCsps ()                                            
+Clear                        Method                void Clear ()                                                       
+GetCspStatusesFromOperations Method                ICspStatuses GetCspStatusesFromOperations (AlgorithmOperationFlag...
+GetCspStatusFromProviderName Method                ICspStatus GetCspStatusFromProviderName (string, X509KeySpec)       
+GetEncryptionCspAlgorithms   Method                ICspAlgorithms GetEncryptionCspAlgorithms (ICspInformation)         
+GetHashAlgorithms            Method                IObjectIds GetHashAlgorithms (ICspInformation)                      
+Remove                       Method                void Remove (int)                                                   
+ItemByIndex                  ParameterizedProperty ICspInformation ItemByIndex (int) {get}                             
+ItemByName                   ParameterizedProperty ICspInformation ItemByName (string) {get}                           
+Count                        Property              int Count () {get}                                                  
+
+

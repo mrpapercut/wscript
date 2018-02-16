@@ -1,0 +1,65 @@
+﻿
+
+   TypeName: System.__ComObject#{790c6e0b-9194-4cc9-9426-a48a63185696}
+
+Name                                  MemberType Definition                                                            
+----                                  ---------- ----------                                                            
+AliasComponent                        Method     void AliasComponent (string, string, string, string, string)          
+AreApplicationInstancesPaused         Method     bool AreApplicationInstancesPaused (Variant)                          
+BackupREGDB                           Method     void BackupREGDB (string)                                             
+Connect                               Method     IDispatch Connect (string)                                            
+CopyApplications                      Method     void CopyApplications (string, Variant, string)                       
+CopyComponents                        Method     void CopyComponents (string, Variant, string)                         
+CreateServiceForApplication           Method     void CreateServiceForApplication (string, string, string, string, s...
+DeleteServiceForApplication           Method     void DeleteServiceForApplication (string)                             
+DumpApplicationInstance               Method     string DumpApplicationInstance (string, string, int)                  
+ExportApplication                     Method     void ExportApplication (string, string, int)                          
+ExportPartition                       Method     void ExportPartition (string, string, int)                            
+FlushPartitionCache                   Method     void FlushPartitionCache ()                                           
+GetApplicationInstanceIDFromProcessID Method     string GetApplicationInstanceIDFromProcessID (int)                    
+GetCollection                         Method     IDispatch GetCollection (string)                                      
+GetCollectionByQuery                  Method     IDispatch GetCollectionByQuery (string, SAFEARRAY(Variant))           
+GetCollectionByQuery2                 Method     IDispatch GetCollectionByQuery2 (string, Variant)                     
+GetComponentVersionCount              Method     int GetComponentVersionCount (string)                                 
+GetEventClassesForIID                 Method     void GetEventClassesForIID (string, SAFEARRAY(Variant), SAFEARRAY(V...
+GetMultipleComponentsInfo             Method     void GetMultipleComponentsInfo (string, SAFEARRAY(Variant), SAFEARR...
+GetPartitionID                        Method     string GetPartitionID (string)                                        
+GetPartitionName                      Method     string GetPartitionName (string)                                      
+ImportComponent                       Method     void ImportComponent (string, string)                                 
+ImportComponents                      Method     void ImportComponents (string, Variant, Variant)                      
+ImportUnconfiguredComponents          Method     void ImportUnconfiguredComponents (string, Variant, Variant)          
+InstallApplication                    Method     void InstallApplication (string, string, int, string, string, string) 
+InstallComponent                      Method     void InstallComponent (string, string, string, string)                
+InstallEventClass                     Method     void InstallEventClass (string, string, string, string)               
+InstallMultipleComponents             Method     void InstallMultipleComponents (string, SAFEARRAY(Variant), SAFEARR...
+InstallMultipleEventClasses           Method     void InstallMultipleEventClasses (string, SAFEARRAY(Variant), SAFEA...
+InstallPartition                      Method     void InstallPartition (string, string, int, string, string, string)   
+IsSafeToDelete                        Method     COMAdminInUse IsSafeToDelete (string)                                 
+MoveComponents                        Method     void MoveComponents (string, Variant, string)                         
+PauseApplicationInstances             Method     void PauseApplicationInstances (Variant)                              
+PromoteUnconfiguredComponents         Method     void PromoteUnconfiguredComponents (string, Variant, Variant)         
+QueryApplicationFile                  Method     void QueryApplicationFile (string, string, string, bool, bool, SAFE...
+QueryApplicationFile2                 Method     IDispatch QueryApplicationFile2 (string)                              
+RecycleApplicationInstances           Method     void RecycleApplicationInstances (Variant, int)                       
+RefreshComponents                     Method     void RefreshComponents ()                                             
+RefreshRouter                         Method     void RefreshRouter ()                                                 
+Reserved1                             Method     void Reserved1 ()                                                     
+Reserved2                             Method     void Reserved2 ()                                                     
+RestoreREGDB                          Method     void RestoreREGDB (string)                                            
+ResumeApplicationInstances            Method     void ResumeApplicationInstances (Variant)                             
+ServiceCheck                          Method     int ServiceCheck (int)                                                
+ShutdownApplication                   Method     void ShutdownApplication (string)                                     
+ShutdownApplicationInstances          Method     void ShutdownApplicationInstances (Variant)                           
+StartApplication                      Method     void StartApplication (string)                                        
+StartRouter                           Method     void StartRouter ()                                                   
+StopRouter                            Method     void StopRouter ()                                                    
+CurrentPartition                      Property   string CurrentPartition () {set}                                      
+CurrentPartitionID                    Property   string CurrentPartitionID () {get}                                    
+CurrentPartitionName                  Property   string CurrentPartitionName () {get}                                  
+GlobalPartitionID                     Property   string GlobalPartitionID () {get}                                     
+Is64BitCatalogServer                  Property   bool Is64BitCatalogServer () {get}                                    
+IsApplicationInstanceDumpSupported    Property   bool IsApplicationInstanceDumpSupported () {get}                      
+MajorVersion                          Property   int MajorVersion () {get}                                             
+MinorVersion                          Property   int MinorVersion () {get}                                             
+
+

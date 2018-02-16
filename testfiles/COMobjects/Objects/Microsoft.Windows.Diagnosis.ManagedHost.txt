@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: Microsoft.Windows.Diagnosis.ManagedHost
+
+Name        MemberType Definition                                                                                      
+----        ---------- ----------                                                                                      
+Cancel      Method     void Cancel(), void IScriptedDiagnosticHost.Cancel()                                            
+Equals      Method     bool Equals(System.Object obj)                                                                  
+GetHashCode Method     int GetHashCode()                                                                               
+GetType     Method     type GetType()                                                                                  
+Initialize  Method     void Initialize(string powerShellVersion, Microsoft.Windows.Diagnosis.IScriptedDiagnosticInte...
+RunScript   Method     void RunScript(string scriptPath, string[] parameterNames, string[] parameterValues), void IS...
+ToString    Method     string ToString()                                                                               
+
+

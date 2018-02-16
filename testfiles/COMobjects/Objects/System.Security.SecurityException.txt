@@ -1,0 +1,35 @@
+﻿
+
+   TypeName: System.Security.SecurityException
+
+Name                      MemberType Definition                                                                        
+----                      ---------- ----------                                                                        
+Equals                    Method     bool Equals(System.Object obj), bool _Exception.Equals(System.Object obj)         
+GetBaseException          Method     System.Exception GetBaseException(), System.Exception _Exception.GetBaseExcepti...
+GetHashCode               Method     int GetHashCode(), int _Exception.GetHashCode()                                   
+GetObjectData             Method     void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System....
+GetType                   Method     type GetType(), type _Exception.GetType()                                         
+ToString                  Method     string ToString(), string _Exception.ToString()                                   
+Action                    Property   System.Security.Permissions.SecurityAction Action {get;set;}                      
+Data                      Property   System.Collections.IDictionary Data {get;}                                        
+Demanded                  Property   System.Object Demanded {get;set;}                                                 
+DenySetInstance           Property   System.Object DenySetInstance {get;set;}                                          
+FailedAssemblyInfo        Property   System.Reflection.AssemblyName FailedAssemblyInfo {get;set;}                      
+FirstPermissionThatFailed Property   System.Security.IPermission FirstPermissionThatFailed {get;set;}                  
+GrantedSet                Property   string GrantedSet {get;set;}                                                      
+HelpLink                  Property   string HelpLink {get;set;}                                                        
+HResult                   Property   int HResult {get;set;}                                                            
+InnerException            Property   System.Exception InnerException {get;}                                            
+Message                   Property   string Message {get;}                                                             
+Method                    Property   System.Reflection.MethodInfo Method {get;set;}                                    
+PermissionState           Property   string PermissionState {get;set;}                                                 
+PermissionType            Property   type PermissionType {get;set;}                                                    
+PermitOnlySetInstance     Property   System.Object PermitOnlySetInstance {get;set;}                                    
+RefusedSet                Property   string RefusedSet {get;set;}                                                      
+Source                    Property   string Source {get;set;}                                                          
+StackTrace                Property   string StackTrace {get;}                                                          
+TargetSite                Property   System.Reflection.MethodBase TargetSite {get;}                                    
+Url                       Property   string Url {get;set;}                                                             
+Zone                      Property   System.Security.SecurityZone Zone {get;set;}                                      
+
+

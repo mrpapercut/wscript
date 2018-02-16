@@ -1,0 +1,50 @@
+﻿
+
+   TypeName: System.Globalization.DateTimeFormatInfo
+
+Name                             MemberType Definition                                                                 
+----                             ---------- ----------                                                                 
+Clone                            Method     System.Object Clone(), System.Object ICloneable.Clone()                    
+Equals                           Method     bool Equals(System.Object obj)                                             
+GetAbbreviatedDayName            Method     string GetAbbreviatedDayName(System.DayOfWeek dayofweek)                   
+GetAbbreviatedEraName            Method     string GetAbbreviatedEraName(int era)                                      
+GetAbbreviatedMonthName          Method     string GetAbbreviatedMonthName(int month)                                  
+GetAllDateTimePatterns           Method     string[] GetAllDateTimePatterns(char format), string[] GetAllDateTimePat...
+GetDayName                       Method     string GetDayName(System.DayOfWeek dayofweek)                              
+GetEra                           Method     int GetEra(string eraName)                                                 
+GetEraName                       Method     string GetEraName(int era)                                                 
+GetFormat                        Method     System.Object GetFormat(type formatType), System.Object IFormatProvider....
+GetHashCode                      Method     int GetHashCode()                                                          
+GetMonthName                     Method     string GetMonthName(int month)                                             
+GetShortestDayName               Method     string GetShortestDayName(System.DayOfWeek dayOfWeek)                      
+GetType                          Method     type GetType()                                                             
+SetAllDateTimePatterns           Method     void SetAllDateTimePatterns(string[] patterns, char format)                
+ToString                         Method     string ToString()                                                          
+AbbreviatedDayNames              Property   string[] AbbreviatedDayNames {get;set;}                                    
+AbbreviatedMonthGenitiveNames    Property   string[] AbbreviatedMonthGenitiveNames {get;set;}                          
+AbbreviatedMonthNames            Property   string[] AbbreviatedMonthNames {get;set;}                                  
+AMDesignator                     Property   string AMDesignator {get;set;}                                             
+Calendar                         Property   System.Globalization.Calendar Calendar {get;set;}                          
+CalendarWeekRule                 Property   System.Globalization.CalendarWeekRule CalendarWeekRule {get;set;}          
+DateSeparator                    Property   string DateSeparator {get;set;}                                            
+DayNames                         Property   string[] DayNames {get;set;}                                               
+FirstDayOfWeek                   Property   System.DayOfWeek FirstDayOfWeek {get;set;}                                 
+FullDateTimePattern              Property   string FullDateTimePattern {get;set;}                                      
+IsReadOnly                       Property   bool IsReadOnly {get;}                                                     
+LongDatePattern                  Property   string LongDatePattern {get;set;}                                          
+LongTimePattern                  Property   string LongTimePattern {get;set;}                                          
+MonthDayPattern                  Property   string MonthDayPattern {get;set;}                                          
+MonthGenitiveNames               Property   string[] MonthGenitiveNames {get;set;}                                     
+MonthNames                       Property   string[] MonthNames {get;set;}                                             
+NativeCalendarName               Property   string NativeCalendarName {get;}                                           
+PMDesignator                     Property   string PMDesignator {get;set;}                                             
+RFC1123Pattern                   Property   string RFC1123Pattern {get;}                                               
+ShortDatePattern                 Property   string ShortDatePattern {get;set;}                                         
+ShortestDayNames                 Property   string[] ShortestDayNames {get;set;}                                       
+ShortTimePattern                 Property   string ShortTimePattern {get;set;}                                         
+SortableDateTimePattern          Property   string SortableDateTimePattern {get;}                                      
+TimeSeparator                    Property   string TimeSeparator {get;set;}                                            
+UniversalSortableDateTimePattern Property   string UniversalSortableDateTimePattern {get;}                             
+YearMonthPattern                 Property   string YearMonthPattern {get;set;}                                         
+
+

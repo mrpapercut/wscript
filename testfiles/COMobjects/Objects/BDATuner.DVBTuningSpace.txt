@@ -1,0 +1,19 @@
+﻿
+
+   TypeName: System.__ComObject#{843188b4-ce62-43db-966b-8145a094e040}
+
+Name                           MemberType Definition                                                    
+----                           ---------- ----------                                                    
+Clone                          Method     ITuningSpace Clone ()                                         
+CreateTuneRequest              Method     ITuneRequest CreateTuneRequest ()                             
+CLSID                          Property   string CLSID () {get}                                         
+DefaultLocator                 Property   ILocator DefaultLocator () {get} {set}                        
+DefaultPreferredComponentTypes Property   IComponentTypes DefaultPreferredComponentTypes () {get} {set} 
+FrequencyMapping               Property   string FrequencyMapping () {get} {set}                        
+FriendlyName                   Property   string FriendlyName () {get} {set}                            
+NetworkID                      Property   int NetworkID () {get} {set}                                  
+NetworkType                    Property   string NetworkType () {get} {set}                             
+SystemType                     Property   DVBSystemType SystemType () {get} {set}                       
+UniqueName                     Property   string UniqueName () {get} {set}                              
+
+

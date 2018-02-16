@@ -2,15 +2,15 @@
 
    TypeName: System.__ComObject#{3da7627a-c7ae-4b23-8708-638c50362c25}
 
-Name                          MemberType Definition                                                                     
-----                          ---------- ----------                                                                     
-AddPronunciation              Method     void AddPronunciation (string, int, SpeechPartOfSpeech, string)                
-AddPronunciationByPhoneIds    Method     void AddPronunciationByPhoneIds (string, int, SpeechPartOfSpeech, Variant)     
-GetGenerationChange           Method     ISpeechLexiconWords GetGenerationChange (int)                                  
-GetPronunciations             Method     ISpeechLexiconPronunciations GetPronunciations (string, int, SpeechLexiconType)
-GetWords                      Method     ISpeechLexiconWords GetWords (SpeechLexiconType, int)                          
-RemovePronunciation           Method     void RemovePronunciation (string, int, SpeechPartOfSpeech, string)             
-RemovePronunciationByPhoneIds Method     void RemovePronunciationByPhoneIds (string, int, SpeechPartOfSpeech, Variant)  
-GenerationId                  Property   int GenerationId () {get}                                                      
+Name                          MemberType Definition                                                                    
+----                          ---------- ----------                                                                    
+AddPronunciation              Method     void AddPronunciation (string, int, SpeechPartOfSpeech, string)               
+AddPronunciationByPhoneIds    Method     void AddPronunciationByPhoneIds (string, int, SpeechPartOfSpeech, Variant)    
+GetGenerationChange           Method     ISpeechLexiconWords GetGenerationChange (int)                                 
+GetPronunciations             Method     ISpeechLexiconPronunciations GetPronunciations (string, int, SpeechLexiconT...
+GetWords                      Method     ISpeechLexiconWords GetWords (SpeechLexiconType, int)                         
+RemovePronunciation           Method     void RemovePronunciation (string, int, SpeechPartOfSpeech, string)            
+RemovePronunciationByPhoneIds Method     void RemovePronunciationByPhoneIds (string, int, SpeechPartOfSpeech, Variant) 
+GenerationId                  Property   int GenerationId () {get}                                                     
 
 

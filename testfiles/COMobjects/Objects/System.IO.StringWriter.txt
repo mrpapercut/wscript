@@ -1,0 +1,27 @@
+﻿
+
+   TypeName: System.IO.StringWriter
+
+Name                      MemberType Definition                                                                        
+----                      ---------- ----------                                                                        
+Close                     Method     void Close()                                                                      
+CreateObjRef              Method     System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)                   
+Dispose                   Method     void Dispose(), void IDisposable.Dispose()                                        
+Equals                    Method     bool Equals(System.Object obj)                                                    
+Flush                     Method     void Flush()                                                                      
+FlushAsync                Method     System.Threading.Tasks.Task FlushAsync()                                          
+GetHashCode               Method     int GetHashCode()                                                                 
+GetLifetimeService        Method     System.Object GetLifetimeService()                                                
+GetStringBuilder          Method     System.Text.StringBuilder GetStringBuilder()                                      
+GetType                   Method     type GetType()                                                                    
+InitializeLifetimeService Method     System.Object InitializeLifetimeService()                                         
+ToString                  Method     string ToString()                                                                 
+Write                     Method     void Write(char value), void Write(char[] buffer, int index, int count), void W...
+WriteAsync                Method     System.Threading.Tasks.Task WriteAsync(char value), System.Threading.Tasks.Task...
+WriteLine                 Method     void WriteLine(), void WriteLine(char value), void WriteLine(char[] buffer), vo...
+WriteLineAsync            Method     System.Threading.Tasks.Task WriteLineAsync(char value), System.Threading.Tasks....
+Encoding                  Property   System.Text.Encoding Encoding {get;}                                              
+FormatProvider            Property   System.IFormatProvider FormatProvider {get;}                                      
+NewLine                   Property   string NewLine {get;set;}                                                         
+
+

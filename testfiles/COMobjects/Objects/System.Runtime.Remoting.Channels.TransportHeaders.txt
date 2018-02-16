@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.Runtime.Remoting.Channels.TransportHeaders
+
+Name          MemberType            Definition                                                                         
+----          ----------            ----------                                                                         
+Equals        Method                bool Equals(System.Object obj)                                                     
+GetEnumerator Method                System.Collections.IEnumerator GetEnumerator(), System.Collections.IEnumerator I...
+GetHashCode   Method                int GetHashCode()                                                                  
+GetType       Method                type GetType()                                                                     
+ToString      Method                string ToString()                                                                  
+Item          ParameterizedProperty System.Object Item(System.Object key) {get;set;}                                   
+
+

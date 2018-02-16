@@ -1,0 +1,20 @@
+﻿
+
+   TypeName: System.Security.AllowPartiallyTrustedCallersAttribute
+
+Name                        MemberType Definition                                                                      
+----                        ---------- ----------                                                                      
+Equals                      Method     bool Equals(System.Object obj)                                                  
+GetHashCode                 Method     int GetHashCode()                                                               
+GetIDsOfNames               Method     void _Attribute.GetIDsOfNames([ref] guid riid, System.IntPtr rgszNames, uint3...
+GetType                     Method     type GetType()                                                                  
+GetTypeInfo                 Method     void _Attribute.GetTypeInfo(uint32 iTInfo, uint32 lcid, System.IntPtr ppTInfo)  
+GetTypeInfoCount            Method     void _Attribute.GetTypeInfoCount([ref] uint32 pcTInfo)                          
+Invoke                      Method     void _Attribute.Invoke(uint32 dispIdMember, [ref] guid riid, uint32 lcid, int...
+IsDefaultAttribute          Method     bool IsDefaultAttribute()                                                       
+Match                       Method     bool Match(System.Object obj)                                                   
+ToString                    Method     string ToString()                                                               
+PartialTrustVisibilityLevel Property   System.Security.PartialTrustVisibilityLevel PartialTrustVisibilityLevel {get;...
+TypeId                      Property   System.Object TypeId {get;}                                                     
+
+

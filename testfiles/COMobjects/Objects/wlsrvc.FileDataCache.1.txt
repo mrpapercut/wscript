@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{fc7e8022-4ec1-4237-a565-9d3a972082c1}
+
+Name            MemberType Definition                              
+----            ---------- ----------                              
+Add             Method     void Add (string, uint, IXMLDOMDocument)
+Delete          Method     void Delete (string)                    
+Initialize      Method     void Initialize (string, uint)          
+Query           Method     _CCACHEENTRY Query (string)             
+UnInitialize    Method     void UnInitialize ()                    
+CacheID         Property   ICacheID CacheID () {get}               
+CleanupInterval Property   uint CleanupInterval () {set}           
+Keys            Property   tagSAFEARRAY Keys () {get}              
+
+

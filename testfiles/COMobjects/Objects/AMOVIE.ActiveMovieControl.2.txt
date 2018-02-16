@@ -1,0 +1,58 @@
+﻿
+
+   TypeName: System.__ComObject#{265ec140-ae62-11d1-8500-00a0c91f9ca0}
+
+Name                    MemberType Definition                                         
+----                    ---------- ----------                                         
+AboutBox                Method     void AboutBox ()                                   
+IsSoundCardEnabled      Method     bool IsSoundCardEnabled ()                         
+Pause                   Method     void Pause ()                                      
+Run                     Method     void Run ()                                        
+Stop                    Method     void Stop ()                                       
+AllowChangeDisplayMode  Property   bool AllowChangeDisplayMode () {get} {set}         
+AllowHideControls       Property   bool AllowHideControls () {get} {set}              
+AllowHideDisplay        Property   bool AllowHideDisplay () {get} {set}               
+Appearance              Property   AppearanceConstants Appearance () {get} {set}      
+Author                  Property   string Author () {get}                             
+AutoRewind              Property   bool AutoRewind () {get} {set}                     
+AutoStart               Property   bool AutoStart () {get} {set}                      
+Balance                 Property   int Balance () {get} {set}                         
+BorderStyle             Property   BorderStyleConstants BorderStyle () {get} {set}    
+Copyright               Property   string Copyright () {get}                          
+CurrentPosition         Property   double CurrentPosition () {get} {set}              
+CurrentState            Property   StateConstants CurrentState () {get}               
+Description             Property   string Description () {get}                        
+DisplayBackColor        Property   OLE_COLOR DisplayBackColor () {get} {set}          
+DisplayForeColor        Property   OLE_COLOR DisplayForeColor () {get} {set}          
+DisplayMode             Property   DisplayModeConstants DisplayMode () {get} {set}    
+Duration                Property   double Duration () {get}                           
+EnableContextMenu       Property   bool EnableContextMenu () {get} {set}              
+Enabled                 Property   bool Enabled () {get} {set}                        
+EnablePositionControls  Property   bool EnablePositionControls () {get} {set}         
+EnableSelectionControls Property   bool EnableSelectionControls () {get} {set}        
+EnableTracker           Property   bool EnableTracker () {get} {set}                  
+FileName                Property   string FileName () {get} {set}                     
+FilterGraph             Property   IUnknown FilterGraph () {get} {set}                
+FilterGraphDispatch     Property   IDispatch FilterGraphDispatch () {get}             
+FullScreenMode          Property   bool FullScreenMode () {get} {set}                 
+hWnd                    Property   int hWnd () {get}                                  
+ImageSourceHeight       Property   int ImageSourceHeight () {get}                     
+ImageSourceWidth        Property   int ImageSourceWidth () {get}                      
+Info                    Property   int Info () {get}                                  
+MediaPlayer             Property   IDispatch MediaPlayer () {get}                     
+MovieWindowSize         Property   WindowSizeConstants MovieWindowSize () {get} {set} 
+PlayCount               Property   int PlayCount () {get} {set}                       
+Rate                    Property   double Rate () {get} {set}                         
+Rating                  Property   string Rating () {get}                             
+ReadyState              Property   ReadyStateConstants ReadyState () {get}            
+SelectionEnd            Property   double SelectionEnd () {get} {set}                 
+SelectionStart          Property   double SelectionStart () {get} {set}               
+ShowControls            Property   bool ShowControls () {get} {set}                   
+ShowDisplay             Property   bool ShowDisplay () {get} {set}                    
+ShowPositionControls    Property   bool ShowPositionControls () {get} {set}           
+ShowSelectionControls   Property   bool ShowSelectionControls () {get} {set}          
+ShowTracker             Property   bool ShowTracker () {get} {set}                    
+Title                   Property   string Title () {get}                              
+Volume                  Property   int Volume () {get} {set}                          
+
+

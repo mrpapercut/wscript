@@ -1,0 +1,22 @@
+﻿
+
+   TypeName: System.Security.Permissions.GacIdentityPermission
+
+Name        MemberType Definition                                                                                      
+----        ---------- ----------                                                                                      
+Assert      Method     void Assert(), void IStackWalk.Assert()                                                         
+Copy        Method     System.Security.IPermission Copy(), System.Security.IPermission IPermission.Copy()              
+Demand      Method     void Demand(), void IPermission.Demand(), void IStackWalk.Demand()                              
+Deny        Method     void Deny(), void IStackWalk.Deny()                                                             
+Equals      Method     bool Equals(System.Object obj)                                                                  
+FromXml     Method     void FromXml(System.Security.SecurityElement securityElement), void ISecurityEncodable.FromXm...
+GetHashCode Method     int GetHashCode()                                                                               
+GetType     Method     type GetType()                                                                                  
+Intersect   Method     System.Security.IPermission Intersect(System.Security.IPermission target), System.Security.IP...
+IsSubsetOf  Method     bool IsSubsetOf(System.Security.IPermission target), bool IPermission.IsSubsetOf(System.Secur...
+PermitOnly  Method     void PermitOnly(), void IStackWalk.PermitOnly()                                                 
+ToString    Method     string ToString()                                                                               
+ToXml       Method     System.Security.SecurityElement ToXml(), System.Security.SecurityElement ISecurityEncodable.T...
+Union       Method     System.Security.IPermission Union(System.Security.IPermission target), System.Security.IPermi...
+
+

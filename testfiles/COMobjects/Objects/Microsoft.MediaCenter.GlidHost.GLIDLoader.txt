@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.GlidHost.GLIDLoader
+
+Name         MemberType Definition                                                                                                                                       
+----         ---------- ----------                                                                                                                                       
+Close        Method     void Close(), void IGLIDLoader.Close()                                                                                                           
+CreateLineup Method     string CreateLineup(string _deviceInstanceId, string _networkType), string IGLIDLoader.CreateLineup(string bstrDeviceURI, string bstrNetworkType)
+Dispose      Method     void Dispose(), void IDisposable.Dispose()                                                                                                       
+Equals       Method     bool Equals(System.Object obj)                                                                                                                   
+GetHashCode  Method     int GetHashCode()                                                                                                                                
+GetType      Method     type GetType()                                                                                                                                   
+ToString     Method     string ToString()                                                                                                                                
+
+

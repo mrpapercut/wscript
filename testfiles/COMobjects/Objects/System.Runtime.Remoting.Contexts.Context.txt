@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.Runtime.Remoting.Contexts.Context
+
+Name              MemberType Definition                                                                  
+----              ---------- ----------                                                                  
+DoCallBack        Method     void DoCallBack(System.Runtime.Remoting.Contexts.CrossContextDelegate deleg)
+Equals            Method     bool Equals(System.Object obj)                                              
+Freeze            Method     void Freeze()                                                               
+GetHashCode       Method     int GetHashCode()                                                           
+GetProperty       Method     System.Runtime.Remoting.Contexts.IContextProperty GetProperty(string name)  
+GetType           Method     type GetType()                                                              
+SetProperty       Method     void SetProperty(System.Runtime.Remoting.Contexts.IContextProperty prop)    
+ToString          Method     string ToString()                                                           
+ContextID         Property   int ContextID {get;}                                                        
+ContextProperties Property   System.Runtime.Remoting.Contexts.IContextProperty[] ContextProperties {get;}
+
+

@@ -1,0 +1,25 @@
+﻿
+
+   TypeName: System.__ComObject#{0369b4e2-45b6-11d3-b650-00c04f79498e}
+
+Name                           MemberType Definition                                                    
+----                           ---------- ----------                                                    
+Clone                          Method     ITuningSpace Clone ()                                         
+CreateTuneRequest              Method     ITuneRequest CreateTuneRequest ()                             
+CLSID                          Property   string CLSID () {get}                                         
+CountryCode                    Property   int CountryCode () {get} {set}                                
+DefaultLocator                 Property   ILocator DefaultLocator () {get} {set}                        
+DefaultPreferredComponentTypes Property   IComponentTypes DefaultPreferredComponentTypes () {get} {set} 
+FrequencyMapping               Property   string FrequencyMapping () {get} {set}                        
+FriendlyName                   Property   string FriendlyName () {get} {set}                            
+InputType                      Property   tagTunerInputType InputType () {get} {set}                    
+MaxChannel                     Property   int MaxChannel () {get} {set}                                 
+MaxMinorChannel                Property   int MaxMinorChannel () {get} {set}                            
+MaxPhysicalChannel             Property   int MaxPhysicalChannel () {get} {set}                         
+MinChannel                     Property   int MinChannel () {get} {set}                                 
+MinMinorChannel                Property   int MinMinorChannel () {get} {set}                            
+MinPhysicalChannel             Property   int MinPhysicalChannel () {get} {set}                         
+NetworkType                    Property   string NetworkType () {get} {set}                             
+UniqueName                     Property   string UniqueName () {get} {set}                              
+
+

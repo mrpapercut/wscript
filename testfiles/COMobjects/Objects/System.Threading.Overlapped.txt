@@ -1,0 +1,19 @@
+﻿
+
+   TypeName: System.Threading.Overlapped
+
+Name              MemberType Definition                                                                                
+----              ---------- ----------                                                                                
+Equals            Method     bool Equals(System.Object obj)                                                            
+GetHashCode       Method     int GetHashCode()                                                                         
+GetType           Method     type GetType()                                                                            
+Pack              Method     System.Threading.NativeOverlapped*, mscorlib, Version=4.0.0.0, Culture=neutral, PublicK...
+ToString          Method     string ToString()                                                                         
+UnsafePack        Method     System.Threading.NativeOverlapped*, mscorlib, Version=4.0.0.0, Culture=neutral, PublicK...
+AsyncResult       Property   System.IAsyncResult AsyncResult {get;set;}                                                
+EventHandle       Property   int EventHandle {get;set;}                                                                
+EventHandleIntPtr Property   System.IntPtr EventHandleIntPtr {get;set;}                                                
+OffsetHigh        Property   int OffsetHigh {get;set;}                                                                 
+OffsetLow         Property   int OffsetLow {get;set;}                                                                  
+
+

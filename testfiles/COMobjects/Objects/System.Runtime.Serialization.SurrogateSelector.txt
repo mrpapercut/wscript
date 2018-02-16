@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: System.Runtime.Serialization.SurrogateSelector
+
+Name            MemberType Definition                                                                                  
+----            ---------- ----------                                                                                  
+AddSurrogate    Method     void AddSurrogate(type type, System.Runtime.Serialization.StreamingContext context, Syste...
+ChainSelector   Method     void ChainSelector(System.Runtime.Serialization.ISurrogateSelector selector), void ISurro...
+Equals          Method     bool Equals(System.Object obj)                                                              
+GetHashCode     Method     int GetHashCode()                                                                           
+GetNextSelector Method     System.Runtime.Serialization.ISurrogateSelector GetNextSelector(), System.Runtime.Seriali...
+GetSurrogate    Method     System.Runtime.Serialization.ISerializationSurrogate GetSurrogate(type type, System.Runti...
+GetType         Method     type GetType()                                                                              
+RemoveSurrogate Method     void RemoveSurrogate(type type, System.Runtime.Serialization.StreamingContext context)      
+ToString        Method     string ToString()                                                                           
+
+

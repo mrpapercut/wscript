@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{f49466a7-395a-4e9e-b6e7-32b331600dc0}
+
+Name       MemberType            Definition                                                
+----       ----------            ----------                                                
+Commit     Method                void Commit (CommitTemplateFlags, string)                 
+Initialize Method                void Initialize (IX509CertificateTemplate)                
+Property   ParameterizedProperty Variant Property (EnrollmentTemplateProperty) {get} {set} 
+Template   Property              IX509CertificateTemplate Template () {get}                
+
+

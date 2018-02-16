@@ -1,0 +1,37 @@
+﻿
+
+   TypeName: System.Security.Cryptography.X509Certificates.X509Certificate
+
+Name                            MemberType Definition                                                                  
+----                            ---------- ----------                                                                  
+Dispose                         Method     void Dispose(), void IDisposable.Dispose()                                  
+Equals                          Method     bool Equals(System.Object obj), bool Equals(X509Certificate other)          
+Export                          Method     byte[] Export(System.Security.Cryptography.X509Certificates.X509ContentTy...
+GetCertHash                     Method     byte[] GetCertHash()                                                        
+GetCertHashString               Method     string GetCertHashString()                                                  
+GetEffectiveDateString          Method     string GetEffectiveDateString()                                             
+GetExpirationDateString         Method     string GetExpirationDateString()                                            
+GetFormat                       Method     string GetFormat()                                                          
+GetHashCode                     Method     int GetHashCode()                                                           
+GetIssuerName                   Method     string GetIssuerName()                                                      
+GetKeyAlgorithm                 Method     string GetKeyAlgorithm()                                                    
+GetKeyAlgorithmParameters       Method     byte[] GetKeyAlgorithmParameters()                                          
+GetKeyAlgorithmParametersString Method     string GetKeyAlgorithmParametersString()                                    
+GetName                         Method     string GetName()                                                            
+GetObjectData                   Method     void ISerializable.GetObjectData(System.Runtime.Serialization.Serializati...
+GetPublicKey                    Method     byte[] GetPublicKey()                                                       
+GetPublicKeyString              Method     string GetPublicKeyString()                                                 
+GetRawCertData                  Method     byte[] GetRawCertData()                                                     
+GetRawCertDataString            Method     string GetRawCertDataString()                                               
+GetSerialNumber                 Method     byte[] GetSerialNumber()                                                    
+GetSerialNumberString           Method     string GetSerialNumberString()                                              
+GetType                         Method     type GetType()                                                              
+Import                          Method     void Import(byte[] rawData), void Import(byte[] rawData, string password,...
+OnDeserialization               Method     void IDeserializationCallback.OnDeserialization(System.Object sender)       
+Reset                           Method     void Reset()                                                                
+ToString                        Method     string ToString(), string ToString(bool fVerbose)                           
+Handle                          Property   System.IntPtr Handle {get;}                                                 
+Issuer                          Property   string Issuer {get;}                                                        
+Subject                         Property   string Subject {get;}                                                       
+
+

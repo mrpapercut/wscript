@@ -1,0 +1,21 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.iTv.CiTvStreamSelector
+
+Name                  MemberType Definition                                                                                      
+----                  ---------- ----------                                                                                      
+AdviseEventSink       Method     void IiTvStreamSelector.AdviseEventSink(System.Object punkIiTvStreamEvents)                     
+CommitStreamSelection Method     void IiTvStreamSelector.CommitStreamSelection()                                                 
+DeselectStream        Method     void IiTvStreamSelector.DeselectStream(uint64 StreamId)                                         
+EnumerateStreams      Method     void IiTvStreamSelector.EnumerateStreams([ref] ehiiTv.IEnumUnknown StreamInfoArray)             
+Equals                Method     bool Equals(System.Object obj)                                                                  
+GetActiveStream       Method     System.Object IiTvStreamSelector.GetActiveStream(ehiiTv.iTvStreamType Type)                     
+GetHashCode           Method     int GetHashCode()                                                                               
+GetMode               Method     ehiiTv.StreamSelectorMode IiTvStreamSelector.GetMode(ehiiTv.iTvStreamType StreamType)           
+GetType               Method     type GetType()                                                                                  
+SelectStream          Method     void IiTvStreamSelector.SelectStream(uint64 StreamId)                                           
+SetMode               Method     void IiTvStreamSelector.SetMode(ehiiTv.iTvStreamType StreamType, ehiiTv.StreamSelectorMode Mode)
+ToString              Method     string ToString()                                                                               
+UnadviseEventSink     Method     void IiTvStreamSelector.UnadviseEventSink()                                                     
+
+

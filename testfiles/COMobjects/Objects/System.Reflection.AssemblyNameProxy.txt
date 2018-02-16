@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.Reflection.AssemblyNameProxy
+
+Name                      MemberType Definition                                                         
+----                      ---------- ----------                                                         
+CreateObjRef              Method     System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)    
+Equals                    Method     bool Equals(System.Object obj)                                     
+GetAssemblyName           Method     System.Reflection.AssemblyName GetAssemblyName(string assemblyFile)
+GetHashCode               Method     int GetHashCode()                                                  
+GetLifetimeService        Method     System.Object GetLifetimeService()                                 
+GetType                   Method     type GetType()                                                     
+InitializeLifetimeService Method     System.Object InitializeLifetimeService()                          
+ToString                  Method     string ToString()                                                  
+
+

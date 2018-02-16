@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.Runtime.Hosting.ApplicationActivator
+
+Name           MemberType Definition                                                                                   
+----           ---------- ----------                                                                                   
+CreateInstance Method     System.Runtime.Remoting.ObjectHandle CreateInstance(System.ActivationContext activationCon...
+Equals         Method     bool Equals(System.Object obj)                                                               
+GetHashCode    Method     int GetHashCode()                                                                            
+GetType        Method     type GetType()                                                                               
+ToString       Method     string ToString()                                                                            
+
+

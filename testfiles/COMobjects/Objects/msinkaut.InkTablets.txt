@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{112086d9-7779-4535-a699-862b43ac1863}
+
+Name                      MemberType Definition                             
+----                      ---------- ----------                             
+IsPacketPropertySupported Method     bool IsPacketPropertySupported (string)
+Item                      Method     IInkTablet Item (int)                  
+Count                     Property   int Count () {get}                     
+DefaultTablet             Property   IInkTablet DefaultTablet () {get}      
+
+

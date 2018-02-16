@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{30510409-98b5-11cf-bb82-00aa00bdce0b}
+
+Name           MemberType Definition                                                        
+----           ---------- ----------                                                        
+choosecolordlg Method     int choosecolordlg (Variant)                                      
+getCharset     Method     int getCharset (string)                                           
+openfiledlg    Method     string openfiledlg (Variant, Variant, Variant, Variant)           
+openfiledlgex  Method     string openfiledlgex (Variant, Variant, Variant, Variant, Variant)
+savefiledlg    Method     string savefiledlg (Variant, Variant, Variant, Variant)           
+document       Property   IDispatch document () {get}                                       
+fonts          Property   IHtmlFontNamesCollection fonts () {get}                           
+
+

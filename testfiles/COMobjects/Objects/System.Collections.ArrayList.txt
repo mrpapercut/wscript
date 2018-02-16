@@ -1,0 +1,40 @@
+﻿
+
+   TypeName: System.Collections.ArrayList
+
+Name           MemberType            Definition                                                                        
+----           ----------            ----------                                                                        
+Add            Method                int Add(System.Object value), int IList.Add(System.Object value)                  
+AddRange       Method                void AddRange(System.Collections.ICollection c)                                   
+BinarySearch   Method                int BinarySearch(int index, int count, System.Object value, System.Collections....
+Clear          Method                void Clear(), void IList.Clear()                                                  
+Clone          Method                System.Object Clone(), System.Object ICloneable.Clone()                           
+Contains       Method                bool Contains(System.Object item), bool IList.Contains(System.Object value)       
+CopyTo         Method                void CopyTo(array array), void CopyTo(array array, int arrayIndex), void CopyTo...
+Equals         Method                bool Equals(System.Object obj)                                                    
+GetEnumerator  Method                System.Collections.IEnumerator GetEnumerator(), System.Collections.IEnumerator ...
+GetHashCode    Method                int GetHashCode()                                                                 
+GetRange       Method                System.Collections.ArrayList GetRange(int index, int count)                       
+GetType        Method                type GetType()                                                                    
+IndexOf        Method                int IndexOf(System.Object value), int IndexOf(System.Object value, int startInd...
+Insert         Method                void Insert(int index, System.Object value), void IList.Insert(int index, Syste...
+InsertRange    Method                void InsertRange(int index, System.Collections.ICollection c)                     
+LastIndexOf    Method                int LastIndexOf(System.Object value), int LastIndexOf(System.Object value, int ...
+Remove         Method                void Remove(System.Object obj), void IList.Remove(System.Object value)            
+RemoveAt       Method                void RemoveAt(int index), void IList.RemoveAt(int index)                          
+RemoveRange    Method                void RemoveRange(int index, int count)                                            
+Reverse        Method                void Reverse(), void Reverse(int index, int count)                                
+SetRange       Method                void SetRange(int index, System.Collections.ICollection c)                        
+Sort           Method                void Sort(), void Sort(System.Collections.IComparer comparer), void Sort(int in...
+ToArray        Method                System.Object[] ToArray(), array ToArray(type type)                               
+ToString       Method                string ToString()                                                                 
+TrimToSize     Method                void TrimToSize()                                                                 
+Item           ParameterizedProperty System.Object Item(int index) {get;set;}                                          
+Capacity       Property              int Capacity {get;set;}                                                           
+Count          Property              int Count {get;}                                                                  
+IsFixedSize    Property              bool IsFixedSize {get;}                                                           
+IsReadOnly     Property              bool IsReadOnly {get;}                                                            
+IsSynchronized Property              bool IsSynchronized {get;}                                                        
+SyncRoot       Property              System.Object SyncRoot {get;}                                                     
+
+

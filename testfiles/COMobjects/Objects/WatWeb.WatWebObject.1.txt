@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{bece4d4d-d9f3-40a9-8fe8-c2487fc37492}
+
+Name                    MemberType Definition                                        
+----                    ---------- ----------                                        
+BeginGenuineValidation  Method     void BeginGenuineValidation ()                    
+GetParameter            Method     string GetParameter (string)                      
+GetParameterNames       Method     string GetParameterNames ()                       
+LaunchSystemApplication Method     int LaunchSystemApplication (string, string, bool)
+SetParameter            Method     void SetParameter (string, string)                
+InterfaceVersion        Property   uint InterfaceVersion () {get}                    
+
+

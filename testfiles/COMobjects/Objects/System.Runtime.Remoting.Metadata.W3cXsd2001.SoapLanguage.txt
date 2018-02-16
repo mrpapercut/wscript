@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.Runtime.Remoting.Metadata.W3cXsd2001.SoapLanguage
+
+Name        MemberType Definition                                       
+----        ---------- ----------                                       
+Equals      Method     bool Equals(System.Object obj)                   
+GetHashCode Method     int GetHashCode()                                
+GetType     Method     type GetType()                                   
+GetXsdType  Method     string GetXsdType(), string ISoapXsd.GetXsdType()
+ToString    Method     string ToString()                                
+Value       Property   string Value {get;set;}                          
+
+

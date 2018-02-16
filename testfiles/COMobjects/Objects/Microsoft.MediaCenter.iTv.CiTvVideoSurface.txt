@@ -1,0 +1,23 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.iTv.CiTvVideoSurface
+
+Name                  MemberType Definition                                                                                                                              
+----                  ---------- ----------                                                                                                                              
+AdviseEventSink       Method     void IiTvVideoSurface.AdviseEventSink(System.Object pSink)                                                                              
+Equals                Method     bool Equals(System.Object obj)                                                                                                          
+GetFrameFormat        Method     void IiTvVideoSurface.GetFrameFormat([ref] int VideoPixelAspectWidth, [ref] int VideoPixelAspectHeight, [ref] int VideoWidth, [ref] i...
+GetHashCode           Method     int GetHashCode()                                                                                                                       
+GetType               Method     type GetType()                                                                                                                          
+SetImage              Method     void IiTvVideoSurface.SetImage(System.Object pImage, bool FollowVideo, bool ScaleToViewport)                                            
+SetSolidBackground    Method     void IiTvVideoSurface.SetSolidBackground(uint32 dwBackgroundColor)                                                                      
+SetVideo              Method     void IiTvVideoSurface.SetVideo(int X, int Y, int Width, int Height, bool ScaleToViewport)                                               
+SetVideoFullscreen    Method     void IiTvVideoSurface.SetVideoFullscreen()                                                                                              
+ToString              Method     string ToString()                                                                                                                       
+UnadviseEventSink     Method     void IiTvVideoSurface.UnadviseEventSink()                                                                                               
+AvailableZoomModes    Property   ehiiTv.ZoomMode AvailableZoomModes {get;}                                                                                               
+ForceZoomModeOverride Property   bool ForceZoomModeOverride {set;}                                                                                                       
+Freeze                Property   bool Freeze {set;}                                                                                                                      
+ZoomMode              Property   ehiiTv.ZoomMode ZoomMode {get;set;}                                                                                                     
+
+

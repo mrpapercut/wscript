@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{14e11abd-ee37-4893-9ea1-6964de933e39}
+
+Name              MemberType Definition                                        
+----              ---------- ----------                                        
+CreateTuneRequest Method     IMPEG2TuneRequest CreateTuneRequest (ITuningSpace)
+
+

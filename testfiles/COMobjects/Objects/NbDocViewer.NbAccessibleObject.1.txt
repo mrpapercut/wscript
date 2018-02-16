@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{55df5e87-078a-442f-a2dd-c1a7e40d0316}
+
+Name       MemberType Definition                      
+----       ---------- ----------                      
+Initialize Method     void Initialize (wireHWND, uint)
+UpdatePage Method     void UpdatePage (int)           
+
+

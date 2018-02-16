@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab320-217d-11da-b2a4-000e7bbb2b09}
+
+Name             MemberType            Definition                                       
+----             ----------            ----------                                       
+Initialize       Method                void Initialize (IObjectId, EncodingType, string)
+InitializeDecode Method                void InitializeDecode (EncodingType, string)     
+InitializeEncode Method                void InitializeEncode (ICertificatePolicies)     
+RawData          ParameterizedProperty string RawData (EncodingType) {get}              
+Critical         Property              bool Critical () {get} {set}                     
+ObjectId         Property              IObjectId ObjectId () {get}                      
+Policies         Property              ICertificatePolicies Policies () {get}           
+
+

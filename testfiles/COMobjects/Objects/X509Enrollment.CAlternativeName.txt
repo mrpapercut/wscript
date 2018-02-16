@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab313-217d-11da-b2a4-000e7bbb2b09}
+
+Name                    MemberType            Definition                                                            
+----                    ----------            ----------                                                            
+InitializeFromOtherName Method                void InitializeFromOtherName (IObjectId, EncodingType, string, bool)  
+InitializeFromRawData   Method                void InitializeFromRawData (AlternativeNameType, EncodingType, string)
+InitializeFromString    Method                void InitializeFromString (AlternativeNameType, string)               
+RawData                 ParameterizedProperty string RawData (EncodingType) {get}                                   
+ObjectId                Property              IObjectId ObjectId () {get}                                           
+strValue                Property              string strValue () {get}                                              
+Type                    Property              AlternativeNameType Type () {get}                                     
+
+

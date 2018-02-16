@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{49372e7f-701f-4520-801a-06aca0e16385}
+
+Name       MemberType            Definition                                          
+----       ----------            ----------                                          
+Install    Method                void Install ()                                     
+Load       Method                void Load (string)                                  
+Save       Method                void Save (string)                                  
+Properties ParameterizedProperty void Properties (ILicensingPackageProperties) {get} 
+Data       Property              SAFEARRAY(byte) Data () {get}                       
+
+

@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.EnterpriseServices.CompensatingResourceManager.ClerkMonitor
+
+Name          MemberType            Definition                                                                         
+----          ----------            ----------                                                                         
+Equals        Method                bool Equals(System.Object obj)                                                     
+GetEnumerator Method                System.Collections.IEnumerator GetEnumerator(), System.Collections.IEnumerator I...
+GetHashCode   Method                int GetHashCode()                                                                  
+GetType       Method                type GetType()                                                                     
+Populate      Method                void Populate()                                                                    
+ToString      Method                string ToString()                                                                  
+Item          ParameterizedProperty System.EnterpriseServices.CompensatingResourceManager.ClerkInfo Item(int index) ...
+Count         Property              int Count {get;}                                                                   
+
+

@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab30b-217d-11da-b2a4-000e7bbb2b09}
+
+Name                               MemberType            Definition                                                    
+----                               ----------            ----------                                                    
+ComputeKeyIdentifier               Method                string ComputeKeyIdentifier (KeyIdentifierHashAlgorithm, En...
+Initialize                         Method                void Initialize (IObjectId, string, string, EncodingType)     
+InitializeFromEncodedPublicKeyInfo Method                void InitializeFromEncodedPublicKeyInfo (string, EncodingType)
+EncodedKey                         ParameterizedProperty string EncodedKey (EncodingType) {get}                        
+EncodedParameters                  ParameterizedProperty string EncodedParameters (EncodingType) {get}                 
+Algorithm                          Property              IObjectId Algorithm () {get}                                  
+Length                             Property              int Length () {get}                                           
+
+

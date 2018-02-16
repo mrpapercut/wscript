@@ -1,0 +1,63 @@
+﻿
+
+   TypeName: System.__ComObject#{7ed92c39-eb38-4927-a70a-708ac5a59321}
+
+Name                         MemberType Definition                                                                  
+----                         ---------- ----------                                                                  
+attachEvent                  Method     void attachEvent (string, IDispatch)                                        
+Connect                      Method     void Connect ()                                                             
+CreateVirtualChannels        Method     void CreateVirtualChannels (string)                                         
+detachEvent                  Method     void detachEvent (string, IDispatch)                                        
+Disconnect                   Method     void Disconnect ()                                                          
+GetErrorDescription          Method     string GetErrorDescription (uint, uint)                                     
+GetStatusText                Method     string GetStatusText (uint)                                                 
+GetVirtualChannelOptions     Method     int GetVirtualChannelOptions (string)                                       
+Reconnect                    Method     ControlReconnectStatus Reconnect (uint, uint)                               
+RequestClose                 Method     ControlCloseStatus RequestClose ()                                          
+SendOnVirtualChannel         Method     void SendOnVirtualChannel (string, string)                                  
+SendRemoteAction             Method     void SendRemoteAction (RemoteSessionActionType)                             
+SetVirtualChannelOptions     Method     void SetVirtualChannelOptions (string, int)                                 
+SyncSessionDisplaySettings   Method     void SyncSessionDisplaySettings ()                                          
+UpdateSessionDisplaySettings Method     void UpdateSessionDisplaySettings (uint, uint, uint, uint, uint, uint, uint)
+AdvancedSettings             Property   IMsTscAdvancedSettings AdvancedSettings () {get}                            
+AdvancedSettings2            Property   IMsRdpClientAdvancedSettings AdvancedSettings2 () {get}                     
+AdvancedSettings3            Property   IMsRdpClientAdvancedSettings2 AdvancedSettings3 () {get}                    
+AdvancedSettings4            Property   IMsRdpClientAdvancedSettings3 AdvancedSettings4 () {get}                    
+AdvancedSettings5            Property   IMsRdpClientAdvancedSettings4 AdvancedSettings5 () {get}                    
+AdvancedSettings6            Property   IMsRdpClientAdvancedSettings5 AdvancedSettings6 () {get}                    
+AdvancedSettings7            Property   IMsRdpClientAdvancedSettings6 AdvancedSettings7 () {get}                    
+AdvancedSettings8            Property   IMsRdpClientAdvancedSettings7 AdvancedSettings8 () {get}                    
+AdvancedSettings9            Property   IMsRdpClientAdvancedSettings8 AdvancedSettings9 () {get}                    
+CipherStrength               Property   int CipherStrength () {get}                                                 
+ColorDepth                   Property   int ColorDepth () {get} {set}                                               
+Connected                    Property   short Connected () {get}                                                    
+ConnectedStatusText          Property   string ConnectedStatusText () {get} {set}                                   
+ConnectingText               Property   string ConnectingText () {get} {set}                                        
+Debugger                     Property   IMsTscDebug Debugger () {get}                                               
+DesktopHeight                Property   int DesktopHeight () {get} {set}                                            
+DesktopWidth                 Property   int DesktopWidth () {get} {set}                                             
+DisconnectedText             Property   string DisconnectedText () {get} {set}                                      
+Domain                       Property   string Domain () {get} {set}                                                
+ExtendedDisconnectReason     Property   ExtendedDisconnectReasonCode ExtendedDisconnectReason () {get}              
+FullScreen                   Property   bool FullScreen () {get} {set}                                              
+FullScreenTitle              Property   string FullScreenTitle () {set}                                             
+HorizontalScrollBarVisible   Property   int HorizontalScrollBarVisible () {get}                                     
+MsRdpClientShell             Property   IMsRdpClientShell MsRdpClientShell () {get}                                 
+RemoteProgram                Property   ITSRemoteProgram RemoteProgram () {get}                                     
+RemoteProgram2               Property   ITSRemoteProgram2 RemoteProgram2 () {get}                                   
+RemoteProgram3               Property   ITSRemoteProgram3 RemoteProgram3 () {get}                                   
+SecuredSettings              Property   IMsTscSecuredSettings SecuredSettings () {get}                              
+SecuredSettings2             Property   IMsRdpClientSecuredSettings SecuredSettings2 () {get}                       
+SecuredSettings3             Property   IMsRdpClientSecuredSettings2 SecuredSettings3 () {get}                      
+SecuredSettingsEnabled       Property   int SecuredSettingsEnabled () {get}                                         
+Server                       Property   string Server () {get} {set}                                                
+StartConnected               Property   int StartConnected () {get} {set}                                           
+TransportSettings            Property   IMsRdpClientTransportSettings TransportSettings () {get}                    
+TransportSettings2           Property   IMsRdpClientTransportSettings2 TransportSettings2 () {get}                  
+TransportSettings3           Property   IMsRdpClientTransportSettings3 TransportSettings3 () {get}                  
+TransportSettings4           Property   IMsRdpClientTransportSettings4 TransportSettings4 () {get}                  
+UserName                     Property   string UserName () {get} {set}                                              
+Version                      Property   string Version () {get}                                                     
+VerticalScrollBarVisible     Property   int VerticalScrollBarVisible () {get}                                       
+
+

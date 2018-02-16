@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{e31fb81b-1335-11d1-8189-0000f87557db}
+
+Name           MemberType Definition                    
+----           ---------- ----------                    
+Capabilities   Property   int Capabilities () {get}     
+Duration       Property   float Duration () {get} {set} 
+Progress       Property   float Progress () {get} {set} 
+StepResolution Property   float StepResolution () {get} 
+
+

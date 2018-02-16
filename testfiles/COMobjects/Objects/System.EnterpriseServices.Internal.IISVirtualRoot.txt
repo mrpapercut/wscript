@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.EnterpriseServices.Internal.IISVirtualRoot
+
+Name        MemberType Definition                                                                                      
+----        ---------- ----------                                                                                      
+Create      Method     void Create(string RootWeb, string inPhysicalDirectory, string VirtualDirectory, [ref] string...
+Delete      Method     void Delete(string RootWeb, string PhysicalDirectory, string VirtualDirectory, [ref] string E...
+Equals      Method     bool Equals(System.Object obj)                                                                  
+GetHashCode Method     int GetHashCode()                                                                               
+GetType     Method     type GetType()                                                                                  
+ToString    Method     string ToString()                                                                               
+
+

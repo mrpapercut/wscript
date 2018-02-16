@@ -1,0 +1,135 @@
+﻿
+
+   TypeName: System.__ComObject#{20d4f5e0-5475-11d2-9774-0000f80855e6}
+
+Name                      MemberType Definition                                        
+----                      ---------- ----------                                        
+AboutBox                  Method     void AboutBox ()                                  
+Cancel                    Method     void Cancel ()                                    
+FastForward               Method     void FastForward ()                               
+FastReverse               Method     void FastReverse ()                               
+GetCodecDescription       Method     string GetCodecDescription (int)                  
+GetCodecInstalled         Method     bool GetCodecInstalled (int)                      
+GetCodecURL               Method     string GetCodecURL (int)                          
+GetCurrentEntry           Method     int GetCurrentEntry ()                            
+GetMarkerName             Method     string GetMarkerName (int)                        
+GetMarkerTime             Method     double GetMarkerTime (int)                        
+GetMediaInfoString        Method     string GetMediaInfoString (MPMediaInfoType)       
+GetMediaParameter         Method     string GetMediaParameter (int, string)            
+GetMediaParameterName     Method     string GetMediaParameterName (int, int)           
+GetMoreInfoURL            Method     string GetMoreInfoURL (MPMoreInfoType)            
+GetStreamGroup            Method     int GetStreamGroup (int)                          
+GetStreamName             Method     string GetStreamName (int)                        
+GetStreamSelected         Method     bool GetStreamSelected (int)                      
+IsSoundCardEnabled        Method     bool IsSoundCardEnabled ()                        
+Next                      Method     void Next ()                                      
+Open                      Method     void Open (string)                                
+Pause                     Method     void Pause ()                                     
+Play                      Method     void Play ()                                      
+Previous                  Method     void Previous ()                                  
+SetCurrentEntry           Method     void SetCurrentEntry (int)                        
+ShowDialog                Method     void ShowDialog (MPShowDialogConstants)           
+Stop                      Method     void Stop ()                                      
+StreamSelect              Method     void StreamSelect (int)                           
+ActiveMovie               Property   IDispatch ActiveMovie () {get}                    
+AllowChangeDisplaySize    Property   bool AllowChangeDisplaySize () {get} {set}        
+AllowScan                 Property   bool AllowScan () {get} {set}                     
+AnimationAtStart          Property   bool AnimationAtStart () {get} {set}              
+AudioStream               Property   int AudioStream () {get} {set}                    
+AutoRewind                Property   bool AutoRewind () {get} {set}                    
+AutoSize                  Property   bool AutoSize () {get} {set}                      
+AutoStart                 Property   bool AutoStart () {get} {set}                     
+Balance                   Property   int Balance () {get} {set}                        
+Bandwidth                 Property   int Bandwidth () {get}                            
+BaseURL                   Property   string BaseURL () {get} {set}                     
+BufferingCount            Property   int BufferingCount () {get}                       
+BufferingProgress         Property   int BufferingProgress () {get}                    
+BufferingTime             Property   double BufferingTime () {get} {set}               
+CanPreview                Property   bool CanPreview () {get}                          
+CanScan                   Property   bool CanScan () {get}                             
+CanSeek                   Property   bool CanSeek () {get}                             
+CanSeekToMarkers          Property   bool CanSeekToMarkers () {get}                    
+CaptioningID              Property   string CaptioningID () {get} {set}                
+ChannelDescription        Property   string ChannelDescription () {get}                
+ChannelName               Property   string ChannelName () {get}                       
+ChannelURL                Property   string ChannelURL () {get}                        
+ClickToPlay               Property   bool ClickToPlay () {get} {set}                   
+ClientId                  Property   string ClientId () {get}                          
+CodecCount                Property   int CodecCount () {get}                           
+ConnectionSpeed           Property   int ConnectionSpeed () {get}                      
+ContactAddress            Property   string ContactAddress () {get}                    
+ContactEmail              Property   string ContactEmail () {get}                      
+ContactPhone              Property   string ContactPhone () {get}                      
+CreationDate              Property   Date CreationDate () {get}                        
+CurrentMarker             Property   int CurrentMarker () {get} {set}                  
+CurrentPosition           Property   double CurrentPosition () {get} {set}             
+CursorType                Property   int CursorType () {get} {set}                     
+DefaultFrame              Property   string DefaultFrame () {get} {set}                
+DisplayBackColor          Property   OLE_COLOR DisplayBackColor () {get} {set}         
+DisplayForeColor          Property   OLE_COLOR DisplayForeColor () {get} {set}         
+DisplayMode               Property   MPDisplayModeConstants DisplayMode () {get} {set} 
+DisplaySize               Property   MPDisplaySizeConstants DisplaySize () {get} {set} 
+Duration                  Property   double Duration () {get}                          
+DVD                       Property   IMediaPlayerDvd DVD () {get}                      
+EnableContextMenu         Property   bool EnableContextMenu () {get} {set}             
+Enabled                   Property   bool Enabled () {get} {set}                       
+EnableFullScreenControls  Property   bool EnableFullScreenControls () {get} {set}      
+EnablePositionControls    Property   bool EnablePositionControls () {get} {set}        
+EnableTracker             Property   bool EnableTracker () {get} {set}                 
+EntryCount                Property   int EntryCount () {get}                           
+ErrorCode                 Property   int ErrorCode () {get}                            
+ErrorCorrection           Property   string ErrorCorrection () {get}                   
+ErrorDescription          Property   string ErrorDescription () {get}                  
+FileName                  Property   string FileName () {get} {set}                    
+HasError                  Property   bool HasError () {get}                            
+HasMultipleItems          Property   bool HasMultipleItems () {get}                    
+ImageSourceHeight         Property   int ImageSourceHeight () {get}                    
+ImageSourceWidth          Property   int ImageSourceWidth () {get}                     
+InvokeURLs                Property   bool InvokeURLs () {get} {set}                    
+IsBroadcast               Property   bool IsBroadcast () {get}                         
+IsDurationValid           Property   bool IsDurationValid () {get}                     
+Language                  Property   int Language () {get} {set}                       
+LostPackets               Property   int LostPackets () {get}                          
+MarkerCount               Property   int MarkerCount () {get}                          
+Mute                      Property   bool Mute () {get} {set}                          
+NSPlay                    Property   IDispatch NSPlay () {get}                         
+OpenState                 Property   int OpenState () {get}                            
+PlayCount                 Property   int PlayCount () {get} {set}                      
+PlayState                 Property   MPPlayStateConstants PlayState () {get}           
+PreviewMode               Property   bool PreviewMode () {get} {set}                   
+Rate                      Property   double Rate () {get} {set}                        
+ReadyState                Property   MPReadyStateConstants ReadyState () {get}         
+ReceivedPackets           Property   int ReceivedPackets () {get}                      
+ReceptionQuality          Property   int ReceptionQuality () {get}                     
+RecoveredPackets          Property   int RecoveredPackets () {get}                     
+SAMIFileName              Property   string SAMIFileName () {get} {set}                
+SAMILang                  Property   string SAMILang () {get} {set}                    
+SAMIStyle                 Property   string SAMIStyle () {get} {set}                   
+SelectionEnd              Property   double SelectionEnd () {get} {set}                
+SelectionStart            Property   double SelectionStart () {get} {set}              
+SendErrorEvents           Property   bool SendErrorEvents () {get} {set}               
+SendKeyboardEvents        Property   bool SendKeyboardEvents () {get} {set}            
+SendMouseClickEvents      Property   bool SendMouseClickEvents () {get} {set}          
+SendMouseMoveEvents       Property   bool SendMouseMoveEvents () {get} {set}           
+SendOpenStateChangeEvents Property   bool SendOpenStateChangeEvents () {get} {set}     
+SendPlayStateChangeEvents Property   bool SendPlayStateChangeEvents () {get} {set}     
+SendWarningEvents         Property   bool SendWarningEvents () {get} {set}             
+ShowAudioControls         Property   bool ShowAudioControls () {get} {set}             
+ShowCaptioning            Property   bool ShowCaptioning () {get} {set}                
+ShowControls              Property   bool ShowControls () {get} {set}                  
+ShowDisplay               Property   bool ShowDisplay () {get} {set}                   
+ShowGotoBar               Property   bool ShowGotoBar () {get} {set}                   
+ShowPositionControls      Property   bool ShowPositionControls () {get} {set}          
+ShowStatusBar             Property   bool ShowStatusBar () {get} {set}                 
+ShowTracker               Property   bool ShowTracker () {get} {set}                   
+SourceLink                Property   string SourceLink () {get}                        
+SourceProtocol            Property   int SourceProtocol () {get}                       
+StreamCount               Property   int StreamCount () {get}                          
+TransparentAtStart        Property   bool TransparentAtStart () {get} {set}            
+VideoBorder3D             Property   bool VideoBorder3D () {get} {set}                 
+VideoBorderColor          Property   OLE_COLOR VideoBorderColor () {get} {set}         
+VideoBorderWidth          Property   int VideoBorderWidth () {get} {set}               
+Volume                    Property   int Volume () {get} {set}                         
+WindowlessVideo           Property   bool WindowlessVideo () {get} {set}               
+
+

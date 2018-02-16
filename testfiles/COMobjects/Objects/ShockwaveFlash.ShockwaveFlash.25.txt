@@ -1,0 +1,76 @@
+﻿
+
+   TypeName: System.__ComObject#{d27cdb6c-ae6d-11cf-96b8-444553540000}
+
+Name                       MemberType Definition                                       
+----                       ---------- ----------                                       
+Back                       Method     void Back ()                                     
+CallFunction               Method     string CallFunction (string)                     
+CurrentFrame               Method     int CurrentFrame ()                              
+DisableLocalSecurity       Method     void DisableLocalSecurity ()                     
+EnforceLocalSecurity       Method     void EnforceLocalSecurity ()                     
+FlashVersion               Method     int FlashVersion ()                              
+Forward                    Method     void Forward ()                                  
+FrameLoaded                Method     bool FrameLoaded (int)                           
+GetVariable                Method     string GetVariable (string)                      
+GotoFrame                  Method     void GotoFrame (int)                             
+IsPlaying                  Method     bool IsPlaying ()                                
+LoadMovie                  Method     void LoadMovie (int, string)                     
+Pan                        Method     void Pan (int, int, int)                         
+PercentLoaded              Method     int PercentLoaded ()                             
+Play                       Method     void Play ()                                     
+Rewind                     Method     void Rewind ()                                   
+SetReturnValue             Method     void SetReturnValue (string)                     
+SetVariable                Method     void SetVariable (string, string)                
+SetZoomRect                Method     void SetZoomRect (int, int, int, int)            
+Stop                       Method     void Stop ()                                     
+StopPlay                   Method     void StopPlay ()                                 
+TCallFrame                 Method     void TCallFrame (string, int)                    
+TCallLabel                 Method     void TCallLabel (string, string)                 
+TCurrentFrame              Method     int TCurrentFrame (string)                       
+TCurrentLabel              Method     string TCurrentLabel (string)                    
+TGetProperty               Method     string TGetProperty (string, int)                
+TGetPropertyAsNumber       Method     double TGetPropertyAsNumber (string, int)        
+TGetPropertyNum            Method     double TGetPropertyNum (string, int)             
+TGotoFrame                 Method     void TGotoFrame (string, int)                    
+TGotoLabel                 Method     void TGotoLabel (string, string)                 
+TPlay                      Method     void TPlay (string)                              
+TSetProperty               Method     void TSetProperty (string, int, string)          
+TSetPropertyNum            Method     void TSetPropertyNum (string, int, double)       
+TStopPlay                  Method     void TStopPlay (string)                          
+Zoom                       Method     void Zoom (int)                                  
+AlignMode                  Property   int AlignMode () {get} {set}                     
+AllowFullScreen            Property   string AllowFullScreen () {get} {set}            
+AllowFullScreenInteractive Property   string AllowFullScreenInteractive () {get} {set} 
+AllowNetworking            Property   string AllowNetworking () {get} {set}            
+AllowScriptAccess          Property   string AllowScriptAccess () {get} {set}          
+BackgroundColor            Property   int BackgroundColor () {get} {set}               
+Base                       Property   string Base () {get} {set}                       
+BGColor                    Property   string BGColor () {get} {set}                    
+BrowserZoom                Property   string BrowserZoom () {get} {set}                
+DeviceFont                 Property   bool DeviceFont () {get} {set}                   
+EmbedMovie                 Property   bool EmbedMovie () {get} {set}                   
+FlashVars                  Property   string FlashVars () {get} {set}                  
+FrameNum                   Property   int FrameNum () {get} {set}                      
+InlineData                 Property   IUnknown InlineData () {get} {set}               
+IsDependent                Property   bool IsDependent () {get} {set}                  
+Loop                       Property   bool Loop () {get} {set}                         
+Menu                       Property   bool Menu () {get} {set}                         
+Movie                      Property   string Movie () {get} {set}                      
+MovieData                  Property   string MovieData () {get} {set}                  
+Playing                    Property   bool Playing () {get} {set}                      
+Profile                    Property   bool Profile () {get} {set}                      
+ProfileAddress             Property   string ProfileAddress () {get} {set}             
+ProfilePort                Property   int ProfilePort () {get} {set}                   
+Quality                    Property   int Quality () {get} {set}                       
+Quality2                   Property   string Quality2 () {get} {set}                   
+ReadyState                 Property   int ReadyState () {get}                          
+SAlign                     Property   string SAlign () {get} {set}                     
+Scale                      Property   string Scale () {get} {set}                      
+ScaleMode                  Property   int ScaleMode () {get} {set}                     
+SeamlessTabbing            Property   bool SeamlessTabbing () {get} {set}              
+SWRemote                   Property   string SWRemote () {get} {set}                   
+TotalFrames                Property   int TotalFrames () {get}                         
+WMode                      Property   string WMode () {get} {set}                      
+
+

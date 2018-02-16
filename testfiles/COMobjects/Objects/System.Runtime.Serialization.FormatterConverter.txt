@@ -1,0 +1,27 @@
+﻿
+
+   TypeName: System.Runtime.Serialization.FormatterConverter
+
+Name        MemberType Definition                                                                                      
+----        ---------- ----------                                                                                      
+Convert     Method     System.Object Convert(System.Object value, type type), System.Object Convert(System.Object va...
+Equals      Method     bool Equals(System.Object obj)                                                                  
+GetHashCode Method     int GetHashCode()                                                                               
+GetType     Method     type GetType()                                                                                  
+ToBoolean   Method     bool ToBoolean(System.Object value), bool IFormatterConverter.ToBoolean(System.Object value)    
+ToByte      Method     byte ToByte(System.Object value), byte IFormatterConverter.ToByte(System.Object value)          
+ToChar      Method     char ToChar(System.Object value), char IFormatterConverter.ToChar(System.Object value)          
+ToDateTime  Method     datetime ToDateTime(System.Object value), datetime IFormatterConverter.ToDateTime(System.Obje...
+ToDecimal   Method     decimal ToDecimal(System.Object value), decimal IFormatterConverter.ToDecimal(System.Object v...
+ToDouble    Method     double ToDouble(System.Object value), double IFormatterConverter.ToDouble(System.Object value)  
+ToInt16     Method     int16 ToInt16(System.Object value), int16 IFormatterConverter.ToInt16(System.Object value)      
+ToInt32     Method     int ToInt32(System.Object value), int IFormatterConverter.ToInt32(System.Object value)          
+ToInt64     Method     long ToInt64(System.Object value), long IFormatterConverter.ToInt64(System.Object value)        
+ToSByte     Method     sbyte ToSByte(System.Object value), sbyte IFormatterConverter.ToSByte(System.Object value)      
+ToSingle    Method     float ToSingle(System.Object value), float IFormatterConverter.ToSingle(System.Object value)    
+ToString    Method     string ToString(System.Object value), string ToString(), string IFormatterConverter.ToString(...
+ToUInt16    Method     uint16 ToUInt16(System.Object value), uint16 IFormatterConverter.ToUInt16(System.Object value)  
+ToUInt32    Method     uint32 ToUInt32(System.Object value), uint32 IFormatterConverter.ToUInt32(System.Object value)  
+ToUInt64    Method     uint64 ToUInt64(System.Object value), uint64 IFormatterConverter.ToUInt64(System.Object value)  
+
+

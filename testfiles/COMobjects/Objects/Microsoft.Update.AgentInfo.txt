@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{85713fa1-7796-4fa2-be3b-e2d6124dd373}
+
+Name    MemberType Definition               
+----    ---------- ----------               
+GetInfo Method     Variant GetInfo (Variant)
+
+

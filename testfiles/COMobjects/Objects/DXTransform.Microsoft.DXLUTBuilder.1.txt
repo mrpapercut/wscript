@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.__ComObject#{73068231-35ee-11d1-81a1-0000f87557db}
+
+Name             MemberType            Definition                                    
+----             ----------            ----------                                    
+ColorBalance     ParameterizedProperty Variant ColorBalance (DXLUTCOLOR) {get} {set} 
+Brightness       Property              Variant Brightness () {get} {set}             
+BuildOrder       Property              Variant BuildOrder () {get} {set}             
+Contrast         Property              Variant Contrast () {get} {set}               
+Gamma            Property              float Gamma () {get} {set}                    
+Invert           Property              float Invert () {get} {set}                   
+LevelsPerChannel Property              int LevelsPerChannel () {get} {set}           
+NumBuildSteps    Property              int NumBuildSteps () {get}                    
+Opacity          Property              float Opacity () {get} {set}                  
+Threshold        Property              float Threshold () {get} {set}                
+
+

@@ -1,0 +1,48 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab362-217d-11da-b2a4-000e7bbb2b09}
+
+Name                     MemberType            Definition                                                      
+----                     ----------            ----------                                                      
+Close                    Method                void Close ()                                                   
+Create                   Method                void Create ()                                                  
+Delete                   Method                void Delete ()                                                  
+Export                   Method                string Export (string, EncodingType)                            
+ExportPublicKey          Method                IX509PublicKey ExportPublicKey ()                               
+Import                   Method                void Import (string, string, EncodingType)                      
+Open                     Method                void Open ()                                                    
+Verify                   Method                void Verify (X509PrivateKeyVerify)                              
+AlgorithmParameters      ParameterizedProperty string AlgorithmParameters (EncodingType) {get} {set}           
+Certificate              ParameterizedProperty string Certificate (EncodingType) {get} {set}                   
+Algorithm                Property              IObjectId Algorithm () {get} {set}                              
+AlgorithmName            Property              string AlgorithmName () {get} {set}                             
+AlternateStorageLocation Property              string AlternateStorageLocation () {get} {set}                  
+ContainerName            Property              string ContainerName () {get} {set}                             
+ContainerNamePrefix      Property              string ContainerNamePrefix () {get} {set}                       
+CspInformations          Property              ICspInformations CspInformations () {get} {set}                 
+CspStatus                Property              ICspStatus CspStatus () {get} {set}                             
+DefaultContainer         Property              bool DefaultContainer () {get}                                  
+Description              Property              string Description () {get} {set}                               
+Existing                 Property              bool Existing () {get} {set}                                    
+ExportPolicy             Property              X509PrivateKeyExportFlags ExportPolicy () {get} {set}           
+FriendlyName             Property              string FriendlyName () {get} {set}                              
+HardwareKeyUsage         Property              X509HardwareKeyUsageFlags HardwareKeyUsage () {get} {set}       
+KeyProtection            Property              X509PrivateKeyProtection KeyProtection () {get} {set}           
+KeySpec                  Property              X509KeySpec KeySpec () {get} {set}                              
+KeyUsage                 Property              X509PrivateKeyUsageFlags KeyUsage () {get} {set}                
+LegacyCsp                Property              bool LegacyCsp () {get} {set}                                   
+Length                   Property              int Length () {get} {set}                                       
+MachineContext           Property              bool MachineContext () {get} {set}                              
+Opened                   Property              bool Opened () {get}                                            
+ParametersExportType     Property              X509KeyParametersExportType ParametersExportType () {get} {set} 
+ParentWindow             Property              int ParentWindow () {get} {set}                                 
+Pin                      Property              string Pin () {set}                                             
+ProviderName             Property              string ProviderName () {get} {set}                              
+ProviderType             Property              X509ProviderType ProviderType () {get} {set}                    
+ReaderName               Property              string ReaderName () {get} {set}                                
+SecurityDescriptor       Property              string SecurityDescriptor () {get} {set}                        
+Silent                   Property              bool Silent () {get} {set}                                      
+UIContextMessage         Property              string UIContextMessage () {get} {set}                          
+UniqueContainerName      Property              string UniqueContainerName () {get}                             
+
+

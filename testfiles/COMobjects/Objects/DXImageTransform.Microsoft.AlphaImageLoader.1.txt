@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{a5f2d3e8-7a7e-48e5-bc75-40790be4a941}
+
+Name         MemberType Definition                         
+----         ---------- ----------                         
+SizingMethod Property   string SizingMethod () {get} {set} 
+Src          Property   string Src () {get} {set}          
+
+

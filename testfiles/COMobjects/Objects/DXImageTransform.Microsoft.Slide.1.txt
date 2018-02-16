@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{810e402e-056b-11d2-a484-00c04f8efb69}
+
+Name           MemberType Definition                       
+----           ---------- ----------                       
+bands          Property   short bands () {get} {set}       
+Capabilities   Property   int Capabilities () {get}        
+Duration       Property   float Duration () {get} {set}    
+Progress       Property   float Progress () {get} {set}    
+slideStyle     Property   string slideStyle () {get} {set} 
+StepResolution Property   float StepResolution () {get}    
+
+

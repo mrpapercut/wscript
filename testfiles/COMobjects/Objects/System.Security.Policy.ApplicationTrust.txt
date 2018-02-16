@@ -1,0 +1,21 @@
+﻿
+
+   TypeName: System.Security.Policy.ApplicationTrust
+
+Name                      MemberType Definition                                                                        
+----                      ---------- ----------                                                                        
+Clone                     Method     System.Security.Policy.EvidenceBase Clone()                                       
+Equals                    Method     bool Equals(System.Object obj)                                                    
+FromXml                   Method     void FromXml(System.Security.SecurityElement element), void ISecurityEncodable....
+GetHashCode               Method     int GetHashCode()                                                                 
+GetType                   Method     type GetType()                                                                    
+ToString                  Method     string ToString()                                                                 
+ToXml                     Method     System.Security.SecurityElement ToXml(), System.Security.SecurityElement ISecur...
+ApplicationIdentity       Property   System.ApplicationIdentity ApplicationIdentity {get;set;}                         
+DefaultGrantSet           Property   System.Security.Policy.PolicyStatement DefaultGrantSet {get;set;}                 
+ExtraInfo                 Property   System.Object ExtraInfo {get;set;}                                                
+FullTrustAssemblies       Property   System.Collections.Generic.IList[System.Security.Policy.StrongName] FullTrustAs...
+IsApplicationTrustedToRun Property   bool IsApplicationTrustedToRun {get;set;}                                         
+Persist                   Property   bool Persist {get;set;}                                                           
+
+

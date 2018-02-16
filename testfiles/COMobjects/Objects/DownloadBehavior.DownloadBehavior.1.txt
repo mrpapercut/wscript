@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{3050f5bd-98b5-11cf-bb82-00aa00bdce0b}
+
+Name          MemberType Definition                            
+----          ---------- ----------                            
+startDownload Method     void startDownload (string, IDispatch)
+
+

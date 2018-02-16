@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{1a5576fc-0e19-11d3-9d8e-00c04f72d980}
+
+Name        MemberType Definition                            
+----        ---------- ----------                            
+Clone       Method     IComponent Clone ()                   
+DescLangID  Property   int DescLangID () {get} {set}         
+Description Property   string Description () {get}           
+Status      Property   ComponentStatus Status () {get} {set} 
+Type        Property   IComponentType Type () {get}          
+
+

@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{7a18edde-7e78-4163-8ded-78e2c9cee924}
+
+Name            MemberType Definition                   
+----            ---------- ----------                   
+GetConfig       Method     string GetConfig (int)       
+GetField        Method     string GetField (string)     
+Next            Method     int Next ()                  
+Reset           Method     int Reset (int)              
+SetSharedFolder Method     void SetSharedFolder (string)
+
+

@@ -1,0 +1,23 @@
+﻿
+
+   TypeName: System.Reflection.ObfuscationAttribute
+
+Name                  MemberType Definition                                                                            
+----                  ---------- ----------                                                                            
+Equals                Method     bool Equals(System.Object obj)                                                        
+GetHashCode           Method     int GetHashCode()                                                                     
+GetIDsOfNames         Method     void _Attribute.GetIDsOfNames([ref] guid riid, System.IntPtr rgszNames, uint32 cNam...
+GetType               Method     type GetType()                                                                        
+GetTypeInfo           Method     void _Attribute.GetTypeInfo(uint32 iTInfo, uint32 lcid, System.IntPtr ppTInfo)        
+GetTypeInfoCount      Method     void _Attribute.GetTypeInfoCount([ref] uint32 pcTInfo)                                
+Invoke                Method     void _Attribute.Invoke(uint32 dispIdMember, [ref] guid riid, uint32 lcid, int16 wFl...
+IsDefaultAttribute    Method     bool IsDefaultAttribute()                                                             
+Match                 Method     bool Match(System.Object obj)                                                         
+ToString              Method     string ToString()                                                                     
+ApplyToMembers        Property   bool ApplyToMembers {get;set;}                                                        
+Exclude               Property   bool Exclude {get;set;}                                                               
+Feature               Property   string Feature {get;set;}                                                             
+StripAfterObfuscation Property   bool StripAfterObfuscation {get;set;}                                                 
+TypeId                Property   System.Object TypeId {get;}                                                           
+
+

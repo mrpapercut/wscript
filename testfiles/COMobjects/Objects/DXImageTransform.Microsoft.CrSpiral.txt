@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{0de527a0-0c7e-11d2-a484-00c04f8efb69}
+
+Name           MemberType Definition                     
+----           ---------- ----------                     
+Capabilities   Property   int Capabilities () {get}      
+Duration       Property   float Duration () {get} {set}  
+gridSizeX      Property   short gridSizeX () {get} {set} 
+gridSizeY      Property   short gridSizeY () {get} {set} 
+Progress       Property   float Progress () {get} {set}  
+StepResolution Property   float StepResolution () {get}  
+
+

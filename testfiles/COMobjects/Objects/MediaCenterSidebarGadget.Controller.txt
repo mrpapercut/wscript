@@ -1,0 +1,20 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.SidebarGadget.MCESidebarCtrl
+
+Name                   MemberType Definition                                                           
+----                   ---------- ----------                                                           
+CheckItemChanged       Method     bool CheckItemChanged()                                              
+Equals                 Method     bool Equals(System.Object obj)                                       
+GetContentSourceList   Method     Microsoft.MediaCenter.SidebarGadget.SourceList GetContentSourceList()
+GetHashCode            Method     int GetHashCode()                                                    
+GetString              Method     string GetString(int stringId)                                       
+GetType                Method     type GetType()                                                       
+IsTVSetupDone          Method     bool IsTVSetupDone()                                                 
+LaunchMCE              Method     void LaunchMCE(int cmdID)                                            
+LaunchMCEWithParameter Method     void LaunchMCEWithParameter(string parameter)                        
+OnItemChangedEvent     Method     void OnItemChangedEvent()                                            
+ToString               Method     string ToString()                                                    
+Unload                 Method     void Unload()                                                        
+
+

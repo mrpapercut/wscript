@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{925cbc18-a2ea-4648-bf1c-ec8badcfe20a}
+
+Name                     MemberType Definition                                                    
+----                     ---------- ----------                                                    
+RecordInstallationResult Method     void RecordInstallationResult (string, int, IStringCollection)
+
+

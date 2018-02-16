@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.__ComObject#{c90352f5-643c-4fbc-bb23-e996eb2d51fd}
+
+Name                MemberType Definition                                  
+----                ---------- ----------                                  
+declarePrefix       Method     void declarePrefix (string, string)         
+getDeclaredPrefixes Method     IMXNamespacePrefixes getDeclaredPrefixes () 
+getPrefixes         Method     IMXNamespacePrefixes getPrefixes (string)   
+getURI              Method     Variant getURI (string)                     
+getURIFromNode      Method     Variant getURIFromNode (string, IXMLDOMNode)
+popContext          Method     void popContext ()                          
+pushContext         Method     void pushContext ()                         
+pushNodeContext     Method     void pushNodeContext (IXMLDOMNode, bool)    
+reset               Method     void reset ()                               
+allowOverride       Property   bool allowOverride () {get} {set}           
+
+

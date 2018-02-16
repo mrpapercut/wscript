@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{8d7928b4-4e17-428d-9a17-728df00d1b2b}
+
+Name                      MemberType Definition                                                
+----                      ---------- ----------                                                
+StringArrayToVariantArray Method     Variant StringArrayToVariantArray (Variant)               
+StringToString            Method     string StringToString (string, EncodingType, EncodingType)
+StringToVariantByteArray  Method     Variant StringToVariantByteArray (string, EncodingType)   
+VariantArrayToStringArray Method     Variant VariantArrayToStringArray (Variant)               
+VariantByteArrayToString  Method     string VariantByteArrayToString (Variant, EncodingType)   
+
+

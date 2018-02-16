@@ -1,0 +1,47 @@
+﻿
+
+   TypeName: System.Globalization.JulianCalendar
+
+Name                 MemberType Definition                                                                             
+----                 ---------- ----------                                                                             
+AddDays              Method     datetime AddDays(datetime time, int days)                                              
+AddHours             Method     datetime AddHours(datetime time, int hours)                                            
+AddMilliseconds      Method     datetime AddMilliseconds(datetime time, double milliseconds)                           
+AddMinutes           Method     datetime AddMinutes(datetime time, int minutes)                                        
+AddMonths            Method     datetime AddMonths(datetime time, int months)                                          
+AddSeconds           Method     datetime AddSeconds(datetime time, int seconds)                                        
+AddWeeks             Method     datetime AddWeeks(datetime time, int weeks)                                            
+AddYears             Method     datetime AddYears(datetime time, int years)                                            
+Clone                Method     System.Object Clone(), System.Object ICloneable.Clone()                                
+Equals               Method     bool Equals(System.Object obj)                                                         
+GetDayOfMonth        Method     int GetDayOfMonth(datetime time)                                                       
+GetDayOfWeek         Method     System.DayOfWeek GetDayOfWeek(datetime time)                                           
+GetDayOfYear         Method     int GetDayOfYear(datetime time)                                                        
+GetDaysInMonth       Method     int GetDaysInMonth(int year, int month, int era), int GetDaysInMonth(int year, int m...
+GetDaysInYear        Method     int GetDaysInYear(int year, int era), int GetDaysInYear(int year)                      
+GetEra               Method     int GetEra(datetime time)                                                              
+GetHashCode          Method     int GetHashCode()                                                                      
+GetHour              Method     int GetHour(datetime time)                                                             
+GetLeapMonth         Method     int GetLeapMonth(int year, int era), int GetLeapMonth(int year)                        
+GetMilliseconds      Method     double GetMilliseconds(datetime time)                                                  
+GetMinute            Method     int GetMinute(datetime time)                                                           
+GetMonth             Method     int GetMonth(datetime time)                                                            
+GetMonthsInYear      Method     int GetMonthsInYear(int year, int era), int GetMonthsInYear(int year)                  
+GetSecond            Method     int GetSecond(datetime time)                                                           
+GetType              Method     type GetType()                                                                         
+GetWeekOfYear        Method     int GetWeekOfYear(datetime time, System.Globalization.CalendarWeekRule rule, System....
+GetYear              Method     int GetYear(datetime time)                                                             
+IsLeapDay            Method     bool IsLeapDay(int year, int month, int day, int era), bool IsLeapDay(int year, int ...
+IsLeapMonth          Method     bool IsLeapMonth(int year, int month, int era), bool IsLeapMonth(int year, int month)  
+IsLeapYear           Method     bool IsLeapYear(int year, int era), bool IsLeapYear(int year)                          
+ToDateTime           Method     datetime ToDateTime(int year, int month, int day, int hour, int minute, int second, ...
+ToFourDigitYear      Method     int ToFourDigitYear(int year)                                                          
+ToString             Method     string ToString()                                                                      
+AlgorithmType        Property   System.Globalization.CalendarAlgorithmType AlgorithmType {get;}                        
+Eras                 Property   int[] Eras {get;}                                                                      
+IsReadOnly           Property   bool IsReadOnly {get;}                                                                 
+MaxSupportedDateTime Property   datetime MaxSupportedDateTime {get;}                                                   
+MinSupportedDateTime Property   datetime MinSupportedDateTime {get;}                                                   
+TwoDigitYearMax      Property   int TwoDigitYearMax {get;set;}                                                         
+
+

@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{ca9c70f2-6051-4e27-b714-dd746b160705}
+
+Name             MemberType Definition                                               
+----             ---------- ----------                                               
+Close            Method     void Close ()                                            
+GetErrorContext  Method     string GetErrorContext ()                                
+GetNextTextToken Method     void GetNextTextToken (string, bool)                     
+Initialize       Method     void Initialize (uint, int, uint, uint, IFsrmPropertyBag)
+InitReader       Method     void InitReader ()                                       
+
+

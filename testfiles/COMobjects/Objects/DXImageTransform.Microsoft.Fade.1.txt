@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{16b280c4-ee70-11d1-9066-00c04fd9189d}
+
+Name           MemberType Definition                    
+----           ---------- ----------                    
+Capabilities   Property   int Capabilities () {get}     
+Center         Property   int Center () {get} {set}     
+Duration       Property   float Duration () {get} {set} 
+Overlap        Property   float Overlap () {get} {set}  
+Progress       Property   float Progress () {get} {set} 
+StepResolution Property   float StepResolution () {get} 
+
+

@@ -1,0 +1,59 @@
+﻿
+
+   TypeName: System.__ComObject#{abc08425-0c86-4fa0-9be3-7189956c926e}
+
+Name                              MemberType Definition                                                  
+----                              ---------- ----------                                                  
+AddDelegatedPolicyUser            Method     void AddDelegatedPolicyUser (string, Variant)               
+AddDelegatedPolicyUserName        Method     void AddDelegatedPolicyUserName (string, Variant)           
+AddPolicyAdministrator            Method     void AddPolicyAdministrator (string, Variant)               
+AddPolicyAdministratorName        Method     void AddPolicyAdministratorName (string, Variant)           
+AddPolicyReader                   Method     void AddPolicyReader (string, Variant)                      
+AddPolicyReaderName               Method     void AddPolicyReaderName (string, Variant)                  
+AddPropertyItem                   Method     void AddPropertyItem (int, Variant, Variant)                
+BizruleGroupSupported             Method     bool BizruleGroupSupported ()                               
+CloseApplication                  Method     void CloseApplication (string, int)                         
+CreateApplication                 Method     IAzApplication CreateApplication (string, Variant)          
+CreateApplication2                Method     IAzApplication2 CreateApplication2 (string, Variant)        
+CreateApplicationGroup            Method     IAzApplicationGroup CreateApplicationGroup (string, Variant)
+Delete                            Method     void Delete (Variant)                                       
+DeleteApplication                 Method     void DeleteApplication (string, Variant)                    
+DeleteApplicationGroup            Method     void DeleteApplicationGroup (string, Variant)               
+DeleteDelegatedPolicyUser         Method     void DeleteDelegatedPolicyUser (string, Variant)            
+DeleteDelegatedPolicyUserName     Method     void DeleteDelegatedPolicyUserName (string, Variant)        
+DeletePolicyAdministrator         Method     void DeletePolicyAdministrator (string, Variant)            
+DeletePolicyAdministratorName     Method     void DeletePolicyAdministratorName (string, Variant)        
+DeletePolicyReader                Method     void DeletePolicyReader (string, Variant)                   
+DeletePolicyReaderName            Method     void DeletePolicyReaderName (string, Variant)               
+DeletePropertyItem                Method     void DeletePropertyItem (int, Variant, Variant)             
+GetProperty                       Method     Variant GetProperty (int, Variant)                          
+GetSchemaVersion                  Method     void GetSchemaVersion (int, int)                            
+Initialize                        Method     void Initialize (int, string, Variant)                      
+IsFunctionalLevelUpgradeSupported Method     bool IsFunctionalLevelUpgradeSupported (int)                
+IsUpdateNeeded                    Method     bool IsUpdateNeeded ()                                      
+OpenApplication                   Method     IAzApplication OpenApplication (string, Variant)            
+OpenApplication2                  Method     IAzApplication2 OpenApplication2 (string, Variant)          
+OpenApplicationGroup              Method     IAzApplicationGroup OpenApplicationGroup (string, Variant)  
+SetProperty                       Method     void SetProperty (int, Variant, Variant)                    
+Submit                            Method     void Submit (int, Variant)                                  
+UpdateCache                       Method     void UpdateCache (Variant)                                  
+UpgradeStoresFunctionalLevel      Method     void UpgradeStoresFunctionalLevel (int)                     
+ApplicationData                   Property   string ApplicationData () {get} {set}                       
+ApplicationGroups                 Property   IAzApplicationGroups ApplicationGroups () {get}             
+Applications                      Property   IAzApplications Applications () {get}                       
+ApplyStoreSacl                    Property   int ApplyStoreSacl () {get} {set}                           
+DelegatedPolicyUsers              Property   Variant DelegatedPolicyUsers () {get}                       
+DelegatedPolicyUsersName          Property   Variant DelegatedPolicyUsersName () {get}                   
+Description                       Property   string Description () {get} {set}                           
+DomainTimeout                     Property   int DomainTimeout () {get} {set}                            
+GenerateAudits                    Property   int GenerateAudits () {get} {set}                           
+MaxScriptEngines                  Property   int MaxScriptEngines () {get} {set}                         
+PolicyAdministrators              Property   Variant PolicyAdministrators () {get}                       
+PolicyAdministratorsName          Property   Variant PolicyAdministratorsName () {get}                   
+PolicyReaders                     Property   Variant PolicyReaders () {get}                              
+PolicyReadersName                 Property   Variant PolicyReadersName () {get}                          
+ScriptEngineTimeout               Property   int ScriptEngineTimeout () {get} {set}                      
+TargetMachine                     Property   string TargetMachine () {get}                               
+Writable                          Property   int Writable () {get}                                       
+
+

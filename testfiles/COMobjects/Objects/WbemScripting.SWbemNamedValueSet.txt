@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{cf2376ea-ce8c-11d1-8b05-00600806d9b6}
+
+Name      MemberType Definition                                 
+----      ---------- ----------                                 
+Add       Method     ISWbemNamedValue Add (string, Variant, int)
+Clone     Method     ISWbemNamedValueSet Clone ()               
+DeleteAll Method     void DeleteAll ()                          
+Item      Method     ISWbemNamedValue Item (string, int)        
+Remove    Method     void Remove (string, int)                  
+Count     Property   int Count () {get}                         
+
+

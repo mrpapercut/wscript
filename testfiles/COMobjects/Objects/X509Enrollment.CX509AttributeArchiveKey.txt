@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab327-217d-11da-b2a4-000e7bbb2b09}
+
+Name                MemberType            Definition                                                                   
+----                ----------            ----------                                                                   
+Initialize          Method                void Initialize (IObjectId, EncodingType, string)                            
+InitializeDecode    Method                void InitializeDecode (EncodingType, string)                                 
+InitializeEncode    Method                void InitializeEncode (IX509PrivateKey, EncodingType, string, IObjectId, int)
+EncryptedKeyBlob    ParameterizedProperty string EncryptedKeyBlob (EncodingType) {get}                                 
+RawData             ParameterizedProperty string RawData (EncodingType) {get}                                          
+EncryptionAlgorithm Property              IObjectId EncryptionAlgorithm () {get}                                       
+EncryptionStrength  Property              int EncryptionStrength () {get}                                              
+ObjectId            Property              IObjectId ObjectId () {get}                                                  
+
+

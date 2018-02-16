@@ -1,0 +1,24 @@
+﻿
+
+   TypeName: System.__ComObject#{c68f52f9-32a3-4625-906c-44fc23b40958}
+
+Name                              MemberType Definition                                                                
+----                              ---------- ----------                                                                
+BackgroundRecognize               Method     void BackgroundRecognize (Variant)                                        
+BackgroundRecognizeWithAlternates Method     void BackgroundRecognizeWithAlternates (Variant)                          
+Clone                             Method     IInkRecognizerContext Clone ()                                            
+EndInkInput                       Method     void EndInkInput ()                                                       
+IsStringSupported                 Method     bool IsStringSupported (string)                                           
+Recognize                         Method     IInkRecognitionResult Recognize (InkRecognitionStatus)                    
+StopBackgroundRecognition         Method     void StopBackgroundRecognition ()                                         
+CharacterAutoCompletionMode       Property   InkRecognizerCharacterAutoCompletionMode CharacterAutoCompletionMode ()...
+Factoid                           Property   string Factoid () {get} {set}                                             
+Guide                             Property   IInkRecognizerGuide Guide () {get} {set by ref}                           
+PrefixText                        Property   string PrefixText () {get} {set}                                          
+RecognitionFlags                  Property   InkRecognitionModes RecognitionFlags () {get} {set}                       
+Recognizer                        Property   IInkRecognizer Recognizer () {get}                                        
+Strokes                           Property   IInkStrokes Strokes () {get} {set by ref}                                 
+SuffixText                        Property   string SuffixText () {get} {set}                                          
+WordList                          Property   IInkWordList WordList () {get} {set by ref}                               
+
+

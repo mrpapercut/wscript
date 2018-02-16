@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.EnterpriseServices.Internal.SoapServerVRoot
+
+Name                 MemberType Definition                                                                             
+----                 ---------- ----------                                                                             
+CreateVirtualRootEx  Method     void CreateVirtualRootEx(string rootWebServer, string inBaseUrl, string inVirtualRoo...
+DeleteVirtualRootEx  Method     void DeleteVirtualRootEx(string rootWebServer, string inBaseUrl, string inVirtualRoo...
+Equals               Method     bool Equals(System.Object obj)                                                         
+GetHashCode          Method     int GetHashCode()                                                                      
+GetType              Method     type GetType()                                                                         
+GetVirtualRootStatus Method     void GetVirtualRootStatus(string RootWebServer, string inBaseUrl, string inVirtualRo...
+ToString             Method     string ToString()                                                                      
+
+

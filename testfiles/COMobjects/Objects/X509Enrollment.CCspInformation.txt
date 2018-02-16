@@ -1,0 +1,25 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab307-217d-11da-b2a4-000e7bbb2b09}
+
+Name                             MemberType Definition                                                                
+----                             ---------- ----------                                                                
+GetCspStatusFromOperations       Method     ICspStatus GetCspStatusFromOperations (IObjectId, AlgorithmOperationFlags)
+GetDefaultSecurityDescriptor     Method     string GetDefaultSecurityDescriptor (bool)                                
+InitializeFromName               Method     void InitializeFromName (string)                                          
+InitializeFromType               Method     void InitializeFromType (X509ProviderType, IObjectId, bool)               
+CspAlgorithms                    Property   ICspAlgorithms CspAlgorithms () {get}                                     
+HasHardwareRandomNumberGenerator Property   bool HasHardwareRandomNumberGenerator () {get}                            
+IsHardwareDevice                 Property   bool IsHardwareDevice () {get}                                            
+IsRemovable                      Property   bool IsRemovable () {get}                                                 
+IsSmartCard                      Property   bool IsSmartCard () {get}                                                 
+IsSoftwareDevice                 Property   bool IsSoftwareDevice () {get}                                            
+KeySpec                          Property   X509KeySpec KeySpec () {get}                                              
+LegacyCsp                        Property   bool LegacyCsp () {get}                                                   
+MaxKeyContainerNameLength        Property   int MaxKeyContainerNameLength () {get}                                    
+Name                             Property   string Name () {get}                                                      
+Type                             Property   X509ProviderType Type () {get}                                            
+Valid                            Property   bool Valid () {get}                                                       
+Version                          Property   int Version () {get}                                                      
+
+

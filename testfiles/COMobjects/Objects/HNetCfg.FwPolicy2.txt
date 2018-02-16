@@ -2,22 +2,22 @@
 
    TypeName: System.__ComObject#{98325047-c671-4174-8d81-defcd3f03186}
 
-Name                                         MemberType            Definition                                                                            
-----                                         ----------            ----------                                                                            
-EnableRuleGroup                              Method                void EnableRuleGroup (int, string, bool)                                              
-IsRuleGroupEnabled                           Method                bool IsRuleGroupEnabled (int, string)                                                 
-RestoreLocalFirewallDefaults                 Method                void RestoreLocalFirewallDefaults ()                                                  
-BlockAllInboundTraffic                       ParameterizedProperty bool BlockAllInboundTraffic (NET_FW_PROFILE_TYPE2_) {get} {set}                       
-DefaultInboundAction                         ParameterizedProperty NET_FW_ACTION_ DefaultInboundAction (NET_FW_PROFILE_TYPE2_) {get} {set}               
-DefaultOutboundAction                        ParameterizedProperty NET_FW_ACTION_ DefaultOutboundAction (NET_FW_PROFILE_TYPE2_) {get} {set}              
-ExcludedInterfaces                           ParameterizedProperty Variant ExcludedInterfaces (NET_FW_PROFILE_TYPE2_) {get} {set}                        
-FirewallEnabled                              ParameterizedProperty bool FirewallEnabled (NET_FW_PROFILE_TYPE2_) {get} {set}                              
-IsRuleGroupCurrentlyEnabled                  ParameterizedProperty bool IsRuleGroupCurrentlyEnabled (string) {get}                                       
-NotificationsDisabled                        ParameterizedProperty bool NotificationsDisabled (NET_FW_PROFILE_TYPE2_) {get} {set}                        
-UnicastResponsesToMulticastBroadcastDisabled ParameterizedProperty bool UnicastResponsesToMulticastBroadcastDisabled (NET_FW_PROFILE_TYPE2_) {get} {set} 
-CurrentProfileTypes                          Property              int CurrentProfileTypes () {get}                                                      
-LocalPolicyModifyState                       Property              NET_FW_MODIFY_STATE_ LocalPolicyModifyState () {get}                                  
-Rules                                        Property              INetFwRules Rules () {get}                                                            
-ServiceRestriction                           Property              INetFwServiceRestriction ServiceRestriction () {get}                                  
+Name                                         MemberType            Definition                                          
+----                                         ----------            ----------                                          
+EnableRuleGroup                              Method                void EnableRuleGroup (int, string, bool)            
+IsRuleGroupEnabled                           Method                bool IsRuleGroupEnabled (int, string)               
+RestoreLocalFirewallDefaults                 Method                void RestoreLocalFirewallDefaults ()                
+BlockAllInboundTraffic                       ParameterizedProperty bool BlockAllInboundTraffic (NET_FW_PROFILE_TYPE2...
+DefaultInboundAction                         ParameterizedProperty NET_FW_ACTION_ DefaultInboundAction (NET_FW_PROFI...
+DefaultOutboundAction                        ParameterizedProperty NET_FW_ACTION_ DefaultOutboundAction (NET_FW_PROF...
+ExcludedInterfaces                           ParameterizedProperty Variant ExcludedInterfaces (NET_FW_PROFILE_TYPE2_...
+FirewallEnabled                              ParameterizedProperty bool FirewallEnabled (NET_FW_PROFILE_TYPE2_) {get...
+IsRuleGroupCurrentlyEnabled                  ParameterizedProperty bool IsRuleGroupCurrentlyEnabled (string) {get}     
+NotificationsDisabled                        ParameterizedProperty bool NotificationsDisabled (NET_FW_PROFILE_TYPE2_...
+UnicastResponsesToMulticastBroadcastDisabled ParameterizedProperty bool UnicastResponsesToMulticastBroadcastDisabled...
+CurrentProfileTypes                          Property              int CurrentProfileTypes () {get}                    
+LocalPolicyModifyState                       Property              NET_FW_MODIFY_STATE_ LocalPolicyModifyState () {g...
+Rules                                        Property              INetFwRules Rules () {get}                          
+ServiceRestriction                           Property              INetFwServiceRestriction ServiceRestriction () {g...
 
 

@@ -1,0 +1,22 @@
+﻿
+
+   TypeName: System.__ComObject#{04c6895d-eaf2-4034-97f3-311de9be413a}
+
+Name                                MemberType Definition                                              
+----                                ---------- ----------                                              
+BeginSearch                         Method     ISearchJob BeginSearch (string, IUnknown, Variant)      
+EndSearch                           Method     ISearchResult EndSearch (ISearchJob)                    
+EscapeString                        Method     string EscapeString (string)                            
+GetTotalHistoryCount                Method     int GetTotalHistoryCount ()                             
+QueryHistory                        Method     IUpdateHistoryEntryCollection QueryHistory (int, int)   
+Search                              Method     ISearchResult Search (string)                           
+CanAutomaticallyUpgradeService      Property   bool CanAutomaticallyUpgradeService () {get} {set}      
+ClientApplicationID                 Property   string ClientApplicationID () {get} {set}               
+IgnoreDownloadPriority              Property   bool IgnoreDownloadPriority () {get} {set}              
+IncludePotentiallySupersededUpdates Property   bool IncludePotentiallySupersededUpdates () {get} {set} 
+Online                              Property   bool Online () {get} {set}                              
+SearchScope                         Property   SearchScope SearchScope () {get} {set}                  
+ServerSelection                     Property   ServerSelection ServerSelection () {get} {set}          
+ServiceID                           Property   string ServiceID () {get} {set}                         
+
+

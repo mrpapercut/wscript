@@ -1,0 +1,62 @@
+﻿
+
+   TypeName: Microsoft.JScript.COMMethodInfo
+
+Name                         MemberType Definition                                                                     
+----                         ---------- ----------                                                                     
+CreateDelegate               Method     System.Delegate CreateDelegate(type delegateType), System.Delegate CreateDel...
+Equals                       Method     bool Equals(System.Object obj), bool _MemberInfo.Equals(System.Object other)...
+GetBaseDefinition            Method     System.Reflection.MethodInfo GetBaseDefinition(), System.Reflection.MethodIn...
+GetCOMMemberInfo             Method     Microsoft.JScript.COMMemberInfo GetCOMMemberInfo(), Microsoft.JScript.COMMem...
+GetCustomAttributes          Method     System.Object[] GetCustomAttributes(type t, bool inherit), System.Object[] G...
+GetCustomAttributesData      Method     System.Collections.Generic.IList[System.Reflection.CustomAttributeData] GetC...
+GetGenericArguments          Method     type[] GetGenericArguments()                                                   
+GetGenericMethodDefinition   Method     System.Reflection.MethodInfo GetGenericMethodDefinition()                      
+GetHashCode                  Method     int GetHashCode(), int _MemberInfo.GetHashCode(), int _MethodBase.GetHashCod...
+GetIDsOfNames                Method     void _MemberInfo.GetIDsOfNames([ref] guid riid, System.IntPtr rgszNames, uin...
+GetMethodBody                Method     System.Reflection.MethodBody GetMethodBody()                                   
+GetMethodImplementationFlags Method     System.Reflection.MethodImplAttributes GetMethodImplementationFlags(), Syste...
+GetParameters                Method     System.Reflection.ParameterInfo[] GetParameters(), System.Reflection.Paramet...
+GetType                      Method     type GetType(), type _MemberInfo.GetType(), type _MethodBase.GetType(), type...
+GetTypeInfo                  Method     void _MemberInfo.GetTypeInfo(uint32 iTInfo, uint32 lcid, System.IntPtr ppTIn...
+GetTypeInfoCount             Method     void _MemberInfo.GetTypeInfoCount([ref] uint32 pcTInfo), void _MethodBase.Ge...
+Initialize                   Method     void Initialize(string name, Microsoft.JScript.COMMemberInfo dispatch), void...
+Invoke                       Method     System.Object Invoke(System.Object obj, System.Reflection.BindingFlags invok...
+IsDefined                    Method     bool IsDefined(type type, bool inherit), bool ICustomAttributeProvider.IsDef...
+MakeGenericMethod            Method     System.Reflection.MethodInfo MakeGenericMethod(Params type[] typeArguments)    
+ToString                     Method     string ToString(), string _MemberInfo.ToString(), string _MethodBase.ToStrin...
+Attributes                   Property   System.Reflection.MethodAttributes Attributes {get;}                           
+CallingConvention            Property   System.Reflection.CallingConventions CallingConvention {get;}                  
+ContainsGenericParameters    Property   bool ContainsGenericParameters {get;}                                          
+CustomAttributes             Property   System.Collections.Generic.IEnumerable[System.Reflection.CustomAttributeData...
+DeclaringType                Property   type DeclaringType {get;}                                                      
+IsAbstract                   Property   bool IsAbstract {get;}                                                         
+IsAssembly                   Property   bool IsAssembly {get;}                                                         
+IsConstructor                Property   bool IsConstructor {get;}                                                      
+IsFamily                     Property   bool IsFamily {get;}                                                           
+IsFamilyAndAssembly          Property   bool IsFamilyAndAssembly {get;}                                                
+IsFamilyOrAssembly           Property   bool IsFamilyOrAssembly {get;}                                                 
+IsFinal                      Property   bool IsFinal {get;}                                                            
+IsGenericMethod              Property   bool IsGenericMethod {get;}                                                    
+IsGenericMethodDefinition    Property   bool IsGenericMethodDefinition {get;}                                          
+IsHideBySig                  Property   bool IsHideBySig {get;}                                                        
+IsPrivate                    Property   bool IsPrivate {get;}                                                          
+IsPublic                     Property   bool IsPublic {get;}                                                           
+IsSecurityCritical           Property   bool IsSecurityCritical {get;}                                                 
+IsSecuritySafeCritical       Property   bool IsSecuritySafeCritical {get;}                                             
+IsSecurityTransparent        Property   bool IsSecurityTransparent {get;}                                              
+IsSpecialName                Property   bool IsSpecialName {get;}                                                      
+IsStatic                     Property   bool IsStatic {get;}                                                           
+IsVirtual                    Property   bool IsVirtual {get;}                                                          
+MemberType                   Property   System.Reflection.MemberTypes MemberType {get;}                                
+MetadataToken                Property   int MetadataToken {get;}                                                       
+MethodHandle                 Property   System.RuntimeMethodHandle MethodHandle {get;}                                 
+MethodImplementationFlags    Property   System.Reflection.MethodImplAttributes MethodImplementationFlags {get;}        
+Module                       Property   System.Reflection.Module Module {get;}                                         
+Name                         Property   string Name {get;}                                                             
+ReflectedType                Property   type ReflectedType {get;}                                                      
+ReturnParameter              Property   System.Reflection.ParameterInfo ReturnParameter {get;}                         
+ReturnType                   Property   type ReturnType {get;}                                                         
+ReturnTypeCustomAttributes   Property   System.Reflection.ICustomAttributeProvider ReturnTypeCustomAttributes {get;}   
+
+

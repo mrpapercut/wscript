@@ -2,39 +2,39 @@
 
    TypeName: System.AppDomainSetup
 
-Name                           MemberType Definition                                                                                     
-----                           ---------- ----------                                                                                     
-Equals                         Method     bool Equals(System.Object obj)                                                                 
-GetConfigurationBytes          Method     byte[] GetConfigurationBytes()                                                                 
-GetHashCode                    Method     int GetHashCode()                                                                              
-GetType                        Method     type GetType()                                                                                 
-SetCompatibilitySwitches       Method     void SetCompatibilitySwitches(System.Collections.Generic.IEnumerable[string] switches)         
-SetConfigurationBytes          Method     void SetConfigurationBytes(byte[] value)                                                       
-SetNativeFunction              Method     void SetNativeFunction(string functionName, int functionVersion, System.IntPtr functionPointer)
-ToString                       Method     string ToString()                                                                              
-ActivationArguments            Property   System.Runtime.Hosting.ActivationArguments ActivationArguments {get;set;}                      
-AppDomainInitializer           Property   System.AppDomainInitializer AppDomainInitializer {get;set;}                                    
-AppDomainInitializerArguments  Property   string[] AppDomainInitializerArguments {get;set;}                                              
-AppDomainManagerAssembly       Property   string AppDomainManagerAssembly {get;set;}                                                     
-AppDomainManagerType           Property   string AppDomainManagerType {get;set;}                                                         
-ApplicationBase                Property   string ApplicationBase {get;set;}                                                              
-ApplicationName                Property   string ApplicationName {get;set;}                                                              
-ApplicationTrust               Property   System.Security.Policy.ApplicationTrust ApplicationTrust {get;set;}                            
-CachePath                      Property   string CachePath {get;set;}                                                                    
-ConfigurationFile              Property   string ConfigurationFile {get;set;}                                                            
-DisallowApplicationBaseProbing Property   bool DisallowApplicationBaseProbing {get;set;}                                                 
-DisallowBindingRedirects       Property   bool DisallowBindingRedirects {get;set;}                                                       
-DisallowCodeDownload           Property   bool DisallowCodeDownload {get;set;}                                                           
-DisallowPublisherPolicy        Property   bool DisallowPublisherPolicy {get;set;}                                                        
-DynamicBase                    Property   string DynamicBase {get;set;}                                                                  
-LicenseFile                    Property   string LicenseFile {get;set;}                                                                  
-LoaderOptimization             Property   System.LoaderOptimization LoaderOptimization {get;set;}                                        
-PartialTrustVisibleAssemblies  Property   string[] PartialTrustVisibleAssemblies {get;set;}                                              
-PrivateBinPath                 Property   string PrivateBinPath {get;set;}                                                               
-PrivateBinPathProbe            Property   string PrivateBinPathProbe {get;set;}                                                          
-SandboxInterop                 Property   bool SandboxInterop {get;set;}                                                                 
-ShadowCopyDirectories          Property   string ShadowCopyDirectories {get;set;}                                                        
-ShadowCopyFiles                Property   string ShadowCopyFiles {get;set;}                                                              
-TargetFrameworkName            Property   string TargetFrameworkName {get;set;}                                                          
+Name                           MemberType Definition                                                                   
+----                           ---------- ----------                                                                   
+Equals                         Method     bool Equals(System.Object obj)                                               
+GetConfigurationBytes          Method     byte[] GetConfigurationBytes()                                               
+GetHashCode                    Method     int GetHashCode()                                                            
+GetType                        Method     type GetType()                                                               
+SetCompatibilitySwitches       Method     void SetCompatibilitySwitches(System.Collections.Generic.IEnumerable[strin...
+SetConfigurationBytes          Method     void SetConfigurationBytes(byte[] value)                                     
+SetNativeFunction              Method     void SetNativeFunction(string functionName, int functionVersion, System.In...
+ToString                       Method     string ToString()                                                            
+ActivationArguments            Property   System.Runtime.Hosting.ActivationArguments ActivationArguments {get;set;}    
+AppDomainInitializer           Property   System.AppDomainInitializer AppDomainInitializer {get;set;}                  
+AppDomainInitializerArguments  Property   string[] AppDomainInitializerArguments {get;set;}                            
+AppDomainManagerAssembly       Property   string AppDomainManagerAssembly {get;set;}                                   
+AppDomainManagerType           Property   string AppDomainManagerType {get;set;}                                       
+ApplicationBase                Property   string ApplicationBase {get;set;}                                            
+ApplicationName                Property   string ApplicationName {get;set;}                                            
+ApplicationTrust               Property   System.Security.Policy.ApplicationTrust ApplicationTrust {get;set;}          
+CachePath                      Property   string CachePath {get;set;}                                                  
+ConfigurationFile              Property   string ConfigurationFile {get;set;}                                          
+DisallowApplicationBaseProbing Property   bool DisallowApplicationBaseProbing {get;set;}                               
+DisallowBindingRedirects       Property   bool DisallowBindingRedirects {get;set;}                                     
+DisallowCodeDownload           Property   bool DisallowCodeDownload {get;set;}                                         
+DisallowPublisherPolicy        Property   bool DisallowPublisherPolicy {get;set;}                                      
+DynamicBase                    Property   string DynamicBase {get;set;}                                                
+LicenseFile                    Property   string LicenseFile {get;set;}                                                
+LoaderOptimization             Property   System.LoaderOptimization LoaderOptimization {get;set;}                      
+PartialTrustVisibleAssemblies  Property   string[] PartialTrustVisibleAssemblies {get;set;}                            
+PrivateBinPath                 Property   string PrivateBinPath {get;set;}                                             
+PrivateBinPathProbe            Property   string PrivateBinPathProbe {get;set;}                                        
+SandboxInterop                 Property   bool SandboxInterop {get;set;}                                               
+ShadowCopyDirectories          Property   string ShadowCopyDirectories {get;set;}                                      
+ShadowCopyFiles                Property   string ShadowCopyFiles {get;set;}                                            
+TargetFrameworkName            Property   string TargetFrameworkName {get;set;}                                        
 
 

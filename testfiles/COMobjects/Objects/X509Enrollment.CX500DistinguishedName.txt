@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab303-217d-11da-b2a4-000e7bbb2b09}
+
+Name        MemberType            Definition                                       
+----        ----------            ----------                                       
+Decode      Method                void Decode (string, EncodingType, X500NameFlags)
+Encode      Method                void Encode (string, X500NameFlags)              
+EncodedName ParameterizedProperty string EncodedName (EncodingType) {get}          
+Name        Property              string Name () {get}                             
+
+

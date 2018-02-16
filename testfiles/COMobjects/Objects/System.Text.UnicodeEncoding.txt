@@ -1,0 +1,38 @@
+﻿
+
+   TypeName: System.Text.UnicodeEncoding
+
+Name               MemberType Definition                                                                               
+----               ---------- ----------                                                                               
+Clone              Method     System.Object Clone(), System.Object ICloneable.Clone()                                  
+Equals             Method     bool Equals(System.Object value)                                                         
+GetByteCount       Method     int GetByteCount(char[] chars, int index, int count), int GetByteCount(string s), int ...
+GetBytes           Method     int GetBytes(string s, int charIndex, int charCount, byte[] bytes, int byteIndex), int...
+GetCharCount       Method     int GetCharCount(byte[] bytes, int index, int count), int GetCharCount(System.Byte*, m...
+GetChars           Method     int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex),...
+GetDecoder         Method     System.Text.Decoder GetDecoder()                                                         
+GetEncoder         Method     System.Text.Encoder GetEncoder()                                                         
+GetHashCode        Method     int GetHashCode()                                                                        
+GetMaxByteCount    Method     int GetMaxByteCount(int charCount)                                                       
+GetMaxCharCount    Method     int GetMaxCharCount(int byteCount)                                                       
+GetPreamble        Method     byte[] GetPreamble()                                                                     
+GetString          Method     string GetString(byte[] bytes, int index, int count), string GetString(System.Byte*, m...
+GetType            Method     type GetType()                                                                           
+IsAlwaysNormalized Method     bool IsAlwaysNormalized(), bool IsAlwaysNormalized(System.Text.NormalizationForm form)   
+ToString           Method     string ToString()                                                                        
+BodyName           Property   string BodyName {get;}                                                                   
+CodePage           Property   int CodePage {get;}                                                                      
+DecoderFallback    Property   System.Text.DecoderFallback DecoderFallback {get;set;}                                   
+EncoderFallback    Property   System.Text.EncoderFallback EncoderFallback {get;set;}                                   
+EncodingName       Property   string EncodingName {get;}                                                               
+HeaderName         Property   string HeaderName {get;}                                                                 
+IsBrowserDisplay   Property   bool IsBrowserDisplay {get;}                                                             
+IsBrowserSave      Property   bool IsBrowserSave {get;}                                                                
+IsMailNewsDisplay  Property   bool IsMailNewsDisplay {get;}                                                            
+IsMailNewsSave     Property   bool IsMailNewsSave {get;}                                                               
+IsReadOnly         Property   bool IsReadOnly {get;}                                                                   
+IsSingleByte       Property   bool IsSingleByte {get;}                                                                 
+WebName            Property   string WebName {get;}                                                                    
+WindowsCodePage    Property   int WindowsCodePage {get;}                                                               
+
+

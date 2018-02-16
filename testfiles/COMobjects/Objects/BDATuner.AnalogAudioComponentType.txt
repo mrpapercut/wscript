@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{2cfeb2a8-1787-4a24-a941-c6eaec39c842}
+
+Name            MemberType Definition                                    
+----            ---------- ----------                                    
+Clone           Method     IComponentType Clone ()                       
+AnalogAudioMode Property   tagTVAudioMode AnalogAudioMode () {get} {set} 
+Category        Property   ComponentCategory Category () {get} {set}     
+MediaFormatType Property   string MediaFormatType () {get} {set}         
+MediaMajorType  Property   string MediaMajorType () {get} {set}          
+MediaSubType    Property   string MediaSubType () {get} {set}            
+
+

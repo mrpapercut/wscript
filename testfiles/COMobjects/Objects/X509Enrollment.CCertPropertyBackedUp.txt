@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab338-217d-11da-b2a4-000e7bbb2b09}
+
+Name                      MemberType            Definition                                                 
+----                      ----------            ----------                                                 
+Initialize                Method                void Initialize (bool, Date)                               
+InitializeDecode          Method                void InitializeDecode (EncodingType, string)               
+InitializeFromCertificate Method                void InitializeFromCertificate (bool, EncodingType, string)
+InitializeFromCurrentTime Method                void InitializeFromCurrentTime (bool)                      
+RemoveFromCertificate     Method                void RemoveFromCertificate (bool, EncodingType, string)    
+SetValueOnCertificate     Method                void SetValueOnCertificate (bool, EncodingType, string)    
+RawData                   ParameterizedProperty string RawData (EncodingType) {get}                        
+BackedUpTime              Property              Date BackedUpTime () {get}                                 
+BackedUpValue             Property              bool BackedUpValue () {get}                                
+PropertyId                Property              CERTENROLL_PROPERTYID PropertyId () {get} {set}            
+
+

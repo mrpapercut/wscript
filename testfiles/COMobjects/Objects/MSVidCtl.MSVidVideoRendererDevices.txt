@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{c5702cd3-9b79-11d3-b654-00c04f79498e}
+
+Name   MemberType            Definition                               
+----   ----------            ----------                               
+Add    Method                void Add (IMSVidVideoRenderer)           
+Remove Method                void Remove (Variant)                    
+Item   ParameterizedProperty IMSVidVideoRenderer Item (Variant) {get} 
+Count  Property              int Count () {get}                       
+
+

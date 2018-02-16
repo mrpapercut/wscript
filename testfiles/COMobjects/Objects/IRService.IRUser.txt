@@ -1,0 +1,34 @@
+﻿
+
+   TypeName: IRService.IRUser
+
+Name                          MemberType Definition                                                                                                                      
+----                          ---------- ----------                                                                                                                      
+AddAllCodeSets                Method     void IIRUser.AddAllCodeSets([ref] int[] hCodeSets)                                                                              
+AddCodeSet                    Method     void IIRUser.AddCodeSet(string urlCodeSet, string target, [ref] int hCodeSet)                                                   
+CancelLearnKey                Method     void IIRUser.CancelLearnKey()                                                                                                   
+CodeSetHasKey                 Method     void IIRUser.CodeSetHasKey(int hCodeSet, string key, [ref] bool result)                                                         
+CreateCodeSet                 Method     void IIRUser.CreateCodeSet(string target, [ref] int hCodeSet)                                                                   
+DeleteCodeSet                 Method     void IIRUser.DeleteCodeSet(string urlCodeSet)                                                                                   
+DeleteKey                     Method     void IIRUser.DeleteKey(int hCodeSet, string key)                                                                                
+Equals                        Method     bool Equals(System.Object obj)                                                                                                  
+FreeAllCodeSets               Method     void IIRUser.FreeAllCodeSets()                                                                                                  
+GetAlternateKeyNames          Method     void IIRUser.GetAlternateKeyNames(string keyname, [ref] string[] alternateKeyNames)                                             
+GetHashCode                   Method     int GetHashCode()                                                                                                               
+GetKeyNameFromStdKeyCode      Method     void IIRUser.GetKeyNameFromStdKeyCode(ehiProxy.EHCIR_STD_KEYS key, [ref] string keyname)                                        
+GetRlcForKey                  Method     string IIRUser.GetRlcForKey(int hCodeSet, string key)                                                                           
+GetStdKeyCodeFromKeyName      Method     void IIRUser.GetStdKeyCodeFromKeyName(string keyname, [ref] ehiProxy.EHCIR_STD_KEYS key)                                        
+GetType                       Method     type GetType()                                                                                                                  
+KeyPress                      Method     void IIRUser.KeyPress(int hCodeSet, string key, ehiProxy.IRKPType type, int duration, bool async)                               
+LearnKey                      Method     void IIRUser.LearnKey(int hCodeSet, string target, string key, ehiProxy.IIRLearnKeyStatus pStatusCallback)                      
+MatchKey                      Method     void IIRUser.MatchKey(int hCodeSet, string keyname, [ref] int[] hCodeSets, ehiProxy.IRMatchKeyOptions options, [ref] int[] hM...
+QueryCodesetsByDeviceType     Method     void IIRUser.QueryCodesetsByDeviceType(string type, [ref] string[] brand, [ref] string[] model, [ref] string[] codeseturl)      
+QueryConnectedIRDeviceOutputs Method     void IIRUser.QueryConnectedIRDeviceOutputs([ref] string[] deviceoutputs)                                                        
+QueryIRDeviceCapabilities     Method     void IIRUser.QueryIRDeviceCapabilities([ref] uint32 IRDeviceCapabilities)                                                       
+QueryIRInputDevices           Method     void IIRUser.QueryIRInputDevices([ref] string[] devicenames)                                                                    
+QueryIROutputDevices          Method     void IIRUser.QueryIROutputDevices([ref] string[] devicenames)                                                                   
+SaveCodeSet                   Method     void IIRUser.SaveCodeSet(int hCodeSet, string urlCodeSet, string type, string brand, string model)                              
+SuggestDifferentiatingKey     Method     void IIRUser.SuggestDifferentiatingKey([ref] int[] hCodeSets, [ref] ehiProxy.EHCIR_STD_KEYS[] keysAllowed, [ref] ehiProxy.EHC...
+ToString                      Method     string ToString()                                                                                                               
+
+

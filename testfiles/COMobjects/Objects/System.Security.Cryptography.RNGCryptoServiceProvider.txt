@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.Security.Cryptography.RNGCryptoServiceProvider
+
+Name            MemberType Definition                                                                   
+----            ---------- ----------                                                                   
+Dispose         Method     void Dispose(), void IDisposable.Dispose()                                   
+Equals          Method     bool Equals(System.Object obj)                                               
+GetBytes        Method     void GetBytes(byte[] data), void GetBytes(byte[] data, int offset, int count)
+GetHashCode     Method     int GetHashCode()                                                            
+GetNonZeroBytes Method     void GetNonZeroBytes(byte[] data)                                            
+GetType         Method     type GetType()                                                               
+ToString        Method     string ToString()                                                            
+
+

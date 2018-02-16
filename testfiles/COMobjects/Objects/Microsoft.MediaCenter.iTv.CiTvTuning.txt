@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.iTv.CiTvTuning
+
+Name                  MemberType Definition                                                                                                  
+----                  ---------- ----------                                                                                                  
+DoPassThruTuneRequest Method     void IiTvTuning.DoPassThruTuneRequest(string TuneString, bool Quiet)                                        
+DoTuneRequest         Method     void IiTvTuning.DoTuneRequest(System.Object ServiceInfo, bool Quiet)                                        
+Equals                Method     bool Equals(System.Object obj)                                                                              
+FindServiceFromId     Method     System.Object IiTvTuning.FindServiceFromId(int ONID, int NID, int TSID, int SID, [ref] bool MultipleMatches)
+FindServiceFromLCN    Method     System.Object IiTvTuning.FindServiceFromLCN(int LCN)                                                        
+GetHashCode           Method     int GetHashCode()                                                                                           
+GetTunerProperty      Method     string IiTvTuning.GetTunerProperty(string PropertyName, string Language)                                    
+GetType               Method     type GetType()                                                                                              
+ToString              Method     string ToString()                                                                                           
+CurrentService        Property   System.Object CurrentService {get;}                                                                         
+
+

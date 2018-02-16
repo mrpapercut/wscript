@@ -1,0 +1,34 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab35c-217d-11da-b2a4-000e7bbb2b09}
+
+Name                        MemberType            Definition                                                           
+----                        ----------            ----------                                                           
+CheckCertificateSignature   Method                void CheckCertificateSignature (bool)                                
+Encode                      Method                void Encode ()                                                       
+GetInnerRequest             Method                IX509CertificateRequest GetInnerRequest (InnerRequestLevel)          
+Initialize                  Method                void Initialize (X509CertificateEnrollmentContext)                   
+InitializeDecode            Method                void InitializeDecode (string, EncodingType)                         
+InitializeFromCertificate   Method                void InitializeFromCertificate (X509CertificateEnrollmentContext, ...
+InitializeFromInnerRequest  Method                void InitializeFromInnerRequest (IX509CertificateRequest)            
+InitializeFromTemplate      Method                void InitializeFromTemplate (X509CertificateEnrollmentContext, IX5...
+InitializeFromTemplateName  Method                void InitializeFromTemplateName (X509CertificateEnrollmentContext,...
+ResetForEncode              Method                void ResetForEncode ()                                               
+RawData                     ParameterizedProperty string RawData (EncodingType) {get}                                  
+RenewalCertificate          ParameterizedProperty string RenewalCertificate (EncodingType) {get} {set}                 
+AlternateSignatureAlgorithm Property              bool AlternateSignatureAlgorithm () {get} {set}                      
+ClientId                    Property              RequestClientInfoClientId ClientId () {get} {set}                    
+CspInformations             Property              ICspInformations CspInformations () {get} {set}                      
+EnrollmentContext           Property              X509CertificateEnrollmentContext EnrollmentContext () {get}          
+HashAlgorithm               Property              IObjectId HashAlgorithm () {get} {set}                               
+ParentWindow                Property              int ParentWindow () {get} {set}                                      
+PolicyServer                Property              IX509EnrollmentPolicyServer PolicyServer () {get}                    
+RequesterName               Property              string RequesterName () {get} {set}                                  
+SignerCertificate           Property              ISignerCertificate SignerCertificate () {get} {set}                  
+Silent                      Property              bool Silent () {get} {set}                                           
+SuppressDefaults            Property              bool SuppressDefaults () {get} {set}                                 
+Template                    Property              IX509CertificateTemplate Template () {get}                           
+Type                        Property              X509RequestType Type () {get}                                        
+UIContextMessage            Property              string UIContextMessage () {get} {set}                               
+
+

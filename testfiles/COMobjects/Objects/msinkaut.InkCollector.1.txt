@@ -1,0 +1,33 @@
+﻿
+
+   TypeName: System.__ComObject#{f0f060b5-8b1f-4a7c-89ec-880692588a4f}
+
+Name                          MemberType Definition                                                          
+----                          ---------- ----------                                                          
+GetEventInterest              Method     bool GetEventInterest (InkCollectorEventInterest)                   
+GetGestureStatus              Method     bool GetGestureStatus (InkApplicationGesture)                       
+GetWindowInputRectangle       Method     void GetWindowInputRectangle (IInkRectangle)                        
+SetAllTabletsMode             Method     void SetAllTabletsMode (bool)                                       
+SetEventInterest              Method     void SetEventInterest (InkCollectorEventInterest, bool)             
+SetGestureStatus              Method     void SetGestureStatus (InkApplicationGesture, bool)                 
+SetSingleTabletIntegratedMode Method     void SetSingleTabletIntegratedMode (IInkTablet)                     
+SetWindowInputRectangle       Method     void SetWindowInputRectangle (IInkRectangle)                        
+AutoRedraw                    Property   bool AutoRedraw () {get} {set}                                      
+CollectingInk                 Property   bool CollectingInk () {get}                                         
+CollectionMode                Property   InkCollectionMode CollectionMode () {get} {set}                     
+Cursors                       Property   IInkCursors Cursors () {get}                                        
+DefaultDrawingAttributes      Property   IInkDrawingAttributes DefaultDrawingAttributes () {get} {set by ref}
+DesiredPacketDescription      Property   Variant DesiredPacketDescription () {get} {set}                     
+DynamicRendering              Property   bool DynamicRendering () {get} {set}                                
+Enabled                       Property   bool Enabled () {get} {set}                                         
+hWnd                          Property   LONG_PTR hWnd () {get} {set}                                        
+Ink                           Property   IInkDisp Ink () {get} {set by ref}                                  
+MarginX                       Property   int MarginX () {get} {set}                                          
+MarginY                       Property   int MarginY () {get} {set}                                          
+MouseIcon                     Property   IPictureDisp MouseIcon () {get} {set} {set by ref}                  
+MousePointer                  Property   InkMousePointer MousePointer () {get} {set}                         
+Renderer                      Property   IInkRenderer Renderer () {get} {set by ref}                         
+SupportHighContrastInk        Property   bool SupportHighContrastInk () {get} {set}                          
+Tablet                        Property   IInkTablet Tablet () {get}                                          
+
+

@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.EnterpriseServices.RegistrationConfig
+
+Name                     MemberType Definition                                                              
+----                     ---------- ----------                                                              
+Equals                   Method     bool Equals(System.Object obj)                                          
+GetHashCode              Method     int GetHashCode()                                                       
+GetType                  Method     type GetType()                                                          
+ToString                 Method     string ToString()                                                       
+Application              Property   string Application {get;set;}                                           
+ApplicationRootDirectory Property   string ApplicationRootDirectory {get;set;}                              
+AssemblyFile             Property   string AssemblyFile {get;set;}                                          
+InstallationFlags        Property   System.EnterpriseServices.InstallationFlags InstallationFlags {get;set;}
+Partition                Property   string Partition {get;set;}                                             
+TypeLibrary              Property   string TypeLibrary {get;set;}                                           
+
+

@@ -1,0 +1,23 @@
+﻿
+
+   TypeName: System.__ComObject#{615f1d43-8703-4565-88e2-8201d2ecd7b7}
+
+Name           MemberType Definition                                                  
+----           ---------- ----------                                                  
+GetTransform   Method     void GetTransform (float, float, float, float, float, float)
+Reflect        Method     void Reflect (bool, bool)                                   
+Reset          Method     void Reset ()                                               
+Rotate         Method     void Rotate (float, float, float)                           
+ScaleTransform Method     void ScaleTransform (float, float)                          
+SetTransform   Method     void SetTransform (float, float, float, float, float, float)
+Shear          Method     void Shear (float, float)                                   
+Translate      Method     void Translate (float, float)                               
+Data           Property   XFORM Data () {get} {set}                                   
+eDx            Property   float eDx () {get} {set}                                    
+eDy            Property   float eDy () {get} {set}                                    
+eM11           Property   float eM11 () {get} {set}                                   
+eM12           Property   float eM12 () {get} {set}                                   
+eM21           Property   float eM21 () {get} {set}                                   
+eM22           Property   float eM22 () {get} {set}                                   
+
+

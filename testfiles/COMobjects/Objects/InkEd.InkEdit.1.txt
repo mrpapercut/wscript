@@ -1,0 +1,49 @@
+﻿
+
+   TypeName: System.__ComObject#{f2127a19-fbfb-4aed-8464-3f36d78cfefb}
+
+Name               MemberType Definition                                                   
+----               ---------- ----------                                                   
+GetGestureStatus   Method     bool GetGestureStatus (InkApplicationGesture)                
+Recognize          Method     void Recognize ()                                            
+Refresh            Method     void Refresh ()                                              
+SetGestureStatus   Method     void SetGestureStatus (InkApplicationGesture, bool)          
+Appearance         Property   AppearanceConstants Appearance () {get} {set}                
+BackColor          Property   OLE_COLOR BackColor () {get} {set}                           
+BorderStyle        Property   BorderStyleConstants BorderStyle () {get} {set}              
+DisableNoScroll    Property   bool DisableNoScroll () {get} {set}                          
+DrawingAttributes  Property   IInkDrawingAttributes DrawingAttributes () {get} {set by ref}
+Enabled            Property   bool Enabled () {get} {set}                                  
+Factoid            Property   string Factoid () {get} {set}                                
+Font               Property   IFontDisp Font () {get} {set by ref}                         
+Hwnd               Property   OLE_HANDLE Hwnd () {get}                                     
+InkInsertMode      Property   InkInsertMode InkInsertMode () {get} {set}                   
+InkMode            Property   InkMode InkMode () {get} {set}                               
+Locked             Property   bool Locked () {get} {set}                                   
+MaxLength          Property   int MaxLength () {get} {set}                                 
+MouseIcon          Property   IPictureDisp MouseIcon () {get} {set} {set by ref}           
+MousePointer       Property   InkMousePointer MousePointer () {get} {set}                  
+MultiLine          Property   bool MultiLine () {get} {set}                                
+RecognitionTimeout Property   int RecognitionTimeout () {get} {set}                        
+Recognizer         Property   IInkRecognizer Recognizer () {get} {set by ref}              
+ScrollBars         Property   ScrollBarsConstants ScrollBars () {get} {set}                
+SelAlignment       Property   Variant SelAlignment () {get} {set}                          
+SelBold            Property   Variant SelBold () {get} {set}                               
+SelCharOffset      Property   Variant SelCharOffset () {get} {set}                         
+SelColor           Property   Variant SelColor () {get} {set}                              
+SelFontName        Property   Variant SelFontName () {get} {set}                           
+SelFontSize        Property   Variant SelFontSize () {get} {set}                           
+SelInks            Property   Variant SelInks () {get} {set}                               
+SelInksDisplayMode Property   InkDisplayMode SelInksDisplayMode () {get} {set}             
+SelItalic          Property   Variant SelItalic () {get} {set}                             
+SelLength          Property   int SelLength () {get} {set}                                 
+SelRTF             Property   string SelRTF () {get} {set}                                 
+SelStart           Property   int SelStart () {get} {set}                                  
+SelText            Property   string SelText () {get} {set}                                
+SelUnderline       Property   Variant SelUnderline () {get} {set}                          
+Status             Property   InkEditStatus Status () {get}                                
+Text               Property   string Text () {get} {set}                                   
+TextRTF            Property   string TextRTF () {get} {set}                                
+UseMouseForInput   Property   bool UseMouseForInput () {get} {set}                         
+
+

@@ -1,0 +1,27 @@
+﻿
+
+   TypeName: System.__ComObject#{7988b575-ec89-11cf-9c00-00aa00a14f56}
+
+Name                           MemberType Definition                                                    
+----                           ---------- ----------                                                    
+AddUser                        Method     DIDiskQuotaUser AddUser (string)                              
+DeleteUser                     Method     void DeleteUser (DIDiskQuotaUser)                             
+FindUser                       Method     DIDiskQuotaUser FindUser (string)                             
+GiveUserNameResolutionPriority Method     void GiveUserNameResolutionPriority (DIDiskQuotaUser)         
+Initialize                     Method     void Initialize (string, bool)                                
+InvalidateSidNameCache         Method     void InvalidateSidNameCache ()                                
+ShutdownNameResolution         Method     void ShutdownNameResolution ()                                
+TranslateLogonNameToSID        Method     string TranslateLogonNameToSID (string)                       
+_NewEnum                       Method     IDispatch _NewEnum ()                                         
+DefaultQuotaLimit              Property   double DefaultQuotaLimit () {get} {set}                       
+DefaultQuotaLimitText          Property   string DefaultQuotaLimitText () {get}                         
+DefaultQuotaThreshold          Property   double DefaultQuotaThreshold () {get} {set}                   
+DefaultQuotaThresholdText      Property   string DefaultQuotaThresholdText () {get}                     
+LogQuotaLimit                  Property   bool LogQuotaLimit () {get} {set}                             
+LogQuotaThreshold              Property   bool LogQuotaThreshold () {get} {set}                         
+QuotaFileIncomplete            Property   bool QuotaFileIncomplete () {get}                             
+QuotaFileRebuilding            Property   bool QuotaFileRebuilding () {get}                             
+QuotaState                     Property   QuotaStateConstants QuotaState () {get} {set}                 
+UserNameResolution             Property   UserNameResolutionConstants UserNameResolution () {get} {set} 
+
+

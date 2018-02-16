@@ -1,0 +1,34 @@
+﻿
+
+   TypeName: System.__ComObject#{7a50261d-0cd6-47d1-8004-cdc679896ce0}
+
+Name                           MemberType Definition                                                           
+----                           ---------- ----------                                                           
+AddSlide                       Method     void AddSlide (string, string, stSlideInfo)                          
+AddSlideBackgroundAudio        Method     void AddSlideBackgroundAudio (string)                                
+AddVideo                       Method     void AddVideo (string, string, string)                               
+CloseProject                   Method     void CloseProject ()                                                 
+get_AssetCount                 Method     void get_AssetCount (int)                                            
+get_CurrentLocaleVideoStandard Method     eVideoStandard get_CurrentLocaleVideoStandard ()                     
+get_EstimatedVideoDuration     Method     void get_EstimatedVideoDuration (double)                             
+get_MPEGVideoEncoderPresent    Method     void get_MPEGVideoEncoderPresent (bool)                              
+get_SlideCount                 Method     void get_SlideCount (int)                                            
+get_VideoCount                 Method     void get_VideoCount (int)                                            
+InitializeVideoAudioBurner     Method     void InitializeVideoAudioBurner (eVideoAudioDiscType, eVideoStandard)
+LoadStylesets                  Method     void LoadStylesets (string)                                          
+NewProject                     Method     void NewProject ()                                                   
+RemoveAllSlideBackgroundAudio  Method     void RemoveAllSlideBackgroundAudio ()                                
+RemoveSlide                    Method     void RemoveSlide (string)                                            
+RemoveSlideBackgroundAudio     Method     void RemoveSlideBackgroundAudio (string)                             
+RemoveVideo                    Method     void RemoveVideo (string)                                            
+SetStyleMenuTitle              Method     void SetStyleMenuTitle (string)                                      
+SetStylesets                   Method     void SetStylesets (string, string)                                   
+ApplicationType                Property   int ApplicationType () {get} {set}                                   
+FitSlidesToAudio               Property   bool FitSlidesToAudio () {get} {set}                                 
+FitToDisc                      Property   bool FitToDisc () {get} {set}                                        
+LoopSlideAudio                 Property   bool LoopSlideAudio () {get} {set}                                   
+PreferredChapterPoints         Property   double PreferredChapterPoints () {get} {set}                         
+SlideBackgroundAudio           Property   string SlideBackgroundAudio () {get} {set}                           
+SlideShowTitle                 Property   string SlideShowTitle () {get} {set}                                 
+
+

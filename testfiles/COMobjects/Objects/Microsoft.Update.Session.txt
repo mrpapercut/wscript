@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: System.__ComObject#{918efd1e-b5d8-4c90-8540-aeb9bdc56f9d}
+
+Name                       MemberType Definition                                                   
+----                       ---------- ----------                                                   
+CreateUpdateDownloader     Method     IUpdateDownloader CreateUpdateDownloader ()                  
+CreateUpdateInstaller      Method     IUpdateInstaller CreateUpdateInstaller ()                    
+CreateUpdateSearcher       Method     IUpdateSearcher CreateUpdateSearcher ()                      
+CreateUpdateServiceManager Method     IUpdateServiceManager2 CreateUpdateServiceManager ()         
+QueryHistory               Method     IUpdateHistoryEntryCollection QueryHistory (string, int, int)
+ClientApplicationID        Property   string ClientApplicationID () {get} {set}                    
+ReadOnly                   Property   bool ReadOnly () {get}                                       
+UserLocale                 Property   uint UserLocale () {get} {set}                               
+WebProxy                   Property   IWebProxy WebProxy () {get} {set}                            
+
+

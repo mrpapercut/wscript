@@ -1,0 +1,11 @@
+﻿
+
+   TypeName: System.__ComObject#{76ba3491-cb2f-406b-9961-0e0c4cdaaef2}
+
+Name       MemberType Definition               
+----       ---------- ----------               
+AddWord    Method     void AddWord (string)    
+Merge      Method     void Merge (IInkWordList)
+RemoveWord Method     void RemoveWord (string) 
+
+

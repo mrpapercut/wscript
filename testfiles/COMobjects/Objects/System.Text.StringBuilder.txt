@@ -1,0 +1,26 @@
+﻿
+
+   TypeName: System.Text.StringBuilder
+
+Name           MemberType            Definition                                                                        
+----           ----------            ----------                                                                        
+Append         Method                System.Text.StringBuilder Append(char value, int repeatCount), System.Text.Stri...
+AppendFormat   Method                System.Text.StringBuilder AppendFormat(string format, System.Object arg0), Syst...
+AppendLine     Method                System.Text.StringBuilder AppendLine(), System.Text.StringBuilder AppendLine(st...
+Clear          Method                System.Text.StringBuilder Clear()                                                 
+CopyTo         Method                void CopyTo(int sourceIndex, char[] destination, int destinationIndex, int count) 
+EnsureCapacity Method                int EnsureCapacity(int capacity)                                                  
+Equals         Method                bool Equals(System.Text.StringBuilder sb), bool Equals(System.Object obj)         
+GetHashCode    Method                int GetHashCode()                                                                 
+GetObjectData  Method                void ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo...
+GetType        Method                type GetType()                                                                    
+Insert         Method                System.Text.StringBuilder Insert(int index, string value, int count), System.Te...
+Remove         Method                System.Text.StringBuilder Remove(int startIndex, int length)                      
+Replace        Method                System.Text.StringBuilder Replace(string oldValue, string newValue), System.Tex...
+ToString       Method                string ToString(), string ToString(int startIndex, int length)                    
+Chars          ParameterizedProperty char Chars(int index) {get;set;}                                                  
+Capacity       Property              int Capacity {get;set;}                                                           
+Length         Property              int Length {get;set;}                                                             
+MaxCapacity    Property              int MaxCapacity {get;}                                                            
+
+

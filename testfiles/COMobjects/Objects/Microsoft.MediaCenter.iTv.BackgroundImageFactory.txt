@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.iTv.BackgroundImageFactory
+
+Name        MemberType Definition                                                                                                                                        
+----        ---------- ----------                                                                                                                                        
+Create      Method     System.Object Create(ehiiTv.ImgMediaType ImageType, System.IntPtr ImageData, int ImageDataLength), System.Object IiTvBackgroundImageFactory.Cre...
+Equals      Method     bool Equals(System.Object obj)                                                                                                                    
+GetHashCode Method     int GetHashCode()                                                                                                                                 
+GetType     Method     type GetType()                                                                                                                                    
+ToString    Method     string ToString()                                                                                                                                 
+
+

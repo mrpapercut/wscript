@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{c3a9f406-2222-436d-86d5-ba3229279efb}
+
+Name   MemberType Definition                          
+----   ---------- ----------                          
+Bind   Method     int Bind (IDispatch, string, string)
+Unbind Method     void Unbind (uint)                  
+
+

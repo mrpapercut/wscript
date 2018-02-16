@@ -1,0 +1,21 @@
+﻿
+
+   TypeName: System.__ComObject#{1c3294f9-891f-49b1-bbae-492a68ba10cc}
+
+Name                            MemberType Definition                                             
+----                            ---------- ----------                                             
+CreateObject                    Method     IXcpObject CreateObject (string)                       
+IsVersionSupported              Method     bool IsVersionSupported (string)                       
+LoadRuntime                     Method     void LoadRuntime ()                                    
+Content                         Property   IDispatch Content () {get}                             
+InitParams                      Property   string InitParams () {get} {set}                       
+IsLoaded                        Property   bool IsLoaded () {get}                                 
+OnError                         Property   Variant OnError () {get} {set}                         
+OnLoad                          Property   Variant OnLoad () {get} {set}                          
+OnSourceDownloadComplete        Property   Variant OnSourceDownloadComplete () {get} {set}        
+OnSourceDownloadProgressChanged Property   Variant OnSourceDownloadProgressChanged () {get} {set} 
+Settings                        Property   IDispatch Settings () {get}                            
+Source                          Property   string Source () {get} {set}                           
+SplashScreenSource              Property   string SplashScreenSource () {get} {set}               
+
+

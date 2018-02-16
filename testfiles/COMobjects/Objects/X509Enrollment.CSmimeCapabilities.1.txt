@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab31a-217d-11da-b2a4-000e7bbb2b09}
+
+Name                          MemberType            Definition                               
+----                          ----------            ----------                               
+Add                           Method                void Add (ISmimeCapability)              
+AddAvailableSmimeCapabilities Method                void AddAvailableSmimeCapabilities (bool)
+AddFromCsp                    Method                void AddFromCsp (ICspInformation)        
+Clear                         Method                void Clear ()                            
+Remove                        Method                void Remove (int)                        
+ItemByIndex                   ParameterizedProperty ISmimeCapability ItemByIndex (int) {get} 
+Count                         Property              int Count () {get}                       
+
+

@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{ade87bf7-7b56-4275-8fab-b9b0e591844b}
+
+Name                   MemberType Definition                             
+----                   ---------- ----------                             
+OemHardwareSupportLink Property   string OemHardwareSupportLink () {get} 
+RebootRequired         Property   bool RebootRequired () {get}           
+
+

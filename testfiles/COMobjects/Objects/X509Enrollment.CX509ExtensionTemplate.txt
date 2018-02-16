@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab312-217d-11da-b2a4-000e7bbb2b09}
+
+Name             MemberType            Definition                                       
+----             ----------            ----------                                       
+Initialize       Method                void Initialize (IObjectId, EncodingType, string)
+InitializeDecode Method                void InitializeDecode (EncodingType, string)     
+InitializeEncode Method                void InitializeEncode (IObjectId, int, int)      
+RawData          ParameterizedProperty string RawData (EncodingType) {get}              
+Critical         Property              bool Critical () {get} {set}                     
+MajorVersion     Property              int MajorVersion () {get}                        
+MinorVersion     Property              int MinorVersion () {get}                        
+ObjectId         Property              IObjectId ObjectId () {get}                      
+TemplateOid      Property              IObjectId TemplateOid () {get}                   
+
+

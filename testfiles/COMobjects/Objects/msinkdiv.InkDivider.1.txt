@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{5de00405-f9a4-4651-b0c5-c317defd58b9}
+
+Name              MemberType Definition                                                   
+----              ---------- ----------                                                   
+Divide            Method     IInkDivisionResult Divide ()                                 
+LineHeight        Property   int LineHeight () {get} {set}                                
+RecognizerContext Property   IInkRecognizerContext RecognizerContext () {get} {set by ref}
+Strokes           Property   IInkStrokes Strokes () {get} {set by ref}                    
+
+

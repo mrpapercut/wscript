@@ -1,0 +1,19 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab339-217d-11da-b2a4-000e7bbb2b09}
+
+Name                      MemberType            Definition                                                 
+----                      ----------            ----------                                                 
+Initialize                Method                void Initialize (int, string, string, string)              
+InitializeDecode          Method                void InitializeDecode (EncodingType, string)               
+InitializeFromCertificate Method                void InitializeFromCertificate (bool, EncodingType, string)
+RemoveFromCertificate     Method                void RemoveFromCertificate (bool, EncodingType, string)    
+SetValueOnCertificate     Method                void SetValueOnCertificate (bool, EncodingType, string)    
+RawData                   ParameterizedProperty string RawData (EncodingType) {get}                        
+CADnsName                 Property              string CADnsName () {get}                                  
+CAName                    Property              string CAName () {get}                                     
+FriendlyName              Property              string FriendlyName () {get}                               
+PropertyId                Property              CERTENROLL_PROPERTYID PropertyId () {get} {set}            
+RequestId                 Property              int RequestId () {get}                                     
+
+

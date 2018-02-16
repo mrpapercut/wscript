@@ -1,0 +1,21 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.iTv.CiTvSession
+
+Name                     MemberType Definition                                                        
+----                     ---------- ----------                                                        
+AdviseEventSink          Method     void IiTvSession.AdviseEventSink(System.Object pSink)             
+Equals                   Method     bool Equals(System.Object obj)                                    
+GetHashCode              Method     int GetHashCode()                                                 
+GetType                  Method     type GetType()                                                    
+ToString                 Method     string ToString()                                                 
+UnadviseEventSink        Method     void IiTvSession.UnadviseEventSink()                              
+AudioMuted               Property   bool AudioMuted {get;set;}                                        
+ClientInteractivityState Property   ehiiTv.iTvClientInteractivityState ClientInteractivityState {set;}
+IsOnExtender             Property   bool IsOnExtender {get;}                                          
+PlaybackMode             Property   ehiiTv.PlaybackMode PlaybackMode {get;}                           
+PlaybackState            Property   ehiiTv.PlaybackState PlaybackState {get;}                         
+PreferredLanguage        Property   string PreferredLanguage {get;}                                   
+TimeShift                Property   float TimeShift {get;}                                            
+
+

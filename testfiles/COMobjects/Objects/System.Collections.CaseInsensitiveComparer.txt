@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.Collections.CaseInsensitiveComparer
+
+Name        MemberType Definition                                                                                      
+----        ---------- ----------                                                                                      
+Compare     Method     int Compare(System.Object a, System.Object b), int IComparer.Compare(System.Object x, System....
+Equals      Method     bool Equals(System.Object obj)                                                                  
+GetHashCode Method     int GetHashCode()                                                                               
+GetType     Method     type GetType()                                                                                  
+ToString    Method     string ToString()                                                                               
+
+

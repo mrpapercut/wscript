@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{6a340dc0-0311-11d3-9d8e-00c04f72d980}
+
+Name            MemberType Definition                                
+----            ---------- ----------                                
+Clone           Method     IComponentType Clone ()                   
+Category        Property   ComponentCategory Category () {get} {set} 
+MediaFormatType Property   string MediaFormatType () {get} {set}     
+MediaMajorType  Property   string MediaMajorType () {get} {set}      
+MediaSubType    Property   string MediaSubType () {get} {set}        
+
+

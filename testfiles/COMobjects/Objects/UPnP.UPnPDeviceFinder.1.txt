@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{adda3d55-6f72-4319-bff9-18600a539b10}
+
+Name            MemberType Definition                                  
+----            ---------- ----------                                  
+CancelAsyncFind Method     void CancelAsyncFind (int)                  
+CreateAsyncFind Method     int CreateAsyncFind (string, uint, IUnknown)
+FindByType      Method     IUPnPDevices FindByType (string, uint)      
+FindByUDN       Method     IUPnPDevice FindByUDN (string)              
+StartAsyncFind  Method     void StartAsyncFind (int)                   
+
+

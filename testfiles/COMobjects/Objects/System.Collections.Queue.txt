@@ -1,0 +1,25 @@
+﻿
+
+   TypeName: System.Collections.Queue
+
+Name           MemberType Definition                                                                                   
+----           ---------- ----------                                                                                   
+Clear          Method     void Clear()                                                                                 
+Clone          Method     System.Object Clone(), System.Object ICloneable.Clone()                                      
+Contains       Method     bool Contains(System.Object obj)                                                             
+CopyTo         Method     void CopyTo(array array, int index), void ICollection.CopyTo(array array, int index)         
+Dequeue        Method     System.Object Dequeue()                                                                      
+Enqueue        Method     void Enqueue(System.Object obj)                                                              
+Equals         Method     bool Equals(System.Object obj)                                                               
+GetEnumerator  Method     System.Collections.IEnumerator GetEnumerator(), System.Collections.IEnumerator IEnumerable...
+GetHashCode    Method     int GetHashCode()                                                                            
+GetType        Method     type GetType()                                                                               
+Peek           Method     System.Object Peek()                                                                         
+ToArray        Method     System.Object[] ToArray()                                                                    
+ToString       Method     string ToString()                                                                            
+TrimToSize     Method     void TrimToSize()                                                                            
+Count          Property   int Count {get;}                                                                             
+IsSynchronized Property   bool IsSynchronized {get;}                                                                   
+SyncRoot       Property   System.Object SyncRoot {get;}                                                                
+
+

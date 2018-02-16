@@ -1,0 +1,9 @@
+﻿
+
+   TypeName: System.__ComObject#{3e46f4f0-d6fe-49e4-97e5-c731154f4e7a}
+
+Name       MemberType            Definition                          
+----       ----------            ----------                          
+GetService ParameterizedProperty IDispatch GetService (string) {get} 
+
+

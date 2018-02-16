@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{160621aa-bbbc-4326-a824-c395aebc6e74}
+
+Name               MemberType Definition                           
+----               ---------- ----------                           
+RecordingAttribute Property   IUnknown RecordingAttribute () {get} 
+RecordingStarted   Property   bool RecordingStarted () {get}       
+RecordingStopped   Property   bool RecordingStopped () {get}       
+RecordingType      Property   RecordingType RecordingType () {get} 
+startTime          Property   int startTime () {get} {set}         
+StopTime           Property   int StopTime () {get} {set}          
+
+

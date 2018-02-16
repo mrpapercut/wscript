@@ -1,0 +1,62 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab363-217d-11da-b2a4-000e7bbb2b09}
+
+Name                             MemberType            Definition                                                      
+----                             ----------            ----------                                                      
+CheckSignature                   Method                void CheckSignature (Pkcs10AllowedSignatureTypes)               
+Encode                           Method                void Encode ()                                                  
+GetCspStatuses                   Method                ICspStatuses GetCspStatuses (X509KeySpec)                       
+GetInnerRequest                  Method                IX509CertificateRequest GetInnerRequest (InnerRequestLevel)     
+Initialize                       Method                void Initialize (X509CertificateEnrollmentContext)              
+InitializeDecode                 Method                void InitializeDecode (string, EncodingType)                    
+InitializeFromCertificate        Method                void InitializeFromCertificate (X509CertificateEnrollmentCont...
+InitializeFromPrivateKey         Method                void InitializeFromPrivateKey (X509CertificateEnrollmentConte...
+InitializeFromPrivateKeyTemplate Method                void InitializeFromPrivateKeyTemplate (X509CertificateEnrollm...
+InitializeFromPublicKey          Method                void InitializeFromPublicKey (X509CertificateEnrollmentContex...
+InitializeFromPublicKeyTemplate  Method                void InitializeFromPublicKeyTemplate (X509CertificateEnrollme...
+InitializeFromTemplate           Method                void InitializeFromTemplate (X509CertificateEnrollmentContext...
+InitializeFromTemplateName       Method                void InitializeFromTemplateName (X509CertificateEnrollmentCon...
+IsSmartCard                      Method                bool IsSmartCard ()                                             
+ResetForEncode                   Method                void ResetForEncode ()                                          
+AttestationEncryptionCertificate ParameterizedProperty string AttestationEncryptionCertificate (EncodingType) {get} ...
+OldCertificate                   ParameterizedProperty string OldCertificate (EncodingType) {get}                      
+RawData                          ParameterizedProperty string RawData (EncodingType) {get}                             
+RawDataToBeSigned                ParameterizedProperty string RawDataToBeSigned (EncodingType) {get}                   
+RenewalCertificate               ParameterizedProperty string RenewalCertificate (EncodingType) {get} {set}            
+Signature                        ParameterizedProperty string Signature (EncodingType) {get}                           
+AlternateSignatureAlgorithm      Property              bool AlternateSignatureAlgorithm () {get} {set}                 
+AttestPrivateKey                 Property              bool AttestPrivateKey () {get} {set}                            
+AttestPrivateKeyPreferred        Property              bool AttestPrivateKeyPreferred () {get} {set}                   
+ChallengePassword                Property              string ChallengePassword () {get} {set}                         
+ClaimType                        Property              KeyAttestationClaimType ClaimType () {get} {set}                
+ClientId                         Property              RequestClientInfoClientId ClientId () {get} {set}               
+CriticalExtensions               Property              IObjectIds CriticalExtensions () {get}                          
+CryptAttributes                  Property              ICryptAttributes CryptAttributes () {get}                       
+CspInformations                  Property              ICspInformations CspInformations () {get} {set}                 
+CspStatuses                      Property              ICspStatuses CspStatuses () {get}                               
+EncryptionAlgorithm              Property              IObjectId EncryptionAlgorithm () {get} {set}                    
+EncryptionStrength               Property              int EncryptionStrength () {get} {set}                           
+EnrollmentContext                Property              X509CertificateEnrollmentContext EnrollmentContext () {get}     
+HashAlgorithm                    Property              IObjectId HashAlgorithm () {get} {set}                          
+KeyContainerNamePrefix           Property              string KeyContainerNamePrefix () {get} {set}                    
+NameValuePairs                   Property              IX509NameValuePairs NameValuePairs () {get}                     
+NullSigned                       Property              bool NullSigned () {get}                                        
+ParentWindow                     Property              int ParentWindow () {get} {set}                                 
+PolicyServer                     Property              IX509EnrollmentPolicyServer PolicyServer () {get}               
+PrivateKey                       Property              IX509PrivateKey PrivateKey () {get}                             
+PublicKey                        Property              IX509PublicKey PublicKey () {get}                               
+ReuseKey                         Property              bool ReuseKey () {get}                                          
+SignatureInformation             Property              IX509SignatureInformation SignatureInformation () {get}         
+Silent                           Property              bool Silent () {get} {set}                                      
+SmimeCapabilities                Property              bool SmimeCapabilities () {get} {set}                           
+Subject                          Property              IX500DistinguishedName Subject () {get} {set}                   
+SuppressDefaults                 Property              bool SuppressDefaults () {get} {set}                            
+SuppressOids                     Property              IObjectIds SuppressOids () {get}                                
+Template                         Property              IX509CertificateTemplate Template () {get}                      
+TemplateObjectId                 Property              IObjectId TemplateObjectId () {get}                             
+Type                             Property              X509RequestType Type () {get}                                   
+UIContextMessage                 Property              string UIContextMessage () {get} {set}                          
+X509Extensions                   Property              IX509Extensions X509Extensions () {get}                         
+
+

@@ -1,0 +1,13 @@
+﻿
+
+   TypeName: System.__ComObject#{0dc13d4a-0313-11d3-9d8e-00c04f72d980}
+
+Name   MemberType            Definition                                
+----   ----------            ----------                                
+Add    Method                Variant Add (IComponentType)              
+Clone  Method                IComponentTypes Clone ()                  
+Remove Method                void Remove (Variant)                     
+Item   ParameterizedProperty IComponentType Item (Variant) {get} {set} 
+Count  Property              int Count () {get}                        
+
+

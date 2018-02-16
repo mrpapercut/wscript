@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.EnterpriseServices.Internal.ComManagedImportUtil
+
+Name             MemberType Definition                                                                                 
+----             ---------- ----------                                                                                 
+Equals           Method     bool Equals(System.Object obj)                                                             
+GetComponentInfo Method     void GetComponentInfo(string assemblyPath, [ref] string numComponents, [ref] string comp...
+GetHashCode      Method     int GetHashCode()                                                                          
+GetType          Method     type GetType()                                                                             
+InstallAssembly  Method     void InstallAssembly(string asmpath, string parname, string appname), void IComManagedIm...
+ToString         Method     string ToString()                                                                          
+
+

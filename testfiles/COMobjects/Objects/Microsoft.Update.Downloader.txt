@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{68f1c6f9-7ecc-4666-a464-247fe12496c3}
+
+Name                MemberType Definition                                              
+----                ---------- ----------                                              
+BeginDownload       Method     IDownloadJob BeginDownload (IUnknown, IUnknown, Variant)
+Download            Method     IDownloadResult Download ()                             
+EndDownload         Method     IDownloadResult EndDownload (IDownloadJob)              
+ClientApplicationID Property   string ClientApplicationID () {get} {set}               
+IsForced            Property   bool IsForced () {get} {set}                            
+Priority            Property   DownloadPriority Priority () {get} {set}                
+Updates             Property   IUpdateCollection Updates () {get} {set}                
+
+

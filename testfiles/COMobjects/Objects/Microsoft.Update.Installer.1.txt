@@ -1,0 +1,23 @@
+﻿
+
+   TypeName: System.__ComObject#{3442d4fe-224d-4cee-98cf-30e0c4d229e6}
+
+Name                             MemberType Definition                                                   
+----                             ---------- ----------                                                   
+BeginInstall                     Method     IInstallationJob BeginInstall (IUnknown, IUnknown, Variant)  
+BeginUninstall                   Method     IInstallationJob BeginUninstall (IUnknown, IUnknown, Variant)
+EndInstall                       Method     IInstallationResult EndInstall (IInstallationJob)            
+EndUninstall                     Method     IInstallationResult EndUninstall (IInstallationJob)          
+Install                          Method     IInstallationResult Install ()                               
+RunWizard                        Method     IInstallationResult RunWizard (string)                       
+Uninstall                        Method     IInstallationResult Uninstall ()                             
+AllowSourcePrompts               Property   bool AllowSourcePrompts () {get} {set}                       
+ClientApplicationID              Property   string ClientApplicationID () {get} {set}                    
+ForceQuiet                       Property   bool ForceQuiet () {get} {set}                               
+IsBusy                           Property   bool IsBusy () {get}                                         
+IsForced                         Property   bool IsForced () {get} {set}                                 
+parentWindow                     Property   IUnknown parentWindow () {get} {set}                         
+RebootRequiredBeforeInstallation Property   bool RebootRequiredBeforeInstallation () {get}               
+Updates                          Property   IUpdateCollection Updates () {get} {set}                     
+
+

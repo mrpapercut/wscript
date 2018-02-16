@@ -1,0 +1,24 @@
+﻿
+
+   TypeName: System.Threading.ReaderWriterLock
+
+Name                    MemberType Definition                                                                          
+----                    ---------- ----------                                                                          
+AcquireReaderLock       Method     void AcquireReaderLock(int millisecondsTimeout), void AcquireReaderLock(timespan ...
+AcquireWriterLock       Method     void AcquireWriterLock(int millisecondsTimeout), void AcquireWriterLock(timespan ...
+AnyWritersSince         Method     bool AnyWritersSince(int seqNum)                                                    
+DowngradeFromWriterLock Method     void DowngradeFromWriterLock([ref] System.Threading.LockCookie lockCookie)          
+Equals                  Method     bool Equals(System.Object obj)                                                      
+GetHashCode             Method     int GetHashCode()                                                                   
+GetType                 Method     type GetType()                                                                      
+ReleaseLock             Method     System.Threading.LockCookie ReleaseLock()                                           
+ReleaseReaderLock       Method     void ReleaseReaderLock()                                                            
+ReleaseWriterLock       Method     void ReleaseWriterLock()                                                            
+RestoreLock             Method     void RestoreLock([ref] System.Threading.LockCookie lockCookie)                      
+ToString                Method     string ToString()                                                                   
+UpgradeToWriterLock     Method     System.Threading.LockCookie UpgradeToWriterLock(int millisecondsTimeout), System....
+IsReaderLockHeld        Property   bool IsReaderLockHeld {get;}                                                        
+IsWriterLockHeld        Property   bool IsWriterLockHeld {get;}                                                        
+WriterSeqNum            Property   int WriterSeqNum {get;}                                                             
+
+

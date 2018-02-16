@@ -1,0 +1,17 @@
+﻿
+
+   TypeName: System.__ComObject#{07f7438c-7709-4ca5-b518-91279288134e}
+
+Name     MemberType            Definition                     
+----     ----------            ----------                     
+Add      Method                int Add (IUpdate)              
+Clear    Method                void Clear ()                  
+Copy     Method                IUpdateCollection Copy ()      
+Insert   Method                void Insert (int, IUpdate)     
+RemoveAt Method                void RemoveAt (int)            
+Item     ParameterizedProperty IUpdate Item (int) {get} {set} 
+Count    Property              int Count () {get}             
+ReadOnly Property              bool ReadOnly () {get}         
+_NewEnum Property              IUnknown _NewEnum () {get}     
+
+

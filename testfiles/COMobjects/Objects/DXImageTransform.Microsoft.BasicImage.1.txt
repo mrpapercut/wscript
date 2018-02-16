@@ -1,0 +1,16 @@
+﻿
+
+   TypeName: System.__ComObject#{16b280c7-ee70-11d1-9066-00c04fd9189d}
+
+Name      MemberType Definition                   
+----      ---------- ----------                   
+GrayScale Property   int GrayScale () {get} {set} 
+Invert    Property   int Invert () {get} {set}    
+Mask      Property   int Mask () {get} {set}      
+MaskColor Property   int MaskColor () {get} {set} 
+Mirror    Property   int Mirror () {get} {set}    
+Opacity   Property   float Opacity () {get} {set} 
+Rotation  Property   int Rotation () {get} {set}  
+XRay      Property   int XRay () {get} {set}      
+
+

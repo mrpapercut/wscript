@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.__ComObject#{b11cd855-f4c4-4fc6-b710-4422237f09e9}
+
+Name                  MemberType Definition                                            
+----                  ---------- ----------                                            
+AddCertificate        Method     void AddCertificate (EncodingType, string)            
+Close                 Method     void Close ()                                         
+ExportPublicKey       Method     IX509PublicKey ExportPublicKey ()                     
+GetCertificateByIndex Method     string GetCertificateByIndex (bool, int, EncodingType)
+GetCertificateCount   Method     int GetCertificateCount (bool)                        
+Open                  Method     void Open ()                                          
+RemoveCertificate     Method     void RemoveCertificate (EncodingType, string)         
+Length                Property   int Length () {get}                                   
+Opened                Property   bool Opened () {get}                                  
+ProviderName          Property   string ProviderName () {get} {set}                    
+
+

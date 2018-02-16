@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{a295019c-dc65-47dd-90dc-7fe918a1ab44}
+
+Name                  MemberType Definition                                     
+----                  ---------- ----------                                     
+AddCallback           Method     void AddCallback (IUnknown)                    
+InvokeAction          Method     Variant InvokeAction (string, Variant, Variant)
+QueryStateVariable    Method     Variant QueryStateVariable (string)            
+Id                    Property   string Id () {get}                             
+LastTransportStatus   Property   int LastTransportStatus () {get}               
+ServiceTypeIdentifier Property   string ServiceTypeIdentifier () {get}          
+
+

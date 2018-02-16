@@ -1,0 +1,10 @@
+﻿
+
+   TypeName: System.__ComObject#{c3701883-b39b-11d1-9d68-00c04fc30df6}
+
+Name               MemberType Definition                          
+----               ---------- ----------                          
+InstallPrinter     Method     void InstallPrinter (string, string)
+OpenPrintersFolder Method     void OpenPrintersFolder ()          
+
+

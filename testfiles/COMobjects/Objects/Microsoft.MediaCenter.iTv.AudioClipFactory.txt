@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: Microsoft.MediaCenter.iTv.AudioClipFactory
+
+Name               MemberType Definition                                                                                                                                 
+----               ---------- ----------                                                                                                                                 
+Create             Method     void Create(ehiiTv.AudioMediaType AudioType, System.IntPtr AudioData, int AudioDataLength, [ref] System.Object AudioClip), void IiTvAudi...
+CreateFromResource Method     void CreateFromResource(string ResourceId, [ref] System.Object AudioClip), void IiTvAudioClipFactory.CreateFromResource(string ResourceI...
+Dispose            Method     void Dispose(), void IDisposable.Dispose()                                                                                                 
+Equals             Method     bool Equals(System.Object obj)                                                                                                             
+GetHashCode        Method     int GetHashCode()                                                                                                                          
+GetType            Method     type GetType()                                                                                                                             
+ToString           Method     string ToString()                                                                                                                          
+
+

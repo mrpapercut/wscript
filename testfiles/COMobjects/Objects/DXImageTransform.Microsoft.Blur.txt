@@ -1,0 +1,11 @@
+﻿
+
+   TypeName: System.__ComObject#{9f7c7827-e87a-11d1-81e0-0000f87557db}
+
+Name          MemberType Definition                         
+----          ---------- ----------                         
+MakeShadow    Property   bool MakeShadow () {get} {set}     
+PixelRadius   Property   float PixelRadius () {get} {set}   
+ShadowOpacity Property   float ShadowOpacity () {get} {set} 
+
+

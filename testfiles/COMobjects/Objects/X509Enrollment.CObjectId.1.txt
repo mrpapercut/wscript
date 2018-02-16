@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab300-217d-11da-b2a4-000e7bbb2b09}
+
+Name                        MemberType Definition                                                                      
+----                        ---------- ----------                                                                      
+GetAlgorithmName            Method     string GetAlgorithmName (ObjectIdGroupId, ObjectIdPublicKeyFlags)               
+InitializeFromAlgorithmName Method     void InitializeFromAlgorithmName (ObjectIdGroupId, ObjectIdPublicKeyFlags, Al...
+InitializeFromName          Method     void InitializeFromName (CERTENROLL_OBJECTID)                                   
+InitializeFromValue         Method     void InitializeFromValue (string)                                               
+FriendlyName                Property   string FriendlyName () {get} {set}                                              
+Name                        Property   CERTENROLL_OBJECTID Name () {get}                                               
+Value                       Property   string Value () {get}                                                           
+
+

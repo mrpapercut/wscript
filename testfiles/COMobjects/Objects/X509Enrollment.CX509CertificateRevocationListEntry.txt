@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: System.__ComObject#{728ab35e-217d-11da-b2a4-000e7bbb2b09}
+
+Name               MemberType            Definition                                          
+----               ----------            ----------                                          
+Initialize         Method                void Initialize (EncodingType, string, Date)        
+SerialNumber       ParameterizedProperty string SerialNumber (EncodingType) {get}            
+CriticalExtensions Property              IObjectIds CriticalExtensions () {get}              
+RevocationDate     Property              Date RevocationDate () {get}                        
+RevocationReason   Property              CRLRevocationReason RevocationReason () {get} {set} 
+X509Extensions     Property              IX509Extensions X509Extensions () {get}             
+
+

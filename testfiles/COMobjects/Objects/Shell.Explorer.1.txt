@@ -1,0 +1,29 @@
+﻿
+
+   TypeName: System.__ComObject#{eab22ac1-30c1-11cf-a7eb-0000c05bae0b}
+
+Name              MemberType Definition                                                
+----              ---------- ----------                                                
+GoBack            Method     void GoBack ()                                            
+GoForward         Method     void GoForward ()                                         
+GoHome            Method     void GoHome ()                                            
+GoSearch          Method     void GoSearch ()                                          
+Navigate          Method     void Navigate (string, Variant, Variant, Variant, Variant)
+Refresh           Method     void Refresh ()                                           
+Refresh2          Method     void Refresh2 (Variant)                                   
+Stop              Method     void Stop ()                                              
+Application       Property   IDispatch Application () {get}                            
+Busy              Property   bool Busy () {get}                                        
+Container         Property   IDispatch Container () {get}                              
+Document          Property   IDispatch Document () {get}                               
+Height            Property   int Height () {get} {set}                                 
+Left              Property   int Left () {get} {set}                                   
+LocationName      Property   string LocationName () {get}                              
+LocationURL       Property   string LocationURL () {get}                               
+Parent            Property   IDispatch Parent () {get}                                 
+Top               Property   int Top () {get} {set}                                    
+TopLevelContainer Property   bool TopLevelContainer () {get}                           
+Type              Property   string Type () {get}                                      
+Width             Property   int Width () {get} {set}                                  
+
+

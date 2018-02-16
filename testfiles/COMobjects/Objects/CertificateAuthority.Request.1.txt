@@ -1,0 +1,25 @@
+﻿
+
+   TypeName: System.__ComObject#{afc8f92b-33a2-4861-bf36-2933b7cd67b3}
+
+Name                     MemberType Definition                                                       
+----                     ---------- ----------                                                       
+GetCACertificate         Method     string GetCACertificate (int, string, int)                       
+GetCAProperty            Method     Variant GetCAProperty (string, int, int, int, int)               
+GetCAPropertyDisplayName Method     string GetCAPropertyDisplayName (string, int)                    
+GetCAPropertyFlags       Method     int GetCAPropertyFlags (string, int)                             
+GetCertificate           Method     string GetCertificate (int)                                      
+GetDispositionMessage    Method     string GetDispositionMessage ()                                  
+GetErrorMessageText      Method     string GetErrorMessageText (int, int)                            
+GetFullResponseProperty  Method     Variant GetFullResponseProperty (int, int, int, int)             
+GetIssuedCertificate     Method     int GetIssuedCertificate (string, int, string)                   
+GetIssuedCertificate2    Method     int GetIssuedCertificate2 (string, string, string)               
+GetLastStatus            Method     int GetLastStatus ()                                             
+GetRefreshPolicy         Method     bool GetRefreshPolicy ()                                         
+GetRequestId             Method     int GetRequestId ()                                              
+GetRequestIdString       Method     string GetRequestIdString ()                                     
+RetrievePending          Method     int RetrievePending (int, string)                                
+SetCredential            Method     void SetCredential (int, X509EnrollmentAuthFlags, string, string)
+Submit                   Method     int Submit (int, string, string, string)                         
+
+

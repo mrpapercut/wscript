@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{11d1c1b2-7daa-4c9e-9595-7f82ed206d1e}
+
+Name        MemberType Definition                       
+----        ---------- ----------                       
+Abort       Method     void Abort ()                    
+DeviceByUDN Method     IUPnPDevice DeviceByUDN (string) 
+Load        Method     void Load (string)               
+LoadAsync   Method     void LoadAsync (string, IUnknown)
+RootDevice  Method     IUPnPDevice RootDevice ()        
+LoadResult  Property   int LoadResult () {get}          
+ReadyState  Property   int ReadyState () {get}          
+
+

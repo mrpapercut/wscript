@@ -1,0 +1,14 @@
+﻿
+
+   TypeName: Microsoft.JScript.JSAuthor
+
+Name         MemberType Definition                                                                                     
+----         ---------- ----------                                                                                     
+Equals       Method     bool Equals(System.Object obj)                                                                 
+GetCodeSense Method     Microsoft.JScript.IParseText GetCodeSense(), Microsoft.JScript.IParseText IAuthorServices.Ge...
+GetColorizer Method     Microsoft.JScript.IColorizeText GetColorizer(), Microsoft.JScript.IColorizeText IAuthorServi...
+GetHashCode  Method     int GetHashCode()                                                                              
+GetType      Method     type GetType()                                                                                 
+ToString     Method     string ToString()                                                                              
+
+

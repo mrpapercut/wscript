@@ -1,0 +1,12 @@
+﻿
+
+   TypeName: System.__ComObject#{1069b656-07f8-41d6-9b1c-6b1f43a8a4a0}
+
+Name                      MemberType Definition                                                                 
+----                      ---------- ----------                                                                 
+CloseValidationSession    Method     void CloseValidationSession (uint)                                         
+GetData                   Method     void GetData (string, string, int, string, string)                         
+OpenValidationSession     Method     void OpenValidationSession (_E_WGP_ADMIN_SESSION_TYPE, string, string, int)
+ReportValidationCompleted Method     void ReportValidationCompleted (string, string)                            
+
+

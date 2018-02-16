@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{9519152b-9484-4a6c-b6a7-4f25e92d6c6b}
+
+Name     MemberType Definition                       
+----     ---------- ----------                       
+Apply    Method     void Apply ()                    
+Play     Method     void Play (Variant)              
+Stop     Method     void Stop ()                     
+Duration Property   float Duration () {get} {set}    
+Enabled  Property   bool Enabled () {get} {set}      
+Percent  Property   float Percent () {get} {set}     
+Status   Property   DXTFILTER_STATUS Status () {get} 
+
+

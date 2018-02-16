@@ -1,0 +1,18 @@
+﻿
+
+   TypeName: System.Security.Policy.TrustManagerContext
+
+Name                        MemberType Definition                                                       
+----                        ---------- ----------                                                       
+Equals                      Method     bool Equals(System.Object obj)                                   
+GetHashCode                 Method     int GetHashCode()                                                
+GetType                     Method     type GetType()                                                   
+ToString                    Method     string ToString()                                                
+IgnorePersistedDecision     Property   bool IgnorePersistedDecision {get;set;}                          
+KeepAlive                   Property   bool KeepAlive {get;set;}                                        
+NoPrompt                    Property   bool NoPrompt {get;set;}                                         
+Persist                     Property   bool Persist {get;set;}                                          
+PreviousApplicationIdentity Property   System.ApplicationIdentity PreviousApplicationIdentity {get;set;}
+UIContext                   Property   System.Security.Policy.TrustManagerUIContext UIContext {get;set;}
+
+

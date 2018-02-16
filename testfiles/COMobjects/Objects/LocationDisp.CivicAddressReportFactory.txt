@@ -1,0 +1,15 @@
+﻿
+
+   TypeName: System.__ComObject#{bf773b93-c64f-4bee-beb2-67c0b8df66e0}
+
+Name                    MemberType Definition                                          
+----                    ---------- ----------                                          
+ListenForReports        Method     void ListenForReports (uint)                        
+RequestPermissions      Method     void RequestPermissions (uint)                      
+StopListeningForReports Method     void StopListeningForReports ()                     
+CivicAddressReport      Property   IDispCivicAddressReport CivicAddressReport () {get} 
+desiredAccuracy         Property   uint desiredAccuracy () {get} {set}                 
+ReportInterval          Property   uint ReportInterval () {get} {set}                  
+status                  Property   uint status () {get}                                
+
+

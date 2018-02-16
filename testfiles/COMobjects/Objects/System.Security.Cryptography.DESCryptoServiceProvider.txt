@@ -1,0 +1,28 @@
+﻿
+
+   TypeName: System.Security.Cryptography.DESCryptoServiceProvider
+
+Name            MemberType Definition                                                                                  
+----            ---------- ----------                                                                                  
+Clear           Method     void Clear()                                                                                
+CreateDecryptor Method     System.Security.Cryptography.ICryptoTransform CreateDecryptor(byte[] rgbKey, byte[] rgbIV...
+CreateEncryptor Method     System.Security.Cryptography.ICryptoTransform CreateEncryptor(byte[] rgbKey, byte[] rgbIV...
+Dispose         Method     void Dispose(), void IDisposable.Dispose()                                                  
+Equals          Method     bool Equals(System.Object obj)                                                              
+GenerateIV      Method     void GenerateIV()                                                                           
+GenerateKey     Method     void GenerateKey()                                                                          
+GetHashCode     Method     int GetHashCode()                                                                           
+GetType         Method     type GetType()                                                                              
+ToString        Method     string ToString()                                                                           
+ValidKeySize    Method     bool ValidKeySize(int bitLength)                                                            
+BlockSize       Property   int BlockSize {get;set;}                                                                    
+FeedbackSize    Property   int FeedbackSize {get;set;}                                                                 
+IV              Property   byte[] IV {get;set;}                                                                        
+Key             Property   byte[] Key {get;set;}                                                                       
+KeySize         Property   int KeySize {get;set;}                                                                      
+LegalBlockSizes Property   System.Security.Cryptography.KeySizes[] LegalBlockSizes {get;}                              
+LegalKeySizes   Property   System.Security.Cryptography.KeySizes[] LegalKeySizes {get;}                                
+Mode            Property   System.Security.Cryptography.CipherMode Mode {get;set;}                                     
+Padding         Property   System.Security.Cryptography.PaddingMode Padding {get;set;}                                 
+
+

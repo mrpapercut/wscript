@@ -1,0 +1,29 @@
+﻿
+
+   TypeName: System.__ComObject#{4f8721d7-7d59-4d8b-99f5-a77775586bd5}
+
+Name                MemberType            Definition                                                          
+----                ----------            ----------                                                          
+IsEqualDevice       Method                bool IsEqualDevice (IMSVidDevice)                                   
+NameSetLock         Method                void NameSetLock ()                                                 
+SetMinSeek          Method                int SetMinSeek ()                                                   
+UnlockProfile       Method                void UnlockProfile ()                                               
+ContentRecorder     ParameterizedProperty IMSVidStreamBufferRecordingControl ContentRecorder (string) {get}   
+ReferenceRecorder   ParameterizedProperty IMSVidStreamBufferRecordingControl ReferenceRecorder (string) {get} 
+AudioAnalysisFilter Property              string AudioAnalysisFilter () {get} {set}                           
+AudioCounter        Property              IUnknown AudioCounter () {get}                                      
+Category            Property              string Category () {get}                                            
+CCCounter           Property              IUnknown CCCounter () {get}                                         
+ClassID             Property              string ClassID () {get}                                             
+DataAnalysisFilter  Property              string DataAnalysisFilter () {get} {set}                            
+LicenseErrorCode    Property              int LicenseErrorCode () {get}                                       
+Name                Property              string Name () {get}                                                
+Power               Property              bool Power () {get} {set}                                           
+SBESink             Property              IUnknown SBESink () {get}                                           
+SinkName            Property              string SinkName () {get} {set}                                      
+Status              Property              int Status () {get}                                                 
+VideoAnalysisFilter Property              string VideoAnalysisFilter () {get} {set}                           
+VideoCounter        Property              IUnknown VideoCounter () {get}                                      
+WSTCounter          Property              IUnknown WSTCounter () {get}                                        
+
+

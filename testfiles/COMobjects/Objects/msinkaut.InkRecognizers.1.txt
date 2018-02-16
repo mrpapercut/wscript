@@ -1,0 +1,11 @@
+﻿
+
+   TypeName: System.__ComObject#{9ccc4f12-b0b7-4a8b-bf58-4aeca4e8cefd}
+
+Name                 MemberType Definition                               
+----                 ---------- ----------                               
+GetDefaultRecognizer Method     IInkRecognizer GetDefaultRecognizer (int)
+Item                 Method     IInkRecognizer Item (int)                
+Count                Property   int Count () {get}                       
+
+
