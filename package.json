@@ -17,11 +17,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^14.4.0",
+    "browserify": "^16.2.0",
     "chai": "^4.0.1",
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.4.2"
+    "mocha": "^5.1.1"
   },
   "scripts": {
     "build": "browserify ./lib/index.js -o ./dist/WScript.js",
