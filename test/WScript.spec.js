@@ -140,7 +140,7 @@ describe('WScript', function() {
 
                 expect(RemoteScript._eventStart.toString()).to.equal(global.remote_Start.toString());
                 expect(RemoteScript._eventEnd.toString()).to.equal(global.remote_End.toString());
-                expect(RemoteScript._eventError.toString()).to.equal('function() {}');
+                expect(RemoteScript._eventError instanceof Function).to.be.true;
             });
         });
 
